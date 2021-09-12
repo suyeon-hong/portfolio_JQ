@@ -118,3 +118,94 @@ body{
         }
     }
 }
+
+#footer{
+    width: 100%;
+    padding: 150px 0;
+    border-top: 1px solid #eee;
+
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+
+        .top{
+            margin-bottom: 30px;
+
+            h1{
+                float: left;
+
+                a{
+                    font: 34px/1 'Limelight';
+                    color: #000;
+                }
+            }
+            .sns{
+                float: right;
+
+                li{
+                    float: left;
+                    margin-left: 20px;
+
+                    a{
+                        font-size: 20px;
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .bottom{
+            margin-bottom: 30px;
+
+            address{
+                float: left;
+                font: 500 14px/1.8 $font;
+                color: #333;
+                letter-spacing: 0.5px;
+
+                .btn{
+                    background: #bbb;
+                    color: #fff;
+                    font-size: 12px;
+                    display: inline-block;
+                    padding: 0 3px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+                p{
+                    margin-top: 30px;
+
+                    span{
+                        color: #ccc;
+                        margin-left: 15px;
+                    }
+                }
+            }
+            ul{
+                float: right;
+                text-align: right;
+
+                li{
+                    a{
+                        font: 500 14px/1.8 $font;
+                        color: #000;
+                        position: relative;
+                    }
+                    &:nth-of-type(3) a::after{
+                        content:'';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background: #000;
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                    }
+                }
+            }
+        }
+        >p{
+            font: 500 14px/1 $font;
+            color: #ccc;
+        }
+    }
+}
