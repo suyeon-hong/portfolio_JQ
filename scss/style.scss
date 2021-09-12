@@ -3,3 +3,69 @@
 @import 'reset';
 
 $font: 'Gothic A1';
+
+body{
+    font-family: $font;
+}
+
+#header{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #B3B3AF;
+
+    .inner{
+        width: 1180px;
+        height: 80px;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+
+        h1{
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 0;
+
+            a{
+                font: bold 28px/1 'Limelight';
+                color: #000;
+                letter-spacing: 1px;
+            }
+        }
+        #gnb{
+            width: 60%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            li{
+                float: left;
+
+                a{
+                    display: block;
+                    padding: 15px 20px;
+                    box-sizing: border-box;
+                    font: 400 16px/1 $font;
+                    color: #000;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+        .util{
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+
+            li{
+                float: left;
+                margin-left: 20px;
+
+                a{
+                    font-size: 18px;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

@@ -24,4 +24,52 @@ a {
   font-size: 0;
   opacity: 0; }
 
+body {
+  font-family: "Gothic A1"; }
+
+#header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #B3B3AF; }
+  #header .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+    #header .inner h1 {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      font-size: 0; }
+      #header .inner h1 a {
+        font: bold 28px/1 'Limelight';
+        color: #000;
+        letter-spacing: 1px; }
+    #header .inner #gnb {
+      width: 60%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      #header .inner #gnb li {
+        float: left; }
+        #header .inner #gnb li a {
+          display: block;
+          padding: 15px 20px;
+          box-sizing: border-box;
+          font: 400 16px/1 "Gothic A1";
+          color: #000;
+          letter-spacing: 0.5px; }
+    #header .inner .util {
+      position: absolute;
+      bottom: 10px;
+      right: 0; }
+      #header .inner .util li {
+        float: left;
+        margin-left: 20px; }
+        #header .inner .util li a {
+          font-size: 18px;
+          color: #000; }
+
 /*# sourceMappingURL=style.css.map */
