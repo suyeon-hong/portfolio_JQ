@@ -169,4 +169,134 @@ body {
       font: 500 14px/1 "Gothic A1";
       color: #ccc; }
 
+#header_sub {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #B3B3AF; }
+  #header_sub .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+    #header_sub .inner h1 {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      font-size: 0; }
+      #header_sub .inner h1 a {
+        font: bold 28px/1 'Limelight';
+        color: #000;
+        letter-spacing: 1px; }
+    #header_sub .inner #gnb {
+      width: 60%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      #header_sub .inner #gnb li {
+        float: left; }
+        #header_sub .inner #gnb li a {
+          display: block;
+          padding: 15px 20px;
+          box-sizing: border-box;
+          font: 400 16px/1 "Gothic A1";
+          color: #000;
+          letter-spacing: 0.5px; }
+    #header_sub .inner .util {
+      position: absolute;
+      bottom: 10px;
+      right: 0; }
+      #header_sub .inner .util li {
+        float: left;
+        margin-left: 20px; }
+        #header_sub .inner .util li a {
+          font-size: 18px;
+          color: #000; }
+
+.content {
+  width: 100%; }
+  .content .visual {
+    width: 100%;
+    height: 300px;
+    background: lightgray; }
+  .content .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 100px 0; }
+    .content .inner h1 {
+      font: 600 24px/1 "Gothic A1";
+      color: #000;
+      text-align: center;
+      margin-bottom: 50px; }
+    .content .inner div {
+      width: 100%;
+      min-height: 500px;
+      border: 1px solid #ddd; }
+
+#footer_sub {
+  width: 100%;
+  padding: 150px 0;
+  border-top: 1px solid #eee; }
+  #footer_sub .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    #footer_sub .inner .top {
+      margin-bottom: 30px; }
+      #footer_sub .inner .top h1 {
+        float: left; }
+        #footer_sub .inner .top h1 a {
+          font: 34px/1 'Limelight';
+          color: #000; }
+      #footer_sub .inner .top .sns {
+        float: right; }
+        #footer_sub .inner .top .sns li {
+          float: left;
+          margin-left: 20px; }
+          #footer_sub .inner .top .sns li a {
+            font-size: 20px;
+            color: #000; }
+    #footer_sub .inner .bottom {
+      margin-bottom: 30px; }
+      #footer_sub .inner .bottom address {
+        float: left;
+        font: 500 14px/1.8 "Gothic A1";
+        color: #333;
+        letter-spacing: 0.5px; }
+        #footer_sub .inner .bottom address .btn {
+          background: #bbb;
+          color: #fff;
+          font-size: 12px;
+          display: inline-block;
+          padding: 0 3px;
+          box-sizing: border-box;
+          cursor: pointer; }
+        #footer_sub .inner .bottom address p {
+          margin-top: 30px; }
+          #footer_sub .inner .bottom address p span {
+            color: #ccc;
+            margin-left: 15px; }
+      #footer_sub .inner .bottom ul {
+        float: right;
+        text-align: right; }
+        #footer_sub .inner .bottom ul li a {
+          font: 500 14px/1.8 "Gothic A1";
+          color: #000;
+          position: relative; }
+        #footer_sub .inner .bottom ul li:nth-of-type(3) a::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #000;
+          position: absolute;
+          left: 0;
+          bottom: -2px; }
+    #footer_sub .inner > p {
+      font: 500 14px/1 "Gothic A1";
+      color: #ccc; }
+
+.department .visual {
+  background: lightslategrey; }
+
 /*# sourceMappingURL=style.css.map */
