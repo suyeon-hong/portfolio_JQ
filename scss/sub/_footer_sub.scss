@@ -12,6 +12,7 @@
 
             h1{
                 float: left;
+                font-size: 0;
 
                 a{
                     font: 34px/1 'Limelight';
@@ -47,7 +48,6 @@
                     font-size: 12px;
                     display: inline-block;
                     padding: 0 3px;
-                    box-sizing: border-box;
                     cursor: pointer;
                 }
                 p{
@@ -85,6 +85,94 @@
         >p{
             font: 500 14px/1 $font;
             color: #ccc;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    #footer_sub{
+        padding: 50px 30px;
+    
+        .inner{
+            width: 100%;
+
+            .bottom address{
+                width: 75%;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    #footer_sub{
+        padding: 50px 10px;
+    
+        .inner{
+            width: 100%;
+
+            .top{
+                text-align: center;
+
+                h1{
+                    float: none;
+                    margin-bottom: 20px;
+    
+                    a{
+                        font-size: 22px;
+                    }
+                }
+                .sns{
+                    float: none;
+                    display: inline-block;
+
+                    li{
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        a{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            } 
+            .bottom{
+                address{
+                    width: 100%;
+                    font-size: 12px;
+                    line-height: 1.4;
+                    margin-bottom: 30px;
+                    text-align: center;
+
+                    .btn{
+                        font-size: 11px;
+                    }
+                    p{
+                        margin-top: 10px;
+
+                        span{
+                            margin-left: 0;
+                            display: block;
+                        }
+                    }
+                }
+                ul{
+                    text-align: center;
+
+                    li{
+                        display: inline-block;
+                        padding: 0px 10px;
+
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            >p{
+                font-size: 12px;
+                text-align: center;
+            }
         }
     }
 }

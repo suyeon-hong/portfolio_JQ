@@ -23,7 +23,7 @@
             }
         }
         #gnb{
-            width: 60%;
+            width: 65%;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -35,8 +35,7 @@
                 a{
                     display: block;
                     padding: 15px 20px;
-                    box-sizing: border-box;
-                    font: 400 16px/1 $font;
+                    font: 500 16px/1 $font;
                     color: #000;
                     letter-spacing: 0.5px;
                 }
@@ -55,6 +54,34 @@
                     font-size: 18px;
                     color: #000;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    #header_sub{
+        padding: 0 30px; 
+
+        .inner{
+            width: 100%;
+
+            #gnb{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    #header_sub{
+        padding: 0 10px;
+
+        .inner{
+            height: 60px;
+
+            h1 a{
+                font-size: 24px;
             }
         }
     }

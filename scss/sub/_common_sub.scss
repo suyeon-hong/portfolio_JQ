@@ -30,3 +30,20 @@
 
 
 @import 'footer_sub';
+
+@media screen and (max-width: $tablet){
+    .content{
+        .inner{
+            width: 100%;
+            padding: 100px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .content{
+        .inner{
+            padding: 50px 10px;
+        }
+    }
+}
