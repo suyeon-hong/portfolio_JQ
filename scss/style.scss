@@ -3,6 +3,8 @@
 @import 'reset';
 
 $font: 'Gothic A1';
+$tablet : 1179px;
+$mobile : 539px;
 
 body{
     font-family: $font;
@@ -33,7 +35,7 @@ body{
             }
         }
         #gnb{
-            width: 60%;
+            width: 65%;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -45,8 +47,7 @@ body{
                 a{
                     display: block;
                     padding: 15px 20px;
-                    box-sizing: border-box;
-                    font: 400 16px/1 $font;
+                    font: 500 16px/1 $font;
                     color: #000;
                     letter-spacing: 0.5px;
                 }
@@ -133,6 +134,7 @@ body{
 
             h1{
                 float: left;
+                font-size: 0;
 
                 a{
                     font: 34px/1 'Limelight';
@@ -168,7 +170,6 @@ body{
                     font-size: 12px;
                     display: inline-block;
                     padding: 0 3px;
-                    box-sizing: border-box;
                     cursor: pointer;
                 }
                 p{
@@ -206,6 +207,156 @@ body{
         >p{
             font: 500 14px/1 $font;
             color: #ccc;
+        }
+    }
+}
+
+
+@media screen and (max-width: $tablet){
+    #header{
+        padding: 0 30px; 
+
+        .inner{
+            width: 100%;
+
+            #gnb{
+                display: none;
+            }
+        }
+    }
+    
+    #content{
+        padding: 50px 30px;
+    
+        .inner{
+            width: 100%;
+    
+            .wrap{
+                article{
+                    width: 49%;
+                    margin-right: 2%;
+                    margin-bottom: 20px;
+                    
+                    &:nth-of-type(even){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    #footer{
+        padding: 50px 30px;
+    
+        .inner{
+            width: 100%;
+
+            .bottom address{
+                width: 75%;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    #header{
+        padding: 0 10px;
+
+        .inner{
+            height: 60px;
+
+            h1 a{
+                font-size: 24px;
+            }
+        }
+    }
+
+    #visual{
+        height: 300px;
+    }
+
+    #content{
+        padding: 50px 10px;
+
+        .inner{
+            .wrap{
+                article{
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    #footer{
+        padding: 50px 10px;
+    
+        .inner{
+            width: 100%;
+
+            .top{
+                text-align: center;
+
+                h1{
+                    float: none;
+                    margin-bottom: 20px;
+    
+                    a{
+                        font-size: 22px;
+                    }
+                }
+                .sns{
+                    float: none;
+                    display: inline-block;
+
+                    li{
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        a{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            } 
+            .bottom{
+                address{
+                    width: 100%;
+                    font-size: 12px;
+                    line-height: 1.4;
+                    margin-bottom: 30px;
+                    text-align: center;
+
+                    .btn{
+                        font-size: 11px;
+                    }
+                    p{
+                        margin-top: 10px;
+
+                        span{
+                            margin-left: 0;
+                            display: block;
+                        }
+                    }
+                }
+                ul{
+                    text-align: center;
+
+                    li{
+                        display: inline-block;
+                        padding: 0px 10px;
+
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            >p{
+                font-size: 12px;
+                text-align: center;
+            }
         }
     }
 }

@@ -47,7 +47,7 @@ body {
         color: #000;
         letter-spacing: 1px; }
     #header .inner #gnb {
-      width: 60%;
+      width: 65%;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -57,8 +57,7 @@ body {
         #header .inner #gnb li a {
           display: block;
           padding: 15px 20px;
-          box-sizing: border-box;
-          font: 400 16px/1 "Gothic A1";
+          font: 500 16px/1 "Gothic A1";
           color: #000;
           letter-spacing: 0.5px; }
     #header .inner .util {
@@ -117,7 +116,8 @@ body {
     #footer .inner .top {
       margin-bottom: 30px; }
       #footer .inner .top h1 {
-        float: left; }
+        float: left;
+        font-size: 0; }
         #footer .inner .top h1 a {
           font: 34px/1 'Limelight';
           color: #000; }
@@ -142,7 +142,6 @@ body {
           font-size: 12px;
           display: inline-block;
           padding: 0 3px;
-          box-sizing: border-box;
           cursor: pointer; }
         #footer .inner .bottom address p {
           margin-top: 30px; }
@@ -169,6 +168,90 @@ body {
       font: 500 14px/1 "Gothic A1";
       color: #ccc; }
 
+@media screen and (max-width: 1179px) {
+  #header {
+    padding: 0 30px; }
+    #header .inner {
+      width: 100%; }
+      #header .inner #gnb {
+        display: none; }
+
+  #content {
+    padding: 50px 30px; }
+    #content .inner {
+      width: 100%; }
+      #content .inner .wrap article {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 20px; }
+        #content .inner .wrap article:nth-of-type(even) {
+          margin-right: 0; }
+
+  #footer {
+    padding: 50px 30px; }
+    #footer .inner {
+      width: 100%; }
+      #footer .inner .bottom address {
+        width: 75%;
+        line-height: 1.6; } }
+@media screen and (max-width: 539px) {
+  #header {
+    padding: 0 10px; }
+    #header .inner {
+      height: 60px; }
+      #header .inner h1 a {
+        font-size: 24px; }
+
+  #visual {
+    height: 300px; }
+
+  #content {
+    padding: 50px 10px; }
+    #content .inner .wrap article {
+      width: 100%;
+      margin-right: 0; }
+
+  #footer {
+    padding: 50px 10px; }
+    #footer .inner {
+      width: 100%; }
+      #footer .inner .top {
+        text-align: center; }
+        #footer .inner .top h1 {
+          float: none;
+          margin-bottom: 20px; }
+          #footer .inner .top h1 a {
+            font-size: 22px; }
+        #footer .inner .top .sns {
+          float: none;
+          display: inline-block; }
+          #footer .inner .top .sns li:first-child {
+            margin-left: 0; }
+          #footer .inner .top .sns li a {
+            font-size: 18px; }
+      #footer .inner .bottom address {
+        width: 100%;
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+        text-align: center; }
+        #footer .inner .bottom address .btn {
+          font-size: 11px; }
+        #footer .inner .bottom address p {
+          margin-top: 10px; }
+          #footer .inner .bottom address p span {
+            margin-left: 0;
+            display: block; }
+      #footer .inner .bottom ul {
+        text-align: center; }
+        #footer .inner .bottom ul li {
+          display: inline-block;
+          padding: 0px 10px; }
+          #footer .inner .bottom ul li a {
+            font-size: 12px; }
+      #footer .inner > p {
+        font-size: 12px;
+        text-align: center; } }
 #header_sub {
   width: 100%;
   background: #fff;
