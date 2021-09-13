@@ -84,7 +84,7 @@ body{
                         position: absolute;
                         top: 7px;
                         left: 0;
-                        transition: 1s;
+                        transition: .6s;
                     }
                     &::before{
                         content: '';
@@ -95,7 +95,7 @@ body{
                         position: absolute;
                         top: 0;
                         left: 0;
-                        transition: 1s;
+                        transition: .6s;
                     }
                     &::after{
                         content: '';
@@ -106,7 +106,7 @@ body{
                         position: absolute;
                         bottom: 0;
                         left: 0;
-                        transition: 1s;
+                        transition: .6s;
                     }
                     &.on{
                         span{
@@ -137,20 +137,20 @@ body{
         top: 80px;
         left: -100%;
         transition: 1s;
+        opacity: 0;
 
-        ul{
-            li{
-                padding:50px;
-                border-bottom: 1px solid #e8e8e8;
+        li{
+            padding:50px;
+            border-bottom: 1px solid #e8e8e8;
 
-                a{
-                    font: 600 18px/1 $font;
-                    color: #000;
-                }
+            a{
+                font: 600 18px/1 $font;
+                color: #000;
             }
         }
         &.on{
             left: 0;
+            opacity: 1;
         }
     }
 }

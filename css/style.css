@@ -87,7 +87,7 @@ body {
             position: absolute;
             top: 7px;
             left: 0;
-            transition: 1s; }
+            transition: .6s; }
           #header .inner .util li.btnMo::before {
             content: '';
             display: block;
@@ -97,7 +97,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            transition: 1s; }
+            transition: .6s; }
           #header .inner .util li.btnMo::after {
             content: '';
             display: block;
@@ -107,7 +107,7 @@ body {
             position: absolute;
             bottom: 0;
             left: 0;
-            transition: 1s; }
+            transition: .6s; }
           #header .inner .util li.btnMo.on span {
             left: 100%;
             opacity: 0; }
@@ -127,15 +127,17 @@ body {
     position: fixed;
     top: 80px;
     left: -100%;
-    transition: 1s; }
-    #header .gnbMo ul li {
+    transition: 1s;
+    opacity: 0; }
+    #header .gnbMo li {
       padding: 50px;
       border-bottom: 1px solid #e8e8e8; }
-      #header .gnbMo ul li a {
+      #header .gnbMo li a {
         font: 600 18px/1 "Gothic A1";
         color: #000; }
     #header .gnbMo.on {
-      left: 0; }
+      left: 0;
+      opacity: 1; }
 
 #visual {
   width: 100%;
