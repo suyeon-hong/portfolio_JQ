@@ -127,7 +127,7 @@ body {
     position: fixed;
     top: 80px;
     left: -100%;
-    transition: 1s;
+    transition: left 1s;
     opacity: 0; }
     #header .gnbMo li {
       padding: 50px;
@@ -269,6 +269,9 @@ body {
       height: 60px; }
       #header .inner h1 a {
         font-size: 24px; }
+    #header .gnbMo {
+      height: calc(100vh - 60px);
+      top: 60px; }
 
   #visual {
     height: 300px; }

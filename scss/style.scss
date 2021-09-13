@@ -136,7 +136,7 @@ body{
         position: fixed;
         top: 80px;
         left: -100%;
-        transition: 1s;
+        transition: left 1s;
         opacity: 0;
 
         li{
@@ -353,6 +353,10 @@ body{
             h1 a{
                 font-size: 24px;
             }
+        }
+        .gnbMo{
+            height: calc(100vh - 60px);
+            top: 60px;
         }
     }
 
