@@ -9,19 +9,20 @@
             .wrap{
                 article{
                     float: left;
-                    width: 580px;
-                    height: 400px;
+                    width: 380px;
+                    height: 300px;
                     margin-right: 20px;
                     margin-bottom: 30px;
                     position: relative;
 
-                    &:nth-of-type(even){
+                    &:nth-of-type(3n){
                         margin-right: 0;
                     }
                     .pic{
                         width: 60%;
                         height: 100%;
                         background: #bbb;
+                        transition: .6s;
 
                         img{
                             width: 100%;
@@ -29,19 +30,21 @@
                             object-fit: cover;
                             opacity: 0.6;
                             filter: saturate(20%);
+                            transition: .6s;
                         }
                     }
                     .txt{
                         position: absolute;
                         top: 50%;
-                        left: 50%;
+                        left: 45%;
                         transform: translateY(-50%);
                         transition: .6s;
                         padding: 30px;
                         width: 40%;
+                        transition: .6s;
 
                         h3{
-                            font: 400 30px/1.2 $font;
+                            font: 400 24px/1.2 $font;
                             color: #000;
                             letter-spacing: -3px;
                             margin-bottom: 50px;
@@ -50,7 +53,7 @@
                             &::after{
                                 content:'';
                                 display: block;
-                                width: 50px;
+                                width: 40px;
                                 height: 2px;
                                 background: #667ea8;
                                 position: absolute;
@@ -59,7 +62,7 @@
                             }
                         }
                         p{
-                            font: 400 18px/1.2 $font;
+                            font: 400 14px/1.2 $font;
                             color: #555;
                             margin-bottom: 20px;
                         }
@@ -99,7 +102,11 @@
                     }
                     &:hover{
                         .pic{
-                            box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
+                            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+                            img{
+                                filter: saturate(80%);
+                            }
                         }
                         .txt{
                             background: #fff;
