@@ -207,7 +207,7 @@ body{
 #footer{
     width: 100%;
     padding: 150px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 2px solid #222;
 
     .inner{
         width: 1180px;
@@ -453,3 +453,4 @@ body{
 // sub
 @import 'sub/common_sub';
 @import 'sub/department';
+@import 'sub/community';
