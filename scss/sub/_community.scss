@@ -1,4 +1,41 @@
 .community{
+    .membership{
+        width: 100%;
+        padding: 100px 0;
+
+        h1{
+            font: 600 20px/1 $font;
+            color: #000;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .wrap{
+            width: 90%;
+            margin: 0 auto;
+
+            article{
+                width: calc((100% - 80px) / 5);
+                float: left;
+                margin-right: 20px;
+
+                .pic{
+                    width: 100%;
+                    height: 250px;
+                    background: gray;
+                    margin-bottom: 30px;
+
+                    img{
+                        width: 100%;height: 100%;object-fit: cover;
+                    }
+                }
+                h2{
+                    font: 400 18px/1 $font;
+                    color: #000;
+                    text-align: center;
+                }
+            }
+        }
+    }
     .inner{
         position: relative;
 
@@ -10,7 +47,7 @@
                 height: 80px;
                 background: #fff;
                 position: absolute;
-                top: -80px;
+                top: -628px;
                 left: 0;
 
                 &:nth-of-type(2){
@@ -50,17 +87,180 @@
             }
             dd{
                 width: 100%;
-                height: 500px;
-                padding: 100px 0;
-                text-align: center;
                 display: none;
 
-                a{
-                    font: 16px/1 $font;
-                    color: #777;
+                h2{
+                    margin-bottom: 50px;
+                    text-align: center;
+
+                    a{
+                        font: 500 24px/1 $font;
+                        color: #000;
+                    }
                 }
                 &#notice{
                     display: block;
+
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+    
+                        thead{
+                            tr{
+                                border-top: 3px solid #000;
+    
+                                th{
+                                    padding: 15px 0;
+                                    text-align: center;
+                                    font: 100 14px/1 $font;
+                                    color: #888;
+        
+                                    &:nth-of-type(1){
+                                        width: 8%;
+                                    }
+                                    &:nth-of-type(3){
+                                        width: 15%;
+                                    }
+                                    &:nth-of-type(4){
+                                        width: 10%;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        tbody{
+                            border-bottom: 1px solid #000;
+    
+                            tr{
+                                border-top: 1px solid #c9c9c9;
+    
+                                td{
+                                    padding: 10px 15px;
+                                    text-align: center;
+                                    font: 400 14px/1 $font;
+                                    color: #555;
+    
+                                    &:nth-of-type(1){
+                                        span{
+                                            display: block;
+                                            width: 100%;
+                                            height: 25px;
+                                            background: #666;
+                                            font: 400 12px/25px $font;
+                                            color: #fff;
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        text-align: left;
+    
+                                        a{
+                                            color: #555;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#faq{
+                    ul{
+                        border-top: 3px solid #000;
+                        border-bottom: 1px solid #000;
+
+                        li{
+                            border-bottom: 1px solid #c9c9c9;
+                            
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                            >div{
+                                padding: 20px;
+                                padding-left: 70px;
+                                position: relative;
+
+                                .icon{
+                                    display: block;
+                                    color: #606060;
+                                    position: absolute;
+                                    top: 30px;
+                                    left: 20px;
+                                    font: 600 24px/1 $font;
+                                    text-align: center;
+                                }
+                            }
+                            .question{
+                                cursor: pointer;
+
+                                p{
+                                    font: 600 16px/1 $font;
+                                    color: #333;
+                                    margin-bottom: 10px;
+                                }
+                                .subj{
+                                    font: 500 14px/1 $font;
+                                    color: #666;
+                                }
+                                .arrow{
+                                    display: block;
+                                    width: 16px;
+                                    height: 16px;
+                                    position: absolute;
+                                    top: 30px;
+                                    right: 20px;
+                                    transition: 0.6s;
+
+                                    &::before{
+                                        content:'';
+                                        display: block;
+                                        width: 12px;
+                                        height: 1px;
+                                        background: #000;
+                                        transform: rotate(-45deg);
+                                        transform-origin: left center;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content:'';
+                                        display: block;
+                                        width: 12px;
+                                        height: 1px;
+                                        background: #000;
+                                        transform: rotate(45deg);
+                                        transform-origin: right center;
+                                        position: absolute;
+                                        bottom: 0;
+                                        right: 0;
+                                    }
+                                }
+                                &.on{
+                                    .icon{
+                                        color: #111;
+                                    }
+                                    .arrow{
+                                        transform: rotate(-180deg);
+                                    }
+                                } 
+                            }
+                            .answer{
+                                display: none;
+                                background: #f7f7f7;
+
+                                .icon{
+                                    color: #008a00;
+                                }
+                                p{
+                                    width: 70%;
+                                    font: 500 14px/1.6 $font;
+                                    color: #333;
+                                }
+                                &.on{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

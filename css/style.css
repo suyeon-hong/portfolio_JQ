@@ -688,6 +688,34 @@ body {
         transform: rotate(-45deg);
         transition: 0.6s 0.6s; }
 
+.community .membership {
+  width: 100%;
+  padding: 100px 0; }
+  .community .membership h1 {
+    font: 600 20px/1 "Gothic A1";
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px; }
+  .community .membership .wrap {
+    width: 90%;
+    margin: 0 auto; }
+    .community .membership .wrap article {
+      width: calc((100% - 80px) / 5);
+      float: left;
+      margin-right: 20px; }
+      .community .membership .wrap article .pic {
+        width: 100%;
+        height: 250px;
+        background: gray;
+        margin-bottom: 30px; }
+        .community .membership .wrap article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .community .membership .wrap article h2 {
+        font: 400 18px/1 "Gothic A1";
+        color: #000;
+        text-align: center; }
 .community .inner {
   position: relative; }
   .community .inner dl {
@@ -697,7 +725,7 @@ body {
       height: 80px;
       background: #fff;
       position: absolute;
-      top: -80px;
+      top: -628px;
       left: 0; }
       .community .inner dl dt:nth-of-type(2) {
         left: 50%; }
@@ -726,14 +754,123 @@ body {
             background: #333; }
     .community .inner dl dd {
       width: 100%;
-      height: 500px;
-      padding: 100px 0;
-      text-align: center;
       display: none; }
-      .community .inner dl dd a {
-        font: 16px/1 "Gothic A1";
-        color: #777; }
+      .community .inner dl dd h2 {
+        margin-bottom: 50px;
+        text-align: center; }
+        .community .inner dl dd h2 a {
+          font: 500 24px/1 "Gothic A1";
+          color: #000; }
       .community .inner dl dd#notice {
         display: block; }
+        .community .inner dl dd#notice table {
+          width: 100%;
+          border-collapse: collapse; }
+          .community .inner dl dd#notice table thead tr {
+            border-top: 3px solid #000; }
+            .community .inner dl dd#notice table thead tr th {
+              padding: 15px 0;
+              text-align: center;
+              font: 100 14px/1 "Gothic A1";
+              color: #888; }
+              .community .inner dl dd#notice table thead tr th:nth-of-type(1) {
+                width: 8%; }
+              .community .inner dl dd#notice table thead tr th:nth-of-type(3) {
+                width: 15%; }
+              .community .inner dl dd#notice table thead tr th:nth-of-type(4) {
+                width: 10%; }
+          .community .inner dl dd#notice table tbody {
+            border-bottom: 1px solid #000; }
+            .community .inner dl dd#notice table tbody tr {
+              border-top: 1px solid #c9c9c9; }
+              .community .inner dl dd#notice table tbody tr td {
+                padding: 10px 15px;
+                text-align: center;
+                font: 400 14px/1 "Gothic A1";
+                color: #555; }
+                .community .inner dl dd#notice table tbody tr td:nth-of-type(1) span {
+                  display: block;
+                  width: 100%;
+                  height: 25px;
+                  background: #666;
+                  font: 400 12px/25px "Gothic A1";
+                  color: #fff; }
+                .community .inner dl dd#notice table tbody tr td:nth-of-type(2) {
+                  text-align: left; }
+                  .community .inner dl dd#notice table tbody tr td:nth-of-type(2) a {
+                    color: #555; }
+      .community .inner dl dd#faq ul {
+        border-top: 3px solid #000;
+        border-bottom: 1px solid #000; }
+        .community .inner dl dd#faq ul li {
+          border-bottom: 1px solid #c9c9c9; }
+          .community .inner dl dd#faq ul li:last-child {
+            border-bottom: none; }
+          .community .inner dl dd#faq ul li > div {
+            padding: 20px;
+            padding-left: 70px;
+            position: relative; }
+            .community .inner dl dd#faq ul li > div .icon {
+              display: block;
+              color: #606060;
+              position: absolute;
+              top: 30px;
+              left: 20px;
+              font: 600 24px/1 "Gothic A1";
+              text-align: center; }
+          .community .inner dl dd#faq ul li .question {
+            cursor: pointer; }
+            .community .inner dl dd#faq ul li .question p {
+              font: 600 16px/1 "Gothic A1";
+              color: #333;
+              margin-bottom: 10px; }
+            .community .inner dl dd#faq ul li .question .subj {
+              font: 500 14px/1 "Gothic A1";
+              color: #666; }
+            .community .inner dl dd#faq ul li .question .arrow {
+              display: block;
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              top: 30px;
+              right: 20px;
+              transition: 0.6s; }
+              .community .inner dl dd#faq ul li .question .arrow::before {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 1px;
+                background: #000;
+                transform: rotate(-45deg);
+                transform-origin: left center;
+                position: absolute;
+                bottom: 0;
+                left: 0; }
+              .community .inner dl dd#faq ul li .question .arrow::after {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 1px;
+                background: #000;
+                transform: rotate(45deg);
+                transform-origin: right center;
+                position: absolute;
+                bottom: 0;
+                right: 0; }
+            .community .inner dl dd#faq ul li .question.on .icon {
+              color: #111; }
+            .community .inner dl dd#faq ul li .question.on .arrow {
+              transform: rotate(-180deg); }
+          .community .inner dl dd#faq ul li .answer {
+            display: none;
+            background: #f7f7f7; }
+            .community .inner dl dd#faq ul li .answer .icon {
+              color: #008a00; }
+            .community .inner dl dd#faq ul li .answer p {
+              width: 70%;
+              font: 500 14px/1.6 "Gothic A1";
+              color: #333; }
+            .community .inner dl dd#faq ul li .answer.on {
+              display: block; }
 
 /*# sourceMappingURL=style.css.map */
