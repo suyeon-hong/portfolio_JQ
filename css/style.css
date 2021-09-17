@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500&family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Limelight&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -688,189 +688,250 @@ body {
         transform: rotate(-45deg);
         transition: 0.6s 0.6s; }
 
-.community .membership {
-  width: 100%;
-  padding: 100px 0; }
-  .community .membership h1 {
-    font: 600 20px/1 "Gothic A1";
-    color: #000;
-    text-align: center;
-    margin-bottom: 50px; }
-  .community .membership .wrap {
-    width: 90%;
-    margin: 0 auto; }
-    .community .membership .wrap article {
-      width: calc((100% - 80px) / 5);
-      float: left;
-      margin-right: 20px; }
-      .community .membership .wrap article .pic {
-        width: 100%;
-        height: 250px;
-        background: gray;
-        margin-bottom: 30px; }
-        .community .membership .wrap article .pic img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-      .community .membership .wrap article h2 {
-        font: 400 18px/1 "Gothic A1";
-        color: #000;
-        text-align: center; }
-.community .inner {
-  position: relative; }
-  .community .inner dl {
-    width: 100%; }
-    .community .inner dl dt {
-      width: 50%;
-      height: 80px;
-      background: #fff;
-      position: absolute;
-      top: -628px;
-      left: 0; }
-      .community .inner dl dt:nth-of-type(2) {
-        left: 50%; }
-        .community .inner dl dt:nth-of-type(2) a::after {
-          left: 0; }
-      .community .inner dl dt a {
+.community .inner h1 {
+  text-align: left;
+  font: 600 40px/1 "Gothic A1";
+  color: #000;
+  position: relative;
+  padding-bottom: 40px; }
+  .community .inner h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+.community .inner .tabmenu {
+  margin-bottom: 70px; }
+  .community .inner .tabmenu li {
+    float: left;
+    margin-right: 30px; }
+    .community .inner .tabmenu li a {
+      font: 600 24px/1 "Gothic A1";
+      color: #555;
+      position: relative; }
+      .community .inner .tabmenu li a::after {
+        content: '';
         display: block;
         width: 100%;
+        height: 3px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        opacity: 0; }
+      .community .inner .tabmenu li a.on {
+        color: #000; }
+        .community .inner .tabmenu li a.on::after {
+          opacity: 1; }
+.community .inner > div {
+  width: 100%;
+  display: none; }
+  .community .inner > div .pagination {
+    text-align: center; }
+    .community .inner > div .pagination > span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+      margin-right: 15px; }
+      .community .inner > div .pagination > span img {
+        width: 100%;
         height: 100%;
-        font: 600 18px/100px "Gothic A1";
-        color: #555;
+        object-fit: cover; }
+    .community .inner > div .pagination .numbers {
+      display: inline-block;
+      margin: 0 10px; }
+      .community .inner > div .pagination .numbers span a {
+        display: inline-block;
+        padding: 10px 13px;
+        color: #606060;
+        font: 600 16px/1 "Gothic A1"; }
+        .community .inner > div .pagination .numbers span a:hover {
+          text-decoration: underline; }
+      .community .inner > div .pagination .numbers span.on a {
+        background: #222;
+        color: #fff;
+        text-decoration: none;
+        cursor: text; }
+  .community .inner > div#faq {
+    display: block; }
+    .community .inner > div#faq h2 {
+      font: 600 22px/1 "Gothic A1";
+      color: #000;
+      margin-bottom: 20px; }
+    .community .inner > div#faq .search {
+      margin-bottom: 70px; }
+      .community .inner > div#faq .search form {
+        width: 100%;
+        background: #f7f7f7;
+        padding: 30px 0;
         text-align: center;
         position: relative; }
-        .community .inner dl dt a::after {
-          content: '';
+        .community .inner > div#faq .search form input {
+          width: 644px;
+          height: 66px;
+          border: 2px solid #000;
+          padding-left: 30px;
+          font: 600 20px/1 "Gothic A1";
+          color: #606060; }
+        .community .inner > div#faq .search form .btn {
           display: block;
-          width: 90%;
-          height: 2px;
-          background: #ddd;
+          text-indent: -9999px;
+          width: 30px;
+          height: 30px;
           position: absolute;
-          bottom: 0;
-          right: 0; }
-        .community .inner dl dt a.on {
-          color: #222; }
-          .community .inner dl dt a.on::after {
-            background: #333; }
-    .community .inner dl dd {
-      width: 100%;
-      display: none; }
-      .community .inner dl dd h2 {
-        margin-bottom: 50px;
-        text-align: center; }
-        .community .inner dl dd h2 a {
-          font: 500 24px/1 "Gothic A1";
-          color: #000; }
-      .community .inner dl dd#notice {
-        display: block; }
-        .community .inner dl dd#notice table {
+          top: 50%;
+          right: calc((100% - 644px) / 2 + 30px);
+          margin-top: -15px; }
+          .community .inner > div#faq .search form .btn::before {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 70%;
+            border-radius: 50%;
+            border: 2px solid #000;
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .community .inner > div#faq .search form .btn::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform-origin: right center;
+            transform: rotate(45deg); }
+    .community .inner > div#faq .tabs {
+      margin-bottom: 50px; }
+      .community .inner > div#faq .tabs li {
+        float: left;
+        width: calc(100% / 5);
+        height: 55px;
+        margin: 0 -1px -1px 0; }
+        .community .inner > div#faq .tabs li a {
+          display: block;
           width: 100%;
-          border-collapse: collapse; }
-          .community .inner dl dd#notice table thead tr {
-            border-top: 3px solid #000; }
-            .community .inner dl dd#notice table thead tr th {
-              padding: 15px 0;
-              text-align: center;
-              font: 100 14px/1 "Gothic A1";
-              color: #888; }
-              .community .inner dl dd#notice table thead tr th:nth-of-type(1) {
-                width: 8%; }
-              .community .inner dl dd#notice table thead tr th:nth-of-type(3) {
-                width: 15%; }
-              .community .inner dl dd#notice table thead tr th:nth-of-type(4) {
-                width: 10%; }
-          .community .inner dl dd#notice table tbody {
-            border-bottom: 1px solid #000; }
-            .community .inner dl dd#notice table tbody tr {
-              border-top: 1px solid #c9c9c9; }
-              .community .inner dl dd#notice table tbody tr td {
-                padding: 10px 15px;
-                text-align: center;
-                font: 400 14px/1 "Gothic A1";
-                color: #555; }
-                .community .inner dl dd#notice table tbody tr td:nth-of-type(1) span {
-                  display: block;
-                  width: 100%;
-                  height: 25px;
-                  background: #666;
-                  font: 400 12px/25px "Gothic A1";
-                  color: #fff; }
-                .community .inner dl dd#notice table tbody tr td:nth-of-type(2) {
-                  text-align: left; }
-                  .community .inner dl dd#notice table tbody tr td:nth-of-type(2) a {
-                    color: #555; }
-      .community .inner dl dd#faq ul {
-        border-top: 3px solid #000;
-        border-bottom: 1px solid #000; }
-        .community .inner dl dd#faq ul li {
-          border-bottom: 1px solid #c9c9c9; }
-          .community .inner dl dd#faq ul li:last-child {
-            border-bottom: none; }
-          .community .inner dl dd#faq ul li > div {
-            padding: 20px;
-            padding-left: 70px;
-            position: relative; }
-            .community .inner dl dd#faq ul li > div .icon {
+          height: 100%;
+          border: 1px solid #b0b0b0;
+          text-align: center;
+          font: 500 15px/55px "Gothic A1";
+          color: #606060; }
+          .community .inner > div#faq .tabs li a.on {
+            color: #000;
+            border: 3px solid #000; }
+    .community .inner > div#faq .qna {
+      border-top: 3px solid #000;
+      border-bottom: 1px solid #000;
+      margin-bottom: 100px; }
+      .community .inner > div#faq .qna li {
+        border-bottom: 1px solid #c9c9c9; }
+        .community .inner > div#faq .qna li:last-child {
+          border-bottom: none; }
+        .community .inner > div#faq .qna li > div {
+          padding: 20px;
+          padding-left: 70px;
+          position: relative; }
+          .community .inner > div#faq .qna li > div .icon {
+            display: block;
+            color: #606060;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            font: 600 24px/1 "Gothic A1";
+            text-align: center; }
+        .community .inner > div#faq .qna li .question {
+          cursor: pointer; }
+          .community .inner > div#faq .qna li .question p {
+            font: 600 16px/1 "Gothic A1";
+            color: #333;
+            margin-bottom: 10px; }
+          .community .inner > div#faq .qna li .question .subj {
+            font: 500 14px/1 "Gothic A1";
+            color: #666; }
+          .community .inner > div#faq .qna li .question .arrow {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            transition: 0.6s; }
+            .community .inner > div#faq .qna li .question .arrow::before {
+              content: '';
               display: block;
-              color: #606060;
+              width: 12px;
+              height: 1px;
+              background: #000;
+              transform: rotate(-45deg);
+              transform-origin: left center;
               position: absolute;
-              top: 30px;
-              left: 20px;
-              font: 600 24px/1 "Gothic A1";
-              text-align: center; }
-          .community .inner dl dd#faq ul li .question {
-            cursor: pointer; }
-            .community .inner dl dd#faq ul li .question p {
-              font: 600 16px/1 "Gothic A1";
-              color: #333;
-              margin-bottom: 10px; }
-            .community .inner dl dd#faq ul li .question .subj {
-              font: 500 14px/1 "Gothic A1";
-              color: #666; }
-            .community .inner dl dd#faq ul li .question .arrow {
+              bottom: 0;
+              left: 0; }
+            .community .inner > div#faq .qna li .question .arrow::after {
+              content: '';
               display: block;
-              width: 16px;
-              height: 16px;
+              width: 12px;
+              height: 1px;
+              background: #000;
+              transform: rotate(45deg);
+              transform-origin: right center;
               position: absolute;
-              top: 30px;
-              right: 20px;
-              transition: 0.6s; }
-              .community .inner dl dd#faq ul li .question .arrow::before {
-                content: '';
-                display: block;
-                width: 12px;
-                height: 1px;
-                background: #000;
-                transform: rotate(-45deg);
-                transform-origin: left center;
-                position: absolute;
-                bottom: 0;
-                left: 0; }
-              .community .inner dl dd#faq ul li .question .arrow::after {
-                content: '';
-                display: block;
-                width: 12px;
-                height: 1px;
-                background: #000;
-                transform: rotate(45deg);
-                transform-origin: right center;
-                position: absolute;
-                bottom: 0;
-                right: 0; }
-            .community .inner dl dd#faq ul li .question.on .icon {
-              color: #111; }
-            .community .inner dl dd#faq ul li .question.on .arrow {
-              transform: rotate(-180deg); }
-          .community .inner dl dd#faq ul li .answer {
-            display: none;
-            background: #f7f7f7; }
-            .community .inner dl dd#faq ul li .answer .icon {
-              color: #008a00; }
-            .community .inner dl dd#faq ul li .answer p {
-              width: 70%;
-              font: 500 14px/1.6 "Gothic A1";
-              color: #333; }
-            .community .inner dl dd#faq ul li .answer.on {
-              display: block; }
+              bottom: 0;
+              right: 0; }
+          .community .inner > div#faq .qna li .question.on .icon {
+            color: #111; }
+          .community .inner > div#faq .qna li .question.on .arrow {
+            transform: rotate(-180deg); }
+        .community .inner > div#faq .qna li .answer {
+          display: none;
+          background: #f7f7f7; }
+          .community .inner > div#faq .qna li .answer .icon {
+            color: #008a00; }
+          .community .inner > div#faq .qna li .answer p {
+            width: 70%;
+            font: 500 14px/1.6 "Gothic A1";
+            color: #333; }
+          .community .inner > div#faq .qna li .answer.on {
+            display: block; }
+  .community .inner > div#notice table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px; }
+    .community .inner > div#notice table thead tr {
+      border-top: 2px solid #000;
+      background: #efefef; }
+      .community .inner > div#notice table thead tr th {
+        padding: 16px 0;
+        text-align: center;
+        font: 600 15px/1 "Gothic A1";
+        color: #222; }
+        .community .inner > div#notice table thead tr th:nth-of-type(1) {
+          width: 10%; }
+        .community .inner > div#notice table thead tr th:nth-of-type(3) {
+          width: 15%; }
+    .community .inner > div#notice table tbody tr {
+      border-bottom: 1px solid #c9c9c9; }
+      .community .inner > div#notice table tbody tr td {
+        padding: 25px 15px;
+        text-align: center;
+        font: 500 14px/1 "Gothic A1";
+        color: #222; }
+        .community .inner > div#notice table tbody tr td:nth-of-type(1) span {
+          display: block;
+          width: 100%;
+          height: 25px;
+          background: #666;
+          font: 400 12px/25px "Gothic A1";
+          color: #fff; }
+        .community .inner > div#notice table tbody tr td:nth-of-type(2) {
+          text-align: left; }
+          .community .inner > div#notice table tbody tr td:nth-of-type(2) a {
+            color: #555; }
 
 /*# sourceMappingURL=style.css.map */

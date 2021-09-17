@@ -32,8 +32,8 @@ for (let i=0; i<btns.length; i++){
 */
 
 // community tab메뉴 jQuery 버전
-const $btns = $(".community .inner dl dt a");
-const $boxs = $(".community .inner dl dd");
+const $btns = $(".community .inner .tabmenu li a");
+const $boxs = $(".community .inner>div");
 
 $btns.on("click focus", function(e){
     e.preventDefault();
@@ -47,4 +47,25 @@ $btns.on("click focus", function(e){
 
     $boxs.hide();
     $(target).show();
+});
+
+// community QnAbox 토글 설정
+const $qbox = $("#faq .qna .question");
+const $abox = $("#faq .qna .answer");
+
+$qbox.on("click", function(e){
+    e.preventDefault();
+
+    let target = $(this).parent().index();
+    let isOn = $(this).hasClass("on");
+    
+    if (isOn) {
+        $qbox.removeClass("on");
+        $abox.removeClass("on");
+    } else{
+        $qbox.removeClass("on");
+        $abox.removeClass("on");
+        $(this).addClass("on");
+        $abox.eq(target).addClass("on");
+    }
 });
