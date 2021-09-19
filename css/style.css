@@ -861,11 +861,11 @@ body {
       background: #777;
       padding: 300px 50px 50px; }
       .department .bottom .inner .blog .wrap article:nth-of-type(1) {
-        background: url(../../img/article1.jpg) no-repeat center/cover; }
+        background: url(../img/article1.jpg) no-repeat center/cover; }
       .department .bottom .inner .blog .wrap article:nth-of-type(2) {
-        background: url(../../img/article2.jpg) no-repeat center/cover; }
+        background: url(../img/article2.jpg) no-repeat center/cover; }
       .department .bottom .inner .blog .wrap article:nth-of-type(3) {
-        background: url(../../img/article3.jpg) no-repeat center/cover; }
+        background: url(../img/article3.jpg) no-repeat center/cover; }
       .department .bottom .inner .blog .wrap article h3 {
         font: 400 20px/1.4 "Gothic A1";
         color: #fff;

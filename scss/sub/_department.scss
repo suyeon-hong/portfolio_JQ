@@ -186,7 +186,7 @@
 
                         @for $i from 1 through 3{
                             &:nth-of-type(#{$i}){
-                                background: url(../../img/article#{$i}.jpg) no-repeat center/cover;
+                                background: url(../img/article#{$i}.jpg) no-repeat center/cover;
                             }
                         }
                         h3{
