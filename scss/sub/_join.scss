@@ -1,0 +1,241 @@
+.join{
+    .visual{}
+    .inner{
+        h1, h2{
+            font: 600 30px/1 $font;
+            position: relative;
+            margin-bottom: 100px;
+
+            &::after{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+            }
+        }
+        form{
+            fieldset{
+                border: none;
+
+                table{
+                    width: 100%;
+                    border-top: 3px solid #aaa;
+                    margin-bottom: 100px;
+                    border-collapse: collapse;
+
+                    caption{
+                        font: 600 18px/1 $font;
+                        color: #222;
+                        margin-bottom: 20px;
+                        text-align: left;
+                    }
+                    tr{
+                        border-bottom: 2px solid #ddd;
+
+                        th{
+                            width: 250px;
+                            text-align: left;
+                            font: 500 16px/1 $font;
+                            color: #444;
+                            padding-left: 50px;
+                            background: #f3f3f3;
+                        }
+                        td{
+                            padding: 15px 0 15px 20px;
+                            font: 500 14px/1 $font;
+                            color: #777;
+                            
+                            input[type="text"], select{
+                                width: 500px;
+                                height: 40px;
+                                font: 500 18px/40px $font;
+                                color: #777;
+                                padding: 10px 20px;
+                                border: 2px solid #ddd;
+                            }
+                            select{
+                                font-size: 14px;
+                            }
+                            input[type="button"]{
+                                width: 120px;
+                                height: 40px;
+                                font: 300 14px/40px $font;
+                                color: #555;
+                                background: #eee;
+                                border: 1px solid #ddd;
+                                cursor: pointer;
+                            }
+                            label{
+                                margin-right: 10px;
+                            }
+                            input:focus, select:focus{
+                                outline: none;
+                            }
+                        }
+                    }
+                    &:nth-of-type(1){
+                        tr{
+                            &:nth-of-type(1){
+                                input{
+                                    margin-right: 10px;
+                                }
+                                
+                            }
+                            &:nth-of-type(2){
+                                td{
+                                    input{
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(8){
+                                td{
+                                    input{
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+        
+                                        &:nth-of-type(1){
+                                            width: 200px;
+                                        }
+                                        &:nth-of-type(4){
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-of-type(9){
+                                td{
+                                    font-size: 14px;
+                                    color: #777;
+    
+                                    select{
+                                        width: 100px;
+                                        margin-right: 5px;
+                                    }
+                                    input{
+                                        width: 150px;
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(10), &:nth-of-type(12){
+                                td{
+                                    label{
+                                        margin-right: 10px;
+                                    }
+                                    p{
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(11){
+                                td{
+                                    font-size: 14px;
+                                    color: #777;
+
+                                    input{
+                                        width: 200px;
+                                        margin-right: 5px;
+
+                                        &:nth-of-type(2){
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                    select{
+                                        width: 180px;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        tr{
+                            &:nth-of-type(2){
+                                td{
+                                    input[type="text"]{
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                td{
+                                    input{
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+    
+                                        &:nth-of-type(3){
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                div{
+                    margin-bottom: 100px;
+
+                    h2{
+                        font-size: 18px;
+                        color: #222;
+                        margin-bottom: 50px;
+
+                        &::after{
+                            background: #222;
+                        }
+                    }
+                    textarea{
+                        width: 100%;
+                        height: 300px;
+                        padding: 30px;
+                        resize: none;
+                        border: 1px solid #aaa;
+                        color: #777;
+                        margin-bottom: 20px;
+
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    span, label{
+                        font: 500 16px/1 $font;
+                        color: #444;
+                        margin-bottom: 10px;
+                    }
+                    label{
+                        margin-left: 10px;
+                    }
+                }
+                .btns{
+                    text-align: center;
+                    font-size: 0;
+
+                    input{
+                        width: 180px;
+                        height: 50px;
+                        font: 500 18px/50px $font;
+                        color: #333;
+                        border-radius: 0;
+                        border: 1px solid #444;
+                        background: #fff;
+                        cursor: pointer;
+
+                        &:first-child{
+                            margin-right: 10px;
+                        }
+                        &:last-child{
+                            background: #444;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
