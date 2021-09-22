@@ -59,7 +59,7 @@
                         <tr>
                             <th scope="row">아이디</th>
                             <td>
-                                <input type="text" name="userid" id="userid">
+                                <input type="text" name="userid" id="userid" maxlength="16">
                                 <input type="button" value="아이디 중복확인">
                                 <span>(영문소문자/숫자, 4~16자)</span>
                             </td>
@@ -67,7 +67,7 @@
                         <tr>
                             <th scope="row">비밀번호</th>
                             <td>
-                                <input type="text" name="userpw" id="userpw">
+                                <input type="text" name="userpw" id="userpw" maxlength="16">
                                 <p>영문 대소문자, 숫자, 또는 특수문자 중 2가지 이상 조합하여 8~16자로 입력해 주세요.</p>
                             </td>
                         </tr>
@@ -122,8 +122,8 @@
                                     <option value="011">011</option>
                                     <option value="017">017</option>
                                 </select> -
-                                <input type="text" name="phone1" id="phone1"> -
-                                <input type="text" name="phone2" id="phone2">
+                                <input type="text" name="phone1" id="phone1" maxlength="4"> -
+                                <input type="text" name="phone2" id="phone2" maxlength="4">
                             </td>
                         </tr>
                         <tr>
@@ -186,9 +186,9 @@
                         <tr>
                             <th scope="row">생년월일</th>
                             <td>
-                                <input type="text" name="birthY" id="birthY">년
-                                <input type="text" name="birthM" id="birthM">월
-                                <input type="text" name="birthD" id="birthD">일<br>
+                                <input type="text" name="birthY" id="birthY" maxlength="4">년
+                                <input type="text" name="birthM" id="birthM" maxlength="2">월
+                                <input type="text" name="birthD" id="birthD" maxlength="2">일
                                 <label for="solar">
                                     <input type="radio" name="birth" id="solar">
                                     양력
@@ -202,9 +202,9 @@
                         <tr>
                             <th scope="row">결혼기념일</th>
                             <td>
-                                <input type="text" name="weddingY" id="weddingY">년
-                                <input type="text" name="weddingM" id="weddingM">월
-                                <input type="text" name="weddingD" id="weddingD">일
+                                <input type="text" name="weddingY" id="weddingY" maxlength="4">년
+                                <input type="text" name="weddingM" id="weddingM" maxlength="2">월
+                                <input type="text" name="weddingD" id="weddingD" maxlength="2">일
                             </td>
                         </tr>
                         <tr>
