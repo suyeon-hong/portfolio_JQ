@@ -8,6 +8,57 @@ btnMo.addEventListener("click", e=>{
     gnbMo.classList.toggle("on");
 });
 
+// index visual slide
+const $visual = $("#visual");
+const $wrap = $visual.find(".wrap");
+const $imgs = $visual.find("img");
+const $btnLeft = $visual.find(".left");
+const $btnRight = $visual.find(".right");
+let timerR;
+let timerL;
+let activeL;
+let activeR;
+
+$imgs.last().prependTo($wrap);
+
+$btnLeft.on("click", function(e){
+    e.preventDefault();
+
+    if (activeL) return;
+    activeL = true;
+    clearInterval(timerR);
+    activeR = false;
+    timerL = setInterval(function(){
+        movingLeft();
+    }, 3000);
+});
+
+$btnRight.on("click", function(e){
+    e.preventDefault();
+
+    if (activeR) return;
+    activeR = true;
+    clearInterval(timerL);
+    activeL = false;
+    timerR = setInterval(function(){
+        movingRight();
+    }, 3000);
+});
+
+function movingRight(){
+    $wrap.animate({marginLeft: "-200%"}, 1000, function(){
+        $wrap.css({marginLeft: "-100%"});
+        $wrap.find("img").first().appendTo($wrap);
+    });
+}
+
+function movingLeft(){
+    $wrap.animate({marginLeft: 0}, 1000, function(){
+        $wrap.css({marginLeft: "-100%"});
+        $wrap.find("img").last().prependTo($wrap);
+    });
+}
+
 /* community tab메뉴 자바스크립트 버전
 const btns = document.querySelectorAll(".community dl dt a");
 const boxs = document.querySelectorAll(".community dl dd");
