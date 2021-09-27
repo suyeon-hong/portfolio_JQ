@@ -188,56 +188,80 @@ body {
   overflow: hidden;
   position: relative; }
   #visual .wrap {
-    width: calc(100% * 3);
+    width: calc((100% / 7) * 8);
     height: 100%;
-    margin-left: -100%;
-    background-color: #fff; }
+    background-color: #fff;
+    transition: 1s; }
     #visual .wrap img {
-      width: calc(100% / 3);
+      width: calc((100% / 8) - 20px);
       height: 100%;
+      margin-right: 20px;
       float: left;
       object-fit: cover;
-      opacity: 0.8; }
+      opacity: 0.8;
+      filter: saturate(10%);
+      transition: .6s; }
+      #visual .wrap img.on {
+        width: calc((100% / 8) + 20px);
+        filter: saturate(120%); }
   #visual .left {
     position: absolute;
     top: 50%;
-    left: 100px; }
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: #222; }
     #visual .left::before {
       content: '';
       display: block;
+      position: absolute;
+      top: 50%;
+      left: 25px;
       width: 50px;
       height: 1px;
       background: #fff;
       transform-origin: left center;
-      transform: rotate(-45deg); }
+      transform: rotate(-35deg); }
     #visual .left::after {
       content: '';
       display: block;
+      position: absolute;
+      top: 50%;
+      left: 25px;
       width: 50px;
       height: 1px;
       background: #fff;
       transform-origin: left center;
-      transform: rotate(45deg); }
+      transform: rotate(35deg); }
   #visual .right {
     position: absolute;
     top: 50%;
-    right: 100px; }
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: #222; }
     #visual .right::before {
       content: '';
       display: block;
+      position: absolute;
+      top: 50%;
+      right: 25px;
       width: 50px;
       height: 1px;
       background: #fff;
       transform-origin: right center;
-      transform: rotate(45deg); }
+      transform: rotate(35deg); }
     #visual .right::after {
       content: '';
       display: block;
+      position: absolute;
+      top: 50%;
+      right: 25px;
       width: 50px;
       height: 1px;
       background: #fff;
       transform-origin: right center;
-      transform: rotate(-45deg); }
+      transform: rotate(-35deg); }
 
 #content {
   width: 100%;

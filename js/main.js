@@ -14,75 +14,82 @@ const $wrap = $visual.find(".wrap");
 const $imgs = $visual.find("img");
 const $btnLeft = $visual.find(".left");
 const $btnRight = $visual.find(".right");
-let timerR;
-let timerL;
-let activeL;
-let activeR;
+let index = 0;
+let len = $imgs.length - 1;
+let timer;
 
 $imgs.last().prependTo($wrap);
+timer = setInterval(function(){
+    movingRight();
+}, 2500);
 
 $btnLeft.on("click", function(e){
     e.preventDefault();
 
-    if (activeL) return;
-    activeL = true;
-    clearInterval(timerR);
-    activeR = false;
-    timerL = setInterval(function(){
-        movingLeft();
-    }, 3000);
+    clearInterval(timer);
+    movingLeft();
 });
 
 $btnRight.on("click", function(e){
     e.preventDefault();
 
-    if (activeR) return;
-    activeR = true;
-    clearInterval(timerL);
-    activeL = false;
-    timerR = setInterval(function(){
-        movingRight();
-    }, 3000);
+    clearInterval(timer);
+    movingRight();
 });
 
 function movingRight(){
-    $wrap.animate({marginLeft: "-200%"}, 1000, function(){
-        $wrap.css({marginLeft: "-100%"});
-        $wrap.find("img").first().appendTo($wrap);
-    });
+    let target = $wrap.find(".on").index();
+
+    if (target > 4){
+        $wrap.animate({marginLeft: "calc(-100% / 7)"}, 0, function(){
+            $wrap.css({marginLeft: 0});
+            $wrap.find("img").first().appendTo($wrap);
+            $imgs.removeClass("on");
+            if (index == len){
+                index = 0;
+            }else{
+                index++;
+            }
+            $imgs.eq(index).addClass("on");
+        });
+    } else{
+        $imgs.removeClass("on");
+        if (index == len){
+            index = 0;
+        }else{
+            index++;
+        }
+        $imgs.eq(index).addClass("on");
+    }
 }
 
 function movingLeft(){
-    $wrap.animate({marginLeft: 0}, 1000, function(){
-        $wrap.css({marginLeft: "-100%"});
-        $wrap.find("img").last().prependTo($wrap);
-    });
+    let target = $wrap.find(".on").index();
+
+    if (target < 2){
+        $wrap.animate({marginLeft: "calc(100% / 7)"}, 0, function(){
+            $wrap.css({marginLeft: 0});
+            $wrap.find("img").last().prependTo($wrap);
+            $imgs.removeClass("on");
+            if (index == 0){
+                index = len;
+            }else{
+                index--;
+            }
+            $imgs.eq(index).addClass("on");
+        });
+    } else{
+        $imgs.removeClass("on");
+            if (index == 0){
+                index = len;
+            }else{
+                index--;
+            }
+            $imgs.eq(index).addClass("on");
+    }
 }
 
-/* community tab메뉴 자바스크립트 버전
-const btns = document.querySelectorAll(".community dl dt a");
-const boxs = document.querySelectorAll(".community dl dd");
-
-for (let i=0; i<btns.length; i++){
-    btns[i].addEventListener("click", e=>{
-        e.preventDefault();
-
-        let isOn = e.currentTarget.classList.contains("on");
-        if (isOn) return;
-
-        for (let el of btns){
-            el.classList.remove("on");
-        }
-        e.currentTarget.classList.add("on");
-        for (let el of boxs){
-            el.style.display = "none";
-        }
-        boxs[i].style.display = "block";
-    })
-}
-*/
-
-// community tab메뉴 jQuery 버전
+// community tab메뉴
 const $btns = $(".community .inner .tabmenu li a");
 const $boxs = $(".community .inner>div");
 
