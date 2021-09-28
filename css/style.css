@@ -618,7 +618,7 @@ body {
   width: 100%; }
   .content .visual {
     width: 100%;
-    height: 300px;
+    height: 500px;
     background: lightgray; }
   .content .inner {
     width: 1180px;
@@ -749,7 +749,8 @@ body {
   .content .inner {
     padding: 50px 10px; } }
 .department .visual {
-  background: #888; }
+  background: #888 url(../../img/department.jpg) no-repeat center/cover;
+  opacity: 0.9; }
 .department .inner h1 {
   font: 500 16px/1 "Gothic A1";
   color: #666;
@@ -774,51 +775,62 @@ body {
 .department .top {
   width: 100%;
   background: #e7e7e7; }
-  .department .top .inner .service {
-    margin-bottom: 100px; }
-    .department .top .inner .service .wrap article {
-      width: 380px;
-      float: left;
-      margin-right: 20px;
-      text-align: center;
+  .department .top .inner {
+    padding-top: 350px;
+    position: relative; }
+    .department .top .inner .service {
+      position: absolute;
+      top: -350px;
+      left: 0; }
+      .department .top .inner .service h1 {
+        color: #ddd; }
+        .department .top .inner .service h1::before {
+          background: #ddd; }
+      .department .top .inner .service h2 {
+        color: #eee; }
+      .department .top .inner .service .wrap article {
+        width: 380px;
+        float: left;
+        margin-right: 20px;
+        text-align: center;
+        background: #fff;
+        padding: 100px 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); }
+        .department .top .inner .service .wrap article i {
+          font-size: 80px;
+          margin-bottom: 70px;
+          color: #222; }
+        .department .top .inner .service .wrap article p {
+          font: 500 22px/1 "Gothic A1";
+          color: #222;
+          margin-bottom: 70px; }
+        .department .top .inner .service .wrap article .btn {
+          display: inline-block;
+          width: 200px;
+          height: 50px;
+          font: 400 18px/50px "Gothic A1";
+          color: #444;
+          border: 1px solid #888; }
+    .department .top .inner .awards ul li {
+      width: 100%;
+      padding: 30px;
       background: #fff;
-      padding: 100px 0;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); }
-      .department .top .inner .service .wrap article i {
-        font-size: 80px;
-        margin-bottom: 70px;
-        color: #222; }
-      .department .top .inner .service .wrap article p {
-        font: 500 22px/1 "Gothic A1";
-        color: #222;
-        margin-bottom: 70px; }
-      .department .top .inner .service .wrap article .btn {
+      margin-bottom: 20px;
+      font-size: 0;
+      box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05); }
+      .department .top .inner .awards ul li h3 {
         display: inline-block;
-        width: 200px;
-        height: 50px;
-        font: 400 18px/50px "Gothic A1";
-        color: #444;
-        border: 1px solid #888; }
-  .department .top .inner .awards ul li {
-    width: 100%;
-    padding: 30px;
-    background: #fff;
-    margin-bottom: 20px;
-    font-size: 0;
-    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05); }
-    .department .top .inner .awards ul li h3 {
-      display: inline-block;
-      width: 50%;
-      font: 600 18px/1 "Gothic A1";
-      color: #555; }
-    .department .top .inner .awards ul li span {
-      display: inline-block;
-      font: 500 16px/1 "Gothic A1";
-      color: #777; }
-      .department .top .inner .awards ul li span:nth-of-type(1) {
-        width: 30%; }
-      .department .top .inner .awards ul li span:nth-of-type(2) {
-        width: 10%; }
+        width: 50%;
+        font: 600 18px/1 "Gothic A1";
+        color: #555; }
+      .department .top .inner .awards ul li span {
+        display: inline-block;
+        font: 500 16px/1 "Gothic A1";
+        color: #777; }
+        .department .top .inner .awards ul li span:nth-of-type(1) {
+          width: 30%; }
+        .department .top .inner .awards ul li span:nth-of-type(2) {
+          width: 10%; }
 .department .bottom {
   width: 100%;
   background: #f5f5f5; }
@@ -986,7 +998,8 @@ body {
     height: 250px;
     margin-right: 20px;
     margin-bottom: 30px;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .department .bottom .inner .members .wrap article:nth-of-type(3n) {
       margin-right: 0; }
     .department .bottom .inner .members .wrap article .pic {

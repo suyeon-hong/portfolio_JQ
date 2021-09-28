@@ -1,6 +1,7 @@
 .department{
     .visual{
-        background: #888;
+        background: #888 url(../../img/department.jpg) no-repeat center/cover;
+        opacity: 0.9;
     }
     .inner{
         h1{
@@ -34,9 +35,24 @@
         background: #e7e7e7;
 
         .inner{
-            .service{
-                margin-bottom: 100px;
+            padding-top: 350px;
+            position: relative;
 
+            .service{
+                position: absolute;
+                top: -350px;
+                left: 0;
+
+                h1{
+                    color: #ddd;
+
+                    &::before{
+                        background: #ddd;
+                    }
+                }
+                h2{
+                    color: #eee;
+                }
                 .wrap{
                     article{
                         width: 380px;
@@ -215,6 +231,7 @@
                         margin-right: 20px;
                         margin-bottom: 30px;
                         position: relative;
+                        cursor: pointer;
     
                         &:nth-of-type(3n){
                             margin-right: 0;
