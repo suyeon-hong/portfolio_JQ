@@ -1240,76 +1240,74 @@ body {
       border-top: 3px solid #000;
       border-bottom: 1px solid #000;
       margin-bottom: 100px; }
-      .community .inner > div#faq .qna li {
-        border-bottom: 1px solid #c9c9c9; }
-        .community .inner > div#faq .qna li:last-child {
+      .community .inner > div#faq .qna dt, .community .inner > div#faq .qna dd {
+        padding: 20px;
+        padding-left: 70px;
+        position: relative; }
+        .community .inner > div#faq .qna dt .icon, .community .inner > div#faq .qna dd .icon {
+          display: block;
+          color: #606060;
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          font: 600 24px/1 "Gothic A1";
+          text-align: center; }
+      .community .inner > div#faq .qna dt {
+        border-bottom: 1px solid #c9c9c9;
+        cursor: pointer; }
+        .community .inner > div#faq .qna dt:last-child {
           border-bottom: none; }
-        .community .inner > div#faq .qna li > div {
-          padding: 20px;
-          padding-left: 70px;
-          position: relative; }
-          .community .inner > div#faq .qna li > div .icon {
+        .community .inner > div#faq .qna dt p {
+          font: 600 16px/1 "Gothic A1";
+          color: #333;
+          margin-bottom: 10px; }
+        .community .inner > div#faq .qna dt .subj {
+          font: 500 14px/1 "Gothic A1";
+          color: #666; }
+        .community .inner > div#faq .qna dt .arrow {
+          display: block;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 30px;
+          right: 20px;
+          transition: 0.6s; }
+          .community .inner > div#faq .qna dt .arrow::before {
+            content: '';
             display: block;
-            color: #606060;
+            width: 12px;
+            height: 1px;
+            background: #000;
+            transform: rotate(-45deg);
+            transform-origin: left center;
             position: absolute;
-            top: 30px;
-            left: 20px;
-            font: 600 24px/1 "Gothic A1";
-            text-align: center; }
-        .community .inner > div#faq .qna li .question {
-          cursor: pointer; }
-          .community .inner > div#faq .qna li .question p {
-            font: 600 16px/1 "Gothic A1";
-            color: #333;
-            margin-bottom: 10px; }
-          .community .inner > div#faq .qna li .question .subj {
-            font: 500 14px/1 "Gothic A1";
-            color: #666; }
-          .community .inner > div#faq .qna li .question .arrow {
+            bottom: 0;
+            left: 0; }
+          .community .inner > div#faq .qna dt .arrow::after {
+            content: '';
             display: block;
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 1px;
+            background: #000;
+            transform: rotate(45deg);
+            transform-origin: right center;
             position: absolute;
-            top: 30px;
-            right: 20px;
-            transition: 0.6s; }
-            .community .inner > div#faq .qna li .question .arrow::before {
-              content: '';
-              display: block;
-              width: 12px;
-              height: 1px;
-              background: #000;
-              transform: rotate(-45deg);
-              transform-origin: left center;
-              position: absolute;
-              bottom: 0;
-              left: 0; }
-            .community .inner > div#faq .qna li .question .arrow::after {
-              content: '';
-              display: block;
-              width: 12px;
-              height: 1px;
-              background: #000;
-              transform: rotate(45deg);
-              transform-origin: right center;
-              position: absolute;
-              bottom: 0;
-              right: 0; }
-          .community .inner > div#faq .qna li .question.on .icon {
-            color: #111; }
-          .community .inner > div#faq .qna li .question.on .arrow {
-            transform: rotate(-180deg); }
-        .community .inner > div#faq .qna li .answer {
-          display: none;
-          background: #f7f7f7; }
-          .community .inner > div#faq .qna li .answer .icon {
-            color: #008a00; }
-          .community .inner > div#faq .qna li .answer p {
-            width: 70%;
-            font: 500 14px/1.6 "Gothic A1";
-            color: #333; }
-          .community .inner > div#faq .qna li .answer.on {
-            display: block; }
+            bottom: 0;
+            right: 0; }
+        .community .inner > div#faq .qna dt.on .icon {
+          color: #111; }
+        .community .inner > div#faq .qna dt.on .arrow {
+          transform: rotate(-180deg); }
+      .community .inner > div#faq .qna dd {
+        display: none;
+        background: #f7f7f7; }
+        .community .inner > div#faq .qna dd .icon {
+          color: #008a00; }
+        .community .inner > div#faq .qna dd p {
+          width: 70%;
+          min-height: 50px;
+          font: 500 14px/1.6 "Gothic A1";
+          color: #333; }
   .community .inner > div#notice table {
     width: 100%;
     border-collapse: collapse;

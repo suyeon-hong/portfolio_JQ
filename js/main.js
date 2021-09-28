@@ -108,8 +108,8 @@ $btns.on("click focus", function(e){
 });
 
 // community QnAbox 토글 설정
-const $qbox = $("#faq .qna .question");
-const $abox = $("#faq .qna .answer");
+const $qbox = $("#faq .qna dt");
+const $abox = $("#faq .qna dd");
 
 $qbox.on("click", function(e){
     e.preventDefault();
@@ -119,11 +119,11 @@ $qbox.on("click", function(e){
     
     if (isOn) {
         $qbox.removeClass("on");
-        $abox.removeClass("on");
+        $(this).next().slideUp();
     } else{
         $qbox.removeClass("on");
-        $abox.removeClass("on");
+        $abox.slideUp();
         $(this).addClass("on");
-        $abox.eq(target).addClass("on");
+        $(this).next().slideDown(500);
     }
 });

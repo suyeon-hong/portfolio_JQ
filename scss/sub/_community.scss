@@ -188,97 +188,94 @@
                     border-bottom: 1px solid #000;
                     margin-bottom: 100px;
 
-                    li{
+                    dt, dd{
+                        padding: 20px;
+                        padding-left: 70px;
+                        position: relative;
+
+                        .icon{
+                            display: block;
+                            color: #606060;
+                            position: absolute;
+                            top: 30px;
+                            left: 20px;
+                            font: 600 24px/1 $font;
+                            text-align: center;
+                        }
+                    }
+                    dt{
                         border-bottom: 1px solid #c9c9c9;
                         
                         &:last-child{
                             border-bottom: none;
                         }
-                        >div{
-                            padding: 20px;
-                            padding-left: 70px;
-                            position: relative;
+                        cursor: pointer;
 
-                            .icon{
+                        p{
+                            font: 600 16px/1 $font;
+                            color: #333;
+                            margin-bottom: 10px;
+                        }
+                        .subj{
+                            font: 500 14px/1 $font;
+                            color: #666;
+                        }
+                        .arrow{
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            top: 30px;
+                            right: 20px;
+                            transition: 0.6s;
+
+                            &::before{
+                                content:'';
                                 display: block;
-                                color: #606060;
+                                width: 12px;
+                                height: 1px;
+                                background: #000;
+                                transform: rotate(-45deg);
+                                transform-origin: left center;
                                 position: absolute;
-                                top: 30px;
-                                left: 20px;
-                                font: 600 24px/1 $font;
-                                text-align: center;
+                                bottom: 0;
+                                left: 0;
+                            }
+                            &::after{
+                                content:'';
+                                display: block;
+                                width: 12px;
+                                height: 1px;
+                                background: #000;
+                                transform: rotate(45deg);
+                                transform-origin: right center;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
                             }
                         }
-                        .question{
-                            cursor: pointer;
-
-                            p{
-                                font: 600 16px/1 $font;
-                                color: #333;
-                                margin-bottom: 10px;
-                            }
-                            .subj{
-                                font: 500 14px/1 $font;
-                                color: #666;
+                        &.on{
+                            .icon{
+                                color: #111;
                             }
                             .arrow{
-                                display: block;
-                                width: 16px;
-                                height: 16px;
-                                position: absolute;
-                                top: 30px;
-                                right: 20px;
-                                transition: 0.6s;
-
-                                &::before{
-                                    content:'';
-                                    display: block;
-                                    width: 12px;
-                                    height: 1px;
-                                    background: #000;
-                                    transform: rotate(-45deg);
-                                    transform-origin: left center;
-                                    position: absolute;
-                                    bottom: 0;
-                                    left: 0;
-                                }
-                                &::after{
-                                    content:'';
-                                    display: block;
-                                    width: 12px;
-                                    height: 1px;
-                                    background: #000;
-                                    transform: rotate(45deg);
-                                    transform-origin: right center;
-                                    position: absolute;
-                                    bottom: 0;
-                                    right: 0;
-                                }
+                                transform: rotate(-180deg);
                             }
-                            &.on{
-                                .icon{
-                                    color: #111;
-                                }
-                                .arrow{
-                                    transform: rotate(-180deg);
-                                }
-                            } 
+                        } 
+                        
+                    }
+                    dd{
+                        display: none;
+                        background: #f7f7f7;
+
+                        .icon{
+                            color: #008a00;
                         }
-                        .answer{
-                            display: none;
-                            background: #f7f7f7;
-
-                            .icon{
-                                color: #008a00;
-                            }
-                            p{
-                                width: 70%;
-                                font: 500 14px/1.6 $font;
-                                color: #333;
-                            }
-                            &.on{
-                                display: block;
-                            }
+                        p{
+                            width: 70%;
+                            min-height: 50px;
+                            font: 500 14px/1.6 $font;
+                            color: #333;
                         }
                     }
                 }
