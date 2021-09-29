@@ -314,7 +314,7 @@ body{
 
 section{
     width: 100%;
-    padding: 50px 0;
+    padding: 100px 0;
     border-top: 3px solid #111;
 
     .inner{
@@ -326,11 +326,24 @@ section{
             font: 600 50px/1 $font;
             color: #111;
             letter-spacing: -2px;
+            transform: translateX(-200px);
+            opacity: 0;
+            transition: 1s;
         }
-        p{
+        >p{
             font: 500 16px/1 $font;
             color: #888;
             margin-bottom: 50px;
+            transform: translateX(-200px);
+            opacity: 0;
+            transition: 1s;
+            transition-delay: .2s;
+        }
+    }
+    &.on{
+        h1, p{
+            transform: translateX(0);
+            opacity: 1;
         }
     }
     &#process{

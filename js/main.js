@@ -92,17 +92,17 @@ function movingLeft(){
 // index scroll효과
 const $btnScroll = $("#navi li");
 let posArr = [];
-let boxs = $(".myScroll");
+let $boxs = $(".myScroll");
 let baseLine = -200;
 
-for (let i = 0; i < boxs.length; i++){
+for (let i = 0; i < $boxs.length; i++){
     posArr.push($($btnScroll.eq(i).children("a").attr("href")).offset().top);
 }
 
 $(window).on("resize", function(){
     posArr = [];
-    
-    for (let i = 0; i < boxs.length; i++){
+
+    for (let i = 0; i < $boxs.length; i++){
         posArr.push($($btnScroll.eq(i).children("a").attr("href")).offset().top);
     }
 });
@@ -114,6 +114,8 @@ $(window).on("scroll", function(){
         if (scroll >= posArr[i] + baseLine){
             $btnScroll.children("a").removeClass("on");
             $btnScroll.eq(i).children("a").addClass("on");
+            $boxs.removeClass("on");
+            $boxs.eq(i).addClass("on");
         }
     }
 });
@@ -130,7 +132,7 @@ $btnScroll.children("a").on("click", function(e){
 
 // community tab메뉴
 const $btns = $(".community .inner .tabmenu li a");
-const $boxs = $(".community .inner>div");
+const $tabBoxs = $(".community .inner>div");
 
 $btns.on("click focus", function(e){
     e.preventDefault();
@@ -142,7 +144,7 @@ $btns.on("click focus", function(e){
     $btns.removeClass("on");
     $(this).addClass("on");
 
-    $boxs.hide();
+    $tabBoxs.hide();
     $(target).show();
 });
 

@@ -265,7 +265,7 @@ body {
 
 section {
   width: 100%;
-  padding: 50px 0;
+  padding: 100px 0;
   border-top: 3px solid #111; }
   section .inner {
     width: 1180px;
@@ -274,11 +274,21 @@ section {
     section .inner h1 {
       font: 600 50px/1 "Gothic A1";
       color: #111;
-      letter-spacing: -2px; }
-    section .inner p {
+      letter-spacing: -2px;
+      transform: translateX(-200px);
+      opacity: 0;
+      transition: 1s; }
+    section .inner > p {
       font: 500 16px/1 "Gothic A1";
       color: #888;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      transform: translateX(-200px);
+      opacity: 0;
+      transition: 1s;
+      transition-delay: .2s; }
+  section.on h1, section.on p {
+    transform: translateX(0);
+    opacity: 1; }
   section#process .inner .wrap article {
     width: 280px;
     margin-right: 20px;
