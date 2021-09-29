@@ -93,7 +93,7 @@ function movingLeft(){
 const $btnScroll = $("#navi li");
 let posArr = [];
 let $boxs = $(".myScroll");
-let baseLine = -200;
+let baseLine = -300;
 
 for (let i = 0; i < $boxs.length; i++){
     posArr.push($($btnScroll.eq(i).children("a").attr("href")).offset().top);

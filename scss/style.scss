@@ -314,15 +314,15 @@ body{
 
 section{
     width: 100%;
-    padding: 100px 0;
     border-top: 3px solid #111;
 
     .inner{
         width: 1180px;
         min-height: 800px;
         margin: 0 auto;
+        padding: 100px 0;
 
-        h1{
+        .title{
             font: 600 50px/1 $font;
             color: #111;
             letter-spacing: -2px;
@@ -341,7 +341,7 @@ section{
         }
     }
     &.on{
-        h1, p{
+        .title, p{
             transform: translateX(0);
             opacity: 1;
         }
