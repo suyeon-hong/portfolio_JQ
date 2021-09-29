@@ -100,6 +100,8 @@ for (let i = 0; i < boxs.length; i++){
 }
 
 $(window).on("resize", function(){
+    posArr = [];
+    
     for (let i = 0; i < boxs.length; i++){
         posArr.push($($btnScroll.eq(i).children("a").attr("href")).offset().top);
     }
