@@ -312,43 +312,52 @@ body{
     }
 }
 
-#content{
+section{
     width: 100%;
-    padding: 100px 0;
+    padding: 50px 0;
+    border-top: 3px solid #111;
 
     .inner{
         width: 1180px;
+        min-height: 800px;
         margin: 0 auto;
 
         h1{
-            font: bold 24px/1 $font;
-            color: #000;
-            text-align: center;
+            font: 600 50px/1 $font;
+            color: #111;
+            letter-spacing: -2px;
+        }
+        p{
+            font: 500 16px/1 $font;
+            color: #888;
             margin-bottom: 50px;
         }
-
-        .wrap{
+    }
+    &#process{
+        .inner .wrap{
             article{
-                float: left;
                 width: 280px;
                 margin-right: 20px;
+                float: left;
 
-                h2{
-                    font: bold 18px/1 $font;
-                    color: #222;
-                    text-align: center;
-                    margin-bottom: 5px;
-                }
-                p{
-                    font: 16px/1 $font;
-                    color: #555;
-                    text-align: center;
-                    margin-bottom: 20px;
-                }
                 .pic{
                     width: 100%;
-                    height: 150px;
-                    background: #bbb;
+                    height: 280px;
+                    border-radius: 50%;
+                    background: #222;
+                    margin-bottom: 30px;
+                }
+                .txt{
+                    h2{
+                        font: 600 30px/1 $font;
+                        color: #111;
+                        letter-spacing: -2px;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font: 18px/1.2 $font;
+                        color: #555;
+                    }
                 }
             }
         }
@@ -442,6 +451,27 @@ body{
         >p{
             font: 500 14px/1 $font;
             color: #ccc;
+        }
+    }
+}
+
+#navi{
+    position: fixed;
+    top: 50%;
+    right: 150px;
+
+    li a{
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background: #eee;
+        margin-bottom: 20px;
+        transition: 1s;
+
+        &.on{
+            height: 50px;
+            background: #222;
         }
     }
 }
