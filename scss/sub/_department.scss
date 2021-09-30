@@ -123,8 +123,10 @@
             .testimonials{
                 margin-bottom: 100px;
                 position: relative;
+                overflow: hidden;
 
                 .wrap{
+                    width: calc((100% / 2) * 4 + 20px);
                     margin-bottom: 50px;
 
                     article{
