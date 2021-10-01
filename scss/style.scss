@@ -473,16 +473,17 @@ section{
     top: 50%;
     right: 150px;
 
-    li a{
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        background: #eee;
-        margin-bottom: 20px;
-        transition: 1s;
-
-        &.on{
+    li{
+        a{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: #eee;
+            margin-bottom: 20px;
+            transition: 1s;
+        }
+        &.on a{
             height: 50px;
             background: #222;
         }

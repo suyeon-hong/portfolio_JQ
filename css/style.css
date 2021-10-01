@@ -382,9 +382,9 @@ section {
     background: #eee;
     margin-bottom: 20px;
     transition: 1s; }
-    #navi li a.on {
-      height: 50px;
-      background: #222; }
+  #navi li.on a {
+    height: 50px;
+    background: #222; }
 
 @media screen and (max-width: 1179px) {
   #header {

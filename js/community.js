@@ -23,15 +23,15 @@ const $abox = $("#faq .qna dd");
 $qbox.on("click", function(e){
     e.preventDefault();
 
+    let i = $(this).index();
     let isOn = $(this).hasClass("on");
     
     if (isOn) {
-        $qbox.removeClass("on");
+        $(this).removeClass("on");
         $(this).next().slideUp();
     } else{
-        $qbox.removeClass("on");
+        activeBtn($qbox, i/2);
         $abox.slideUp();
-        $(this).addClass("on");
         $(this).next().slideDown(500);
     }
 });
