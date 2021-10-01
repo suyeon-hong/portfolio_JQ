@@ -5,7 +5,7 @@ const $btnLeft_dep = $department.find(".testimonials .btnLeft");
 const $btnRgiht_dep = $department.find(".testimonials .btnRight");
 let speed = 500;
 let len_dep = $frame.find("article").length;
-let i = 1;
+let i = 0;
 
 $frame.css({
     width: "calc((100% / 2 + 20px) * "+ len_dep +" )"
@@ -14,10 +14,10 @@ $frame.css({
 $btnLeft_dep.on("click", function(e){
     e.preventDefault();
 
-    if (i > 1){
+    if (i > 0){
         i--;
         $frame.animate({
-            marginLeft: -51 * (i - 1) + "%"
+            marginLeft: -51 * i + "%"
         });
     }else{
         return;
@@ -27,11 +27,11 @@ $btnLeft_dep.on("click", function(e){
 $btnRgiht_dep.on("click", function(e){
     e.preventDefault();
 
-    if (i < (len_dep - 1)){
+    if (i < (len_dep - 2)){
+        i++;
         $frame.animate({
             marginLeft: -51 * i + "%"
         }, speed);
-        i++;
     } else{
         return;
     }
