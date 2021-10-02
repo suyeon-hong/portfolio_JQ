@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&family=Limelight&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -272,23 +272,39 @@ section {
     margin: 0 auto;
     padding: 100px 0; }
     section .inner .title {
-      font: 600 50px/1 "Gothic A1";
+      font: bold 70px/1 'Pathway Gothic One';
       color: #111;
-      letter-spacing: -2px;
+      margin-bottom: 10px;
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s; }
     section .inner > p {
-      font: 500 16px/1 "Gothic A1";
+      font: 500 18px/1 "Gothic A1";
       color: #888;
+      text-transform: uppercase;
+      letter-spacing: -1px;
       margin-bottom: 50px;
       transform: translateX(-200px);
       opacity: 0;
-      transition: 1s;
-      transition-delay: .2s; }
+      transition: 1s .2s; }
   section.on .title, section.on p {
     transform: translateX(0);
     opacity: 1; }
+  section#intro .inner .wrap .tit {
+    float: left; }
+    section#intro .inner .wrap .tit h1 {
+      font: 600 90px/1 'Pathway Gothic One';
+      color: #bbb; }
+    section#intro .inner .wrap .tit h2 {
+      font: 600 240px/1 'Pathway Gothic One';
+      color: #111; }
+  section#intro .inner .wrap .desc {
+    width: 35%;
+    float: right; }
+    section#intro .inner .wrap .desc p {
+      font: 400 16px/1.3 "Gothic A1";
+      color: #444;
+      margin-bottom: 30px; }
   section#process .inner .wrap article {
     width: 280px;
     margin-right: 20px;
@@ -300,13 +316,150 @@ section {
       background: #222;
       margin-bottom: 30px; }
     section#process .inner .wrap article .txt h2 {
-      font: 600 30px/1 "Gothic A1";
+      font: bold 45px/0.8 'Pathway Gothic One';
       color: #111;
-      letter-spacing: -2px;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
     section#process .inner .wrap article .txt p {
       font: 18px/1.2 "Gothic A1";
       color: #555; }
+  section#topic .inner dl {
+    width: 100%; }
+    section#topic .inner dl dt {
+      width: 100%;
+      height: 50px;
+      background: #000;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      position: relative; }
+      section#topic .inner dl dt h2 {
+        font: 30px/30px 'Pathway Gothic One';
+        color: #fff; }
+      section#topic .inner dl dt .btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        text-indent: -9999px; }
+        section#topic .inner dl dt .btn::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px; }
+        section#topic .inner dl dt .btn::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+          opacity: 1;
+          transform: rotate(90deg);
+          transition: 1s; }
+      section#topic .inner dl dt.on .btn::after {
+        opacity: 0;
+        transform: rotateX(0); }
+    section#topic .inner dl dd h3 {
+      font: bold 30px/1 'Pathway Gothic One';
+      color: #111;
+      margin-bottom: 10px; }
+    section#topic .inner dl dd p {
+      font: 500 14px/1.4 "Gothic A1";
+      color: #555;
+      margin-bottom: 20px; }
+    section#topic .inner dl dd .pic {
+      width: 100%;
+      height: 400px;
+      background: #bbb;
+      margin-bottom: 30px; }
+    section#topic .inner dl dd.technical article {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      margin-bottom: 20px; }
+    section#topic .inner dl dd.technical .wrap article {
+      width: 380px;
+      margin-right: 20px;
+      float: left;
+      border-bottom: none; }
+      section#topic .inner dl dd.technical .wrap article .pic {
+        height: 250px; }
+    section#topic .inner dl dd.behind {
+      margin-bottom: 20px; }
+      section#topic .inner dl dd.behind .wrap {
+        width: 100%; }
+        section#topic .inner dl dd.behind .wrap article {
+          width: 580px;
+          margin-right: 20px;
+          float: left; }
+          section#topic .inner dl dd.behind .wrap article .pic {
+            height: 250px;
+            margin-bottom: 0; }
+            section#topic .inner dl dd.behind .wrap article .pic:nth-of-type(2) {
+              background: #aaa; }
+    section#topic .inner dl dd.interview .wrap article {
+      float: left;
+      width: 380px;
+      margin-right: 20px; }
+      section#topic .inner dl dd.interview .wrap article .pic {
+        height: 250px; }
+    section#topic .inner dl dd.extra .wrap {
+      width: 100%; }
+      section#topic .inner dl dd.extra .wrap article {
+        float: left;
+        width: 580px;
+        margin-right: 20px; }
+        section#topic .inner dl dd.extra .wrap article .pic {
+          height: 250px; }
+  section#info .inner .pic {
+    width: 100%;
+    height: 400px;
+    background: #bbb;
+    margin-bottom: 30px; }
+  section#info .inner .info {
+    margin-bottom: 20px; }
+    section#info .inner .info .wrap article {
+      float: left;
+      width: 380px;
+      margin-right: 20px; }
+      section#info .inner .info .wrap article h2 {
+        font: bold 30px/1 'Pathway Gothic One';
+        color: #111;
+        margin-bottom: 10px; }
+      section#info .inner .info .wrap article p {
+        font: 500 14px/1.4 "Gothic A1";
+        color: #555;
+        margin-bottom: 20px; }
+  section#info .inner .digital {
+    border-top: 3px solid #000;
+    padding-top: 30px; }
+    section#info .inner .digital .wrap .pic {
+      float: left;
+      width: 200px;
+      height: 200px;
+      background: #bbb; }
+    section#info .inner .digital .wrap .txt {
+      float: right;
+      width: 80%; }
+      section#info .inner .digital .wrap .txt h2 {
+        font: bold 30px/1 'Pathway Gothic One';
+        color: #111;
+        margin-bottom: 10px; }
+      section#info .inner .digital .wrap .txt p {
+        font: 500 14px/1.4 "Gothic A1";
+        color: #555;
+        margin-bottom: 50px; }
+        section#info .inner .digital .wrap .txt p.noti {
+          font-size: 13px;
+          font-style: italic; }
 
 #footer {
   width: 100%;
