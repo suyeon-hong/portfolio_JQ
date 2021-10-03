@@ -17,6 +17,7 @@ btnMo.addEventListener("click", e=>{
     let index = 0;
     let len = $imgs.length - 1;
     let timer;
+    let speed = 1000;
     
     initVisual($wrap, $imgs);
     
@@ -75,7 +76,7 @@ btnMo.addEventListener("click", e=>{
         imgs.last().prependTo(frame);
         timer = setInterval(function(){
             nextPic(frame, imgs);
-        }, 2500);
+        }, speed*2.5);
     }
 
 
@@ -121,5 +122,31 @@ function moveScroll(el){
 
     $("html, body").animate({
         scrollTop : posArr[target]
-    }, 1000);
+    }, speed);
 }
+
+// index #topic tab버튼
+const $btns_topic = $("#topic dl dt .btn");
+const $boxs_topic = $("#topic dl dd");
+
+$btns_topic.on("click", function(e){
+    e.preventDefault();
+
+    let i = $(this).parent().index() / 2;
+    let isOn = $(this).hasClass("on");
+    
+
+    if (isOn) {
+        $(this).removeClass("on");
+        $boxs_topic.eq(i).slideUp(speed/2, function(){
+                posArr = [];
+                initScroll();
+        });
+    }else{
+        $(this).addClass("on");
+        $boxs_topic.eq(i).slideDown(speed/2, function(){
+                posArr = [];
+                initScroll();
+        });
+    }
+});

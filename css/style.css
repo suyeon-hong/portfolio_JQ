@@ -44,7 +44,7 @@ body {
       bottom: 10px;
       font-size: 0; }
       #header .inner h1 a {
-        font: bold 28px/1 'Limelight';
+        font: bold 30px/1 'Pathway Gothic One';
         color: #000;
         letter-spacing: 1px; }
     #header .inner #gnb {
@@ -363,11 +363,11 @@ section {
           left: 0;
           margin-top: -1px;
           opacity: 1;
-          transform: rotate(90deg);
+          transform: rotate(270deg);
           transition: 1s; }
-      section#topic .inner dl dt.on .btn::after {
-        opacity: 0;
-        transform: rotateX(0); }
+        section#topic .inner dl dt .btn.on::after {
+          opacity: 0;
+          transform: rotateX(0); }
     section#topic .inner dl dd h3 {
       font: bold 30px/1 'Pathway Gothic One';
       color: #111;
@@ -474,7 +474,8 @@ section {
         float: left;
         font-size: 0; }
         #footer .inner .top h1 a {
-          font: 34px/1 'Limelight';
+          font: bold 42px/1 'Pathway Gothic One';
+          letter-spacing: 1px;
           color: #000; }
       #footer .inner .top .sns {
         float: right; }
@@ -643,7 +644,7 @@ section {
       bottom: 10px;
       font-size: 0; }
       #header_sub .inner h1 a {
-        font: bold 28px/1 'Limelight';
+        font: bold 30px/1 'Pathway Gothic One';
         color: #000;
         letter-spacing: 1px; }
     #header_sub .inner #gnb {
@@ -810,9 +811,20 @@ section {
     margin: 0 auto;
     padding: 100px 0; }
     .content .inner h1 {
-      font: 600 24px/1 "Gothic A1";
+      font: 600 40px/1 "Gothic A1";
       color: #000;
-      margin-bottom: 50px; }
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 40px; }
+      .content .inner h1::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
 
 #footer_sub {
   width: 100%;
@@ -827,7 +839,8 @@ section {
         float: left;
         font-size: 0; }
         #footer_sub .inner .top h1 a {
-          font: 34px/1 'Limelight';
+          font: bold 42px/1 'Pathway Gothic One';
+          letter-spacing: 1px;
           color: #000; }
       #footer_sub .inner .top .sns {
         float: right; }
@@ -940,16 +953,17 @@ section {
   font: 500 16px/1 "Gothic A1";
   color: #666;
   margin-bottom: 20px;
+  padding-bottom: 0;
   padding-left: 50px;
   position: relative; }
-  .department .inner h1::before {
+  .department .inner h1::after {
     content: '';
     display: block;
     width: 40px;
     height: 2px;
     background: #666;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 0;
     margin-top: -1px; }
 .department .inner h2 {
@@ -1128,7 +1142,8 @@ section {
           object-fit: conatin;
           filter: grayscale(80%) contrast(30%); }
   .department .bottom .inner .blog {
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    position: relative; }
     .department .bottom .inner .blog .wrap article {
       width: 380px;
       float: left;
@@ -1145,6 +1160,8 @@ section {
         font: 400 20px/1.4 "Gothic A1";
         color: #fff;
         margin-bottom: 50px; }
+      .department .bottom .inner .blog .wrap article p {
+        display: none; }
       .department .bottom .inner .blog .wrap article .btn {
         font: 400 18px/1 "Gothic A1";
         color: #eee;
@@ -1179,6 +1196,33 @@ section {
             position: absolute;
             bottom: 0;
             right: 0; }
+    .department .bottom .inner .blog .detail {
+      position: absolute;
+      top: 0;
+      left: -200%;
+      width: 100%;
+      height: 100%;
+      background: #bbb;
+      padding: 50px;
+      opacity: 0;
+      transition: 1s; }
+      .department .bottom .inner .blog .detail.on {
+        left: 0;
+        opacity: 1; }
+      .department .bottom .inner .blog .detail h3 {
+        width: 80%;
+        font: 500 40px/1 "Gothic A1";
+        color: #fff;
+        margin-bottom: 50px; }
+      .department .bottom .inner .blog .detail p {
+        font: 300 26px/1.2 "Gothic A1";
+        color: #eee; }
+      .department .bottom .inner .blog .detail .btnClose {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font: 500 20px/1 "Gothic A1";
+        color: #f1f1f1; }
   .department .bottom .inner .members .wrap article {
     float: left;
     width: 380px;
@@ -1286,21 +1330,6 @@ section {
             transform: rotate(-45deg);
             transition: 0.4s 0.6s; }
 
-.community .inner h1 {
-  text-align: left;
-  font: 600 40px/1 "Gothic A1";
-  color: #000;
-  position: relative;
-  padding-bottom: 40px; }
-  .community .inner h1::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: #000;
-    position: absolute;
-    left: 0;
-    bottom: 0; }
 .community .inner .tabmenu {
   margin-bottom: 70px; }
   .community .inner .tabmenu li {
@@ -1530,19 +1559,6 @@ section {
           .community .inner > div#notice table tbody tr td:nth-of-type(2) a {
             color: #555; }
 
-.join .inner h1, .join .inner h2 {
-  font: 600 40px/1 "Gothic A1";
-  position: relative;
-  margin-bottom: 100px; }
-  .join .inner h1::after, .join .inner h2::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: #000;
-    position: absolute;
-    left: 0;
-    bottom: -20px; }
 .join .inner form fieldset {
   border: none; }
   .join .inner form fieldset table {
@@ -1634,13 +1650,20 @@ section {
   .join .inner form fieldset div {
     margin-bottom: 100px; }
     .join .inner form fieldset div h2 {
-      font-size: 18px;
+      font: 600 18px/1 "Gothic A1";
       color: #222;
-      margin-bottom: 50px; }
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 30px; }
       .join .inner form fieldset div h2::after {
-        background: #bbb;
+        content: '';
+        display: block;
+        width: 100%;
         height: 3px;
-        bottom: -20px; }
+        background: #bbb;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
     .join .inner form fieldset div textarea {
       width: 100%;
       height: 300px;

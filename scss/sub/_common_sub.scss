@@ -16,9 +16,22 @@
         padding: 100px 0;
 
         h1{
-            font: 600 24px/1 $font;
+            font: 600 40px/1 $font;
             color: #000;
-            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+
+            &::after{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 4px;
+                background: #000;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
         }
     }
 }
