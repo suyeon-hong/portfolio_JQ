@@ -278,7 +278,7 @@ section {
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s; }
-    section .inner > p {
+    section .inner .sub {
       font: 500 18px/1 "Gothic A1";
       color: #888;
       text-transform: uppercase;
@@ -287,7 +287,7 @@ section {
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s .2s; }
-  section.on .title, section.on p {
+  section.on .title, section.on .sub {
     transform: translateX(0);
     opacity: 1; }
   section#intro .inner .wrap .tit {
@@ -969,389 +969,240 @@ section {
 @media screen and (max-width: 539px) {
   .content .inner {
     padding: 50px 10px; } }
-.department .visual {
-  background: #888 url(../../img/department.jpg) no-repeat center/cover;
-  opacity: 0.9; }
-.department .inner h1 {
-  font: 500 16px/1 "Gothic A1";
-  color: #666;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  padding-left: 50px;
-  position: relative; }
-  .department .inner h1::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: #666;
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    margin-top: -1px; }
-.department .inner h2 {
-  font: 600 24px/1 "Gothic A1";
-  color: #333;
-  margin-bottom: 50px;
-  letter-spacing: 1px; }
-.department .top {
-  width: 100%;
-  background: #e7e7e7; }
-  .department .top .inner {
-    padding-top: 350px;
+.department .inner > p {
+  padding: 200px 0 240px;
+  font: 300 80px/1.2 "Gothic A1";
+  color: #222; }
+.department .inner > div {
+  margin-bottom: 150px; }
+  .department .inner > div h2 {
+    font: 300 36px/1 "Gothic A1";
+    color: #222;
+    margin-bottom: 40px;
     position: relative; }
-    .department .top .inner .service {
+    .department .inner > div h2::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #888;
       position: absolute;
-      top: -350px;
+      bottom: -20px;
       left: 0; }
-      .department .top .inner .service h1 {
-        color: #ddd; }
-        .department .top .inner .service h1::before {
-          background: #ddd; }
-      .department .top .inner .service h2 {
-        color: #eee; }
-      .department .top .inner .service .wrap article {
-        width: 380px;
-        float: left;
-        margin-right: 20px;
-        text-align: center;
-        background: #fff;
-        padding: 100px 0;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); }
-        .department .top .inner .service .wrap article i {
-          font-size: 80px;
-          margin-bottom: 70px;
-          color: #222; }
-        .department .top .inner .service .wrap article p {
-          font: 500 22px/1 "Gothic A1";
-          color: #222;
-          margin-bottom: 70px; }
-        .department .top .inner .service .wrap article .btn {
-          display: inline-block;
-          width: 200px;
-          height: 50px;
-          font: 400 18px/50px "Gothic A1";
-          color: #444;
-          border: 1px solid #888; }
-    .department .top .inner .awards ul li {
-      width: 100%;
-      padding: 30px;
-      background: #fff;
-      margin-bottom: 20px;
-      font-size: 0;
-      box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05); }
-      .department .top .inner .awards ul li h3 {
-        display: inline-block;
-        width: 50%;
-        font: 600 18px/1 "Gothic A1";
-        color: #555; }
-      .department .top .inner .awards ul li span {
-        display: inline-block;
-        font: 500 16px/1 "Gothic A1";
-        color: #777; }
-        .department .top .inner .awards ul li span:nth-of-type(1) {
-          width: 30%; }
-        .department .top .inner .awards ul li span:nth-of-type(2) {
-          width: 10%; }
-.department .bottom {
-  width: 100%;
-  background: #f5f5f5; }
-  .department .bottom .inner .testimonials {
-    margin-bottom: 100px;
-    position: relative;
-    overflow: hidden; }
-    .department .bottom .inner .testimonials .wrap {
-      width: calc((100% / 2) * 4 + 20px);
-      margin-bottom: 50px; }
-      .department .bottom .inner .testimonials .wrap article {
-        width: 580px;
-        margin-right: 20px;
-        float: left;
-        background: #e7e5eb;
-        padding: 50px 50px 50px 100px;
-        position: relative;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); }
-        .department .bottom .inner .testimonials .wrap article p {
-          font: 400 18px/1.4 "Gothic A1";
-          color: #666; }
-          .department .bottom .inner .testimonials .wrap article p span {
-            font-weight: 500;
-            color: #444; }
-          .department .bottom .inner .testimonials .wrap article p::before {
-            content: '"';
-            display: block;
-            font: 600 50px/1.2 "Gothic A1";
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            color: #555; }
-    .department .bottom .inner .testimonials .btnLeft {
-      display: block;
-      width: 50px;
-      height: 2px;
-      background: #777;
-      position: absolute;
-      top: 50px;
-      right: 70px; }
-      .department .bottom .inner .testimonials .btnLeft::before {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 2px;
-        background: inherit;
-        transform: rotate(-45deg);
-        transform-origin: left center;
-        position: absolute;
-        top: 0;
-        left: 0; }
-      .department .bottom .inner .testimonials .btnLeft::after {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 2px;
-        background: inherit;
-        transform: rotate(45deg);
-        transform-origin: left center;
-        position: absolute;
-        bottom: 0;
-        left: 0; }
-    .department .bottom .inner .testimonials .btnRight {
-      display: block;
-      width: 50px;
-      height: 2px;
-      background: #777;
-      position: absolute;
-      top: 50px;
-      right: 0; }
-      .department .bottom .inner .testimonials .btnRight::before {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 2px;
-        background: inherit;
-        transform: rotate(-45deg);
-        transform-origin: right center;
-        position: absolute;
-        top: 0;
-        right: 0; }
-      .department .bottom .inner .testimonials .btnRight::after {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 2px;
-        background: inherit;
-        transform: rotate(45deg);
-        transform-origin: right center;
-        position: absolute;
-        bottom: 0;
-        right: 0; }
-    .department .bottom .inner .testimonials .logos {
-      width: 100%; }
-      .department .bottom .inner .testimonials .logos::after {
-        content: '';
-        display: block;
-        clear: both; }
-      .department .bottom .inner .testimonials .logos li {
-        width: calc(100% / 5);
-        height: 120px;
-        float: left;
-        border: 2px solid #bbb;
-        border-right: none; }
-        .department .bottom .inner .testimonials .logos li:last-child {
-          border-right: 2px solid #bbb; }
-        .department .bottom .inner .testimonials .logos li img {
-          width: 100%;
-          height: 100%;
-          object-fit: conatin;
-          filter: grayscale(80%) contrast(30%); }
-  .department .bottom .inner .blog {
-    margin-bottom: 100px;
-    position: relative; }
-    .department .bottom .inner .blog .wrap article {
-      width: 380px;
-      float: left;
-      margin-right: 20px;
-      background: #777;
-      padding: 300px 50px 50px; }
-      .department .bottom .inner .blog .wrap article:nth-of-type(1) {
-        background: url(../img/article1.jpg) no-repeat center/cover; }
-      .department .bottom .inner .blog .wrap article:nth-of-type(2) {
-        background: url(../img/article2.jpg) no-repeat center/cover; }
-      .department .bottom .inner .blog .wrap article:nth-of-type(3) {
-        background: url(../img/article3.jpg) no-repeat center/cover; }
-      .department .bottom .inner .blog .wrap article h3 {
-        font: 400 20px/1.4 "Gothic A1";
-        color: #fff;
-        margin-bottom: 50px; }
-      .department .bottom .inner .blog .wrap article p {
-        display: none; }
-      .department .bottom .inner .blog .wrap article .btn {
-        font: 400 18px/1 "Gothic A1";
-        color: #eee;
-        position: relative; }
-        .department .bottom .inner .blog .wrap article .btn span {
-          display: block;
-          width: 70px;
-          height: 1px;
-          background: #eee;
-          position: absolute;
-          top: 8px;
-          right: -90px; }
-          .department .bottom .inner .blog .wrap article .btn span::before {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 1px;
-            background: inherit;
-            transform: rotate(-45deg);
-            transform-origin: right center;
-            position: absolute;
-            top: 0;
-            right: 0; }
-          .department .bottom .inner .blog .wrap article .btn span::after {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 1px;
-            background: inherit;
-            transform: rotate(45deg);
-            transform-origin: right center;
-            position: absolute;
-            bottom: 0;
-            right: 0; }
-    .department .bottom .inner .blog .detail {
-      position: absolute;
-      top: 0;
-      left: -200%;
-      width: 100%;
-      height: 100%;
-      background: #bbb;
-      padding: 50px;
-      opacity: 0;
-      transition: 1s; }
-      .department .bottom .inner .blog .detail.on {
-        left: 0;
-        opacity: 1; }
-      .department .bottom .inner .blog .detail h3 {
-        width: 80%;
-        font: 500 40px/1 "Gothic A1";
-        color: #fff;
-        margin-bottom: 50px; }
-      .department .bottom .inner .blog .detail p {
-        font: 300 26px/1.2 "Gothic A1";
-        color: #eee; }
-      .department .bottom .inner .blog .detail .btnClose {
-        position: absolute;
-        top: 50px;
-        right: 50px;
-        font: 500 20px/1 "Gothic A1";
-        color: #f1f1f1; }
-  .department .bottom .inner .members .wrap article {
-    float: left;
-    width: 380px;
-    height: 250px;
-    margin-right: 20px;
+  .department .inner > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); }
+  .department .inner > div.projects .wrap {
+    margin-left: 300px;
     margin-bottom: 30px;
-    position: relative;
-    cursor: pointer; }
-    .department .bottom .inner .members .wrap article:nth-of-type(3n) {
-      margin-right: 0; }
-    .department .bottom .inner .members .wrap article .pic {
-      width: 60%;
-      height: 100%;
-      background: #bbb;
-      transition: .6s; }
-      .department .bottom .inner .members .wrap article .pic img {
+    border-bottom: 1px solid #000; }
+    .department .inner > div.projects .wrap article {
+      float: left;
+      width: 49%;
+      margin-right: 2%;
+      margin-bottom: 50px; }
+      .department .inner > div.projects .wrap article:nth-of-type(even) {
+        margin-right: 0; }
+      .department .inner > div.projects .wrap article .pic {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.6;
-        filter: saturate(20%);
-        transition: 1s; }
-    .department .bottom .inner .members .wrap article .txt {
-      position: absolute;
-      top: 50%;
-      left: 45%;
-      transform: translateY(-50%);
-      padding: 30px;
-      width: 40%; }
-      .department .bottom .inner .members .wrap article .txt .info h3 {
-        font: 400 24px/1.2 "Gothic A1";
-        color: #555;
-        letter-spacing: -3px;
-        margin-bottom: 50px;
-        position: relative; }
-        .department .bottom .inner .members .wrap article .txt .info h3::after {
+        height: 400px;
+        background: #bbb;
+        margin-bottom: 20px; }
+      .department .inner > div.projects .wrap article h3 {
+        font: 400 14px/1 "Gothic A1";
+        color: #777;
+        margin-bottom: 10px; }
+      .department .inner > div.projects .wrap article h4 {
+        font: 500 18px/1 "Gothic A1";
+        color: #333; }
+  .department .inner > div.projects .btnMore {
+    display: inline-block;
+    margin-left: 300px;
+    font: 500 14px/1.2 "Gothic A1";
+    color: #222; }
+    .department .inner > div.projects .btnMore::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000; }
+  .department .inner > div.services .wrap {
+    margin-left: 300px; }
+    .department .inner > div.services .wrap ul {
+      float: left;
+      width: 49%;
+      margin-right: 2%; }
+      .department .inner > div.services .wrap ul li {
+        padding: 34px 0; }
+        .department .inner > div.services .wrap ul li a {
+          display: inline-block;
+          font: 300 24px/1 "Gothic A1";
+          color: #666;
+          position: relative; }
+          .department .inner > div.services .wrap ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #777;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            opacity: 0;
+            transition: .6s; }
+          .department .inner > div.services .wrap ul li a:hover, .department .inner > div.services .wrap ul li a.on {
+            color: #000; }
+            .department .inner > div.services .wrap ul li a:hover::after, .department .inner > div.services .wrap ul li a.on::after {
+              width: 100%;
+              left: 0;
+              opacity: 1; }
+    .department .inner > div.services .wrap .pic {
+      float: left;
+      width: 49%;
+      height: 500px;
+      background: #555; }
+      .department .inner > div.services .wrap .pic img {
+        display: none; }
+  .department .inner > div.process > div {
+    margin-left: 300px; }
+    .department .inner > div.process > div p {
+      width: 70%;
+      font: 400 20px/1.2 "Gothic A1";
+      color: #666;
+      margin-bottom: 20px; }
+    .department .inner > div.process > div .btnMore {
+      display: inline-block;
+      font: 500 14px/1.2 "Gothic A1";
+      color: #222;
+      margin-bottom: 50px; }
+      .department .inner > div.process > div .btnMore::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #000; }
+    .department .inner > div.process > div .pic {
+      width: 100%;
+      height: 400px;
+      background: #bbb;
+      margin-bottom: 150px; }
+    .department .inner > div.process > div h3 {
+      font: 300 80px/1 "Gothic A1";
+      color: #222;
+      margin-bottom: 20px; }
+    .department .inner > div.process > div .contact {
+      display: inline-block;
+      font: 500 12px/1.2 "Gothic A1";
+      color: #444;
+      position: relative;
+      padding-right: 15px; }
+      .department .inner > div.process > div .contact::after {
+        content: '';
+        display: block;
+        width: calc(100% + 15px);
+        height: 1px;
+        background: #000; }
+      .department .inner > div.process > div .contact .arrow {
+        display: block;
+        width: 10px;
+        height: 1px;
+        background: #222;
+        position: absolute;
+        top: 50%;
+        right: 0; }
+        .department .inner > div.process > div .contact .arrow::before {
           content: '';
           display: block;
-          width: 40px;
-          height: 2px;
-          background: #888;
-          position: absolute;
-          left: 0;
-          bottom: -20px; }
-      .department .bottom .inner .members .wrap article .txt .info p {
-        font: 400 14px/1.2 "Gothic A1";
-        color: #555; }
-      .department .bottom .inner .members .wrap article .txt .hoverbox {
-        height: 0;
-        overflow: hidden; }
-        .department .bottom .inner .members .wrap article .txt .hoverbox p {
-          font: 500 16px/1.2 "Gothic A1";
-          color: #222;
-          margin-bottom: 30px; }
-        .department .bottom .inner .members .wrap article .txt .hoverbox .arrow {
-          display: block;
-          width: 0;
+          width: 10px;
           height: 1px;
-          background: #879ab9;
-          text-indent: -9999px;
-          font-size: 0;
-          position: relative; }
-          .department .bottom .inner .members .wrap article .txt .hoverbox .arrow::before {
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background: inherit;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform-origin: right center; }
-          .department .bottom .inner .members .wrap article .txt .hoverbox .arrow::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background: inherit;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transform-origin: right center; }
-    .department .bottom .inner .members .wrap article:hover .pic {
-      box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.3); }
-      .department .bottom .inner .members .wrap article:hover .pic img {
-        filter: saturate(80%); }
-    .department .bottom .inner .members .wrap article:hover .txt {
-      background: #fff;
-      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); }
-      .department .bottom .inner .members .wrap article:hover .txt .info {
-        display: none; }
-      .department .bottom .inner .members .wrap article:hover .txt .hoverbox {
-        height: auto;
-        overflow: unset; }
-        .department .bottom .inner .members .wrap article:hover .txt .hoverbox .arrow {
-          opacity: 1;
-          width: 30px;
-          transition: .6s; }
-          .department .bottom .inner .members .wrap article:hover .txt .hoverbox .arrow::before {
-            width: 5px;
-            transform: rotate(45deg);
-            transition: 0.4s 0.6s; }
-          .department .bottom .inner .members .wrap article:hover .txt .hoverbox .arrow::after {
-            width: 5px;
-            transform: rotate(-45deg);
-            transition: 0.4s 0.6s; }
+          background: inherit;
+          transform: rotate(-45deg);
+          transform-origin: right center;
+          position: absolute;
+          top: 0;
+          right: 0; }
+        .department .inner > div.process > div .contact .arrow::after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 1px;
+          background: inherit;
+          transform: rotate(45deg);
+          transform-origin: right center;
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+        .department .inner > div.process > div .contact .arrow::before, .department .inner > div.process > div .contact .arrow::after {
+          width: 7px; }
+  .department .inner > div.team .wrap {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px; }
+    .department .inner > div.team .wrap article {
+      float: left;
+      width: calc((100% - 40px)/3);
+      margin-right: 20px;
+      margin-bottom: 30px; }
+      .department .inner > div.team .wrap article:nth-of-type(3n) {
+        margin-right: 0; }
+      .department .inner > div.team .wrap article .pic {
+        width: 100%;
+        height: 300px;
+        background: #bbb;
+        margin-bottom: 20px; }
+      .department .inner > div.team .wrap article h3 {
+        font: 400 18px/1 "Gothic A1";
+        color: #222;
+        margin-bottom: 10px; }
+      .department .inner > div.team .wrap article h4 {
+        font: 400 16px/1 "Gothic A1";
+        color: #888; }
+  .department .inner > div.team .btnMore {
+    display: inline-block;
+    margin-left: 300px;
+    font: 500 14px/1.2 "Gothic A1";
+    color: #222; }
+    .department .inner > div.team .btnMore::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000; }
+  .department .inner > div.news .wrap {
+    margin-left: 300px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000; }
+    .department .inner > div.news .wrap article {
+      float: left;
+      width: 49%;
+      margin-right: 2%; }
+      .department .inner > div.news .wrap article .pic {
+        width: 100%;
+        height: 350px;
+        background: #bbb;
+        margin-bottom: 20px; }
+      .department .inner > div.news .wrap article h3 {
+        font: 400 14px/1 "Gothic A1";
+        color: #777;
+        margin-bottom: 10px; }
+      .department .inner > div.news .wrap article h4 {
+        font: 500 18px/1 "Gothic A1";
+        color: #333; }
+  .department .inner > div.news .btnMore {
+    display: inline-block;
+    margin-left: 300px;
+    font: 500 14px/1.2 "Gothic A1";
+    color: #222; }
+    .department .inner > div.news .btnMore::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000; }
 
 .community .inner .tabmenu {
   margin-bottom: 70px; }

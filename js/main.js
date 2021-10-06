@@ -76,7 +76,7 @@ btnMo.addEventListener("click", e=>{
         imgs.last().prependTo(frame);
         timer = setInterval(function(){
             nextPic(frame, imgs);
-        }, speed*2.5);
+        }, speed*1.5);
     }
 
 

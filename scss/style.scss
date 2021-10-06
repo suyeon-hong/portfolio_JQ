@@ -330,7 +330,7 @@ section{
             opacity: 0;
             transition: 1s;
         }
-        >p{
+        .sub{
             font: 500 18px/1 $font;
             color: #888;
             text-transform: uppercase;
@@ -342,7 +342,7 @@ section{
         }
     }
     &.on{
-        .title, p{
+        .title, .sub{
             transform: translateX(0);
             opacity: 1;
         }
