@@ -1,11 +1,22 @@
-const btnMo = document.querySelector(".btnMo");
-const gnbMo = document.querySelector(".gnbMo");
+// btnMo button
+const $btnMo = $(".btnMo");
+const $gnbMo = $(".gnbMo");
+const $gnb = $("#gnb");
 
-btnMo.addEventListener("click", e=>{
+$btnMo.on("click", function(e){
     e.preventDefault();
 
-    btnMo.classList.toggle("on");
-    gnbMo.classList.toggle("on");
+    let isOn = $(this).hasClass("on");
+
+    if(isOn){
+        $btnMo.removeClass("on");
+        $gnbMo.removeClass("on");
+        $gnb.slideDown();
+    } else{
+        $btnMo.addClass("on");
+        $gnbMo.addClass("on");
+        $gnb.slideUp();
+    }
 });
 
 // index visual slide

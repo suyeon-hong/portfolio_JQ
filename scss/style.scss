@@ -193,7 +193,7 @@ body{
         height: calc(100vh - 80px);
         background: #fff;
         border-top: 1px solid #000;
-        position: fixed;
+        position: absolute;
         top: 80px;
         left: -100%;
         transition: 1s;
@@ -930,3 +930,4 @@ section{
 @import 'sub/department';
 @import 'sub/community';
 @import 'sub/join';
+@import 'sub/gallery';
