@@ -106,7 +106,7 @@
                                     background: #777;
                                     position: absolute;
                                     bottom: -5px;
-                                    left: 50%;
+                                    left: 0;
                                     opacity: 0;
                                     transition: .6s;
                                 }
@@ -115,7 +115,6 @@
     
                                     &::after{
                                         width: 100%;
-                                        left: 0;
                                         opacity: 1;
                                     }
                                 }
@@ -130,6 +129,10 @@
 
                         img{
                             display: none;
+
+                            &:first-child{
+                                display: block;
+                            }
                         }
                     }
                 }
