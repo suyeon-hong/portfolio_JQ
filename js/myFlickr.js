@@ -10,19 +10,23 @@ $.ajax({
     datatype: "json",
     data: {
         api_key: "21be590b77fb11bd12a7266f99a2f2d8",
-        per_page: 30,
+        per_page: 20,
         format: "json",
         nojsoncallback: 1,
         privacy_filter: 5,
-        tags: "landscape"
+        tags: "people"
     }
 }).success(function(data){
     let items = data.photos.photo;
 
-    console.log(items);
     $(items).each(function(index,data){
+        let title = data.title;
+
+        if(!data.title){
+            title = "No description in this photo"
+        }
         $(".gallery ul").append(
-            $("<li>").append(
+            $("<li class='item'>").append(
                 $("<a>").attr({
                     href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg"
                 }).append(
@@ -30,13 +34,10 @@ $.ajax({
                         src: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_m.jpg"
                     })
                 ),
-                $("<h2>").text(data.title),
-                $("<div class='profile'>").append(
-                    $("<p>").text(data.owner),
-                    $("<img>").attr({
-                        src: "https://www.flickr.com/buddyicons/"+ data.owner +".jpg"
-                    })
-                )
+                $("<h2>").text(title),
+                $("<img class='profile'>").attr({
+                    src: "https://www.flickr.com/buddyicons/"+ data.owner +".jpg"
+                })
             )
         )
     });
