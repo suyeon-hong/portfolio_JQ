@@ -312,7 +312,7 @@ body{
     }
 }
 
-section{
+.section{
     width: 100%;
     border-top: 3px solid #111;
 
@@ -931,3 +931,4 @@ section{
 @import 'sub/community';
 @import 'sub/join';
 @import 'sub/gallery';
+@import 'sub/youtube';
