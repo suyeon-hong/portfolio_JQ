@@ -14,7 +14,7 @@ $.ajax({
         format: "json",
         nojsoncallback: 1,
         privacy_filter: 5,
-        tags: "people"
+        tags: "castle"
     }
 }).success(function(data){
     let items = data.photos.photo;

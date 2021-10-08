@@ -980,18 +980,18 @@ body {
 @media screen and (max-width: 539px) {
   .content .inner {
     padding: 50px 10px; } }
-.department .inner > p {
+.about .inner > p {
   padding: 200px 0 240px;
   font: 300 80px/1.2 "Gothic A1";
   color: #222; }
-.department .inner > div {
+.about .inner > div {
   margin-bottom: 150px; }
-  .department .inner > div h2 {
+  .about .inner > div h2 {
     font: 300 36px/1 "Gothic A1";
     color: #222;
     margin-bottom: 40px;
     position: relative; }
-    .department .inner > div h2::after {
+    .about .inner > div h2::after {
       content: '';
       display: block;
       width: 100%;
@@ -1000,59 +1000,59 @@ body {
       position: absolute;
       bottom: -20px;
       left: 0; }
-  .department .inner > div img {
+  .about .inner > div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: grayscale(95%); }
-  .department .inner > div.projects .wrap {
+  .about .inner > div.projects .wrap {
     margin-left: 300px;
     margin-bottom: 30px;
     border-bottom: 1px solid #000; }
-    .department .inner > div.projects .wrap article {
+    .about .inner > div.projects .wrap article {
       float: left;
       width: 49%;
       margin-right: 2%;
       margin-bottom: 50px; }
-      .department .inner > div.projects .wrap article:nth-of-type(even) {
+      .about .inner > div.projects .wrap article:nth-of-type(even) {
         margin-right: 0; }
-      .department .inner > div.projects .wrap article .pic {
+      .about .inner > div.projects .wrap article .pic {
         width: 100%;
         height: 400px;
         background: #bbb;
         margin-bottom: 20px; }
-      .department .inner > div.projects .wrap article h3 {
+      .about .inner > div.projects .wrap article h3 {
         font: 400 14px/1 "Gothic A1";
         color: #777;
         margin-bottom: 10px; }
-      .department .inner > div.projects .wrap article h4 {
+      .about .inner > div.projects .wrap article h4 {
         font: 500 18px/1 "Gothic A1";
         color: #333; }
-  .department .inner > div.projects .btnMore {
+  .about .inner > div.projects .btnMore {
     display: inline-block;
     margin-left: 300px;
     font: 500 14px/1.2 "Gothic A1";
     color: #222; }
-    .department .inner > div.projects .btnMore::after {
+    .about .inner > div.projects .btnMore::after {
       content: '';
       display: block;
       width: 100%;
       height: 1px;
       background: #000; }
-  .department .inner > div.services .wrap {
+  .about .inner > div.services .wrap {
     margin-left: 300px; }
-    .department .inner > div.services .wrap ul {
+    .about .inner > div.services .wrap ul {
       float: left;
       width: 49%;
       margin-right: 2%; }
-      .department .inner > div.services .wrap ul li {
+      .about .inner > div.services .wrap ul li {
         padding: 34px 0; }
-        .department .inner > div.services .wrap ul li a {
+        .about .inner > div.services .wrap ul li a {
           display: inline-block;
           font: 300 24px/1 "Gothic A1";
           color: #666;
           position: relative; }
-          .department .inner > div.services .wrap ul li a::after {
+          .about .inner > div.services .wrap ul li a::after {
             content: '';
             display: block;
             width: 0;
@@ -1063,60 +1063,60 @@ body {
             left: 0;
             opacity: 0;
             transition: .6s; }
-          .department .inner > div.services .wrap ul li a:hover, .department .inner > div.services .wrap ul li a.on {
+          .about .inner > div.services .wrap ul li a:hover, .about .inner > div.services .wrap ul li a.on {
             color: #000; }
-            .department .inner > div.services .wrap ul li a:hover::after, .department .inner > div.services .wrap ul li a.on::after {
+            .about .inner > div.services .wrap ul li a:hover::after, .about .inner > div.services .wrap ul li a.on::after {
               width: 100%;
               opacity: 1; }
-    .department .inner > div.services .wrap .pic {
+    .about .inner > div.services .wrap .pic {
       float: left;
       width: 49%;
-      height: 500px;
-      background: #555; }
-      .department .inner > div.services .wrap .pic img {
-        display: none; }
-        .department .inner > div.services .wrap .pic img:first-child {
+      height: 500px; }
+      .about .inner > div.services .wrap .pic img {
+        display: none;
+        filter: grayscale(80%); }
+        .about .inner > div.services .wrap .pic img:first-child {
           display: block; }
-  .department .inner > div.process > div {
+  .about .inner > div.process > div {
     margin-left: 300px; }
-    .department .inner > div.process > div p {
+    .about .inner > div.process > div p {
       width: 70%;
       font: 400 20px/1.2 "Gothic A1";
       color: #666;
       margin-bottom: 20px; }
-    .department .inner > div.process > div .btnMore {
+    .about .inner > div.process > div .btnMore {
       display: inline-block;
       font: 500 14px/1.2 "Gothic A1";
       color: #222;
       margin-bottom: 50px; }
-      .department .inner > div.process > div .btnMore::after {
+      .about .inner > div.process > div .btnMore::after {
         content: '';
         display: block;
         width: 100%;
         height: 1px;
         background: #000; }
-    .department .inner > div.process > div .pic {
+    .about .inner > div.process > div .pic {
       width: 100%;
       height: 400px;
       background: #bbb;
       margin-bottom: 150px; }
-    .department .inner > div.process > div h3 {
+    .about .inner > div.process > div h3 {
       font: 300 80px/1 "Gothic A1";
       color: #222;
       margin-bottom: 20px; }
-    .department .inner > div.process > div .contact {
+    .about .inner > div.process > div .contact {
       display: inline-block;
       font: 500 12px/1.2 "Gothic A1";
       color: #444;
       position: relative;
       padding-right: 15px; }
-      .department .inner > div.process > div .contact::after {
+      .about .inner > div.process > div .contact::after {
         content: '';
         display: block;
         width: calc(100% + 15px);
         height: 1px;
         background: #000; }
-      .department .inner > div.process > div .contact .arrow {
+      .about .inner > div.process > div .contact .arrow {
         display: block;
         width: 10px;
         height: 1px;
@@ -1124,7 +1124,7 @@ body {
         position: absolute;
         top: 50%;
         right: 0; }
-        .department .inner > div.process > div .contact .arrow::before {
+        .about .inner > div.process > div .contact .arrow::before {
           content: '';
           display: block;
           width: 10px;
@@ -1135,7 +1135,7 @@ body {
           position: absolute;
           top: 0;
           right: 0; }
-        .department .inner > div.process > div .contact .arrow::after {
+        .about .inner > div.process > div .contact .arrow::after {
           content: '';
           display: block;
           width: 10px;
@@ -1146,70 +1146,70 @@ body {
           position: absolute;
           bottom: 0;
           right: 0; }
-        .department .inner > div.process > div .contact .arrow::before, .department .inner > div.process > div .contact .arrow::after {
+        .about .inner > div.process > div .contact .arrow::before, .about .inner > div.process > div .contact .arrow::after {
           width: 7px; }
-  .department .inner > div.team .wrap {
+  .about .inner > div.team .wrap {
     margin-left: 300px;
     width: calc(100% - 300px);
     border-bottom: 1px solid #000;
     margin-bottom: 20px; }
-    .department .inner > div.team .wrap article {
+    .about .inner > div.team .wrap article {
       float: left;
       width: calc((100% - 40px)/3);
       margin-right: 20px;
       margin-bottom: 30px; }
-      .department .inner > div.team .wrap article:nth-of-type(3n) {
+      .about .inner > div.team .wrap article:nth-of-type(3n) {
         margin-right: 0; }
-      .department .inner > div.team .wrap article .pic {
+      .about .inner > div.team .wrap article .pic {
         width: 100%;
         height: 300px;
         background: #bbb;
         margin-bottom: 20px; }
-      .department .inner > div.team .wrap article h3 {
+      .about .inner > div.team .wrap article h3 {
         font: 400 18px/1 "Gothic A1";
         color: #222;
         margin-bottom: 10px; }
-      .department .inner > div.team .wrap article h4 {
+      .about .inner > div.team .wrap article h4 {
         font: 400 16px/1 "Gothic A1";
         color: #888; }
-  .department .inner > div.team .btnMore {
+  .about .inner > div.team .btnMore {
     display: inline-block;
     margin-left: 300px;
     font: 500 14px/1.2 "Gothic A1";
     color: #222; }
-    .department .inner > div.team .btnMore::after {
+    .about .inner > div.team .btnMore::after {
       content: '';
       display: block;
       width: 100%;
       height: 1px;
       background: #000; }
-  .department .inner > div.news .wrap {
+  .about .inner > div.news .wrap {
     margin-left: 300px;
     padding-bottom: 50px;
     margin-bottom: 30px;
     border-bottom: 1px solid #000; }
-    .department .inner > div.news .wrap article {
+    .about .inner > div.news .wrap article {
       float: left;
       width: 49%;
       margin-right: 2%; }
-      .department .inner > div.news .wrap article .pic {
+      .about .inner > div.news .wrap article .pic {
         width: 100%;
         height: 350px;
         background: #bbb;
         margin-bottom: 20px; }
-      .department .inner > div.news .wrap article h3 {
+      .about .inner > div.news .wrap article h3 {
         font: 400 14px/1 "Gothic A1";
         color: #777;
         margin-bottom: 10px; }
-      .department .inner > div.news .wrap article h4 {
+      .about .inner > div.news .wrap article h4 {
         font: 500 18px/1 "Gothic A1";
         color: #333; }
-  .department .inner > div.news .btnMore {
+  .about .inner > div.news .btnMore {
     display: inline-block;
     margin-left: 300px;
     font: 500 14px/1.2 "Gothic A1";
     color: #222; }
-    .department .inner > div.news .btnMore::after {
+    .about .inner > div.news .btnMore::after {
       content: '';
       display: block;
       width: 100%;
@@ -1665,60 +1665,59 @@ body {
     right: 50px;
     cursor: pointer; }
 
-.youtube {
-  background: #efefef; }
-  .youtube .inner #vidGallery {
-    width: 100%; }
-    .youtube .inner #vidGallery::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .youtube .inner #vidGallery article {
-      float: left;
-      width: 580px;
-      margin-right: 20px;
-      margin-bottom: 20px;
+.youtube .inner #vidGallery {
+  width: 100%; }
+  .youtube .inner #vidGallery::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .youtube .inner #vidGallery article {
+    float: left;
+    width: 580px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    position: relative;
+    opacity: 0.8;
+    transition: .6s; }
+    .youtube .inner #vidGallery article:nth-of-type(even) {
+      margin-right: 0; }
+    .youtube .inner #vidGallery article:hover {
       background: #fff;
-      position: relative;
-      opacity: 0.8;
-      transition: .6s; }
-      .youtube .inner #vidGallery article:nth-of-type(even) {
-        margin-right: 0; }
-      .youtube .inner #vidGallery article:hover {
-        opacity: 1;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); }
-        .youtube .inner #vidGallery article:hover a img {
-          filter: saturate(100%); }
-        .youtube .inner #vidGallery article:hover h2 {
-          color: #111; }
-        .youtube .inner #vidGallery article:hover p {
-          color: #777; }
-      .youtube .inner #vidGallery article a {
-        display: block;
+      opacity: 1;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); }
+      .youtube .inner #vidGallery article:hover a img {
+        filter: saturate(100%); }
+      .youtube .inner #vidGallery article:hover h2 {
+        color: #111; }
+      .youtube .inner #vidGallery article:hover p {
+        color: #777; }
+    .youtube .inner #vidGallery article a {
+      display: block;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 30px; }
+      .youtube .inner #vidGallery article a img {
         width: 100%;
-        height: 400px;
-        margin-bottom: 30px; }
-        .youtube .inner #vidGallery article a img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: saturate(10%);
-          transition: .6s; }
-      .youtube .inner #vidGallery article h2 {
-        font: 500 14px/1 "Gothic A1";
-        color: #222;
-        text-align: center;
-        margin-bottom: 20px; }
-      .youtube .inner #vidGallery article p {
-        font: 400 18px/1 "Gothic A1";
-        color: #888;
-        text-align: center;
-        margin-bottom: 30px; }
-      .youtube .inner #vidGallery article span {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: #fff;
-        font: 100 12px/1 "Gothic A1"; }
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(10%);
+        transition: .6s; }
+    .youtube .inner #vidGallery article h2 {
+      font: 500 14px/1 "Gothic A1";
+      color: #222;
+      text-align: center;
+      margin-bottom: 20px; }
+    .youtube .inner #vidGallery article p {
+      font: 400 18px/1 "Gothic A1";
+      color: #888;
+      text-align: center;
+      margin-bottom: 30px; }
+    .youtube .inner #vidGallery article span {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #fff;
+      font: 100 12px/1 "Gothic A1"; }
 
 /*# sourceMappingURL=style.css.map */

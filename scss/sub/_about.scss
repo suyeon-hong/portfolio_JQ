@@ -1,4 +1,4 @@
-.department{
+.about{
     .visual{
     }
     .inner{
@@ -125,10 +125,10 @@
                         float: left;
                         width: 49%;
                         height: 500px;
-                        background: #555;
 
                         img{
                             display: none;
+                            filter: grayscale(80%);
 
                             &:first-child{
                                 display: block;
