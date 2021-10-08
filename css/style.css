@@ -210,7 +210,7 @@ body {
     left: 0;
     width: 100px;
     height: 100px;
-    background: #222; }
+    background: rgba(0, 0, 0, 0.8); }
     #visual .left::before {
       content: '';
       display: block;
@@ -239,7 +239,7 @@ body {
     right: 0;
     width: 100px;
     height: 100px;
-    background: #222; }
+    background: rgba(0, 0, 0, 0.8); }
     #visual .right::before {
       content: '';
       display: block;
@@ -263,22 +263,21 @@ body {
       transform-origin: right center;
       transform: rotate(-35deg); }
 
-.section {
+#main .section {
   width: 100%;
   border-top: 3px solid #111; }
-  .section .inner {
+  #main .section .inner {
     width: 1180px;
-    min-height: 800px;
     margin: 0 auto;
     padding: 100px 0; }
-    .section .inner .title {
+    #main .section .inner .title {
       font: bold 70px/1 'Pathway Gothic One';
       color: #111;
       margin-bottom: 10px;
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s; }
-    .section .inner .sub {
+    #main .section .inner .sub {
       font: 500 18px/1 "Gothic A1";
       color: #888;
       text-transform: uppercase;
@@ -287,58 +286,58 @@ body {
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s .2s; }
-    .section .inner img {
+    #main .section .inner img {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-  .section.on .title, .section.on .sub {
+  #main .section.on .title, #main .section.on .sub {
     transform: translateX(0);
     opacity: 1; }
-  .section#intro .inner .wrap .tit {
+  #main .section#intro .inner .wrap .tit {
     float: left; }
-    .section#intro .inner .wrap .tit h1 {
+    #main .section#intro .inner .wrap .tit h1 {
       font: 600 90px/1 'Pathway Gothic One';
       color: #bbb; }
-    .section#intro .inner .wrap .tit h2 {
+    #main .section#intro .inner .wrap .tit h2 {
       font: 600 240px/1 'Pathway Gothic One';
       color: #111; }
-  .section#intro .inner .wrap .desc {
+  #main .section#intro .inner .wrap .desc {
     width: 35%;
     float: right; }
-    .section#intro .inner .wrap .desc p {
+    #main .section#intro .inner .wrap .desc p {
       font: 400 16px/1.3 "Gothic A1";
       color: #444;
       margin-bottom: 30px; }
-  .section#process .inner .wrap article {
+  #main .section#process .inner .wrap article {
     width: 280px;
     margin-right: 20px;
     float: left; }
-    .section#process .inner .wrap article .pic {
+    #main .section#process .inner .wrap article .pic {
       width: 100%;
       height: 280px;
       border-radius: 50%;
       background: #222;
       margin-bottom: 30px; }
-    .section#process .inner .wrap article .txt h2 {
+    #main .section#process .inner .wrap article .txt h2 {
       font: bold 45px/0.8 'Pathway Gothic One';
       color: #111;
       margin-bottom: 20px; }
-    .section#process .inner .wrap article .txt p {
+    #main .section#process .inner .wrap article .txt p {
       font: 18px/1.2 "Gothic A1";
       color: #555; }
-  .section#topic .inner dl {
+  #main .section#topic .inner dl {
     width: 100%; }
-    .section#topic .inner dl dt {
+    #main .section#topic .inner dl dt {
       width: 100%;
       height: 50px;
       background: #000;
       margin-bottom: 30px;
       padding: 10px 20px;
       position: relative; }
-      .section#topic .inner dl dt h2 {
+      #main .section#topic .inner dl dt h2 {
         font: 30px/30px 'Pathway Gothic One';
         color: #fff; }
-      .section#topic .inner dl dt .btn {
+      #main .section#topic .inner dl dt .btn {
         position: absolute;
         top: 50%;
         right: 20px;
@@ -346,7 +345,7 @@ body {
         height: 30px;
         margin-top: -15px;
         text-indent: -9999px; }
-        .section#topic .inner dl dt .btn::before {
+        #main .section#topic .inner dl dt .btn::before {
           content: '';
           display: block;
           width: 100%;
@@ -356,7 +355,7 @@ body {
           top: 50%;
           left: 0;
           margin-top: -1px; }
-        .section#topic .inner dl dt .btn::after {
+        #main .section#topic .inner dl dt .btn::after {
           content: '';
           display: block;
           width: 100%;
@@ -369,129 +368,129 @@ body {
           opacity: 1;
           transform: rotate(270deg);
           transition: 1s; }
-        .section#topic .inner dl dt .btn.on::after {
+        #main .section#topic .inner dl dt .btn.on::after {
           opacity: 0;
           transform: rotateX(0); }
-    .section#topic .inner dl dd {
+    #main .section#topic .inner dl dd {
       display: none; }
-      .section#topic .inner dl dd h3 {
+      #main .section#topic .inner dl dd h3 {
         font: bold 30px/1 'Pathway Gothic One';
         color: #111;
         margin-bottom: 10px; }
-      .section#topic .inner dl dd p {
+      #main .section#topic .inner dl dd p {
         font: 500 14px/1.4 "Gothic A1";
         color: #555;
         margin-bottom: 20px; }
-      .section#topic .inner dl dd .pic {
+      #main .section#topic .inner dl dd .pic {
         width: 100%;
         height: 400px;
         background: #bbb;
         margin-bottom: 30px; }
-        .section#topic .inner dl dd .pic img {
+        #main .section#topic .inner dl dd .pic img {
           filter: grayscale(80%); }
-    .section#topic .inner dl dd.technical {
+    #main .section#topic .inner dl dd.technical {
       display: block; }
-      .section#topic .inner dl dd.technical article {
+      #main .section#topic .inner dl dd.technical article {
         width: 100%;
         border-bottom: 3px solid #000;
         margin-bottom: 20px; }
-      .section#topic .inner dl dd.technical .wrap article {
+      #main .section#topic .inner dl dd.technical .wrap article {
         width: 380px;
         margin-right: 20px;
         float: left;
         border-bottom: none; }
-        .section#topic .inner dl dd.technical .wrap article .pic {
+        #main .section#topic .inner dl dd.technical .wrap article .pic {
           height: 250px; }
-    .section#topic .inner dl dd.behind {
+    #main .section#topic .inner dl dd.behind {
       margin-bottom: 20px; }
-      .section#topic .inner dl dd.behind .wrap {
+      #main .section#topic .inner dl dd.behind .wrap {
         width: 100%; }
-        .section#topic .inner dl dd.behind .wrap article {
+        #main .section#topic .inner dl dd.behind .wrap article {
           width: 580px;
           margin-right: 20px;
           float: left; }
-          .section#topic .inner dl dd.behind .wrap article .pic {
+          #main .section#topic .inner dl dd.behind .wrap article .pic {
             height: 250px;
             margin-bottom: 0; }
-            .section#topic .inner dl dd.behind .wrap article .pic:nth-of-type(2) {
+            #main .section#topic .inner dl dd.behind .wrap article .pic:nth-of-type(2) {
               background: #aaa; }
-    .section#topic .inner dl dd.interview .wrap article {
+    #main .section#topic .inner dl dd.interview .wrap article {
       float: left;
       width: 380px;
       margin-right: 20px; }
-      .section#topic .inner dl dd.interview .wrap article .pic {
+      #main .section#topic .inner dl dd.interview .wrap article .pic {
         height: 250px;
         background: linear-gradient(45deg, #000, #444); }
-        .section#topic .inner dl dd.interview .wrap article .pic img {
+        #main .section#topic .inner dl dd.interview .wrap article .pic img {
           object-fit: contain; }
-  .section#news .inner .wrap > div {
+  #main .section#news .inner .wrap > div {
     width: 380px;
     margin-right: 20px;
     float: left; }
-    .section#news .inner .wrap > div:last-child {
+    #main .section#news .inner .wrap > div:last-child {
       margin-right: 0; }
-      .section#news .inner .wrap > div:last-child .border {
+      #main .section#news .inner .wrap > div:last-child .border {
         margin-bottom: 40px; }
-        .section#news .inner .wrap > div:last-child .border h2 {
+        #main .section#news .inner .wrap > div:last-child .border h2 {
           font-size: 40px;
           line-height: 1.3;
           letter-spacing: 2px; }
-      .section#news .inner .wrap > div:last-child .article .pic {
+      #main .section#news .inner .wrap > div:last-child .article .pic {
         height: 300px; }
-    .section#news .inner .wrap > div article {
+    #main .section#news .inner .wrap > div article {
       padding: 20px;
       margin-bottom: 20px; }
-      .section#news .inner .wrap > div article.calendar {
+      #main .section#news .inner .wrap > div article.calendar {
         border-top: 3px solid #222;
         border-bottom: 3px solid #222; }
-        .section#news .inner .wrap > div article.calendar p {
+        #main .section#news .inner .wrap > div article.calendar p {
           text-align: right;
           color: #222;
           font: 500 20px/1 "Gothic A1"; }
-          .section#news .inner .wrap > div article.calendar p.day {
+          #main .section#news .inner .wrap > div article.calendar p.day {
             font: 600 50px/1 "Gothic A1";
             letter-spacing: -2px;
             color: #000;
             margin-bottom: 5px; }
-          .section#news .inner .wrap > div article.calendar p.date {
+          #main .section#news .inner .wrap > div article.calendar p.date {
             font: 600 120px/1 "Gothic A1";
             letter-spacing: -10px; }
-          .section#news .inner .wrap > div article.calendar p.month {
+          #main .section#news .inner .wrap > div article.calendar p.month {
             font: 600 80px/1 "Gothic A1"; }
-          .section#news .inner .wrap > div article.calendar p.year {
+          #main .section#news .inner .wrap > div article.calendar p.year {
             font: 600 60px/1 "Gothic A1";
             margin-bottom: 10px; }
-      .section#news .inner .wrap > div article.border {
+      #main .section#news .inner .wrap > div article.border {
         border: 4px solid #000;
         padding: 100px 20px 20px;
         text-align: right; }
-        .section#news .inner .wrap > div article.border h1 {
+        #main .section#news .inner .wrap > div article.border h1 {
           font: 400 28px/1.2 "Gothic A1";
           margin-bottom: 30px;
           color: #333; }
-        .section#news .inner .wrap > div article.border h2 {
+        #main .section#news .inner .wrap > div article.border h2 {
           font: 600 80px/1 "Gothic A1";
           color: #111;
           letter-spacing: 5px; }
-      .section#news .inner .wrap > div article.article {
+      #main .section#news .inner .wrap > div article.article {
         border-top: 3px solid #333;
         padding: 10px 0 30px;
         position: relative; }
-        .section#news .inner .wrap > div article.article::before {
+        #main .section#news .inner .wrap > div article.article::before {
           content: 'lorem lorem';
           display: block;
           position: absolute;
           right: 0;
           top: -20px;
           font: 600 18px/1 "Gothic A1"; }
-        .section#news .inner .wrap > div article.article .pic {
+        #main .section#news .inner .wrap > div article.article .pic {
           width: 100%;
           height: 500px;
           background: #bbb;
           margin-bottom: 20px; }
-          .section#news .inner .wrap > div article.article .pic img {
+          #main .section#news .inner .wrap > div article.article .pic img {
             filter: grayscale(100%); }
-        .section#news .inner .wrap > div article.article p {
+        #main .section#news .inner .wrap > div article.article p {
           font: 400 18px/1.2 "Gothic A1";
           color: #222; }
 
@@ -582,16 +581,51 @@ body {
       #header .inner #gnb {
         display: none; }
 
-  #content {
-    padding: 50px 30px; }
-    #content .inner {
-      width: 100%; }
-      #content .inner .wrap article {
-        width: 49%;
-        margin-right: 2%;
-        margin-bottom: 20px; }
-        #content .inner .wrap article:nth-of-type(even) {
-          margin-right: 0; }
+  #visual .right {
+    z-index: 1; }
+
+  #main .section .inner {
+    width: 100%;
+    padding: 100px 50px; }
+  #main .section#intro .inner .wrap .tit h1 {
+    font-size: 7vw; }
+  #main .section#intro .inner .wrap .tit h2 {
+    font-size: 16vw; }
+  #main .section#intro .inner .wrap .desc {
+    width: 40%; }
+    #main .section#intro .inner .wrap .desc p {
+      font-size: 12px; }
+  #main .section#process .inner .wrap article {
+    width: 23%;
+    margin-right: 2%; }
+    #main .section#process .inner .wrap article .pic {
+      height: 20vw; }
+    #main .section#process .inner .wrap article .txt h2 {
+      font-size: 5vw; }
+    #main .section#process .inner .wrap article .txt p {
+      font-size: 14px; }
+  #main .section#topic .inner dl dd.technical .wrap article {
+    width: 32%;
+    margin-right: 2%; }
+  #main .section#topic .inner dl dd.behind .wrap article {
+    width: 49%;
+    margin-right: 2%; }
+  #main .section#topic .inner dl dd.interview .wrap article {
+    width: 32%;
+    margin-right: 2%; }
+  #main .section#news .inner .wrap > div {
+    width: 32%;
+    margin-right: 2%; }
+    #main .section#news .inner .wrap > div article.calendar p.day {
+      font-size: 6vw; }
+    #main .section#news .inner .wrap > div article.border h2 {
+      font-size: 5vw; }
+    #main .section#news .inner .wrap > div article.article .pic {
+      height: 40vw; }
+    #main .section#news .inner .wrap > div:last-child .border h1 {
+      font-size: 2vw; }
+    #main .section#news .inner .wrap > div:last-child .border h2 {
+      font-size: 2.7vw; }
 
   #footer {
     padding: 50px 30px; }
@@ -599,7 +633,45 @@ body {
       width: 100%; }
       #footer .inner .bottom address {
         width: 75%;
-        line-height: 1.6; } }
+        line-height: 1.6; }
+
+  #navi {
+    right: 20px; } }
+@media screen and (max-width: 768px) {
+  #visual {
+    height: 500px; }
+    #visual .left, #visual .right {
+      width: 50px;
+      height: 50px;
+      top: 40%; }
+    #visual .left::before, #visual .left::after {
+      width: 24px;
+      left: 10px; }
+    #visual .right::before, #visual .right::after {
+      width: 24px;
+      right: 10px; }
+
+  #main .section .inner .title {
+    font-size: 50px; }
+  #main .section .inner .sub {
+    font-size: 14px; }
+  #main .section#intro .inner .wrap .tit {
+    width: 100%;
+    margin-bottom: 50px; }
+  #main .section#intro .inner .wrap .desc {
+    width: 100%; }
+  #main .section#news .inner .wrap > div {
+    width: 49%; }
+    #main .section#news .inner .wrap > div:nth-of-type(2) {
+      margin-right: 0; }
+    #main .section#news .inner .wrap > div:nth-of-type(3) {
+      width: 100%; }
+      #main .section#news .inner .wrap > div:nth-of-type(3) article {
+        float: left;
+        width: 49%;
+        margin-right: 2%; }
+        #main .section#news .inner .wrap > div:nth-of-type(3) article:last-child {
+          margin-right: 0; } }
 @media screen and (max-width: 539px) {
   #header {
     padding: 0 10px; }
@@ -614,11 +686,50 @@ body {
   #visual {
     height: 300px; }
 
-  #content {
-    padding: 50px 10px; }
-    #content .inner .wrap article {
-      width: 100%;
+  #main .section .inner {
+    padding: 50px 20px; }
+    #main .section .inner .title {
+      font-size: 30px; }
+    #main .section .inner .sub {
+      font-size: 11px; }
+  #main .section#process .inner .wrap article {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 20px; }
+    #main .section#process .inner .wrap article:nth-of-type(even) {
       margin-right: 0; }
+    #main .section#process .inner .wrap article .pic {
+      height: 38vw; }
+  #main .section#topic .inner dl dt h2 {
+    font-size: 26px; }
+  #main .section#topic .inner dl dd .pic {
+    height: 200px; }
+  #main .section#topic .inner dl dd h3 {
+    font-size: 24px; }
+  #main .section#topic .inner dl dd.technical .wrap {
+    display: none; }
+  #main .section#topic .inner dl dd.behind .wrap article {
+    width: 100%;
+    margin-right: 0; }
+    #main .section#topic .inner dl dd.behind .wrap article .pic {
+      height: 150px; }
+  #main .section#topic .inner dl dd.interview .wrap article {
+    width: 100%;
+    margin-right: 0; }
+    #main .section#topic .inner dl dd.interview .wrap article .pic {
+      height: 100px;
+      margin-bottom: 10px; }
+  #main .section#news .inner .wrap > div {
+    width: 100%;
+    margin-right: 0; }
+    #main .section#news .inner .wrap > div:last-child article {
+      width: 100%; }
+    #main .section#news .inner .wrap > div:last-child .border h1 {
+      font-size: 20px; }
+    #main .section#news .inner .wrap > div:last-child .border h2 {
+      font-size: 30px; }
+    #main .section#news .inner .wrap > div article.border h2 {
+      font-size: 24px; }
 
   #footer {
     padding: 50px 10px; }

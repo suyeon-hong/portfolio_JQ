@@ -4,6 +4,7 @@
 
 $font: 'Gothic A1';
 $tablet : 1179px;
+$tablet2 : 768px;
 $mobile : 539px;
 
 body{
@@ -250,7 +251,7 @@ body{
         left: 0;
         width: 100px;
         height: 100px;
-        background: #222;
+        background: rgba(0,0,0,0.8);
 
         &::before{
             content:'';
@@ -283,7 +284,7 @@ body{
         right: 0;
         width: 100px;
         height: 100px;
-        background: #222;
+        background: rgba(0,0,0,0.8);
 
         &::before{
             content:'';
@@ -312,341 +313,342 @@ body{
     }
 }
 
-.section{
-    width: 100%;
-    border-top: 3px solid #111;
-
-    .inner{
-        width: 1180px;
-        min-height: 800px;
-        margin: 0 auto;
-        padding: 100px 0;
-
-        .title{
-            font: bold 70px/1 'Pathway Gothic One';
-            color: #111;
-            margin-bottom: 10px;
-            transform: translateX(-200px);
-            opacity: 0;
-            transition: 1s;
-        }
-        .sub{
-            font: 500 18px/1 $font;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            margin-bottom: 50px;
-            transform: translateX(-200px);
-            opacity: 0;
-            transition: 1s .2s;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &.on{
-        .title, .sub{
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    &#intro{
-        .inner .wrap{
-            .tit{
-                float: left;
-
-                h1{
-                    font: 600 90px/1 'Pathway Gothic One';
-                    color: #bbb;
-                }
-                h2{
-                    font: 600 240px/1 'Pathway Gothic One';
-                    color: #111;
-                }
+#main{
+    .section{
+        width: 100%;
+        border-top: 3px solid #111;
+    
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+            padding: 100px 0;
+    
+            .title{
+                font: bold 70px/1 'Pathway Gothic One';
+                color: #111;
+                margin-bottom: 10px;
+                transform: translateX(-200px);
+                opacity: 0;
+                transition: 1s;
             }
-            .desc{
-                width: 35%;
-                float: right;
-
-                p{
-                    font: 400 16px/1.3 $font;
-                    color: #444;
-                    margin-bottom: 30px;
-                }
+            .sub{
+                font: 500 18px/1 $font;
+                color: #888;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 50px;
+                transform: translateX(-200px);
+                opacity: 0;
+                transition: 1s .2s;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
-    }
-    &#process{
-        .inner .wrap{
-            article{
-                width: 280px;
-                margin-right: 20px;
-                float: left;
-
-                .pic{
-                    width: 100%;
-                    height: 280px;
-                    border-radius: 50%;
-                    background: #222;
-                    margin-bottom: 30px;
-                }
-                .txt{
+        &.on{
+            .title, .sub{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        &#intro{
+            .inner .wrap{
+                .tit{
+                    float: left;
+    
+                    h1{
+                        font: 600 90px/1 'Pathway Gothic One';
+                        color: #bbb;
+                    }
                     h2{
-                        font: bold 45px/0.8 'Pathway Gothic One';
+                        font: 600 240px/1 'Pathway Gothic One';
                         color: #111;
-                        margin-bottom: 20px;
+                    }
+                }
+                .desc{
+                    width: 35%;
+                    float: right;
+    
+                    p{
+                        font: 400 16px/1.3 $font;
+                        color: #444;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        &#process{
+            .inner .wrap{
+                article{
+                    width: 280px;
+                    margin-right: 20px;
+                    float: left;
+    
+                    .pic{
+                        width: 100%;
+                        height: 280px;
+                        border-radius: 50%;
+                        background: #222;
+                        margin-bottom: 30px;
+                    }
+                    .txt{
+                        h2{
+                            font: bold 45px/0.8 'Pathway Gothic One';
+                            color: #111;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font: 18px/1.2 $font;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+        &#topic{
+            .inner dl{
+                width: 100%;
+    
+                dt{
+                    width: 100%;
+                    height: 50px;
+                    background: #000;
+                    margin-bottom: 30px;
+                    padding: 10px 20px;
+                    position: relative;
+    
+                    h2{
+                        font: 30px/30px 'Pathway Gothic One';
+                        color: #fff;
+                    }
+                    .btn{
+                        position: absolute;
+                        top: 50%;
+                        right: 20px;
+                        width: 30px;
+                        height: 30px;
+                        margin-top: -15px;
+                        text-indent: -9999px;
+    
+                        &::before{
+                            content:'';
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background: #fff;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            margin-top: -1px;
+                        }
+                        &::after{
+                            content:'';
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background: #fff;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            margin-top: -1px;
+                            opacity: 1;
+                            transform: rotate(270deg);
+                            transition: 1s;
+                        }
+                        &.on::after{
+                            opacity: 0;
+                            transform: rotateX(0);
+                        }
+                    }
+                }
+                dd{
+                    display: none;
+    
+                    h3{
+                        font: bold 30px/1 'Pathway Gothic One';
+                        color: #111;
+                        margin-bottom: 10px;
                     }
                     p{
-                        font: 18px/1.2 $font;
+                        font: 500 14px/1.4 $font;
                         color: #555;
+                        margin-bottom: 20px;
+                    }
+                    .pic{
+                        width: 100%;
+                        height: 400px;
+                        background: #bbb;
+                        margin-bottom: 30px;
+    
+                        img{
+                            filter: grayscale(80%);
+                        }
+                    }
+                }
+                dd.technical{
+                    display: block;
+    
+                    article{
+                        width: 100%;
+                        border-bottom: 3px solid #000;
+                        margin-bottom: 20px;
+                    }
+                    .wrap{
+                        article{
+                            width: 380px;
+                            margin-right: 20px;
+                            float: left;
+                            border-bottom: none;
+    
+                            .pic{
+                                height: 250px;
+                            }
+                        }
+                    }
+                }
+                dd.behind{
+                    margin-bottom: 20px;
+    
+                    .wrap{
+                        width: 100%;
+    
+                        article{
+                            width: 580px;
+                            margin-right: 20px;
+                            float: left;
+    
+                            .pic{
+                                height: 250px;
+                                margin-bottom: 0;
+    
+                                &:nth-of-type(2){
+                                    background: #aaa;
+                                }
+                            }
+                        }
+                    }
+                }
+                dd.interview{
+                    .wrap article{
+                        float: left;
+                        width: 380px;
+                        margin-right: 20px;
+    
+                        .pic{
+                            height: 250px;
+                            background: linear-gradient(45deg, #000, #444);
+    
+                            img{
+                                object-fit: contain;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-    &#topic{
-        .inner dl{
-            width: 100%;
-
-            dt{
-                width: 100%;
-                height: 50px;
-                background: #000;
-                margin-bottom: 30px;
-                padding: 10px 20px;
-                position: relative;
-
-                h2{
-                    font: 30px/30px 'Pathway Gothic One';
-                    color: #fff;
-                }
-                .btn{
-                    position: absolute;
-                    top: 50%;
-                    right: 20px;
-                    width: 30px;
-                    height: 30px;
-                    margin-top: -15px;
-                    text-indent: -9999px;
-
-                    &::before{
-                        content:'';
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background: #fff;
-                        position: absolute;
-                        top: 50%;
-                        left: 0;
-                        margin-top: -1px;
-                    }
-                    &::after{
-                        content:'';
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background: #fff;
-                        position: absolute;
-                        top: 50%;
-                        left: 0;
-                        margin-top: -1px;
-                        opacity: 1;
-                        transform: rotate(270deg);
-                        transition: 1s;
-                    }
-                    &.on::after{
-                        opacity: 0;
-                        transform: rotateX(0);
-                    }
-                }
-            }
-            dd{
-                display: none;
-
-                h3{
-                    font: bold 30px/1 'Pathway Gothic One';
-                    color: #111;
-                    margin-bottom: 10px;
-                }
-                p{
-                    font: 500 14px/1.4 $font;
-                    color: #555;
-                    margin-bottom: 20px;
-                }
-                .pic{
-                    width: 100%;
-                    height: 400px;
-                    background: #bbb;
-                    margin-bottom: 30px;
-
-                    img{
-                        filter: grayscale(80%);
-                    }
-                }
-            }
-            dd.technical{
-                display: block;
-
-                article{
-                    width: 100%;
-                    border-bottom: 3px solid #000;
-                    margin-bottom: 20px;
-                }
+        &#news{
+            .inner{
                 .wrap{
-                    article{
+                    >div{
                         width: 380px;
                         margin-right: 20px;
                         float: left;
-                        border-bottom: none;
-
-                        .pic{
-                            height: 250px;
-                        }
-                    }
-                }
-            }
-            dd.behind{
-                margin-bottom: 20px;
-
-                .wrap{
-                    width: 100%;
-
-                    article{
-                        width: 580px;
-                        margin-right: 20px;
-                        float: left;
-
-                        .pic{
-                            height: 250px;
-                            margin-bottom: 0;
-
-                            &:nth-of-type(2){
-                                background: #aaa;
-                            }
-                        }
-                    }
-                }
-            }
-            dd.interview{
-                .wrap article{
-                    float: left;
-                    width: 380px;
-                    margin-right: 20px;
-
-                    .pic{
-                        height: 250px;
-                        background: linear-gradient(45deg, #000, #444);
-
-                        img{
-                            object-fit: contain;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &#news{
-        .inner{
-            .wrap{
-                >div{
-                    width: 380px;
-                    margin-right: 20px;
-                    float: left;
-
-                    &:last-child{
-                        margin-right: 0;
-
-                        .border{
-                            margin-bottom: 40px;
-
-                            h2{
-                                font-size: 40px;
-                                line-height: 1.3;
-                                letter-spacing: 2px;
-                            }
-                        }
-                        .article{
-                            .pic{
-                                height: 300px;
-                            }
-                        }
-                    }
-                    article{
-                        padding: 20px;
-                        margin-bottom: 20px;
-
-                        &.calendar{
-                            border-top: 3px solid #222;
-                            border-bottom: 3px solid #222;
     
-                            p{
+                        &:last-child{
+                            margin-right: 0;
+    
+                            .border{
+                                margin-bottom: 40px;
+    
+                                h2{
+                                    font-size: 40px;
+                                    line-height: 1.3;
+                                    letter-spacing: 2px;
+                                }
+                            }
+                            .article{
+                                .pic{
+                                    height: 300px;
+                                }
+                            }
+                        }
+                        article{
+                            padding: 20px;
+                            margin-bottom: 20px;
+    
+                            &.calendar{
+                                border-top: 3px solid #222;
+                                border-bottom: 3px solid #222;
+        
+                                p{
+                                    text-align: right;
+                                    color: #222;
+                                    font: 500 20px/1 $font;
+        
+                                    &.day{
+                                        font: 600 50px/1 $font;
+                                        letter-spacing: -2px;
+                                        color: #000;
+                                        margin-bottom: 5px;
+                                    }
+                                    &.date{
+                                        font: 600 120px/1 $font;
+                                        letter-spacing: -10px;
+                                    }
+                                    &.month{
+                                        font: 600 80px/1 $font;
+                                    }
+                                    &.year{
+                                        font: 600 60px/1 $font;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                            &.border{
+                                border: 4px solid #000;
+                                padding: 100px 20px 20px;
                                 text-align: right;
-                                color: #222;
-                                font: 500 20px/1 $font;
     
-                                &.day{
-                                    font: 600 50px/1 $font;
-                                    letter-spacing: -2px;
-                                    color: #000;
-                                    margin-bottom: 5px;
+                                h1{
+                                    font: 400 28px/1.2 $font;
+                                    margin-bottom: 30px;
+                                    color: #333;
                                 }
-                                &.date{
-                                    font: 600 120px/1 $font;
-                                    letter-spacing: -10px;
-                                }
-                                &.month{
+                                h2{
                                     font: 600 80px/1 $font;
-                                }
-                                &.year{
-                                    font: 600 60px/1 $font;
-                                    margin-bottom: 10px;
+                                    color: #111;
+                                    letter-spacing: 5px;
                                 }
                             }
-                        }
-                        &.border{
-                            border: 4px solid #000;
-                            padding: 100px 20px 20px;
-                            text-align: right;
-
-                            h1{
-                                font: 400 28px/1.2 $font;
-                                margin-bottom: 30px;
-                                color: #333;
-                            }
-                            h2{
-                                font: 600 80px/1 $font;
-                                color: #111;
-                                letter-spacing: 5px;
-                            }
-                        }
-                        &.article{
-                            border-top: 3px solid #333;
-                            padding: 10px 0 30px;
-                            position: relative;
-
-                            &::before{
-                                content:'lorem lorem';
-                                display: block;
-                                position: absolute;
-                                right: 0;
-                                top: -20px;
-                                font: 600 18px/1 $font;
-                            }
-                            .pic{
-                                width: 100%;
-                                height: 500px;
-                                background: #bbb;
-                                margin-bottom: 20px;
-
-                                img{
-                                    filter: grayscale(100%);
+                            &.article{
+                                border-top: 3px solid #333;
+                                padding: 10px 0 30px;
+                                position: relative;
+    
+                                &::before{
+                                    content:'lorem lorem';
+                                    display: block;
+                                    position: absolute;
+                                    right: 0;
+                                    top: -20px;
+                                    font: 600 18px/1 $font;
                                 }
-                            }
-                            p{
-                                font: 400 18px/1.2 $font;
-                                color: #222;
+                                .pic{
+                                    width: 100%;
+                                    height: 500px;
+                                    background: #bbb;
+                                    margin-bottom: 20px;
+    
+                                    img{
+                                        filter: grayscale(100%);
+                                    }
+                                }
+                                p{
+                                    font: 400 18px/1.2 $font;
+                                    color: #222;
+                                }
                             }
                         }
                     }
@@ -655,6 +657,7 @@ body{
         }
     }
 }
+
 
 #footer{
     width: 100%;
@@ -783,21 +786,101 @@ body{
             }
         }
     }
-    
-    #content{
-        padding: 50px 30px;
-    
-        .inner{
-            width: 100%;
-    
-            .wrap{
-                article{
-                    width: 49%;
-                    margin-right: 2%;
-                    margin-bottom: 20px;
-                    
-                    &:nth-of-type(even){
-                        margin-right: 0;
+
+    #visual{
+        .right{
+            z-index: 1;
+        }
+    }
+
+    #main{
+        .section{
+            .inner{
+                width: 100%;
+                padding: 100px 50px;
+            }
+            &#intro{
+                .inner .wrap{
+                    .tit{
+                        h1{
+                            font-size: 7vw;
+                        }
+                        h2{
+                            font-size: 16vw;
+                        }
+                    }
+                    .desc{
+                        width: 40%;
+
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            &#process{
+                .inner .wrap{
+                    article{
+                        width: 23%;
+                        margin-right: 2%;
+
+                        .pic{
+                            height: 20vw;
+                        }
+                        .txt{
+                            h2{
+                                font-size: 5vw;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            &#topic{
+                .inner dl dd{
+                    &.technical .wrap article{
+                        width: 32%;
+                        margin-right: 2%;
+                    }
+                    &.behind .wrap article{
+                        width: 49%;
+                        margin-right: 2%;
+                    }
+                    &.interview .wrap article{
+                        width: 32%;
+                        margin-right: 2%;
+                    }
+                }
+            }
+            &#news{
+                .inner .wrap{
+                    >div{
+                        width: 32%;
+                        margin-right: 2%;
+
+                        article{
+                            &.calendar{
+                                p.day{
+                                    font-size: 6vw;
+                                }
+                            }
+                            &.border h2{
+                                font-size: 5vw;
+                            }
+                            &.article .pic {
+                                height: 40vw;
+                            }
+                        }
+                        &:last-child .border{
+                            h1{
+                                font-size: 2vw;
+                            }
+                            h2{
+                                font-size: 2.7vw;
+                            }
+                        }
                     }
                 }
             }
@@ -813,6 +896,76 @@ body{
             .bottom address{
                 width: 75%;
                 line-height: 1.6;
+            }
+        }
+    }
+
+    #navi{
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    #visual{
+        height: 500px;
+
+        .left, .right{
+            width: 50px;
+            height: 50px;
+            top: 40%;
+        }
+        .left{
+            &::before, &::after{
+                width: 24px;
+                left: 10px;
+            }
+        }
+        .right{
+            &::before, &::after{
+                width: 24px;
+                right: 10px;
+            }
+        }
+    }
+
+    #main{
+        .section{
+            .inner{
+                .title{
+                    font-size: 50px;
+                }
+                .sub{
+                    font-size: 14px;
+                }
+            }
+            &#intro .inner .wrap{
+                .tit{
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+                .desc{
+                    width: 100%;
+                }
+            }
+            &#news .inner .wrap>div{
+                width: 49%;
+
+                &:nth-of-type(2){
+                    margin-right: 0;
+                }
+                &:nth-of-type(3){
+                    width: 100%;
+
+                    article{
+                        float: left;
+                        width: 49%;
+                        margin-right: 2%;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
             }
         }
     }
@@ -839,14 +992,88 @@ body{
         height: 300px;
     }
 
-    #content{
-        padding: 50px 10px;
+    #main{
+        .section{
+            .inner{
+                padding: 50px 20px;
 
-        .inner{
-            .wrap{
-                article{
-                    width: 100%;
+                .title{
+                    font-size: 30px;
+                }
+                .sub{
+                    font-size: 11px;
+                }
+            }
+            &#process .inner .wrap article{
+                width: 49%;
+                margin-right: 2%;
+                margin-bottom: 20px;
+
+                &:nth-of-type(even){
                     margin-right: 0;
+                }
+                .pic{
+                    height: 38vw;
+                }
+            }
+            &#topic .inner dl{
+                dt{
+                    h2{
+                        font-size: 26px;
+                    }
+                }
+                dd{
+                    .pic{
+                        height: 200px;
+                    }
+                    h3{
+                        font-size: 24px;
+                    }
+                    &.technical{
+                        .wrap{
+                            display: none;
+                        }
+                    }
+                    &.behind .wrap article{
+                        width: 100%;
+                        margin-right: 0;
+    
+                        .pic{
+                            height: 150px;
+                        }
+                    } 
+                    &.interview .wrap article{
+                        width: 100%;
+                        margin-right: 0;
+    
+                        .pic{
+                            height: 100px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            } 
+            &#news .inner .wrap>div{
+                width: 100%;
+                margin-right: 0;
+
+                &:last-child{
+                    article{
+                        width: 100%;
+                    }
+                    .border{
+                        h1{
+                            font-size: 20px;
+                        }
+                        h2{
+                            font-size: 30px;
+                        }
+                    }
+                }
+                article{
+                    &.border h2{
+                        font-size: 24px;
+                    }
                 }
             }
         }

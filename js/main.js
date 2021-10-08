@@ -11,11 +11,9 @@ $btnMo.on("click", function(e){
     if(isOn){
         $btnMo.removeClass("on");
         $gnbMo.removeClass("on");
-        $gnb.slideDown();
     } else{
         $btnMo.addClass("on");
         $gnbMo.addClass("on");
-        $gnb.slideUp();
     }
 });
 
