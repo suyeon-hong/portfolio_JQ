@@ -1948,4 +1948,29 @@ body {
       color: #fff;
       font: 100 12px/1 "Gothic A1"; }
 
+@media screen and (max-width: 1179px) {
+  .youtube .inner #vidGallery article {
+    width: 49%;
+    margin-right: 2%; }
+    .youtube .inner #vidGallery article a {
+      height: 40vw; } }
+@media screen and (max-width: 768px) {
+  .youtube .inner #vidGallery article {
+    width: 100%;
+    margin-right: 0; }
+    .youtube .inner #vidGallery article a {
+      height: 60vw; } }
+@media screen and (max-width: 539px) {
+  .youtube .inner #vidGallery article a {
+    margin-bottom: 20px; }
+  .youtube .inner #vidGallery article .con h2 {
+    font-size: 12px;
+    margin-bottom: 10px; }
+  .youtube .inner #vidGallery article .con p {
+    font-size: 14px;
+    margin-bottom: 20px; }
+  .youtube .inner #vidGallery article .con span {
+    top: 2px;
+    left: 2px; } }
+
 /*# sourceMappingURL=style.css.map */
