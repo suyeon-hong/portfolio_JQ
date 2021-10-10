@@ -21,14 +21,20 @@
                 &:nth-of-type(4n){
                     margin-right: 0;
                 }
-                a img{
+                a{
+                    display: block;
                     width: 100%;
                     height: 250px;
-                    object-fit: cover;
                     margin-bottom: 30px;
                     filter: saturate(10%);
                     transform-origin: center 150px;
                     transition: 0s;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
                 h2{
                     font: 500 12px/1 $font;
@@ -44,11 +50,11 @@
                     padding: 20px;
                     transition: 1s;
 
-                    a img{
-                        filter: saturate(100%);
+                    a{
                         height: 300px;
                         margin-bottom: 20px;
                         transition: 1s;
+                        filter: saturate(100%);
                     }
                     h2{
                         padding-left: 40px;
@@ -96,5 +102,66 @@
         top: 50px;
         right: 50px;
         cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: $tablet) {
+    .gallery{
+        .inner{
+            ul li{
+                width: 23.5%;
+                margin-right: 2%;
+
+                a{
+                    height: 20vw;
+                }
+                &:hover a{
+                    height: 24vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2) {
+    .gallery{
+        .inner{
+            ul li{
+                width: 49%;
+                margin-right: 2%;
+
+                &:nth-of-type(2n){
+                    margin-right: 0;
+                }
+                a{
+                    height: 30vw;
+                }
+                &:hover a{
+                    height: 39vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .gallery{
+        .inner{
+            ul li{
+                width: 100%;
+                margin-right: 0;
+
+                a{
+                    height: 70vw;
+                }
+                &:hover a{
+                    height: 90vw;
+                }
+            }
+        }
+    }
+    .pop{
+        padding: 100px 20px;
     }
 }
