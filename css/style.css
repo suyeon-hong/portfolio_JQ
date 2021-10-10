@@ -1092,8 +1092,10 @@ body {
   .content .inner {
     padding: 50px 20px; } }
 @media screen and (max-width: 539px) {
+  .content .visual {
+    height: 200px; }
   .content .inner {
-    padding: 30px 10px; }
+    padding: 30px 10px 50px; }
     .content .inner h1 {
       font-size: 30px; } }
 .about .inner > p {
@@ -1408,7 +1410,8 @@ body {
   width: 100%;
   display: none; }
   .community .inner > div .pagination {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
     .community .inner > div .pagination > span {
       display: inline-block;
       width: 20px;
@@ -1525,6 +1528,7 @@ body {
         .community .inner > div#faq .qna dt:last-child {
           border-bottom: none; }
         .community .inner > div#faq .qna dt p {
+          width: 90%;
           font: 600 16px/1 "Gothic A1";
           color: #333;
           margin-bottom: 10px; }
@@ -1590,7 +1594,7 @@ body {
         .community .inner > div#notice table thead tr th:nth-of-type(1) {
           width: 10%; }
         .community .inner > div#notice table thead tr th:nth-of-type(3) {
-          width: 15%; }
+          width: 18%; }
     .community .inner > div#notice table tbody tr {
       border-bottom: 1px solid #c9c9c9; }
       .community .inner > div#notice table tbody tr td {
@@ -1610,6 +1614,65 @@ body {
           .community .inner > div#notice table tbody tr td:nth-of-type(2) a {
             color: #555; }
 
+@media screen and (max-width: 768px) {
+  .community .inner div#faq .search form {
+    padding: 30px; }
+    .community .inner div#faq .search form input {
+      width: 100%; }
+    .community .inner div#faq .search form .btn {
+      right: 40px; }
+  .community .inner div#notice table thead tr th:nth-of-type(3) {
+    display: none; }
+  .community .inner div#notice table tbody tr td:nth-of-type(3) {
+    display: none; } }
+@media screen and (max-width: 539px) {
+  .community .inner .tabmenu {
+    margin-bottom: 50px; }
+    .community .inner .tabmenu li a {
+      font-size: 20px; }
+  .community .inner div#faq h2 {
+    font-size: 18px; }
+  .community .inner div#faq .search {
+    margin-bottom: 50px; }
+    .community .inner div#faq .search form {
+      padding: 20px; }
+      .community .inner div#faq .search form input {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 40px 0 10px; }
+      .community .inner div#faq .search form .btn {
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        right: 30px; }
+        .community .inner div#faq .search form .btn::after {
+          width: 10px; }
+  .community .inner div#faq .tabs li {
+    height: 50px; }
+    .community .inner div#faq .tabs li a {
+      font-size: 12px;
+      line-height: 50px; }
+  .community .inner div#faq .qna {
+    margin-bottom: 50px; }
+    .community .inner div#faq .qna dt, .community .inner div#faq .qna dd {
+      padding-left: 40px; }
+      .community .inner div#faq .qna dt .icon, .community .inner div#faq .qna dd .icon {
+        left: 10px; }
+    .community .inner div#faq .qna dt p {
+      font-size: 14px; }
+    .community .inner div#faq .qna dt .arrow {
+      right: 10px; }
+    .community .inner div#faq .qna dd p {
+      width: 100%; }
+  .community .inner div#notice table thead tr th:nth-of-type(1), .community .inner div#notice table tbody tr td:nth-of-type(1) {
+    display: none; }
+  .community .inner div .pagination > span {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px; }
+  .community .inner div .pagination .numbers span a {
+    font-size: 14px;
+    padding: 8px 10px; } }
 .join .inner form fieldset {
   border: none; }
   .join .inner form fieldset table {
