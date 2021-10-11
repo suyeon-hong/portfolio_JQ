@@ -181,20 +181,96 @@
         height: calc(100vh - 80px);
         background: #fff;
         border-top: 1px solid #000;
-        position: fixed;
+        padding-top: 20px;
+        position: absolute;
         top: 80px;
         left: -100%;
         transition: 1s;
         opacity: 0;
         z-index: 2;
 
-        li{
-            padding:50px;
-            border-bottom: 1px solid #e8e8e8;
+        >li{
+            text-align: right;
+            height: 170px;
+            padding-right: 80%;
+            position: relative;
 
             a{
                 font: 600 18px/1 $font;
                 color: #000;
+            }
+            .arrow{
+                display: none;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 27px;
+                right: 30px;
+                cursor: pointer;
+                transition: .6s;
+
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #bbb;
+                    transform-origin: right center;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #bbb;
+                    transform-origin: right center;
+                    transform: rotate(-45deg);
+                    margin-top: -2px;
+                }
+                &.on{
+                    transform: rotate(90deg);
+                }
+            }
+            ul{
+                position: absolute;
+                top: 0;
+                left: 25%;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                li{
+                    float: left;
+                    width: 20vw;
+                    height: 150px;
+                    margin-right: 20px;
+
+                    a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        text-align: center;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0.6;
+                        }
+                        span{
+                            font: 300 16px/1 $font;
+                            color: #000;
+                            position: relative;
+                        }
+                    }
+                }
             }
         }
         &.on{
@@ -218,6 +294,38 @@
     }
 }
 
+@media screen and (max-width: $tablet2){
+    #header_sub{
+        .gnbMo{
+            >li{
+                padding: 20px 30px;
+                text-align: left;
+                height: auto;
+
+                a{
+                    font-size: 22px;
+                }
+                .arrow{
+                    display: block;
+                }
+                ul{
+                    display: none;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    margin-top: 20px;
+
+                    li{
+                        width: 150px;
+                        height: 100px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $mobile){
     #header_sub{
         padding: 0 10px;
@@ -232,6 +340,11 @@
         .gnbMo{
             height: calc(100vh - 60px);
             top: 60px;
+
+            >li ul li{
+                width: 85px;
+                height: 85px;
+            }
         }
     }
 }

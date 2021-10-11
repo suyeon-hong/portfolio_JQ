@@ -17,6 +17,25 @@ $btnMo.on("click", function(e){
     }
 });
 
+// gnbMo tabmenu
+const $gnbMo_tabs = $gnbMo.find(".arrow");
+const $gnbMo_boxs = $gnbMo.find("ul");
+
+$gnbMo_tabs.on("click", function(e){
+    let isOn = $(this).hasClass("on");
+
+    if (isOn){
+        $(this).removeClass("on");
+        $(this).siblings("ul").slideUp(speed/2);
+    } else{
+        $gnbMo_tabs.removeClass("on");
+        $gnbMo_tabs.siblings("ul").slideUp(speed/2);
+        $(this).addClass("on");
+        $(this).siblings("ul").slideDown(speed/2);
+    }
+});
+
+
 // index visual slide
     const $visual = $("#visual");
     const $wrap = $visual.find(".wrap");
