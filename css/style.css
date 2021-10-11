@@ -1551,16 +1551,20 @@ body {
       width: 100%;
       margin-right: 0;
       margin-bottom: 20px; } }
-.community .inner .tabmenu {
-  margin-bottom: 70px; }
-  .community .inner .tabmenu li {
-    float: left;
-    margin-right: 30px; }
-    .community .inner .tabmenu li a {
+.community .inner > dl {
+  position: relative;
+  padding-top: 100px; }
+  .community .inner > dl > dt {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .community .inner > dl > dt:nth-of-type(2) {
+      left: 70px; }
+    .community .inner > dl > dt a {
       font: 600 24px/1 "Gothic A1";
       color: #555;
       position: relative; }
-      .community .inner .tabmenu li a::after {
+      .community .inner > dl > dt a::after {
         content: '';
         display: block;
         width: 100%;
@@ -1570,277 +1574,277 @@ body {
         left: 0;
         bottom: -5px;
         opacity: 0; }
-      .community .inner .tabmenu li a.on {
+      .community .inner > dl > dt a.on {
         color: #000; }
-        .community .inner .tabmenu li a.on::after {
+        .community .inner > dl > dt a.on::after {
           opacity: 1; }
-.community .inner > div {
-  width: 100%;
-  display: none; }
-  .community .inner > div .pagination {
-    text-align: center;
-    margin-bottom: 50px; }
-    .community .inner > div .pagination > span {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      vertical-align: text-bottom;
-      margin-right: 15px; }
-      .community .inner > div .pagination > span img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-    .community .inner > div .pagination .numbers {
-      display: inline-block;
-      margin: 0 10px; }
-      .community .inner > div .pagination .numbers span a {
-        display: inline-block;
-        padding: 10px 13px;
-        color: #606060;
-        font: 600 16px/1 "Gothic A1"; }
-        .community .inner > div .pagination .numbers span a:hover {
-          text-decoration: underline; }
-      .community .inner > div .pagination .numbers span.on a {
-        background: #222;
-        color: #fff;
-        text-decoration: none;
-        cursor: text; }
-  .community .inner > div#faq {
-    display: block; }
-    .community .inner > div#faq h2 {
-      font: 600 22px/1 "Gothic A1";
-      color: #000;
-      margin-bottom: 20px; }
-    .community .inner > div#faq .search {
-      margin-bottom: 70px; }
-      .community .inner > div#faq .search form {
-        width: 100%;
-        background: #f7f7f7;
-        padding: 30px 0;
-        text-align: center;
-        position: relative; }
-        .community .inner > div#faq .search form input {
-          width: 644px;
-          height: 66px;
-          border: 2px solid #000;
-          padding: 0 70px 0 30px;
-          font: 600 20px/1 "Gothic A1";
-          color: #606060; }
-        .community .inner > div#faq .search form .btn {
-          display: block;
-          text-indent: -9999px;
-          width: 30px;
-          height: 30px;
-          position: absolute;
-          top: 50%;
-          right: calc((100% - 644px) / 2 + 30px);
-          margin-top: -15px; }
-          .community .inner > div#faq .search form .btn::before {
-            content: '';
-            display: block;
-            width: 70%;
-            height: 70%;
-            border-radius: 50%;
-            border: 2px solid #000;
-            position: absolute;
-            top: 0;
-            left: 0; }
-          .community .inner > div#faq .search form .btn::after {
-            content: '';
-            display: block;
-            width: 12px;
-            height: 2px;
-            background: #000;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transform-origin: right center;
-            transform: rotate(45deg); }
-    .community .inner > div#faq .tabs {
+  .community .inner > dl > dd {
+    width: 100%;
+    display: none; }
+    .community .inner > dl > dd .pagination {
+      text-align: center;
       margin-bottom: 50px; }
-      .community .inner > div#faq .tabs li {
-        float: left;
-        width: calc(100% / 5);
-        height: 55px;
-        margin: 0 -1px -1px 0; }
-        .community .inner > div#faq .tabs li a {
-          display: block;
+      .community .inner > dl > dd .pagination > span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: text-bottom;
+        margin-right: 15px; }
+        .community .inner > dl > dd .pagination > span img {
           width: 100%;
           height: 100%;
-          border: 1px solid #b0b0b0;
-          text-align: center;
-          font: 500 15px/55px "Gothic A1";
-          color: #606060; }
-          .community .inner > div#faq .tabs li a.on {
-            color: #000;
-            border: 3px solid #000; }
-    .community .inner > div#faq .qna {
-      border-top: 3px solid #000;
-      border-bottom: 1px solid #000;
-      margin-bottom: 100px; }
-      .community .inner > div#faq .qna dt, .community .inner > div#faq .qna dd {
-        padding: 20px;
-        padding-left: 70px;
-        position: relative; }
-        .community .inner > div#faq .qna dt .icon, .community .inner > div#faq .qna dd .icon {
-          display: block;
+          object-fit: cover; }
+      .community .inner > dl > dd .pagination .numbers {
+        display: inline-block;
+        margin: 0 10px; }
+        .community .inner > dl > dd .pagination .numbers span a {
+          display: inline-block;
+          padding: 10px 13px;
           color: #606060;
-          position: absolute;
-          top: 30px;
-          left: 20px;
-          font: 600 24px/1 "Gothic A1";
-          text-align: center; }
-      .community .inner > div#faq .qna dt {
-        border-bottom: 1px solid #c9c9c9;
-        cursor: pointer; }
-        .community .inner > div#faq .qna dt:last-child {
-          border-bottom: none; }
-        .community .inner > div#faq .qna dt p {
-          width: 90%;
-          font: 600 16px/1 "Gothic A1";
-          color: #333;
-          margin-bottom: 10px; }
-        .community .inner > div#faq .qna dt .subj {
-          font: 500 14px/1 "Gothic A1";
-          color: #666; }
-        .community .inner > div#faq .qna dt .arrow {
-          display: block;
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          top: 30px;
-          right: 20px;
-          transition: 0.6s; }
-          .community .inner > div#faq .qna dt .arrow::before {
-            content: '';
-            display: block;
-            width: 12px;
-            height: 1px;
-            background: #000;
-            transform: rotate(-45deg);
-            transform-origin: left center;
-            position: absolute;
-            bottom: 0;
-            left: 0; }
-          .community .inner > div#faq .qna dt .arrow::after {
-            content: '';
-            display: block;
-            width: 12px;
-            height: 1px;
-            background: #000;
-            transform: rotate(45deg);
-            transform-origin: right center;
-            position: absolute;
-            bottom: 0;
-            right: 0; }
-        .community .inner > div#faq .qna dt.on .icon {
-          color: #111; }
-        .community .inner > div#faq .qna dt.on .arrow {
-          transform: rotate(-180deg); }
-      .community .inner > div#faq .qna dd {
-        display: none;
-        background: #f7f7f7; }
-        .community .inner > div#faq .qna dd .icon {
-          color: #008a00; }
-        .community .inner > div#faq .qna dd p {
-          width: 70%;
-          min-height: 50px;
-          font: 500 14px/1.6 "Gothic A1";
-          color: #333; }
-  .community .inner > div#notice table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 50px; }
-    .community .inner > div#notice table thead tr {
-      border-top: 2px solid #000;
-      background: #efefef; }
-      .community .inner > div#notice table thead tr th {
-        padding: 16px 0;
-        text-align: center;
-        font: 600 15px/1 "Gothic A1";
-        color: #222; }
-        .community .inner > div#notice table thead tr th:nth-of-type(1) {
-          width: 10%; }
-        .community .inner > div#notice table thead tr th:nth-of-type(3) {
-          width: 18%; }
-    .community .inner > div#notice table tbody tr {
-      border-bottom: 1px solid #c9c9c9; }
-      .community .inner > div#notice table tbody tr td {
-        padding: 25px 15px;
-        text-align: center;
-        font: 500 14px/1 "Gothic A1";
-        color: #222; }
-        .community .inner > div#notice table tbody tr td:nth-of-type(1) span {
-          display: block;
+          font: 600 16px/1 "Gothic A1"; }
+          .community .inner > dl > dd .pagination .numbers span a:hover {
+            text-decoration: underline; }
+        .community .inner > dl > dd .pagination .numbers span.on a {
+          background: #222;
+          color: #fff;
+          text-decoration: none;
+          cursor: text; }
+    .community .inner > dl > dd#faq {
+      display: block; }
+      .community .inner > dl > dd#faq h2 {
+        font: 600 22px/1 "Gothic A1";
+        color: #000;
+        margin-bottom: 20px; }
+      .community .inner > dl > dd#faq .search {
+        margin-bottom: 70px; }
+        .community .inner > dl > dd#faq .search form {
           width: 100%;
-          height: 25px;
-          background: #666;
-          font: 400 12px/25px "Gothic A1";
-          color: #fff; }
-        .community .inner > div#notice table tbody tr td:nth-of-type(2) {
-          text-align: left; }
-          .community .inner > div#notice table tbody tr td:nth-of-type(2) a {
-            color: #555; }
+          background: #f7f7f7;
+          padding: 30px 0;
+          text-align: center;
+          position: relative; }
+          .community .inner > dl > dd#faq .search form input {
+            width: 644px;
+            height: 66px;
+            border: 2px solid #000;
+            padding: 0 70px 0 30px;
+            font: 600 20px/1 "Gothic A1";
+            color: #606060; }
+          .community .inner > dl > dd#faq .search form .btn {
+            display: block;
+            text-indent: -9999px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            right: calc((100% - 644px) / 2 + 30px);
+            margin-top: -15px; }
+            .community .inner > dl > dd#faq .search form .btn::before {
+              content: '';
+              display: block;
+              width: 70%;
+              height: 70%;
+              border-radius: 50%;
+              border: 2px solid #000;
+              position: absolute;
+              top: 0;
+              left: 0; }
+            .community .inner > dl > dd#faq .search form .btn::after {
+              content: '';
+              display: block;
+              width: 12px;
+              height: 2px;
+              background: #000;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              transform-origin: right center;
+              transform: rotate(45deg); }
+      .community .inner > dl > dd#faq .tabs {
+        margin-bottom: 50px; }
+        .community .inner > dl > dd#faq .tabs li {
+          float: left;
+          width: calc(100% / 5);
+          height: 55px;
+          margin: 0 -1px -1px 0; }
+          .community .inner > dl > dd#faq .tabs li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #b0b0b0;
+            text-align: center;
+            font: 500 15px/55px "Gothic A1";
+            color: #606060; }
+            .community .inner > dl > dd#faq .tabs li a.on {
+              color: #000;
+              border: 3px solid #000; }
+      .community .inner > dl > dd#faq .qna {
+        border-top: 3px solid #000;
+        border-bottom: 1px solid #000;
+        margin-bottom: 100px; }
+        .community .inner > dl > dd#faq .qna dt, .community .inner > dl > dd#faq .qna dd {
+          padding: 20px;
+          padding-left: 70px;
+          position: relative; }
+          .community .inner > dl > dd#faq .qna dt .icon, .community .inner > dl > dd#faq .qna dd .icon {
+            display: block;
+            color: #606060;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            font: 600 24px/1 "Gothic A1";
+            text-align: center; }
+        .community .inner > dl > dd#faq .qna dt {
+          border-bottom: 1px solid #c9c9c9;
+          cursor: pointer; }
+          .community .inner > dl > dd#faq .qna dt:last-child {
+            border-bottom: none; }
+          .community .inner > dl > dd#faq .qna dt p {
+            width: 90%;
+            font: 600 16px/1 "Gothic A1";
+            color: #333;
+            margin-bottom: 10px; }
+          .community .inner > dl > dd#faq .qna dt .subj {
+            font: 500 14px/1 "Gothic A1";
+            color: #666; }
+          .community .inner > dl > dd#faq .qna dt .arrow {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            transition: 0.6s; }
+            .community .inner > dl > dd#faq .qna dt .arrow::before {
+              content: '';
+              display: block;
+              width: 12px;
+              height: 1px;
+              background: #000;
+              transform: rotate(-45deg);
+              transform-origin: left center;
+              position: absolute;
+              bottom: 0;
+              left: 0; }
+            .community .inner > dl > dd#faq .qna dt .arrow::after {
+              content: '';
+              display: block;
+              width: 12px;
+              height: 1px;
+              background: #000;
+              transform: rotate(45deg);
+              transform-origin: right center;
+              position: absolute;
+              bottom: 0;
+              right: 0; }
+          .community .inner > dl > dd#faq .qna dt.on .icon {
+            color: #111; }
+          .community .inner > dl > dd#faq .qna dt.on .arrow {
+            transform: rotate(-180deg); }
+        .community .inner > dl > dd#faq .qna dd {
+          display: none;
+          background: #f7f7f7; }
+          .community .inner > dl > dd#faq .qna dd .icon {
+            color: #008a00; }
+          .community .inner > dl > dd#faq .qna dd p {
+            width: 70%;
+            min-height: 50px;
+            font: 500 14px/1.6 "Gothic A1";
+            color: #333; }
+    .community .inner > dl > dd#notice table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 50px; }
+      .community .inner > dl > dd#notice table thead tr {
+        border-top: 2px solid #000;
+        background: #efefef; }
+        .community .inner > dl > dd#notice table thead tr th {
+          padding: 16px 0;
+          text-align: center;
+          font: 600 15px/1 "Gothic A1";
+          color: #222; }
+          .community .inner > dl > dd#notice table thead tr th:nth-of-type(1) {
+            width: 10%; }
+          .community .inner > dl > dd#notice table thead tr th:nth-of-type(3) {
+            width: 18%; }
+      .community .inner > dl > dd#notice table tbody tr {
+        border-bottom: 1px solid #c9c9c9; }
+        .community .inner > dl > dd#notice table tbody tr td {
+          padding: 25px 15px;
+          text-align: center;
+          font: 500 14px/1 "Gothic A1";
+          color: #222; }
+          .community .inner > dl > dd#notice table tbody tr td:nth-of-type(1) span {
+            display: block;
+            width: 100%;
+            height: 25px;
+            background: #666;
+            font: 400 12px/25px "Gothic A1";
+            color: #fff; }
+          .community .inner > dl > dd#notice table tbody tr td:nth-of-type(2) {
+            text-align: left; }
+            .community .inner > dl > dd#notice table tbody tr td:nth-of-type(2) a {
+              color: #555; }
 
 @media screen and (max-width: 768px) {
-  .community .inner div#faq .search form {
+  .community .inner dl dd#faq .search form {
     padding: 30px; }
-    .community .inner div#faq .search form input {
+    .community .inner dl dd#faq .search form input {
       width: 100%; }
-    .community .inner div#faq .search form .btn {
+    .community .inner dl dd#faq .search form .btn {
       right: 40px; }
-  .community .inner div#notice table thead tr th:nth-of-type(3) {
+  .community .inner dl dd#notice table thead tr th:nth-of-type(3) {
     display: none; }
-  .community .inner div#notice table tbody tr td:nth-of-type(3) {
+  .community .inner dl dd#notice table tbody tr td:nth-of-type(3) {
     display: none; } }
 @media screen and (max-width: 539px) {
-  .community .inner .tabmenu {
-    margin-bottom: 50px; }
-    .community .inner .tabmenu li a {
+  .community .inner > dl {
+    padding-top: 80px; }
+    .community .inner > dl > dt li a {
       font-size: 20px; }
-  .community .inner div#faq h2 {
-    font-size: 18px; }
-  .community .inner div#faq .search {
-    margin-bottom: 50px; }
-    .community .inner div#faq .search form {
-      padding: 20px; }
-      .community .inner div#faq .search form input {
-        height: 50px;
-        font-size: 16px;
-        padding: 0 40px 0 10px; }
-      .community .inner div#faq .search form .btn {
-        width: 24px;
-        height: 24px;
-        margin-top: -12px;
-        right: 30px; }
-        .community .inner div#faq .search form .btn::after {
-          width: 10px; }
-  .community .inner div#faq .tabs li {
-    height: 50px; }
-    .community .inner div#faq .tabs li a {
-      font-size: 12px;
-      line-height: 50px; }
-  .community .inner div#faq .qna {
-    margin-bottom: 50px; }
-    .community .inner div#faq .qna dt, .community .inner div#faq .qna dd {
-      padding-left: 40px; }
-      .community .inner div#faq .qna dt .icon, .community .inner div#faq .qna dd .icon {
-        left: 10px; }
-    .community .inner div#faq .qna dt p {
-      font-size: 14px; }
-    .community .inner div#faq .qna dt .arrow {
-      right: 10px; }
-    .community .inner div#faq .qna dd p {
-      width: 100%; }
-  .community .inner div#notice table thead tr th:nth-of-type(1), .community .inner div#notice table tbody tr td:nth-of-type(1) {
-    display: none; }
-  .community .inner div .pagination > span {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px; }
-  .community .inner div .pagination .numbers span a {
-    font-size: 14px;
-    padding: 8px 10px; } }
+    .community .inner > dl dd#faq h2 {
+      font-size: 18px; }
+    .community .inner > dl dd#faq .search {
+      margin-bottom: 50px; }
+      .community .inner > dl dd#faq .search form {
+        padding: 20px; }
+        .community .inner > dl dd#faq .search form input {
+          height: 50px;
+          font-size: 16px;
+          padding: 0 40px 0 10px; }
+        .community .inner > dl dd#faq .search form .btn {
+          width: 24px;
+          height: 24px;
+          margin-top: -12px;
+          right: 30px; }
+          .community .inner > dl dd#faq .search form .btn::after {
+            width: 10px; }
+    .community .inner > dl dd#faq .tabs li {
+      height: 50px; }
+      .community .inner > dl dd#faq .tabs li a {
+        font-size: 12px;
+        line-height: 50px; }
+    .community .inner > dl dd#faq .qna {
+      margin-bottom: 50px; }
+      .community .inner > dl dd#faq .qna dt, .community .inner > dl dd#faq .qna dd {
+        padding-left: 40px; }
+        .community .inner > dl dd#faq .qna dt .icon, .community .inner > dl dd#faq .qna dd .icon {
+          left: 10px; }
+      .community .inner > dl dd#faq .qna dt p {
+        font-size: 14px; }
+      .community .inner > dl dd#faq .qna dt .arrow {
+        right: 10px; }
+      .community .inner > dl dd#faq .qna dd p {
+        width: 100%; }
+    .community .inner > dl dd#notice table thead tr th:nth-of-type(1), .community .inner > dl dd#notice table tbody tr td:nth-of-type(1) {
+      display: none; }
+    .community .inner > dl dd .pagination > span {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px; }
+    .community .inner > dl dd .pagination .numbers span a {
+      font-size: 14px;
+      padding: 8px 10px; } }
 .join .inner form fieldset {
   border: none; }
   .join .inner form fieldset table {

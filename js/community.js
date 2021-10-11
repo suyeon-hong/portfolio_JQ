@@ -1,6 +1,6 @@
 // community tab메뉴
-const $tabBtns = $(".community .inner .tabmenu li a");
-const $tabBoxs = $(".community .inner>div");
+const $tabBtns = $(".community .inner>dl>dt a");
+const $tabBoxs = $(".community .inner>dl>dd");
 
 $tabBtns.on("click focus", function(e){
     e.preventDefault();

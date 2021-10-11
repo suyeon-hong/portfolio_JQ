@@ -1,12 +1,17 @@
 .community{
     .inner{
-        .tabmenu{
-            margin-bottom: 70px;
+        >dl{
+            position: relative;
+            padding-top: 100px;
 
-            li{
-                float: left;
-                margin-right: 30px;
+            >dt{
+                position: absolute;
+                top: 0;
+                left: 0;
 
+                &:nth-of-type(2){
+                    left: 70px;
+                }
                 a{
                     font: 600 24px/1 $font;
                     color: #555;
@@ -32,290 +37,290 @@
                     }
                 }
             }
-        }
-        >div{
-            width: 100%;
-            display: none;
-
-            .pagination{
-                text-align: center;
-                margin-bottom: 50px;
-
-                >span{
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                    vertical-align: text-bottom;
-                    margin-right: 15px;
-
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .numbers{
-                    display: inline-block;
-                    margin: 0 10px;
-
-                    span{
-                        a{
-                            display: inline-block;
-                            padding: 10px 13px;
-                            color: #606060;
-                            font: 600 16px/1 $font;
-
-                            &:hover{
-                                text-decoration: underline;
-                            }
-                        }
-                        &.on a{
-                            background: #222;
-                            color: #fff;
-                            text-decoration: none;
-                            cursor: text;
-                            }
-                    }
-                }
-                
-            }
-            &#faq{
-                display: block;
-
-                h2{
-                    font: 600 22px/1 $font;
-                    color: #000;
-                    margin-bottom: 20px;
-                }
-                .search{
-                    margin-bottom: 70px;
-                    
-                    form{
-                        width: 100%;
-                        background: #f7f7f7;
-                        padding: 30px 0;
-                        text-align: center;
-                        position: relative;
-
-                        input{
-                            width: 644px;
-                            height: 66px;
-                            border: 2px solid #000;
-                            padding: 0 70px 0 30px;
-                            font: 600 20px/1 $font;
-                            color: #606060;
-                        }
-                        .btn{
-                            display: block;
-                            text-indent: -9999px;
-                            width: 30px;
-                            height: 30px;
-                            position: absolute;
-                            top: 50%;
-                            right: calc((100% - 644px) / 2 + 30px);
-                            margin-top: -15px;
-
-                            &::before{
-                                content:'';
-                                display: block;
-                                width: 70%;
-                                height: 70%;
-                                border-radius: 50%;
-                                border: 2px solid #000;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                            }
-                            &::after{
-                                content:'';
-                                display: block;
-                                width: 12px;
-                                height: 2px;
-                                background: #000;
-                                position: absolute;
-                                bottom: 0;
-                                right: 0;
-                                transform-origin: right center;
-                                transform: rotate(45deg);
-                            }
-                        }
-                    }
-                }
-                .tabs{
+            >dd{
+                width: 100%;
+                display: none;
+    
+                .pagination{
+                    text-align: center;
                     margin-bottom: 50px;
-
-                    li{
-                        float: left;
-                        width: calc(100% / 5);
-                        height: 55px;
-                        margin: 0 -1px -1px 0;
-
-                        a{
-                            display: block;
+    
+                    >span{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: text-bottom;
+                        margin-right: 15px;
+    
+                        img{
                             width: 100%;
                             height: 100%;
-                            border: 1px solid #b0b0b0;
-                            text-align: center;
-                            font: 500 15px/55px $font;
-                            color: #606060;
-
-                            &.on{
-                                color: #000;
-                                border: 3px solid #000;
-                            }
+                            object-fit: cover;
                         }
                     }
+                    .numbers{
+                        display: inline-block;
+                        margin: 0 10px;
+    
+                        span{
+                            a{
+                                display: inline-block;
+                                padding: 10px 13px;
+                                color: #606060;
+                                font: 600 16px/1 $font;
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            &.on a{
+                                background: #222;
+                                color: #fff;
+                                text-decoration: none;
+                                cursor: text;
+                                }
+                        }
+                    }
+                    
                 }
-                .qna{
-                    border-top: 3px solid #000;
-                    border-bottom: 1px solid #000;
-                    margin-bottom: 100px;
-
-                    dt, dd{
-                        padding: 20px;
-                        padding-left: 70px;
-                        position: relative;
-
-                        .icon{
-                            display: block;
-                            color: #606060;
-                            position: absolute;
-                            top: 30px;
-                            left: 20px;
-                            font: 600 24px/1 $font;
+                &#faq{
+                    display: block;
+    
+                    h2{
+                        font: 600 22px/1 $font;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+                    .search{
+                        margin-bottom: 70px;
+                        
+                        form{
+                            width: 100%;
+                            background: #f7f7f7;
+                            padding: 30px 0;
                             text-align: center;
+                            position: relative;
+    
+                            input{
+                                width: 644px;
+                                height: 66px;
+                                border: 2px solid #000;
+                                padding: 0 70px 0 30px;
+                                font: 600 20px/1 $font;
+                                color: #606060;
+                            }
+                            .btn{
+                                display: block;
+                                text-indent: -9999px;
+                                width: 30px;
+                                height: 30px;
+                                position: absolute;
+                                top: 50%;
+                                right: calc((100% - 644px) / 2 + 30px);
+                                margin-top: -15px;
+    
+                                &::before{
+                                    content:'';
+                                    display: block;
+                                    width: 70%;
+                                    height: 70%;
+                                    border-radius: 50%;
+                                    border: 2px solid #000;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+                                &::after{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 2px;
+                                    background: #000;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    transform-origin: right center;
+                                    transform: rotate(45deg);
+                                }
+                            }
                         }
                     }
-                    dt{
-                        border-bottom: 1px solid #c9c9c9;
-                        
-                        &:last-child{
-                            border-bottom: none;
-                        }
-                        cursor: pointer;
-
-                        p{
-                            width: 90%;
-                            font: 600 16px/1 $font;
-                            color: #333;
-                            margin-bottom: 10px;
-                        }
-                        .subj{
-                            font: 500 14px/1 $font;
-                            color: #666;
-                        }
-                        .arrow{
-                            display: block;
-                            width: 16px;
-                            height: 16px;
-                            position: absolute;
-                            top: 30px;
-                            right: 20px;
-                            transition: 0.6s;
-
-                            &::before{
-                                content:'';
+                    .tabs{
+                        margin-bottom: 50px;
+    
+                        li{
+                            float: left;
+                            width: calc(100% / 5);
+                            height: 55px;
+                            margin: 0 -1px -1px 0;
+    
+                            a{
                                 display: block;
-                                width: 12px;
-                                height: 1px;
-                                background: #000;
-                                transform: rotate(-45deg);
-                                transform-origin: left center;
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                            }
-                            &::after{
-                                content:'';
-                                display: block;
-                                width: 12px;
-                                height: 1px;
-                                background: #000;
-                                transform: rotate(45deg);
-                                transform-origin: right center;
-                                position: absolute;
-                                bottom: 0;
-                                right: 0;
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid #b0b0b0;
+                                text-align: center;
+                                font: 500 15px/55px $font;
+                                color: #606060;
+    
+                                &.on{
+                                    color: #000;
+                                    border: 3px solid #000;
+                                }
                             }
                         }
-                        &.on{
+                    }
+                    .qna{
+                        border-top: 3px solid #000;
+                        border-bottom: 1px solid #000;
+                        margin-bottom: 100px;
+    
+                        dt, dd{
+                            padding: 20px;
+                            padding-left: 70px;
+                            position: relative;
+    
                             .icon{
-                                color: #111;
+                                display: block;
+                                color: #606060;
+                                position: absolute;
+                                top: 30px;
+                                left: 20px;
+                                font: 600 24px/1 $font;
+                                text-align: center;
+                            }
+                        }
+                        dt{
+                            border-bottom: 1px solid #c9c9c9;
+                            
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                            cursor: pointer;
+    
+                            p{
+                                width: 90%;
+                                font: 600 16px/1 $font;
+                                color: #333;
+                                margin-bottom: 10px;
+                            }
+                            .subj{
+                                font: 500 14px/1 $font;
+                                color: #666;
                             }
                             .arrow{
-                                transform: rotate(-180deg);
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                position: absolute;
+                                top: 30px;
+                                right: 20px;
+                                transition: 0.6s;
+    
+                                &::before{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 1px;
+                                    background: #000;
+                                    transform: rotate(-45deg);
+                                    transform-origin: left center;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                }
+                                &::after{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 1px;
+                                    background: #000;
+                                    transform: rotate(45deg);
+                                    transform-origin: right center;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                }
                             }
-                        } 
-                        
-                    }
-                    dd{
-                        display: none;
-                        background: #f7f7f7;
-
-                        .icon{
-                            color: #008a00;
+                            &.on{
+                                .icon{
+                                    color: #111;
+                                }
+                                .arrow{
+                                    transform: rotate(-180deg);
+                                }
+                            } 
+                            
                         }
-                        p{
-                            width: 70%;
-                            min-height: 50px;
-                            font: 500 14px/1.6 $font;
-                            color: #333;
+                        dd{
+                            display: none;
+                            background: #f7f7f7;
+    
+                            .icon{
+                                color: #008a00;
+                            }
+                            p{
+                                width: 70%;
+                                min-height: 50px;
+                                font: 500 14px/1.6 $font;
+                                color: #333;
+                            }
                         }
                     }
                 }
-            }
-            &#notice{
-                table{
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin-bottom: 50px;
-
-                    thead{
-                        tr{
-                            border-top: 2px solid #000;
-                            background: #efefef;
-
-                            th{
-                                padding: 16px 0;
-                                text-align: center;
-                                font: 600 15px/1 $font;
-                                color: #222;
+                &#notice{
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 50px;
     
-                                &:nth-of-type(1){
-                                    width: 10%;
-                                }
-                                &:nth-of-type(3){
-                                    width: 18%;
-                                }
-                            }
-                            
-                        }
-                    }
-                    tbody{
-                        tr{
-                            border-bottom: 1px solid #c9c9c9;
-
-                            td{
-                                padding: 25px 15px;
-                                text-align: center;
-                                font: 500 14px/1 $font;
-                                color: #222;
-
-                                &:nth-of-type(1){
-                                    span{
-                                        display: block;
-                                        width: 100%;
-                                        height: 25px;
-                                        background: #666;
-                                        font: 400 12px/25px $font;
-                                        color: #fff;
+                        thead{
+                            tr{
+                                border-top: 2px solid #000;
+                                background: #efefef;
+    
+                                th{
+                                    padding: 16px 0;
+                                    text-align: center;
+                                    font: 600 15px/1 $font;
+                                    color: #222;
+        
+                                    &:nth-of-type(1){
+                                        width: 10%;
+                                    }
+                                    &:nth-of-type(3){
+                                        width: 18%;
                                     }
                                 }
-                                &:nth-of-type(2){
-                                    text-align: left;
-
-                                    a{
-                                        color: #555;
+                                
+                            }
+                        }
+                        tbody{
+                            tr{
+                                border-bottom: 1px solid #c9c9c9;
+    
+                                td{
+                                    padding: 25px 15px;
+                                    text-align: center;
+                                    font: 500 14px/1 $font;
+                                    color: #222;
+    
+                                    &:nth-of-type(1){
+                                        span{
+                                            display: block;
+                                            width: 100%;
+                                            height: 25px;
+                                            background: #666;
+                                            font: 400 12px/25px $font;
+                                            color: #fff;
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        text-align: left;
+    
+                                        a{
+                                            color: #555;
+                                        }
                                     }
                                 }
                             }
@@ -330,7 +335,7 @@
 @media screen and (max-width: $tablet2){
     .community{
         .inner{
-            div{
+            dl dd{
                 &#faq .search form{
                     padding: 30px;
 
@@ -357,88 +362,88 @@
 @media screen and (max-width: $mobile){
     .community{
         .inner{
-            .tabmenu{
-                margin-bottom: 50px;
+            >dl{
+                padding-top: 80px;
 
-                li a{
+                >dt li a{
                     font-size: 20px;
                 }
-            }
-            div{
-                &#faq{
-                    h2{
-                        font-size: 18px;
-                    }
-                    .search{
-                        margin-bottom: 50px;
-
-                        form{
-                            padding: 20px;
-
-                            input{
-                                height: 50px;
-                                font-size: 16px;
-                                padding: 0 40px 0 10px;
-                            }
-                            .btn{
-                                width: 24px;
-                                height: 24px;
-                                margin-top: -12px;
-                                right: 30px;
-
-                                &::after{
-                                    width: 10px;
+                dd{
+                    &#faq{
+                        h2{
+                            font-size: 18px;
+                        }
+                        .search{
+                            margin-bottom: 50px;
+    
+                            form{
+                                padding: 20px;
+    
+                                input{
+                                    height: 50px;
+                                    font-size: 16px;
+                                    padding: 0 40px 0 10px;
+                                }
+                                .btn{
+                                    width: 24px;
+                                    height: 24px;
+                                    margin-top: -12px;
+                                    right: 30px;
+    
+                                    &::after{
+                                        width: 10px;
+                                    }
                                 }
                             }
                         }
-                    }
-                    .tabs li{
-                        height: 50px;
-
-                        a{
-                            font-size: 12px;
-                            line-height: 50px;
-                        }
-                    }
-                    .qna{
-                        margin-bottom: 50px;
-
-                        dt, dd{
-                            padding-left: 40px;
-
-                            .icon{
-                                left: 10px;
+                        .tabs li{
+                            height: 50px;
+    
+                            a{
+                                font-size: 12px;
+                                line-height: 50px;
                             }
                         }
-                        dt{
-                            p{
-                                font-size: 14px;
+                        .qna{
+                            margin-bottom: 50px;
+    
+                            dt, dd{
+                                padding-left: 40px;
+    
+                                .icon{
+                                    left: 10px;
+                                }
                             }
-                            .arrow{
-                                right: 10px;
+                            dt{
+                                p{
+                                    font-size: 14px;
+                                }
+                                .arrow{
+                                    right: 10px;
+                                }
+                            } 
+                            dd p{
+                                width: 100%;
                             }
-                        } 
-                        dd p{
-                            width: 100%;
                         }
                     }
-                }
-                &#notice{
-                    table{
-                        thead tr th:nth-of-type(1), tbody tr td:nth-of-type(1){
-                            display: none;
+                    &#notice{
+                        table{
+                            thead tr th:nth-of-type(1), tbody tr td:nth-of-type(1){
+                                display: none;
+                            }
                         }
                     }
-                }
-                .pagination{
-                    >span{
-                        width: 16px;
-                        height: 16px;
-                        margin-right: 5px;
-                    }
-                    .numbers span a{
-                        font-size: 14px;
-                        padding: 8px 10px;
+                    .pagination{
+                        >span{
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 5px;
+                        }
+                        .numbers span a{
+                            font-size: 14px;
+                            padding: 8px 10px;
+                        }
                     }
                 }
             }
