@@ -139,11 +139,71 @@
         <div class="visual"></div>
         <div class="inner">
             <h1>LOCATION</h1>
-            <div id="map"></div>
-            <ul class="traffic">
-                <li><a href="#">교통정보 켜기</a></li>
-                <li class="on"><a href="#">교통정보 끄기</a></li>
-            </ul>
+            <div class="address">
+                <div class="wrap">
+                    <article data-index="0" class="on">
+                        <div class="pic">
+                            <img src="img/starfield.png" alt="스타필드 로고">
+                        </div>
+                        <h2>스타필드 하남</h2>
+                        <address>경기 하남시 미사대로 750<br>1833-9001</address>
+                        <p>info@lorem.com</p>
+                    </article>
+                    <article data-index="1">
+                        <div class="pic">
+                            <img src="img/starfield.png" alt="스타필드 로고">
+                        </div>
+                        <h2>스타필드 코엑스몰</h2>
+                        <address>서울 강남구 봉은사로 524<br>02-6002-5300</address>
+                        <p>info@lorem.com</p>
+                    </article>
+                    <article data-index="2">
+                        <div class="pic">
+                            <img src="img/starfield.png" alt="스타필드 로고">
+                        </div>
+                        <h2>스타필드 시티 위례</h2>
+                        <address>경기 하남시 위례대로 200<br>1833-9001</address>
+                        <p>info@lorem.com</p>
+                    </article>
+                </div>
+            </div>
+            <div id="map">
+                <a href="#" class="traffic on"><span>교통정보</span></a>
+            </div>
+            
+            <div class="contact">
+                <h2>Contact</h2>
+                <div class="wrap">
+                    <h3>Email Us,<br>we would love to<br>hear from you</h3>
+                    <form action="/" method="post">
+                        <fieldset>
+                            <legend class="hidden">문의글 입력양식</legend>
+                            <table>
+                                <caption class="hidden">이름, 성, 제목, 내용을 포함한 문의글 작성표</caption>
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td><input type="text" name="contact_name" id="contact_name" placeholder="Name"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Last name</th>
+                                    <td><input type="text" name="contact_lastname" id="contact_lastname" placeholder="Last name"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Subject</th>
+                                    <td><input type="text" name="contact_qeustions" id="contact_qeustions" placeholder="Questions"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Message</th>
+                                    <td><textarea name="contact_content" id="contact_content" placeholder="Write contents..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2"><input type="submit" value="Send"></th>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 

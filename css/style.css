@@ -2252,8 +2252,155 @@ body {
   .youtube .inner #vidGallery article .con span {
     top: 2px;
     left: 2px; } }
+.location .inner .address {
+  margin-bottom: 50px; }
+  .location .inner .address .wrap article {
+    float: left;
+    width: 360px;
+    padding: 50px 0;
+    margin-right: 40px;
+    text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer; }
+    .location .inner .address .wrap article.on {
+      background: #f7f7f7; }
+    .location .inner .address .wrap article .pic {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 20px; }
+      .location .inner .address .wrap article .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    .location .inner .address .wrap article h2 {
+      font: 600 16px/1 "Gothic A1";
+      color: #222;
+      margin-bottom: 20px; }
+    .location .inner .address .wrap article address {
+      font: 500 14px/1.8 "Gothic A1";
+      color: #555;
+      margin-bottom: 20px; }
+    .location .inner .address .wrap article p {
+      display: inline-block;
+      font: 600 14px/1 "Gothic A1";
+      color: #222;
+      position: relative; }
+      .location .inner .address .wrap article p::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #fafaa6;
+        position: absolute;
+        bottom: 0px;
+        left: 0; }
 .location .inner #map {
   width: 100%;
-  height: 500px; }
+  height: 500px;
+  margin-bottom: 100px;
+  filter: saturate(60%);
+  position: relative; }
+  .location .inner #map .traffic {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 10;
+    display: block;
+    padding: 2px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    color: #111;
+    border-radius: 5px; }
+    .location .inner #map .traffic span {
+      display: block;
+      width: 70px;
+      height: 32px;
+      font: 500 12px/32px "Gothic A1";
+      text-align: center;
+      border-radius: 5px; }
+    .location .inner #map .traffic.on span {
+      background: #3396FF;
+      color: #fff; }
+.location .inner .contact h2 {
+  font: 600 28px/1 "Gothic A1";
+  color: #000;
+  margin-bottom: 100px;
+  position: relative; }
+  .location .inner .contact h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -10px; }
+.location .inner .contact .wrap h3 {
+  float: left;
+  width: 50%;
+  padding: 80px 0;
+  font: 600 60px/1.2 "Gothic A1";
+  color: #111; }
+.location .inner .contact .wrap form {
+  float: right;
+  width: 50%; }
+  .location .inner .contact .wrap form fieldset {
+    border: none; }
+    .location .inner .contact .wrap form fieldset table {
+      width: 100%;
+      border-collapse: collapse; }
+      .location .inner .contact .wrap form fieldset table tr {
+        border-top: 2px solid #eee; }
+        .location .inner .contact .wrap form fieldset table tr th {
+          display: inline-block;
+          width: 90px;
+          padding: 30px 0;
+          font: 600 16px/1 "Gothic A1";
+          text-align: left;
+          color: #222; }
+          .location .inner .contact .wrap form fieldset table tr th input[type="submit"] {
+            width: 150px;
+            height: 40px;
+            border: 2px solid #222;
+            background: transparent;
+            font: 500 18px/1 "Gothic A1";
+            color: #222;
+            cursor: pointer; }
+        .location .inner .contact .wrap form fieldset table tr td {
+          display: inline-block;
+          padding: 30px 0;
+          width: 70%; }
+          .location .inner .contact .wrap form fieldset table tr td input {
+            width: 90%;
+            border: none;
+            outline: none;
+            font: 500 16px/1 "Gothic A1";
+            color: #888; }
+          .location .inner .contact .wrap form fieldset table tr td textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+            border: none;
+            outline: none;
+            font: 500 16px/1 "Gothic A1";
+            color: #888; }
+        .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) {
+          display: inline-block;
+          width: 40%;
+          border-right: 2px solid #eee; }
+          .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td {
+            width: auto; }
+            .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td input {
+              width: 120px; }
+        .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) {
+          display: inline-block;
+          width: 60%;
+          padding-left: 30px; }
+          .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td {
+            width: auto; }
+            .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td input {
+              width: 120px; }
+        .location .inner .contact .wrap form fieldset table tr:nth-of-type(4) th {
+          vertical-align: top; }
 
 /*# sourceMappingURL=style.css.map */
