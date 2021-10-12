@@ -2252,5 +2252,8 @@ body {
   .youtube .inner #vidGallery article .con span {
     top: 2px;
     left: 2px; } }
+.location .inner #map {
+  width: 100%;
+  height: 500px; }
 
 /*# sourceMappingURL=style.css.map */
