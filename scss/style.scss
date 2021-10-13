@@ -423,7 +423,7 @@ body{
                 object-fit: cover;
             }
         }
-        &.on{
+        &.on .inner{
             .title, .sub{
                 transform: translateX(0);
                 opacity: 1;
