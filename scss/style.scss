@@ -854,13 +854,14 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 400px;
     padding: 20px;
+    padding-bottom: 10px;
     background: #fff;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
 
     .txt{
-        min-height: 200px;
+        min-height: 300px;
         background: #eee;
         margin-bottom: 20px;
     }
@@ -1034,6 +1035,9 @@ body{
                     left: auto;
                     margin-top: 20px;
 
+                    &.on{
+                        display: block;
+                    }
                     li{
                         width: 150px;
                         height: 100px;

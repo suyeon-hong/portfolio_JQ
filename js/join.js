@@ -112,7 +112,7 @@ function isTxt(name){
     }else{
         $("[name="+ name +"]").parent().find("p").remove();
         $("[name="+ name +"]").parent().append(
-            "<p class='caution'>필수항목 입니다.</p>"
+            "<p class='caution'>빈 칸을 채워 주세요.</p>"
         )
         return false;
     }

@@ -1,40 +1,25 @@
 // btnMo button
-const $btnMo = $(".btnMo");
-const $gnbMo = $(".gnbMo");
-const $gnb = $("#gnb");
+const btnMo = document.querySelector(".btnMo");
+const gnbMo = document.querySelector(".gnbMo");
+const gnb = document.querySelector("#gnb");
 
-$btnMo.on("click", function(e){
+btnMo.addEventListener("click", e=>{
     e.preventDefault();
 
-    let isOn = $(this).hasClass("on");
-
-    if(isOn){
-        $btnMo.removeClass("on");
-        $gnbMo.removeClass("on");
-    } else{
-        $btnMo.addClass("on");
-        $gnbMo.addClass("on");
-    }
+    btnMo.classList.toggle("on");
+    gnbMo.classList.toggle("on");
 });
 
 // gnbMo tabmenu
-const $gnbMo_tabs = $gnbMo.find(".arrow");
-const $gnbMo_boxs = $gnbMo.find("ul");
+const gnbMo_tabs = gnbMo.querySelectorAll(".arrow");
+const gnbMo_boxs = gnbMo.querySelectorAll("ul");
 
-$gnbMo_tabs.on("click", function(e){
-    let isOn = $(this).hasClass("on");
-
-    if (isOn){
-        $(this).removeClass("on");
-        $(this).siblings("ul").slideUp(speed/2);
-    } else{
-        $gnbMo_tabs.removeClass("on");
-        $gnbMo_tabs.siblings("ul").slideUp(speed/2);
-        $(this).addClass("on");
-        $(this).siblings("ul").slideDown(speed/2);
-    }
-});
-
+for(let i=0; i<gnbMo_tabs.length; i++){
+    gnbMo_tabs[i].addEventListener("click", ()=>{
+        gnbMo_tabs[i].classList.toggle("on");
+        gnbMo_boxs[i].classList.toggle("on");
+    });
+}
 
 // index visual slide
     const $visual = $("#visual");
