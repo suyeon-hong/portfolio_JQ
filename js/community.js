@@ -45,3 +45,21 @@ $qbox.on("click", function(e){
         $(this).next().slideDown(500);
     }
 });
+
+// community pagination
+const $faqBtns = $(".community #faq .numbers span");
+const $noticeBtns = $(".community #notice .numbers span");
+
+$faqBtns.on("click", function(e){
+    e.preventDefault();
+
+    $faqBtns.removeClass("on");
+    $(this).addClass("on");
+});
+
+$noticeBtns.on("click", function(e){
+    e.preventDefault();
+
+    $noticeBtns.removeClass("on");
+    $(this).addClass("on");
+});
