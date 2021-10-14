@@ -178,3 +178,34 @@ $btns_topic.on("click", function(e){
         });
     }
 });
+
+// cookie popup
+const $popup = $("#popup");
+const $popup_close = $popup.find(".close");
+let isCookie = document.cookie.indexOf("popup=done");
+
+if(isCookie == 0){
+    $popup.hide();
+}else{
+    $popup.show();
+}
+
+$popup_close.on("click", function(e){
+    e.preventDefault();
+
+    let isChecked = $popup.find("input[type=checkbox]").is(":checked");
+
+    if(isChecked) setCookie(1);
+    $popup.hide();
+});
+
+function setCookie(time){
+    let today = new Date();
+    let data = today.getDate();
+    
+    today.setDate(data + time);
+
+    let duedate = today.toGMTString();
+
+    document.cookie = "popup=done; expires=" + duedate;
+}
