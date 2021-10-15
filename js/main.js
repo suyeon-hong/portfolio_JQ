@@ -100,6 +100,7 @@ let $boxs = $(".myScroll");
 let baseLine = -300;
 
 initScroll();
+console.log(posArr);
 
 $(window).on("resize", function(){
     posArr = [];
