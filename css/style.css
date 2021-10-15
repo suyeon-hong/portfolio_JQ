@@ -797,6 +797,11 @@ body {
 
   #visual {
     height: 300px; }
+    #visual .wrap img {
+      width: calc((100% / 8) - 5px);
+      margin-right: 5px; }
+      #visual .wrap img.on {
+        width: calc((100% / 8) + 5px); }
 
   #main .section .inner {
     padding: 50px 20px; }
@@ -883,7 +888,10 @@ body {
             font-size: 12px; }
       #footer .inner > p {
         font-size: 12px;
-        text-align: center; } }
+        text-align: center; }
+
+  #navi {
+    display: none; } }
 #header_sub {
   width: 100%;
   background: #fff;

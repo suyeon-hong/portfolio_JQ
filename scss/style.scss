@@ -1137,6 +1137,17 @@ body{
 
     #visual{
         height: 300px;
+
+        .wrap{
+            img{
+                width: calc((100% / 8) - 5px);
+                margin-right: 5px;
+
+                &.on{
+                    width: calc((100% / 8) + 5px);
+                }
+            }
+        }
     }
 
     #main{
@@ -1295,6 +1306,10 @@ body{
                 text-align: center;
             }
         }
+    }
+
+    #navi{
+        display: none;
     }
 }
 
