@@ -9,13 +9,13 @@ $submitBtn.on("click", function(e){
     if(!isTxt("pwA")) e.preventDefault();
     if(!isTxt("usernameKR")) e.preventDefault();
     if(!isTxt("usernameEN")) e.preventDefault();
-    if(!isTxt("postcode")) e.preventDefault();
-    if(!isTxt("phone1")) e.preventDefault();
-    if(!isTxt("email")) e.preventDefault();
+    if(!isTxt3("postcode","address1", "address2")) e.preventDefault();
+    if(!isTxt2("phone1","phone2")) e.preventDefault();
+    if(!isEmail("email1", "email2", "email")) e.preventDefault();
     if(!isCheck("snsAd", "수신여부를 선택해 주세요.")) e.preventDefault();
     if(!isCheck("emailAd", "수신여부를 선택해 주세요.")) e.preventDefault();
-    if(!isCheck("terms", "필수항목입니다.")) e.preventDefault();
-    if(!isCheck("privacy", "필수항목입니다.")) e.preventDefault();
+    if(!isCheck("terms", "필수항목에 체크해 주세요.")) e.preventDefault();
+    if(!isCheck("privacy", "필수항목에 체크해 주세요.")) e.preventDefault();
 });
 
 function isId(name){
@@ -112,7 +112,7 @@ function isTxt(name){
     }else{
         $("[name="+ name +"]").parent().find("p").remove();
         $("[name="+ name +"]").parent().append(
-            "<p class='caution'>빈 칸을 채워 주세요.</p>"
+            "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
         return false;
     }
@@ -127,6 +127,56 @@ function isCheck(name, text){
         $("[name="+ name +"]").parent().parent().find(".caution").remove();
         $("[name="+ name +"]").parent().parent().append(
             "<p class='caution'>"+ text +"</p>"
+        )
+        return false;
+    }
+}
+
+function isTxt2(name1, name2){
+    let txt1 = $("[name="+ name1 +"]").val();
+    let txt2 = $("[name="+ name2 +"]").val();
+    
+    if(txt1 !== "" && txt2 !== ""){
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        return true;
+    }else{
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        $("[name="+ name1 +"]").parent().append(
+            "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+        )
+        return false;
+    }
+}
+
+function isTxt3(name1, name2, name3){
+    let txt1 = $("[name="+ name1 +"]").val();
+    let txt2 = $("[name="+ name2 +"]").val();
+    let txt3 = $("[name="+ name3 +"]").val();
+    
+    if(txt1 !== "" && txt2 !== "" && txt3 !==""){
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        return true;
+    }else{
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        $("[name="+ name1 +"]").parent().append(
+            "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+        )
+        return false;
+    }
+}
+
+function isEmail(name1, name2, name3){
+    let txt1 = $("[name="+ name1 +"]").val();
+    let txt2 = $("[name="+ name2 +"]").val();
+    let txt3 = isSelect(name3);
+    
+    if(txt1 !== "" && txt2 !== "" || txt3){
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        return true;
+    }else{
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        $("[name="+ name1 +"]").parent().append(
+            "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
         return false;
     }
