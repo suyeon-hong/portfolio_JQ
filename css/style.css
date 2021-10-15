@@ -1131,6 +1131,8 @@ body {
       top: auto;
       left: auto;
       margin-top: 20px; }
+      #header_sub .gnbMo > li ul.on {
+        display: block; }
       #header_sub .gnbMo > li ul li {
         width: 150px;
         height: 100px;

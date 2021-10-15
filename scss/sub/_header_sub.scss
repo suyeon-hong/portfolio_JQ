@@ -315,6 +315,9 @@
                     left: auto;
                     margin-top: 20px;
 
+                    &.on{
+                        display: block;
+                    }
                     li{
                         width: 150px;
                         height: 100px;
