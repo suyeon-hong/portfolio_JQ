@@ -29,7 +29,8 @@ $.ajax({
             $("<li class='item'>").append(
                 $("<div class='pic'>").append(
                     $("<a>").attr({
-                        href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg"
+                        href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg",
+                        title: "새창열림"
                     }).append(
                         $("<img>").attr({
                             src: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_m.jpg"
@@ -50,8 +51,9 @@ $.ajax({
 $("body").on("click", ".gallery ul li", function(e){
     e.preventDefault();
 
-    let imgSrc = $(this).children("a").attr("href");
+    let imgSrc = $(this).find("a").attr("href");
 
+    console.log(imgSrc);
     $(".pop").remove();
     $("body").append(
         $("<div class='pop'>").append(

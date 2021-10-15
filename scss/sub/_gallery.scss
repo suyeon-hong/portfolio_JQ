@@ -117,11 +117,8 @@
                 width: 23.5%;
                 margin-right: 2%;
 
-                a{
+                .pic{
                     height: 20vw;
-                }
-                &:hover a{
-                    height: 24vw;
                 }
             }
         }
@@ -138,11 +135,8 @@
                 &:nth-of-type(2n){
                     margin-right: 0;
                 }
-                a{
+                .pic{
                     height: 30vw;
-                }
-                &:hover a{
-                    height: 39vw;
                 }
             }
         }
@@ -156,11 +150,11 @@
                 width: 100%;
                 margin-right: 0;
 
-                a{
+                .pic{
                     height: 70vw;
                 }
-                &:hover a{
-                    height: 90vw;
+                &:hover .pic a{
+                    transform: scale(1.1);
                 }
             }
         }

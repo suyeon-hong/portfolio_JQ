@@ -816,7 +816,7 @@ body {
     #main .section#process .inner .wrap article:nth-of-type(even) {
       margin-right: 0; }
     #main .section#process .inner .wrap article .pic {
-      height: 38vw; }
+      height: 42vw; }
   #main .section#topic .inner dl dt h2 {
     font-size: 26px; }
   #main .section#topic .inner dl dd .pic {
@@ -2377,28 +2377,24 @@ body {
   .gallery .inner ul li {
     width: 23.5%;
     margin-right: 2%; }
-    .gallery .inner ul li a {
-      height: 20vw; }
-    .gallery .inner ul li:hover a {
-      height: 24vw; } }
+    .gallery .inner ul li .pic {
+      height: 20vw; } }
 @media screen and (max-width: 768px) {
   .gallery .inner ul li {
     width: 49%;
     margin-right: 2%; }
     .gallery .inner ul li:nth-of-type(2n) {
       margin-right: 0; }
-    .gallery .inner ul li a {
-      height: 30vw; }
-    .gallery .inner ul li:hover a {
-      height: 39vw; } }
+    .gallery .inner ul li .pic {
+      height: 30vw; } }
 @media screen and (max-width: 539px) {
   .gallery .inner ul li {
     width: 100%;
     margin-right: 0; }
-    .gallery .inner ul li a {
+    .gallery .inner ul li .pic {
       height: 70vw; }
-    .gallery .inner ul li:hover a {
-      height: 90vw; }
+    .gallery .inner ul li:hover .pic a {
+      transform: scale(1.1); }
 
   .pop {
     padding: 100px 20px; } }
@@ -2453,6 +2449,9 @@ body {
       left: 10px;
       color: #fff;
       font: 100 12px/1 "Gothic A1"; }
+
+.pop iframe {
+  object-fit: contain; }
 
 @media screen and (max-width: 1179px) {
   .youtube .inner #vidGallery article {
@@ -2628,5 +2627,55 @@ body {
               width: 120px; }
         .location .inner .contact .wrap form fieldset table tr:nth-of-type(4) th {
           vertical-align: top; }
+
+@media screen and (max-width: 1179px) {
+  .location .inner .address .wrap article {
+    width: 32%;
+    margin-right: 2%;
+    padding: 30px 10px; }
+  .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) {
+    display: block;
+    width: 100%;
+    border-right: none; }
+  .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) {
+    display: block;
+    width: 100%;
+    padding-left: 0; } }
+@media screen and (max-width: 768px) {
+  .location .inner .address {
+    margin-bottom: 30px; }
+    .location .inner .address .wrap article .pic {
+      display: none; }
+  .location .inner #map {
+    height: 400px; }
+  .location .inner .contact h2 {
+    margin-bottom: 0; }
+  .location .inner .contact .wrap h3 {
+    width: 100%;
+    font-size: 50px; }
+  .location .inner .contact .wrap form {
+    width: 100%; } }
+@media screen and (max-width: 539px) {
+  .location .inner .address .wrap article {
+    padding: 20px 10px;
+    height: 150px; }
+    .location .inner .address .wrap article h2 {
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .location .inner .address .wrap article address {
+      font-size: 12px;
+      line-height: 1.4;
+      margin-bottom: 5px; }
+    .location .inner .address .wrap article p {
+      font-size: 12px; }
+      .location .inner .address .wrap article p::after {
+        height: 2px; }
+  .location .inner #map {
+    height: 300px; }
+  .location .inner .contact h2 {
+    font-size: 24px; }
+  .location .inner .contact .wrap h3 {
+    font-size: 38px;
+    padding: 60px 0; } }
 
 /*# sourceMappingURL=style.css.map */

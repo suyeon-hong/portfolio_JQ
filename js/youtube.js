@@ -21,7 +21,10 @@ $.ajax({
 
         $("#vidGallery").append(
             $("<article>").append(
-                $("<a>").attr({href : data.snippet.resourceId.videoId}).append(
+                $("<a>").attr({
+                    href : data.snippet.resourceId.videoId,
+                    title: "새창열림"
+                }).append(
                     $("<img>").attr({src: data.snippet.thumbnails.high.url})
                 ),
                 $("<div class='con'>").append(

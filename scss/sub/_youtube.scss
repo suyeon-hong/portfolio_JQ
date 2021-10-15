@@ -70,6 +70,12 @@
     }
 }
 
+.pop{
+    iframe{
+        object-fit: contain;
+    }
+}
+
 @media screen and (max-width: $tablet) {
     .youtube{
         .inner{

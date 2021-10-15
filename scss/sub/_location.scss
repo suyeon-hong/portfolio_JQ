@@ -212,3 +212,102 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet){
+    .location{
+        .inner{
+            .address{
+                .wrap article{
+                    width: 32%;
+                    margin-right: 2%;
+                    padding: 30px 10px;
+                }
+            }
+            .contact .wrap form fieldset table tr{
+                &:nth-of-type(1){
+                    display: block;
+                    width: 100%;
+                    border-right: none;
+                }
+                &:nth-of-type(2){
+                    display: block;
+                    width: 100%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    .location{
+        .inner{
+            .address{
+                margin-bottom: 30px;
+
+                .wrap article{
+                    .pic{
+                        display: none;
+                    }
+                }
+            }
+            #map{
+                height: 400px;
+            }
+            .contact{
+                h2{
+                    margin-bottom: 0;
+                }
+                .wrap{
+                    h3{
+                        width: 100%;
+                        font-size: 50px;
+                    }
+                    form{
+                        width: 100%;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .location{
+        .inner{
+            .address .wrap article{
+                padding: 20px 10px;
+                height: 150px;
+
+                h2{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                address{
+                    font-size: 12px;
+                    line-height: 1.4;
+                    margin-bottom: 5px;
+                }
+                p{
+                    font-size: 12px;
+
+                    &::after{
+                        height: 2px;
+                    }
+                }
+            }
+            #map{
+                height: 300px;
+            }
+            .contact{
+                h2{
+                    font-size: 24px;
+                }
+                .wrap h3{
+                    font-size: 38px;
+                    padding: 60px 0;
+                }
+            } 
+        }
+    }
+}
