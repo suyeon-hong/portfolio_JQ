@@ -27,13 +27,15 @@ $.ajax({
         }
         $(".gallery ul").append(
             $("<li class='item'>").append(
-                $("<a>").attr({
-                    href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg"
-                }).append(
-                    $("<img>").attr({
-                        src: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_m.jpg"
-                    })
-                ),
+                $("<div class='pic'>").append(
+                    $("<a>").attr({
+                        href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg"
+                    }).append(
+                        $("<img>").attr({
+                            src: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_m.jpg"
+                        })
+                    )
+            ),
                 $("<h2>").text(title),
                 $("<img class='profile'>").attr({
                     src: "https://www.flickr.com/buddyicons/"+ data.owner +".jpg"
