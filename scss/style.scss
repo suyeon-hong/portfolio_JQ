@@ -296,7 +296,7 @@ body{
 #visual{
     width: 100%;
     height: calc(100vh - 80px);
-    // overflow: hidden;
+    overflow: hidden;
     position: relative;
 
     .wrap{
@@ -891,6 +891,7 @@ body{
     height: 100vh;
     padding: 200px 100px;
     background: rgba(0,0,0,0.9);
+    z-index: 3;
 
     .pic{
         float: left;
@@ -1175,12 +1176,14 @@ body{
         height: 300px;
 
         .wrap{
+            width: calc((100% / 7) * 8 + 5px);
+
             img{
-                width: calc((100% / 8) - 5px);
+                width: calc(((100% - 5px) / 8) - 5px);
                 margin-right: 5px;
 
                 &.on{
-                    width: calc((100% / 8) + 5px);
+                    width: calc((100% - 5px) / 8);
                 }
             }
         }
