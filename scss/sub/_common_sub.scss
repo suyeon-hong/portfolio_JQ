@@ -7,8 +7,10 @@
 
     .visual{
         width: 100%;
-        height: 300px;
-        background: lightgray;
+        height: 400px;
+        background: url(../../img/visual_sub1.jpg) no-repeat center/cover;
+        filter: grayscale(80%);
+        opacity: 0.8;
     }
     .inner{
         width: 1180px;

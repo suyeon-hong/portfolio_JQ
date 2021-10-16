@@ -1155,8 +1155,10 @@ body {
   border: none; }
   .content .visual {
     width: 100%;
-    height: 300px;
-    background: lightgray; }
+    height: 400px;
+    background: url(../../img/visual_sub1.jpg) no-repeat center/cover;
+    filter: grayscale(80%);
+    opacity: 0.8; }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
@@ -1304,6 +1306,8 @@ body {
     padding: 30px 10px 50px; }
     .content .inner h1 {
       font-size: 30px; } }
+.about .visual {
+  background-image: url(../../img/visual_sub1.jpg); }
 .about .inner > p {
   padding: 200px 0 240px;
   font: 300 80px/1.2 "Gothic A1";
@@ -1776,6 +1780,8 @@ body {
       width: 100%;
       margin-right: 0;
       margin-bottom: 20px; } }
+.community .visual {
+  background-image: url(../../img/visual_sub2.jpg); }
 .community .inner > dl {
   position: relative;
   padding-top: 100px; }
@@ -2070,6 +2076,8 @@ body {
     .community .inner > dl dd .pagination .numbers span a {
       font-size: 14px;
       padding: 8px 10px; } }
+.join .visual {
+  background-image: url(../../img/visual_sub6.jpg); }
 .join .inner form fieldset {
   border: none; }
   .join .inner form fieldset p.caution {
@@ -2292,6 +2300,8 @@ body {
     height: 34px;
     line-height: 34px;
     font-size: 14px; } }
+.gallery .visual {
+  background-image: url(../../img/visual_sub4.jpg); }
 .gallery .inner ul {
   width: 100%; }
   .gallery .inner ul::after {
@@ -2400,6 +2410,8 @@ body {
 
   .pop {
     padding: 100px 20px; } }
+.youtube .visual {
+  background-image: url(../../img/visual_sub3.jpg); }
 .youtube .inner #vidGallery {
   width: 100%; }
   .youtube .inner #vidGallery::after {
@@ -2479,6 +2491,8 @@ body {
   .youtube .inner #vidGallery article .con span {
     top: 2px;
     left: 2px; } }
+.location .visual {
+  background-image: url(../../img/visual_sub5.jpg); }
 .location .inner .address {
   margin-bottom: 50px; }
   .location .inner .address .wrap article {
