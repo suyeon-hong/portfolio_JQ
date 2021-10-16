@@ -31,21 +31,46 @@ for(let i=0; i<gnbMo_tabs.length; i++){
     let len = $imgs.length - 1;
     let timer;
     let speed = 1000;
+    let num = 0;
     
-    initVisual($wrap, $imgs);
-    
+    $imgs.last().prependTo($wrap);
+
+    $imgs.on("mouseenter", function(){
+        $imgs.removeClass("on");
+        $(this).addClass("on");
+    });
+
+    $imgs.on("click", function(){
+        let imgSrc = $(this).attr("src");
+        let txt = $(this).attr("alt")
+
+        $("body").append(
+            $("<div class='detail'>").append(
+                $("<div class='pic'>").append(
+                    $("<img>").attr({src: imgSrc})
+                ),
+                $("<h2>").text(txt),
+                $("<a href='#' class='close'>").text("CLOSE")
+            )
+        );
+    });
+
+    $("body").on("click", ".detail .close", function(e){
+        e.preventDefault();
+
+        $('.detail').remove();
+    });
+
     $btnLeft.on("click", function(e){
         e.preventDefault();
     
-        clearInterval(timer);
-        prevPic($wrap, $imgs);
+        prevPic($wrap);
     });
     
     $btnRight.on("click", function(e){
         e.preventDefault();
-    
-        clearInterval(timer);
-        nextPic($wrap, $imgs);
+
+        nextPic($wrap);
     });
     
     function activeBtn(item, index){
@@ -53,43 +78,18 @@ for(let i=0; i<gnbMo_tabs.length; i++){
         item.eq(index).addClass("on");
     }
 
-    function nextPic(frame, imgs){
-        let target = frame.find(".on").index();
-    
-        if (target > 4){
-            frame.animate({marginLeft: "calc(-100% / 7)"}, 0, function(){
-                frame.css({marginLeft: 0});
-                frame.find("img").first().appendTo(frame);
-                (index == len) ? index = 0 : index++;
-                activeBtn(imgs, index);
-            });
-        } else{
-            (index == len) ? index = 0 : index++;
-            activeBtn(imgs, index);
-        }
+    function nextPic(frame){
+        frame.animate({marginLeft: "calc(-100% / 7)"}, 0, function(){
+            frame.css({marginLeft: 0});
+            frame.find("img").first().appendTo(frame);
+        });
     }
     
-    function prevPic(frame, imgs){
-        let target = frame.find(".on").index();
-    
-        if (target < 2){
-            frame.animate({marginLeft: "calc(100% / 7)"}, 0, function(){
-                frame.css({marginLeft: 0});
-                frame.find("img").last().prependTo(frame);
-                (index == 0) ? index = len : index--;
-                activeBtn(imgs, index);
-            });
-        } else{
-            (index == 0) ? index = len : index--;
-            activeBtn(imgs, index);
-        }
-    }
-
-    function initVisual(frame, imgs){
-        imgs.last().prependTo(frame);
-        timer = setInterval(function(){
-            nextPic(frame, imgs);
-        }, speed*1.5);
+    function prevPic(frame){
+        frame.animate({marginLeft: "calc(100% / 7)"}, 0, function(){
+            frame.css({marginLeft: 0});
+            frame.find("img").last().prependTo(frame);
+        });
     }
 
 
@@ -107,7 +107,7 @@ $(window).on("resize", function(){
     initScroll();
 });
 
-$(window).on("scroll", function(){
+$("window").on("scroll", function(){
     let scroll = $(window).scrollTop();
 
     for (let i = 0; i < posArr.length; i++){
