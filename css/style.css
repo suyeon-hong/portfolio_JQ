@@ -659,6 +659,8 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover; }
+      #popup .inner .pic .swiper-pagination span {
+        background: #222; }
     #popup .inner .btns {
       padding: 15px 30px; }
       #popup .inner .btns input {

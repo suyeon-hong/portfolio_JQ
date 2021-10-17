@@ -107,7 +107,7 @@ $(window).on("resize", function(){
     initScroll();
 });
 
-$("window").on("scroll", function(){
+$(window).on("scroll", function(){
     let scroll = $(window).scrollTop();
 
     for (let i = 0; i < posArr.length; i++){

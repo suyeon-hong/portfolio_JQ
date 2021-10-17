@@ -877,6 +877,9 @@ body{
                 height: 100%;
                 object-fit: cover;
             }
+            .swiper-pagination span{
+                background: #222;
+            }
         }
         .btns{
             padding: 15px 30px;
