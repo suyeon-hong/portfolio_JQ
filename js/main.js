@@ -168,6 +168,7 @@ $btns_topic.on("click", function(e){
 // cookie popup
 const $popup = $("#popup");
 const $popup_close = $popup.find(".close");
+const $delCookie = $(".delCookie");
 let isCookie = document.cookie.indexOf("popup=done");
 
 if(isCookie == 0){
@@ -183,6 +184,13 @@ $popup_close.on("click", function(e){
 
     if(isChecked) setCookie(1);
     $popup.hide();
+});
+
+$delCookie.on("click", function(e){
+    e.preventDefault();
+
+    setCookie(0);
+    alert("쿠키삭제완료");
 });
 
 function setCookie(time){

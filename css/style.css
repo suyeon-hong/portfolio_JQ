@@ -691,6 +691,18 @@ body {
     font: 500 18px/1 "Gothic A1";
     color: #fff; }
 
+.delCookie {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  width: 100px;
+  height: 30px;
+  font: 500 16px/30px "Gothic A1";
+  color: #000;
+  border: 1px solid #bbb;
+  text-align: center; }
+
 @media screen and (max-width: 1179px) {
   #header {
     padding: 0 30px; }
