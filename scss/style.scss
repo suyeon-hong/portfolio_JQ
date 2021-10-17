@@ -852,35 +852,92 @@ body{
 
 #popup{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    padding: 20px;
-    padding-bottom: 10px;
-    background: #fff;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
 
-    .pic{
-        min-height: 300px;
-        background: #eee;
-        margin-bottom: 20px;
-    }
-    .wrap{
-        float: left;
+    .inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        background: #fff;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
 
-        label{
-            font: 300 14px/1 $font;
-            color: #000;
-            margin-left: 10px;
-            vertical-align: text-top;
+        .pic{
+            width: 100%;
+            height: 400px;
+            background: #eee;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
+        .btns{
+            padding: 15px 30px;
+
+            input{
+                display: none;
+            }
+            label{
+                font: 300 15px/20px $font;
+                color: #000;
+
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid #aaa;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+                &.on{
+                    &::before{
+                        background: #000;
+                    }
+                }
+            }
+            .close{
+                float: right;
+                font: 500 15px/1.3 $font;
+                color: #333;
+                position: relative;
+
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    width: 1px;
+                    height: 26px;
+                    background: #ddd;
+                    position: absolute;
+                    top: -4px;
+                    left: -40px;
+                }
+            }
+        }
+
     }
-    .close{
-        float: right;
-        font: 600 12px/1 $font;
-        color: #555;
-    }
+
+
+}
+
+.delCookie{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 150px;
+    width: 100px;
+    height: 30px;
+    font: 500 16px/30px $font;
+    color: #000;
+    border: 1px solid #bbb;
+    text-align: center;
 }
 
 .detail{
@@ -918,18 +975,7 @@ body{
         color: #fff;
     }
 }
-.delCookie{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 150px;
-    width: 100px;
-    height: 30px;
-    font: 500 16px/30px $font;
-    color: #000;
-    border: 1px solid #bbb;
-    text-align: center;
-}
+
 
 
 @media screen and (max-width: $tablet){

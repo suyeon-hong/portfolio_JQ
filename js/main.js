@@ -193,6 +193,12 @@ $delCookie.on("click", function(e){
     alert("쿠키삭제완료");
 });
 
+$("#popup label").on("click", function(){
+    let isOn = $(this).hasClass("on");
+
+    (isOn) ? $(this).removeClass("on") : $(this).addClass("on");
+});
+
 function setCookie(time){
     let today = new Date();
     let data = today.getDate();
