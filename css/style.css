@@ -742,9 +742,6 @@ body {
       #header .inner #gnb {
         display: none; }
 
-  #visual .right {
-    z-index: 1; }
-
   #main .section .inner {
     width: 100%;
     padding: 100px 50px; }
