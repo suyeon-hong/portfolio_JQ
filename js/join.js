@@ -121,11 +121,11 @@ function isTxt(name){
 function isCheck(name, text){
     let txt = $("[name="+ name +"]").is(":checked");
     if(txt){
-        $("[name="+ name +"]").parent().parent().find(".caution").remove();
+        $("[name="+ name +"]").parent().find(".caution").remove();
         return true;
     }else{
-        $("[name="+ name +"]").parent().parent().find(".caution").remove();
-        $("[name="+ name +"]").parent().parent().append(
+        $("[name="+ name +"]").parent().find(".caution").remove();
+        $("[name="+ name +"]").parent().append(
             "<p class='caution'>"+ text +"</p>"
         )
         return false;

@@ -2219,12 +2219,14 @@ body {
           background: #eee;
           border: 2px solid #ddd;
           cursor: pointer; }
+        .join .inner form fieldset table tr td input[type="radio"] {
+          vertical-align: text-top; }
         .join .inner form fieldset table tr td label {
           margin-right: 10px; }
+        .join .inner form fieldset table tr td p {
+          margin-top: 10px; }
     .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(1) input {
       margin-right: 10px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(2) td p {
-      margin-top: 10px; }
     .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input {
       margin-right: 10px;
       margin-bottom: 10px; }
@@ -2237,14 +2239,11 @@ body {
       color: #777; }
       .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td select {
         width: 100px;
-        margin-right: 5px; }
+        margin-right: 5px;
+        vertical-align: top; }
       .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td input {
         width: 150px;
         margin: 0 5px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(10) td label, .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(12) td label {
-      margin-right: 10px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(10) td p, .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(12) td p {
-      margin-top: 10px; }
     .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td {
       font-size: 14px;
       color: #777; }
@@ -2261,7 +2260,7 @@ body {
       margin-right: 5px; }
       .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"]:nth-of-type(n+2), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"]:nth-of-type(n+2) {
         margin-left: 10px; }
-    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td label:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td label:nth-of-type(1) {
+    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="radio"]:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="radio"]:nth-of-type(1) {
       margin-left: 20px; }
   .join .inner form fieldset > div {
     margin-bottom: 100px; }
@@ -2295,9 +2294,7 @@ body {
     .join .inner form fieldset > div span, .join .inner form fieldset > div label {
       font: 500 16px/1 "Gothic A1";
       color: #444;
-      margin-bottom: 10px; }
-    .join .inner form fieldset > div label {
-      margin-left: 10px; }
+      margin-right: 10px; }
   .join .inner form fieldset .btns {
     text-align: center;
     font-size: 0; }
@@ -2327,8 +2324,6 @@ body {
     margin-bottom: 10px; }
   .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
     width: 18vw; }
-  .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td label:nth-of-type(1) {
-    margin-left: 10px; }
   .join .inner form fieldset table:nth-of-type(2) tr:last-child td {
     line-height: 1.6; }
     .join .inner form fieldset table:nth-of-type(2) tr:last-child td input {
