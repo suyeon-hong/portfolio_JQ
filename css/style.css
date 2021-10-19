@@ -25,16 +25,20 @@ a {
   opacity: 0; }
 
 body {
-  font-family: "Gothic A1"; }
+  font-family: "Gothic A1";
+  width: 100%;
+  overflow-x: hidden; }
 
 #header {
   width: 100%;
+  padding-top: 30px;
   background: #fff;
   border-bottom: 1px solid #B3B3AF;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   #header .inner {
     width: 1180px;
-    height: 80px;
+    height: 40px;
     margin: 0 auto;
     position: relative;
     text-align: center; }
@@ -48,19 +52,41 @@ body {
         color: #000;
         letter-spacing: 1px; }
     #header .inner #gnb {
-      width: 65%;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%); }
-      #header .inner #gnb li {
+      display: inline-block; }
+      #header .inner #gnb > li {
         float: left; }
-        #header .inner #gnb li a {
+        #header .inner #gnb > li > a {
           display: block;
-          padding: 15px 20px;
+          padding: 10px 20px;
           font: 500 16px/1 "Gothic A1";
           color: #000;
           letter-spacing: 0.5px; }
+        #header .inner #gnb > li .sub {
+          display: none;
+          width: 1180px;
+          height: 300px;
+          position: absolute;
+          left: 0;
+          top: 41px;
+          background: #fff; }
+          #header .inner #gnb > li .sub::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: -100%; }
+          #header .inner #gnb > li .sub::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            right: -100%; }
     #header .inner .util {
       position: absolute;
       bottom: 10px;
@@ -163,12 +189,12 @@ body {
           transition: bottom 0.6s, transform 0.6s 0.6s; }
   #header .gnbMo {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     background: #fff;
     border-top: 1px solid #000;
     padding-top: 20px;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: -100%;
     transition: 1s;
     opacity: 0;
@@ -246,9 +272,10 @@ body {
 
 #visual {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 70px);
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   #visual .wrap {
     width: calc((100% / 7) * 8 + 20px);
     height: 100%;
@@ -736,7 +763,7 @@ body {
 
 @media screen and (max-width: 1179px) {
   #header {
-    padding: 0 30px; }
+    padding: 30px 30px 0; }
     #header .inner {
       width: 100%; }
       #header .inner #gnb {
