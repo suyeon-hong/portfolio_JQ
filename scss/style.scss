@@ -668,7 +668,7 @@ body{
                                         font: 600 50px/1 $font;
                                         letter-spacing: -2px;
                                         color: #000;
-                                        margin-bottom: 5px;
+                                        margin-bottom: 10px;
                                     }
                                     &.date{
                                         font: 600 120px/1 $font;
@@ -734,7 +734,6 @@ body{
         }
     }
 }
-
 
 #footer{
     width: 100%;
@@ -1064,7 +1063,7 @@ body{
                         article{
                             &.calendar{
                                 p.day{
-                                    font-size: 6vw;
+                                    font-size: 4.5vw;
                                 }
                             }
                             &.border h2{
@@ -1184,6 +1183,11 @@ body{
             &#news .inner .wrap>div{
                 width: 49%;
 
+                article{
+                    &.calendar p.day{
+                        font-size: 6vw;
+                    }
+                }
                 &:nth-of-type(2){
                     margin-right: 0;
                 }
@@ -1340,6 +1344,11 @@ body{
                     }
                 }
                 article{
+                    &.calendar{
+                        p.day{
+                            font-size: 46px;
+                        }
+                    }
                     &.border{
                         margin-bottom: 40px;
 

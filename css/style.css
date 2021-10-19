@@ -514,7 +514,7 @@ body {
             font: 600 50px/1 "Gothic A1";
             letter-spacing: -2px;
             color: #000;
-            margin-bottom: 5px; }
+            margin-bottom: 10px; }
           #main .section#news .inner .wrap > div article.calendar p.date {
             font: 600 120px/1 "Gothic A1";
             letter-spacing: -10px; }
@@ -775,7 +775,7 @@ body {
     width: 32%;
     margin-right: 2%; }
     #main .section#news .inner .wrap > div article.calendar p.day {
-      font-size: 6vw; }
+      font-size: 4.5vw; }
     #main .section#news .inner .wrap > div article.border h2 {
       font-size: 5vw; }
     #main .section#news .inner .wrap > div article.article .pic {
@@ -841,6 +841,8 @@ body {
     width: 100%; }
   #main .section#news .inner .wrap > div {
     width: 49%; }
+    #main .section#news .inner .wrap > div article.calendar p.day {
+      font-size: 6vw; }
     #main .section#news .inner .wrap > div:nth-of-type(2) {
       margin-right: 0; }
     #main .section#news .inner .wrap > div:nth-of-type(3) {
@@ -929,6 +931,8 @@ body {
       font-size: 20px; }
     #main .section#news .inner .wrap > div:last-child .border h2 {
       font-size: 30px; }
+    #main .section#news .inner .wrap > div article.calendar p.day {
+      font-size: 46px; }
     #main .section#news .inner .wrap > div article.border {
       margin-bottom: 40px; }
       #main .section#news .inner .wrap > div article.border h2 {

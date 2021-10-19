@@ -201,11 +201,25 @@ $("#popup label").on("click", function(){
 
 function setCookie(time){
     let today = new Date();
-    let data = today.getDate();
+    let date = today.getDate();
     
-    today.setDate(data + time);
+    today.setDate(date + time);
 
     let duedate = today.toGMTString();
 
     document.cookie = "popup=done; expires=" + duedate;
 }
+
+// calendar
+const $calendar = $("#news .calendar");
+const $day = $calendar.find(".day");
+const $date = $calendar.find(".date");
+const $month = $calendar.find(".month");
+const $year = $calendar.find(".year");
+const day = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+let date = new Date();
+
+$day.text(day[date.getDay()]);
+$date.text(date.getDate());
+$month.text(date.getMonth() + 1);
+$year.text(date.getFullYear());
