@@ -1,8 +1,6 @@
 const $submitBtn = $(".join input[type=submit]");
 
 $submitBtn.on("click", function(e){
-    e.preventDefault();
-
     if(!isId("userid")) e.preventDefault();
     if(!isPw("userpw1", "userpw2")) e.preventDefault();
     if(!isSelect("pwQ")) e.preventDefault();
