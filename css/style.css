@@ -52,22 +52,28 @@ body {
         color: #000;
         letter-spacing: 1px; }
     #header .inner #gnb {
-      display: inline-block; }
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      font-size: 0; }
       #header .inner #gnb > li {
-        float: left; }
+        display: inline-block; }
         #header .inner #gnb > li > a {
           display: block;
           padding: 10px 20px;
           font: 500 16px/1 "Gothic A1";
           color: #000;
           letter-spacing: 0.5px; }
+        #header .inner #gnb > li:hover > a {
+          font-weight: 600; }
         #header .inner #gnb > li .sub {
           display: none;
           width: 1180px;
           height: 320px;
           position: absolute;
           left: 0;
-          top: 41px;
+          top: 37px;
           background: #fff;
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15); }
           #header .inner #gnb > li .sub::before {
@@ -107,6 +113,9 @@ body {
                 padding: 10px;
                 font: 400 14px/1 "Gothic A1";
                 color: #555; }
+                #header .inner #gnb > li .sub > ul li a:hover {
+                  color: #111;
+                  font-weight: 500; }
               #header .inner #gnb > li .sub > ul li:first-child {
                 background: #f6f6f6;
                 border-left: 1px solid #ddd; }
@@ -220,7 +229,7 @@ body {
           transition: bottom 0.6s, transform 0.6s 0.6s; }
   #header .gnbMo {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     background: #fff;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -682,7 +691,7 @@ body {
 #navi {
   position: fixed;
   top: 50%;
-  right: 150px; }
+  right: 50px; }
   #navi li a {
     display: block;
     width: 10px;
@@ -803,7 +812,6 @@ body {
       #header .inner #gnb {
         display: none; }
     #header .gnbMo {
-      height: calc(100vh - 70px);
       top: 70px; }
 
   #main .section .inner {
@@ -1050,7 +1058,7 @@ body {
     display: none; } }
 #header_sub {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 40px;
   background: #fff;
   border-bottom: 1px solid #B3B3AF;
   position: relative;
@@ -1083,11 +1091,12 @@ body {
         #header_sub .inner #gnb > li .sub {
           display: none;
           width: 1180px;
-          height: 300px;
+          height: 320px;
           position: absolute;
           left: 0;
           top: 41px;
-          background: #fff; }
+          background: #fff;
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15); }
           #header_sub .inner #gnb > li .sub::before {
             content: '';
             display: block;
@@ -1106,6 +1115,36 @@ body {
             position: absolute;
             top: 0;
             right: -100%; }
+          #header_sub .inner #gnb > li .sub > ul {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto; }
+            #header_sub .inner #gnb > li .sub > ul li {
+              float: left;
+              width: 15%;
+              height: 100%;
+              padding-top: 30px;
+              border-right: 1px solid #ddd; }
+              #header_sub .inner #gnb > li .sub > ul li h2 {
+                font: 600 15px/1 "Gothic A1";
+                color: #111;
+                margin-bottom: 10px; }
+              #header_sub .inner #gnb > li .sub > ul li a {
+                display: block;
+                padding: 10px;
+                font: 400 14px/1 "Gothic A1";
+                color: #555; }
+              #header_sub .inner #gnb > li .sub > ul li:first-child {
+                background: #f6f6f6;
+                border-left: 1px solid #ddd; }
+              #header_sub .inner #gnb > li .sub > ul li:nth-of-type(n+4) {
+                border-right: none; }
+              #header_sub .inner #gnb > li .sub > ul li:last-child {
+                width: 35%; }
+                #header_sub .inner #gnb > li .sub > ul li:last-child .pic {
+                  width: 100%;
+                  height: 250px;
+                  background: #bbb; }
     #header_sub .inner .util {
       position: absolute;
       bottom: 10px;
@@ -1208,12 +1247,13 @@ body {
           transition: bottom 0.6s, transform 0.6s 0.6s; }
   #header_sub .gnbMo {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     background: #fff;
     border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
     padding-top: 20px;
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: -100%;
     transition: 1s;
     opacity: 0;
@@ -1291,11 +1331,13 @@ body {
 
 @media screen and (max-width: 1179px) {
   #header_sub {
-    padding: 0 30px; }
+    padding: 30px 30px 0; }
     #header_sub .inner {
       width: 100%; }
       #header_sub .inner #gnb {
-        display: none; } }
+        display: none; }
+    #header_sub .gnbMo {
+      top: 70px; } }
 @media screen and (max-width: 768px) {
   #header_sub .gnbMo > li {
     padding: 20px 30px;
