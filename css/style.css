@@ -727,7 +727,8 @@ body {
       #popup .inner .pic img {
         width: 100%;
         height: 100%;
-        object-fit: cover; }
+        object-fit: cover;
+        cursor: pointer; }
       #popup .inner .pic .swiper-pagination span {
         background: #222; }
     #popup .inner .btns {
