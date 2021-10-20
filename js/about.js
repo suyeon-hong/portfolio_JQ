@@ -11,7 +11,7 @@ $btns_service.on("click", function(e){
     $btns_service.children("a").removeClass("on");
     $(this).children("a").addClass("on");
     $(".services img").hide();
-    $(id).fadeIn(speed/2);
+    $(id).fadeIn(500);
 });
 
 // team 더보기버튼

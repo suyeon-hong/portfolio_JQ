@@ -49,11 +49,6 @@
 
         nextPic($wrap);
     });
-    
-    function activeBtn(item, index){
-        item.removeClass("on");
-        item.eq(index).addClass("on");
-    }
 
     function nextPic(frame){
         frame.animate({marginLeft: "calc(-100% / 7)"}, 0, function(){

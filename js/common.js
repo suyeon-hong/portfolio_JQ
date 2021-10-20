@@ -38,3 +38,8 @@ $("#gnb>li").each(function(index){
         $("#gnb>li").eq(index).find(".sub").hide();
     })
 });
+
+function activeBtn(item, index){
+    item.removeClass("on");
+    item.eq(index).addClass("on");
+}
