@@ -1,9 +1,6 @@
 const $submitBtn = $(".join input[type=submit]");
-let result = [];
 
 $submitBtn.on("click", function(e){
-    result = [];
-
     if(!isId("userid")) e.preventDefault();
     if(!isPw("userpw1", "userpw2")) e.preventDefault();
     if(!isSelect("pwQ")) e.preventDefault();
@@ -11,13 +8,12 @@ $submitBtn.on("click", function(e){
     if(!isTxt("usernameKR")) e.preventDefault();
     if(!isTxt("usernameEN")) e.preventDefault();
     if(!isTxt3("postcode","address1", "address2")) e.preventDefault();
-    if(!isTxt2("phone", "phone1", "phone2")) e.preventDefault();
+    if(!isTxt2("phone1","phone2")) e.preventDefault();
     if(!isEmail("email1", "email2", "email")) e.preventDefault();
-    if(!isCheck("snsAd", "sns 수신여부")) e.preventDefault();
-    if(!isCheck("emailAd", "이메일 수신여부")) e.preventDefault();
-    if(!isCheck("terms", "이용약관 동의")) e.preventDefault();
-    if(!isCheck("privacy", "개인정보 수집 및 이용 동의")) e.preventDefault();
-    if(result.length) alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + result);
+    if(!isCheck("snsAd", "수신여부를 선택해 주세요.")) e.preventDefault();
+    if(!isCheck("emailAd", "수신여부를 선택해 주세요.")) e.preventDefault();
+    if(!isCheck("terms", "필수항목에 체크해 주세요.")) e.preventDefault();
+    if(!isCheck("privacy", "필수항목에 체크해 주세요.")) e.preventDefault();
 });
 
 function isId(name){
@@ -33,14 +29,12 @@ function isId(name){
         $("[name="+ name +"]").parent().append(
             "<p class='caution'>영문소문자/숫자를 포함한 4~16자 이내로 입력해 주세요.</p>"
         );
-        result.push(name);
         return false;
     }else{
         $("[name="+ name +"]").parent().find("p").remove();
         $("[name="+ name +"]").parent().append(
             "<p class='caution'>아이디를 입력해 주세요.</p>"
         );
-        result.push($("label[for="+ name +"]").text());
         return false;
     }
 }
@@ -71,7 +65,6 @@ function isPw(name1, name2){
             $("[name="+ name1 +"]").parent().append(
                 "<p class='caution'>영문 대소문자, 숫자, 또는 특수문자 중 2가지 이상 조합하여 8~16자로 입력해 주세요.</p>"
             );
-            result.push($("label[for="+ name1 +"]").text());
             return false;
         }
     }else if(txt1 === txt2){
@@ -80,8 +73,6 @@ function isPw(name1, name2){
         $("[name="+ name1 +"]").parent().append(
             "<p class='caution'>영문 대소문자, 숫자, 또는 특수문자 중 2가지 이상 조합하여 8~16자로 입력해 주세요.</p>"
         );
-        result.push($("label[for="+ name1 +"]").text());
-        return false;
     }else{
         $("[name="+ name1 +"]").parent().find("p").remove();
         $("[name="+ name2 +"]").parent().find("p").remove();
@@ -91,7 +82,6 @@ function isPw(name1, name2){
         $("[name="+ name2 +"]").parent().append(
             "<p class='caution'>동일한 비밀번호를 입력해 주세요.</p>"
         );
-        result.push($("label[for="+ name2 +"]").text());
         return false;
     }
 }
@@ -107,7 +97,6 @@ function isSelect(name){
         $("[name="+ name +"]").parent().append(
             "<p class='caution'>항목을 선택해 주세요.</p>"
         )
-        result.push($("label[for="+ name +"]").text());
         return false;
     }
 }
@@ -123,7 +112,6 @@ function isTxt(name){
         $("[name="+ name +"]").parent().append(
             "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
-        result.push($("label[for="+ name +"]").text());
         return false;
     }
 }
@@ -136,26 +124,24 @@ function isCheck(name, text){
     }else{
         $("[name="+ name +"]").parent().find(".caution").remove();
         $("[name="+ name +"]").parent().append(
-            "<p class='caution'>"+ text +"에 체크해 주세요.</p>"
+            "<p class='caution'>"+ text +"</p>"
         )
-        result.push(text);
         return false;
     }
 }
 
-function isTxt2(name1, name2, name3){
+function isTxt2(name1, name2){
+    let txt1 = $("[name="+ name1 +"]").val();
     let txt2 = $("[name="+ name2 +"]").val();
-    let txt3 = $("[name="+ name3 +"]").val();
-
-    if(isSelect(name1) && txt2 !== "" && txt3 !== ""){
-        $("[name="+ name2 +"]").parent().find("p").remove();
+    
+    if(txt1 !== "" && txt2 !== ""){
+        $("[name="+ name1 +"]").parent().find("p").remove();
         return true;
     }else{
-        $("[name="+ name2 +"]").parent().find("p").remove();
-        $("[name="+ name2 +"]").parent().append(
+        $("[name="+ name1 +"]").parent().find("p").remove();
+        $("[name="+ name1 +"]").parent().append(
             "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
-        result.push($("label[for="+ name1 +"]").text());
         return false;
     }
 }
@@ -173,7 +159,6 @@ function isTxt3(name1, name2, name3){
         $("[name="+ name1 +"]").parent().append(
             "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
-        result.push($("label[for="+ name1 +"]").text());
         return false;
     }
 }
@@ -191,7 +176,6 @@ function isEmail(name1, name2, name3){
         $("[name="+ name1 +"]").parent().append(
             "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
         )
-        result.push($("label[for="+ name1 +"]").text());
         return false;
     }
 }
