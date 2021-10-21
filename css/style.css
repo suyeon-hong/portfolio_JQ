@@ -239,80 +239,92 @@ body {
     background: #fff;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    padding-top: 20px;
     position: absolute;
     top: 80px;
     left: -100%;
     transition: 1s;
     opacity: 0;
     z-index: 2; }
-    #header .gnbMo > li {
-      text-align: right;
-      height: 170px;
-      padding-right: 80%;
-      position: relative; }
-      #header .gnbMo > li a {
-        font: 600 18px/1 "Gothic A1";
-        color: #000; }
-      #header .gnbMo > li .arrow {
-        display: none;
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        top: 27px;
-        right: 30px;
-        cursor: pointer;
-        transition: .6s; }
-        #header .gnbMo > li .arrow::before {
-          content: '';
-          display: block;
+    #header .gnbMo > ul {
+      width: 1180px;
+      margin: 0 auto; }
+      #header .gnbMo > ul::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header .gnbMo > ul > li {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 50px 20px;
+        position: relative; }
+        #header .gnbMo > ul > li .pic {
           width: 100%;
-          height: 2px;
-          background: #bbb;
-          transform-origin: right center;
-          transform: rotate(45deg); }
-        #header .gnbMo > li .arrow::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 2px;
-          background: #bbb;
-          transform-origin: right center;
-          transform: rotate(-45deg);
-          margin-top: -2px; }
-        #header .gnbMo > li .arrow.on {
-          transform: rotate(90deg); }
-      #header .gnbMo > li ul {
-        position: absolute;
-        top: 0;
-        left: 25%; }
-        #header .gnbMo > li ul::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #header .gnbMo > li ul li {
-          float: left;
-          width: 20vw;
-          height: 150px;
-          margin-right: 20px; }
-          #header .gnbMo > li ul li a {
-            display: block;
+          height: 600px;
+          margin-bottom: 30px;
+          filter: grayscale(30%);
+          opacity: 0.8; }
+          #header .gnbMo > ul > li .pic img {
             width: 100%;
             height: 100%;
-            position: relative;
-            text-align: center; }
-            #header .gnbMo > li ul li a img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              position: absolute;
-              top: 0;
-              left: 0;
-              opacity: 0.6; }
-            #header .gnbMo > li ul li a span {
-              font: 300 16px/1 "Gothic A1";
-              color: #000;
-              position: relative; }
+            object-fit: cover; }
+        #header .gnbMo > ul > li a {
+          font: 600 18px/1 "Gothic A1";
+          color: #000; }
+        #header .gnbMo > ul > li .arrow {
+          display: none;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 27px;
+          right: 30px;
+          cursor: pointer;
+          transition: .6s; }
+          #header .gnbMo > ul > li .arrow::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #bbb;
+            transform-origin: right center;
+            transform: rotate(45deg); }
+          #header .gnbMo > ul > li .arrow::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #bbb;
+            transform-origin: right center;
+            transform: rotate(-45deg);
+            margin-top: -2px; }
+          #header .gnbMo > ul > li .arrow.on {
+            transform: rotate(90deg); }
+        #header .gnbMo > ul > li ul {
+          display: none; }
+          #header .gnbMo > ul > li ul.on {
+            display: block; }
+          #header .gnbMo > ul > li ul::after {
+            content: '';
+            display: block;
+            clear: both; }
+          #header .gnbMo > ul > li ul li {
+            float: left;
+            margin: 20px 10px 0 0; }
+            #header .gnbMo > ul > li ul li a {
+              display: block;
+              width: 150px;
+              height: 100px;
+              text-align: center; }
+              #header .gnbMo > ul > li ul li a img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(30%);
+                opacity: 0.8; }
+              #header .gnbMo > ul > li ul li a span {
+                font: 500 16px/1 "Gothic A1";
+                color: #000;
+                text-align: center; }
     #header .gnbMo.on {
       left: 0;
       opacity: 1; }
@@ -820,6 +832,10 @@ body {
         display: none; }
     #header .gnbMo {
       top: 70px; }
+      #header .gnbMo > ul {
+        width: 100%; }
+        #header .gnbMo > ul > li {
+          padding: 50px 10px; }
 
   #main .section .inner {
     width: 100%;
@@ -875,26 +891,16 @@ body {
   #navi {
     right: 20px; } }
 @media screen and (max-width: 768px) {
-  #header .gnbMo > li {
+  #header .gnbMo > ul > li {
+    width: 100%;
     padding: 20px 30px;
-    text-align: left;
-    height: auto; }
-    #header .gnbMo > li a {
+    text-align: left; }
+    #header .gnbMo > ul > li .pic {
+      display: none; }
+    #header .gnbMo > ul > li a {
       font-size: 22px; }
-    #header .gnbMo > li .arrow {
+    #header .gnbMo > ul > li .arrow {
       display: block; }
-    #header .gnbMo > li ul {
-      display: none;
-      position: relative;
-      top: auto;
-      left: auto;
-      margin-top: 20px; }
-      #header .gnbMo > li ul.on {
-        display: block; }
-      #header .gnbMo > li ul li {
-        width: 150px;
-        height: 100px;
-        margin-right: 10px; }
 
   #visual {
     height: 500px; }
@@ -950,10 +956,9 @@ body {
       #header .inner h1 a {
         font-size: 24px; }
     #header .gnbMo {
-      height: calc(100vh - 60px);
       top: 60px; }
-      #header .gnbMo > li ul li {
-        width: 85px;
+      #header .gnbMo > ul > li ul li a {
+        width: 23vw;
         height: 85px; }
 
   #visual {

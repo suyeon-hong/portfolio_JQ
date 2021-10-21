@@ -12,7 +12,7 @@ btnMo.addEventListener("click", e=>{
 
 // gnbMo tabmenu
 const gnbMo_tabs = gnbMo.querySelectorAll(".arrow");
-const gnbMo_boxs = gnbMo.querySelectorAll("ul");
+const gnbMo_boxs = gnbMo.querySelectorAll("ul li ul");
 
 for(let i=0; i<gnbMo_tabs.length; i++){
     gnbMo_tabs[i].addEventListener("click", ()=>{

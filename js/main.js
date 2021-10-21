@@ -182,6 +182,15 @@ function setCookie(time){
     document.cookie = "popup=done; expires=" + duedate;
 }
 
+//swiper
+let swiper = new Swiper(".swiper", {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+});
+
 // calendar
 const $calendar = $("#news .calendar");
 const $day = $calendar.find(".day");
