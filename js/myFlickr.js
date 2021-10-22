@@ -39,7 +39,7 @@ $.ajax({
             ),
                 $("<h2>").text(title),
                 $("<img class='profile'>").attr({
-                    src: "https://www.flickr.com/buddyicons/"+ data.owner +".jpg"
+                    src: "http://farm"+ data.farm +".staticflickr.com/"+ data.server +"/buddyicons/"+ data.owner +".jpg"
                 })
             )
         )
