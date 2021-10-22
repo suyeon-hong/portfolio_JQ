@@ -310,22 +310,23 @@ body{
                 padding: 50px 20px;
                 position: relative;
     
-                .pic{
-                    width: 100%;
-                    height: 600px;
-                    margin-bottom: 30px;
-                    filter: grayscale(30%);
-                    opacity: 0.8;
-    
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
                 a{
                     font: 600 18px/1 $font;
                     color: #000;
+
+                    .pic{
+                        width: 100%;
+                        height: 600px;
+                        margin-bottom: 30px;
+                        filter: grayscale(30%);
+                        opacity: 0.8;
+        
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
                 }
                 .arrow{
                     display: none;
