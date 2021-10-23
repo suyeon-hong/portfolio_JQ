@@ -65,53 +65,6 @@
     }
 
 
-// index scroll효과
-const $btnScroll = $("#navi li");
-let posArr = [];
-let $boxs = $(".myScroll");
-let baseLine = -300;
-
-window.onload = function(){
-    initScroll();
-}
-
-$(window).on("resize", function(){
-    posArr = [];
-    initScroll();
-});
-
-$(window).on("scroll", function(){
-    let scroll = $(window).scrollTop();
-
-    for (let i = 0; i < posArr.length; i++){
-        if (scroll >= posArr[i] + baseLine){
-            activeBtn($btnScroll, i);
-            activeBtn($boxs, i);
-        }
-    }
-});
-
-$btnScroll.children("a").on("click", function(e){
-    e.preventDefault();
-
-    moveScroll($(this));
-});
-
-function initScroll(){
-    for (let i = 0; i < $boxs.length; i++){
-        let $id = $btnScroll.eq(i).children("a").attr("href");
-        posArr.push($($id).offset().top);
-    }
-}
-
-function moveScroll(el){
-    let target = el.parent().index();
-
-    $("html, body").animate({
-        scrollTop : posArr[target]
-    }, speed);
-}
-
 // index #topic tab버튼
 const $btns_topic = $("#topic dl dt .btn");
 const $boxs_topic = $("#topic dl dd");
@@ -137,51 +90,6 @@ $btns_topic.on("click", function(e){
         });
     }
 });
-
-// cookie popup
-const $popup = $("#popup");
-const $popup_close = $popup.find(".close");
-const $delCookie = $(".delCookie");
-let isCookie = document.cookie.indexOf("popup=done");
-
-if(isCookie == 0){
-    $popup.hide();
-}else{
-    $popup.show();
-}
-
-$popup_close.on("click", function(e){
-    e.preventDefault();
-
-    let isChecked = $popup.find("input[type=checkbox]").is(":checked");
-
-    if(isChecked) setCookie(1);
-    $popup.hide();
-});
-
-$delCookie.on("click", function(e){
-    e.preventDefault();
-
-    setCookie(0);
-    alert("쿠키삭제완료");
-});
-
-$("#popup label").on("click", function(){
-    let isOn = $(this).hasClass("on");
-
-    (isOn) ? $(this).removeClass("on") : $(this).addClass("on");
-});
-
-function setCookie(time){
-    let today = new Date();
-    let date = today.getDate();
-    
-    today.setDate(date + time);
-
-    let duedate = today.toGMTString();
-
-    document.cookie = "popup=done; expires=" + duedate;
-}
 
 //swiper
 let swiper = new Swiper(".swiper", {
