@@ -781,19 +781,6 @@ body {
           top: -4px;
           left: -40px; }
 
-.delCookie {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 150px;
-  width: 100px;
-  height: 30px;
-  font: 500 16px/30px "Gothic A1";
-  color: #000;
-  border: 1px solid #bbb;
-  text-align: center;
-  z-index: 2; }
-
 .detail {
   position: absolute;
   top: 0;
@@ -1376,28 +1363,22 @@ body {
       #header_sub .inner #gnb {
         display: none; }
     #header_sub .gnbMo {
-      top: 70px; } }
+      top: 70px; }
+      #header_sub .gnbMo > ul {
+        width: 100%; }
+        #header_sub .gnbMo > ul > li {
+          padding: 50px 10px; } }
 @media screen and (max-width: 768px) {
-  #header_sub .gnbMo > li {
+  #header_sub .gnbMo > ul > li {
+    width: 100%;
     padding: 20px 30px;
-    text-align: left;
-    height: auto; }
-    #header_sub .gnbMo > li a {
+    text-align: left; }
+    #header_sub .gnbMo > ul > li .pic {
+      display: none; }
+    #header_sub .gnbMo > ul > li a {
       font-size: 22px; }
-    #header_sub .gnbMo > li .arrow {
-      display: block; }
-    #header_sub .gnbMo > li ul {
-      display: none;
-      position: relative;
-      top: auto;
-      left: auto;
-      margin-top: 20px; }
-      #header_sub .gnbMo > li ul.on {
-        display: block; }
-      #header_sub .gnbMo > li ul li {
-        width: 150px;
-        height: 100px;
-        margin-right: 10px; } }
+    #header_sub .gnbMo > ul > li .arrow {
+      display: block; } }
 @media screen and (max-width: 539px) {
   #header_sub {
     padding: 0 10px; }
@@ -1406,10 +1387,9 @@ body {
       #header_sub .inner h1 a {
         font-size: 24px; }
     #header_sub .gnbMo {
-      height: calc(100vh - 60px);
       top: 60px; }
-      #header_sub .gnbMo > li ul li {
-        width: 85px;
+      #header_sub .gnbMo > ul > li ul li a {
+        width: 23vw;
         height: 85px; } }
 .content {
   width: 100%;
@@ -1601,28 +1581,75 @@ body {
       width: 100%;
       height: 1px;
       background: #000; }
-  .about .inner > div.projects .wrap {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #000; }
-    .about .inner > div.projects .wrap article {
-      float: left;
-      width: 49%;
-      margin-right: 2%;
-      margin-bottom: 50px; }
-      .about .inner > div.projects .wrap article:nth-of-type(even) {
-        margin-right: 0; }
-      .about .inner > div.projects .wrap article .pic {
+  .about .inner > div.projects {
+    position: relative; }
+    .about .inner > div.projects .wrap {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #000; }
+      .about .inner > div.projects .wrap article {
+        float: left;
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 50px; }
+        .about .inner > div.projects .wrap article:nth-of-type(even) {
+          margin-right: 0; }
+        .about .inner > div.projects .wrap article .pic {
+          width: 100%;
+          height: 400px;
+          background: #bbb;
+          margin-bottom: 20px; }
+        .about .inner > div.projects .wrap article h3 {
+          font: 400 14px/1 "Gothic A1";
+          color: #777;
+          margin-bottom: 10px; }
+        .about .inner > div.projects .wrap article h4 {
+          font: 500 18px/1 "Gothic A1";
+          color: #333; }
+    .about .inner > div.projects .swiper {
+      position: absolute;
+      top: 58px;
+      left: -100%;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 200px;
+      background: #f5f5f5;
+      transition: 1s; }
+      .about .inner > div.projects .swiper.on {
+        opacity: 1;
+        left: 0; }
+      .about .inner > div.projects .swiper .swiper-slide {
         width: 100%;
-        height: 400px;
-        background: #bbb;
-        margin-bottom: 20px; }
-      .about .inner > div.projects .wrap article h3 {
-        font: 400 14px/1 "Gothic A1";
-        color: #777;
-        margin-bottom: 10px; }
-      .about .inner > div.projects .wrap article h4 {
-        font: 500 18px/1 "Gothic A1";
-        color: #333; }
+        height: 600px; }
+        .about .inner > div.projects .swiper .swiper-slide h3 {
+          text-align: center;
+          font: 500 18px/1 "Gothic A1";
+          color: #333;
+          margin-top: 20px;
+          margin-bottom: 10px; }
+        .about .inner > div.projects .swiper .swiper-slide h4 {
+          text-align: center;
+          font: 500 24px/1 "Gothic A1";
+          color: #111; }
+      .about .inner > div.projects .swiper .swiper-button-next, .about .inner > div.projects .swiper .swiper-button-prev {
+        color: #333;
+        top: 45%; }
+      .about .inner > div.projects .swiper .swiper-pagination-fraction {
+        width: auto;
+        left: 20px;
+        bottom: auto;
+        top: 150px;
+        font-size: 16px;
+        color: #555; }
+      .about .inner > div.projects .swiper .swiper-pagination-current {
+        font-size: 24px;
+        color: #111; }
+      .about .inner > div.projects .swiper .btnClose {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        font: 600 16px/1 "Gothic A1";
+        color: #111; }
   .about .inner > div.services .wrap ul {
     float: left; }
     .about .inner > div.services .wrap ul li {

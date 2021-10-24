@@ -404,6 +404,14 @@
         }
         .gnbMo{
             top: 70px;
+
+            >ul{
+                width: 100%;
+
+                >li{
+                    padding: 50px 10px;
+                }
+            }
         }
     }
 }
@@ -411,32 +419,19 @@
 @media screen and (max-width: $tablet2){
     #header_sub{
         .gnbMo{
-            >li{
+            >ul >li{
+                width: 100%;
                 padding: 20px 30px;
                 text-align: left;
-                height: auto;
 
+                .pic{
+                    display: none;
+                }
                 a{
                     font-size: 22px;
                 }
                 .arrow{
                     display: block;
-                }
-                ul{
-                    display: none;
-                    position: relative;
-                    top: auto;
-                    left: auto;
-                    margin-top: 20px;
-
-                    &.on{
-                        display: block;
-                    }
-                    li{
-                        width: 150px;
-                        height: 100px;
-                        margin-right: 10px;
-                    }
                 }
             }
         }
@@ -455,12 +450,13 @@
             }
         }
         .gnbMo{
-            height: calc(100vh - 60px);
             top: 60px;
 
-            >li ul li{
-                width: 85px;
-                height: 85px;
+            >ul >li ul li{
+                a{
+                    width: 23vw;
+                    height: 85px;
+                }
             }
         }
     }
