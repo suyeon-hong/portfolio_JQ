@@ -14,7 +14,7 @@ $btns_service.on("click", function(e){
     $(id).fadeIn(500);
 });
 
-// project 더보기 버튼
+// projects 더보기 버튼
 const $projectBtn = $(".about .projects .btnMore");
 const $moreClose = $(".about .projects .btnClose");
 
@@ -56,4 +56,25 @@ $orgClose.on("click", function(e){
     e.preventDefault();
 
     $(".team .orgchart").removeClass("on");
+});
+
+//news 더보기버튼
+const $newsBtn = $(".news .btnMore");
+const $newsClose = $(".news .btnClose");
+
+$newsBtn.on("click", function(e){
+    e.preventDefault();
+
+    $(".news .more").addClass("on");
+});
+$newsClose.on("click", function(e){
+    e.preventDefault();
+
+    $(".news .more").removeClass("on");
+});
+
+let swiper2 = new Swiper(".mySwiper2", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
 });
