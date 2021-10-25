@@ -106,7 +106,7 @@ const $day = $calendar.find(".day");
 const $date = $calendar.find(".date");
 const $month = $calendar.find(".month");
 const $year = $calendar.find(".year");
-const day = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+const day = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
 let date = new Date();
 
 $day.text(day[date.getDay()]);
