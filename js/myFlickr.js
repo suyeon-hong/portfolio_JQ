@@ -51,17 +51,16 @@ $.ajax({
             imgNum++;
 
             if (imgNum == totalImg){
-                $(".gallery .inner .loading").addClass("off");
+                $(".gallery .loading").addClass("off");
             }
-            $(".gallery .inner .photos").addClass("on");
+            $(".gallery .photos").addClass("on");
         }
     });
-
 }).error(function(err){
     console.error("데이터를 불러오지 못했습니다.");
 })
 
-$("body").on("click", ".gallery ul li", function(e){
+$("body").on("click", ".gallery .photos li", function(e){
     e.preventDefault();
 
     let imgSrc = $(this).find("a").attr("href");
@@ -78,4 +77,10 @@ $("body").on("click", ".gallery ul li", function(e){
 
 $("body").on("click", ".pop span", function(){
     $(".pop").remove();
+})
+
+$(".tab li a").on("click", function(e){
+    e.preventDefault();
+
+    tag = $(this).text();
 })

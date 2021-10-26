@@ -13,10 +13,9 @@ $.ajax({
     $(items).each(function(index, data){
         let txt = data.snippet.description;
         let len = txt.length;
-        let date = data.snippet.publishedAt.split("T");
 
-        if (len > 50){
-            txt = txt.substr(0, 50)+ "..";
+        if (len > 200){
+            txt = txt.substr(0, 200)+ "..";
         }
 
         $("#vidGallery").append(
@@ -27,10 +26,10 @@ $.ajax({
                 }).append(
                     $("<img>").attr({src: data.snippet.thumbnails.high.url})
                 ),
-                $("<div class='con'>").append(
-                    $("<h2>").text(data.snippet.title),
-                    $("<p>").text(txt),
-                    $("<span>").text(date[0])
+                $("<h2>").text(data.snippet.title),
+                $("<p>").text(txt),
+                $("<span>").append(
+                    $("<i class='fas fa-play'>")
                 )
             )
         )

@@ -2641,9 +2641,13 @@ body {
 .gallery .inner {
   position: relative;
   min-height: 800px; }
+  .gallery .inner h1 {
+    position: relative;
+    z-index: 1; }
   .gallery .inner .tab {
     width: 100%;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
     .gallery .inner .tab::after {
       content: '';
       display: block;
@@ -2660,16 +2664,18 @@ body {
         display: block;
         padding: 15px 0;
         font: 500 16px/1 "Gothic A1";
+        text-transform: uppercase;
         color: #111;
         text-align: center; }
   .gallery .inner .loading {
     position: absolute;
-    top: 300px;
+    top: 150px;
     left: 50%;
     width: 500px;
     height: 500px;
     transform: translateX(-50%);
-    transition: .5s; }
+    transition: .5s;
+    z-index: 0; }
     .gallery .inner .loading.off {
       opacity: 0; }
   .gallery .inner .photos {
@@ -2765,6 +2771,8 @@ body {
     .gallery .inner .photos li:nth-of-type(2n) {
       border-right: none; } }
 @media screen and (max-width: 539px) {
+  .gallery .inner .tab li a {
+    font-size: 10px; }
   .gallery .inner .photos li {
     width: 100%;
     border-right: none; }
@@ -2782,50 +2790,56 @@ body {
     display: block;
     clear: both; }
   .youtube .inner #vidGallery article {
+    width: 50%;
+    height: 550px;
     float: left;
-    width: 580px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background: #f5f5f5;
-    position: relative;
-    opacity: 0.8;
-    transition: .6s; }
-    .youtube .inner #vidGallery article:nth-of-type(even) {
-      margin-right: 0; }
-    .youtube .inner #vidGallery article:hover {
-      background: #fff;
-      opacity: 1;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); }
-      .youtube .inner #vidGallery article:hover h2 {
-        color: #111; }
-      .youtube .inner #vidGallery article:hover p {
-        color: #777; }
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+    position: relative; }
+    .youtube .inner #vidGallery article:nth-of-type(1), .youtube .inner #vidGallery article:nth-of-type(2) {
+      border-top: 1px solid rgba(0, 0, 0, 0.6); }
+    .youtube .inner #vidGallery article:nth-of-type(2n) {
+      padding-left: 40px;
+      border-right: none; }
     .youtube .inner #vidGallery article a {
       display: block;
       width: 100%;
-      height: 400px;
-      margin-bottom: 30px; }
+      height: 300px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 2px solid #111; }
       .youtube .inner #vidGallery article a img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: .6s; }
+        transform: scale(1.4); }
     .youtube .inner #vidGallery article h2 {
-      font: 500 14px/1 "Gothic A1";
-      color: #222;
-      text-align: center;
-      margin-bottom: 20px; }
-    .youtube .inner #vidGallery article p {
-      font: 400 18px/1 "Gothic A1";
-      color: #888;
-      text-align: center;
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font: 500 26px/1.2 "Gothic A1";
+      color: #111;
       margin-bottom: 30px; }
+    .youtube .inner #vidGallery article p {
+      width: 70%;
+      font: 500 14px/1.2 "Gothic A1";
+      color: #555; }
     .youtube .inner #vidGallery article span {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      color: #fff;
-      font: 100 12px/1 "Gothic A1"; }
+      right: 30px;
+      bottom: 30px;
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid #111; }
+      .youtube .inner #vidGallery article span i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px; }
 
 .pop iframe {
   object-fit: contain; }
