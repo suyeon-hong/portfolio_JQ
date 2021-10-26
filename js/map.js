@@ -22,7 +22,7 @@ tBtn.addEventListener("click", (e)=>{
 })
 
 // 마커 표시
-const map_btns = document.querySelectorAll(".location .address article");
+const map_btns = document.querySelectorAll(".location .tabmenu li");
 const positions = [
     {
         title: '스타필드 하남', 
@@ -56,6 +56,9 @@ for (let i = 0; i < positions.length; i ++) {
             map_btns[k].classList.remove("on");
         }
         positions[i].button.classList.add("on");
+        $(".address h2").text($(map_btns[i]).find("h2").text());
+        $(".address address").text($(map_btns[i]).find("address").text());
+        $(".address p").text($(map_btns[i]).find("p").text());
         panTo(positions[i].latlng);
     });
 }
@@ -70,7 +73,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 window.addEventListener("resize", ()=>{
     for (let i = 0; i < positions.length; i ++) {
-        let target = document.querySelector(".location .address article.on");
+        let target = document.querySelector(".location .tabmenu li.on");
         let index = target.getAttribute("data-index");
         panTo(positions[index].latlng);
     }
