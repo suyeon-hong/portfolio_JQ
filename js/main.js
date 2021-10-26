@@ -64,33 +64,6 @@
         });
     }
 
-
-// index #topic tab버튼
-const $btns_topic = $("#topic dl dt .btn");
-const $boxs_topic = $("#topic dl dd");
-
-$btns_topic.on("click", function(e){
-    e.preventDefault();
-
-    let i = $(this).parent().index() / 2;
-    let isOn = $(this).hasClass("on");
-    
-
-    if (isOn) {
-        $(this).removeClass("on");
-        $boxs_topic.eq(i).slideUp(speed/2, function(){
-                posArr = [];
-                initScroll();
-        });
-    }else{
-        $(this).addClass("on");
-        $boxs_topic.eq(i).slideDown(speed/2, function(){
-                posArr = [];
-                initScroll();
-        });
-    }
-});
-
 //swiper
 let swiper = new Swiper(".swiper", {
     pagination: {

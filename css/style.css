@@ -474,104 +474,34 @@ body {
     #main .section#process .inner .wrap article .txt p {
       font: 18px/1.2 "Gothic A1";
       color: #555; }
-  #main .section#topic .inner dl {
-    width: 100%; }
-    #main .section#topic .inner dl dt {
+  #main .section#topic .inner article {
+    width: 100%;
+    border-bottom: 3px solid #000;
+    margin-bottom: 20px; }
+    #main .section#topic .inner article .pic {
       width: 100%;
-      height: 50px;
-      background: #000;
-      margin-bottom: 30px;
-      padding: 10px 20px;
-      position: relative; }
-      #main .section#topic .inner dl dt h2 {
-        font: 30px/30px 'Pathway Gothic One';
-        color: #fff; }
-      #main .section#topic .inner dl dt .btn {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        width: 30px;
-        height: 30px;
-        margin-top: -15px;
-        text-indent: -9999px; }
-        #main .section#topic .inner dl dt .btn::before {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 2px;
-          background: #fff;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          margin-top: -1px; }
-        #main .section#topic .inner dl dt .btn::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 2px;
-          background: #fff;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          margin-top: -1px;
-          opacity: 1;
-          transform: rotate(270deg);
-          transition: 1s; }
-        #main .section#topic .inner dl dt .btn.on::after {
-          opacity: 0;
-          transform: rotateX(0); }
-    #main .section#topic .inner dl dd {
-      display: none; }
-      #main .section#topic .inner dl dd h3 {
-        font: bold 30px/1 'Pathway Gothic One';
-        color: #111;
-        margin-bottom: 10px; }
-      #main .section#topic .inner dl dd p {
-        font: 500 14px/1.4 "Gothic A1";
-        color: #555;
-        margin-bottom: 20px; }
-      #main .section#topic .inner dl dd .pic {
-        width: 100%;
-        height: 400px;
-        background: #bbb;
-        margin-bottom: 30px; }
-        #main .section#topic .inner dl dd .pic img {
-          filter: grayscale(80%); }
-    #main .section#topic .inner dl dd.technical {
-      display: block; }
-      #main .section#topic .inner dl dd.technical article {
-        width: 100%;
-        border-bottom: 3px solid #000;
-        margin-bottom: 20px; }
-      #main .section#topic .inner dl dd.technical .wrap article {
-        width: 380px;
-        margin-right: 20px;
-        float: left;
-        border-bottom: none; }
-        #main .section#topic .inner dl dd.technical .wrap article .pic {
-          height: 250px; }
-    #main .section#topic .inner dl dd.behind {
+      height: 500px;
+      background: #bbb;
+      margin-bottom: 30px; }
+      #main .section#topic .inner article .pic img {
+        filter: grayscale(80%); }
+    #main .section#topic .inner article h2 {
+      font: bold 30px/1 'Pathway Gothic One';
+      color: #111;
+      margin-bottom: 10px; }
+    #main .section#topic .inner article p {
+      font: 500 14px/1.4 "Gothic A1";
+      color: #555;
       margin-bottom: 20px; }
-      #main .section#topic .inner dl dd.behind .wrap {
-        width: 100%; }
-        #main .section#topic .inner dl dd.behind .wrap article {
-          width: 580px;
-          margin-right: 20px;
-          float: left; }
-          #main .section#topic .inner dl dd.behind .wrap article .pic {
-            height: 250px;
-            margin-bottom: 0; }
-            #main .section#topic .inner dl dd.behind .wrap article .pic:nth-of-type(2) {
-              background: #aaa; }
-    #main .section#topic .inner dl dd.interview .wrap article {
-      float: left;
-      width: 380px;
-      margin-right: 20px; }
-      #main .section#topic .inner dl dd.interview .wrap article .pic {
-        height: 250px;
-        background: linear-gradient(45deg, #000, #444); }
-        #main .section#topic .inner dl dd.interview .wrap article .pic img {
-          object-fit: contain; }
+  #main .section#topic .inner .wrap article {
+    width: 380px;
+    margin-right: 20px;
+    float: left;
+    border-bottom: none; }
+    #main .section#topic .inner .wrap article .pic {
+      height: 250px; }
+    #main .section#topic .inner .wrap article p {
+      margin-bottom: 0; }
   #main .section#news .inner .wrap > div {
     width: 380px;
     margin-right: 20px;
@@ -844,13 +774,7 @@ body {
       font-size: 5vw; }
     #main .section#process .inner .wrap article .txt p {
       font-size: 14px; }
-  #main .section#topic .inner dl dd.technical .wrap article {
-    width: 32%;
-    margin-right: 2%; }
-  #main .section#topic .inner dl dd.behind .wrap article {
-    width: 49%;
-    margin-right: 2%; }
-  #main .section#topic .inner dl dd.interview .wrap article {
+  #main .section#topic .inner .wrap article {
     width: 32%;
     margin-right: 2%; }
   #main .section#news .inner .wrap > div {
@@ -911,6 +835,8 @@ body {
     margin-bottom: 50px; }
   #main .section#intro .inner .wrap .desc {
     width: 100%; }
+  #main .section#topic .inner article .pic {
+    height: 400px; }
   #main .section#news .inner .wrap > div {
     width: 49%; }
     #main .section#news .inner .wrap > div article.calendar p.day {
@@ -972,27 +898,14 @@ body {
       margin-right: 0; }
     #main .section#process .inner .wrap article .pic {
       height: 42vw; }
-  #main .section#topic .inner dl dt h2 {
-    font-size: 26px; }
-  #main .section#topic .inner dl dt .btn {
-    width: 24px; }
-  #main .section#topic .inner dl dd .pic {
-    height: 200px; }
-  #main .section#topic .inner dl dd h3 {
-    font-size: 24px; }
-  #main .section#topic .inner dl dd.technical .wrap {
-    display: none; }
-  #main .section#topic .inner dl dd.behind .wrap article {
+  #main .section#topic .inner article {
+    border-bottom: none; }
+    #main .section#topic .inner article .pic {
+      height: 250px;
+      margin-bottom: 20px; }
+  #main .section#topic .inner .wrap article {
     width: 100%;
     margin-right: 0; }
-    #main .section#topic .inner dl dd.behind .wrap article .pic {
-      height: 150px; }
-  #main .section#topic .inner dl dd.interview .wrap article {
-    width: 100%;
-    margin-right: 0; }
-    #main .section#topic .inner dl dd.interview .wrap article .pic {
-      height: 100px;
-      margin-bottom: 10px; }
   #main .section#news .inner .wrap > div {
     width: 100%;
     margin-right: 0; }
