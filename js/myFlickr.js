@@ -39,7 +39,7 @@ $.ajax({
                     })
                 ),
                 $("<h2>").text(title),
-                $("<h3>").text(tag).append(
+                $("<h3>").text("CATEGORY |  " + tag).append(
                     $("<span>").text(data.owner)
                 )
             )
