@@ -5,7 +5,7 @@ https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 21be590b77fb11bd12a7266f99a2f2d8
 */
 let tag = "castle";
-let totalImg = 18;
+let totalImg = 11;
 let imgNum = 0;
 
 $.ajax({
