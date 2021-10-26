@@ -2789,11 +2789,18 @@ body {
     content: '';
     display: block;
     clear: both; }
+  .youtube .inner #vidGallery h2 {
+    font: 400 28px/1 "Gothic A1";
+    color: #111;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    padding: 10px 0; }
   .youtube .inner #vidGallery article {
     width: 50%;
     height: 550px;
     float: left;
-    padding: 40px;
+    padding: 40px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     border-right: 1px solid rgba(0, 0, 0, 0.6);
     position: relative; }
@@ -2804,17 +2811,20 @@ body {
       border-right: none; }
     .youtube .inner #vidGallery article a {
       display: block;
-      width: 100%;
+      width: 60%;
       height: 300px;
       overflow: hidden;
       margin-bottom: 30px;
-      border: 2px solid #111; }
+      border: 2px solid #111;
+      filter: grayscale(60%);
+      cursor: auto;
+      pointer-events: none; }
       .youtube .inner #vidGallery article a img {
         width: 100%;
         height: 100%;
         transform: scale(1.4); }
-    .youtube .inner #vidGallery article h2 {
-      width: 80%;
+    .youtube .inner #vidGallery article h3 {
+      width: 60%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -2822,10 +2832,10 @@ body {
       color: #111;
       margin-bottom: 30px; }
     .youtube .inner #vidGallery article p {
-      width: 70%;
+      width: 60%;
       font: 500 14px/1.2 "Gothic A1";
       color: #555; }
-    .youtube .inner #vidGallery article span {
+    .youtube .inner #vidGallery article .play {
       position: absolute;
       right: 30px;
       bottom: 30px;
@@ -2833,41 +2843,64 @@ body {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 1px solid #111; }
-      .youtube .inner #vidGallery article span i {
+      border: 1px solid #222;
+      cursor: pointer;
+      text-indent: -9999px;
+      font-size: 0; }
+      .youtube .inner #vidGallery article .play i {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 18px; }
+        font-size: 16px;
+        text-indent: 0;
+        color: #555;
+        transition: .6s; }
+      .youtube .inner #vidGallery article .play:hover i {
+        font-size: 20px;
+        color: #111; }
 
 .pop iframe {
   object-fit: contain; }
 
 @media screen and (max-width: 1179px) {
-  .youtube .inner #vidGallery article {
-    width: 49%;
-    margin-right: 2%; }
-    .youtube .inner #vidGallery article a {
-      height: 40vw; } }
+  .youtube .inner #vidGallery article a {
+    width: 70%; }
+  .youtube .inner #vidGallery article h3 {
+    width: 70%; }
+  .youtube .inner #vidGallery article p {
+    width: 70%; }
+  .youtube .inner #vidGallery article .play {
+    width: 70px;
+    height: 70px;
+    right: 20px; } }
 @media screen and (max-width: 768px) {
   .youtube .inner #vidGallery article {
     width: 100%;
-    margin-right: 0; }
-    .youtube .inner #vidGallery article a {
-      height: 60vw; } }
+    border-right: none; }
+    .youtube .inner #vidGallery article:nth-of-type(2) {
+      border-top: none; }
+    .youtube .inner #vidGallery article:nth-of-type(2n) {
+      padding-left: 0; } }
 @media screen and (max-width: 539px) {
-  .youtube .inner #vidGallery article a {
-    margin-bottom: 20px; }
-  .youtube .inner #vidGallery article .con h2 {
-    font-size: 12px;
-    margin-bottom: 10px; }
-  .youtube .inner #vidGallery article .con p {
-    font-size: 14px;
-    margin-bottom: 20px; }
-  .youtube .inner #vidGallery article .con span {
-    top: 2px;
-    left: 2px; } }
+  .youtube .inner #vidGallery h2 {
+    margin-bottom: 30px; }
+  .youtube .inner #vidGallery article {
+    padding: 20px 0;
+    height: 500px; }
+    .youtube .inner #vidGallery article a {
+      width: 100%;
+      margin-bottom: 20px; }
+    .youtube .inner #vidGallery article h3 {
+      width: 100%;
+      margin-bottom: 10px; }
+    .youtube .inner #vidGallery article p {
+      width: 80%; }
+    .youtube .inner #vidGallery article .play {
+      width: 50px;
+      height: 50px;
+      right: 0;
+      bottom: 20px; } }
 .location .visual {
   background-image: url(../img/visual_sub5.jpg); }
 .location .inner .address {

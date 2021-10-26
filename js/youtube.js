@@ -21,14 +21,13 @@ $.ajax({
         $("#vidGallery").append(
             $("<article>").append(
                 $("<a>").attr({
-                    href : data.snippet.resourceId.videoId,
-                    title: "새창열림"
+                    href : data.snippet.resourceId.videoId
                 }).append(
                     $("<img>").attr({src: data.snippet.thumbnails.high.url})
                 ),
-                $("<h2>").text(data.snippet.title),
+                $("<h3>").text(data.snippet.title),
                 $("<p>").text(txt),
-                $("<span>").append(
+                $("<span class='play'>").text("비디오재생").append(
                     $("<i class='fas fa-play'>")
                 )
             )
@@ -38,10 +37,10 @@ $.ajax({
     console.error(err);
 });
 
-$("body").on("click", "#vidGallery article a", function(e){
+$("body").on("click", "#vidGallery article .play", function(e){
     e.preventDefault();
 
-    let vidId = $(this).attr("href");
+    let vidId = $(this).parent().find("a").attr("href");
 
     $("body").append(
         $("<div class='pop'>").append(
