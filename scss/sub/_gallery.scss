@@ -6,9 +6,19 @@
         position: relative;
         min-height: 800px;
 
-        h1{
-            position: relative;
-            z-index: 1;
+        .loading{
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            transform: translateX(-50%);
+            transition: .5s;
+            z-index: 0;
+
+            &.off{
+                opacity: 0;
+            }
         }
         .tab{
             width: 100%;
@@ -38,20 +48,6 @@
                     color: #111;
                     text-align: center;
                 }
-            }
-        }
-        .loading{
-            position: absolute;
-            top: 150px;
-            left: 50%;
-            width: 500px;
-            height: 500px;
-            transform: translateX(-50%);
-            transition: .5s;
-            z-index: 0;
-
-            &.off{
-                opacity: 0;
             }
         }
         .photos{

@@ -2554,9 +2554,17 @@ body {
 .gallery .inner {
   position: relative;
   min-height: 800px; }
-  .gallery .inner h1 {
-    position: relative;
-    z-index: 1; }
+  .gallery .inner .loading {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+    transition: .5s;
+    z-index: 0; }
+    .gallery .inner .loading.off {
+      opacity: 0; }
   .gallery .inner .tab {
     width: 100%;
     margin-bottom: 30px;
@@ -2580,17 +2588,6 @@ body {
         text-transform: uppercase;
         color: #111;
         text-align: center; }
-  .gallery .inner .loading {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    width: 500px;
-    height: 500px;
-    transform: translateX(-50%);
-    transition: .5s;
-    z-index: 0; }
-    .gallery .inner .loading.off {
-      opacity: 0; }
   .gallery .inner .photos {
     width: 100%;
     position: relative;
