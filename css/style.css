@@ -2833,12 +2833,12 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
       font: 500 26px/1.2 "Gothic A1";
-      color: #111;
+      color: #333;
       margin-bottom: 30px; }
     .youtube .inner #vidGallery article p {
       width: 60%;
       font: 500 14px/1.2 "Gothic A1";
-      color: #555; }
+      color: #777; }
     .youtube .inner #vidGallery article .play {
       position: absolute;
       right: 30px;
@@ -2925,7 +2925,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     text-align: center;
-    font: 300 16px/1 "Gothic A1";
+    font: 400 16px/1 "Gothic A1";
     color: #555;
     cursor: pointer; }
     .location .inner .tabmenu li:last-child {
@@ -3021,11 +3021,11 @@ body {
     .location .inner .trafficInfo article .txt {
       padding-left: 350px; }
       .location .inner .trafficInfo article .txt h3 {
-        font: 500 20px/1 "Gothic A1";
+        font: 600 18px/1 "Gothic A1";
         color: #222;
         margin-bottom: 20px; }
       .location .inner .trafficInfo article .txt p {
-        font: 300 16px/1.6 "Gothic A1";
+        font: 400 16px/1.6 "Gothic A1";
         color: #666; }
         .location .inner .trafficInfo article .txt p span {
           display: inline-block;
