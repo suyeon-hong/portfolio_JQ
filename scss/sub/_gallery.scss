@@ -8,7 +8,7 @@
 
         .loading{
             position: absolute;
-            top: 150px;
+            top: 250px;
             left: 50%;
             width: 500px;
             height: 500px;
@@ -20,9 +20,47 @@
                 opacity: 0;
             }
         }
+        .search{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+
+            input{
+                width: 80%;
+                height: 50px;
+                padding: 10px 20px;
+                font: 500 18px/50px $font;
+                color: #333;
+                border-radius: 0;
+                border: 1px solid #888;
+
+                &:focus{
+                    outline: none;
+                }
+                &::placeholder{
+                    font: 500 16px/50px $font;
+                    color: #888;
+                }
+            }
+            button{
+                width: 80px;
+                height: 50px;
+                font: 500 16px/50px $font;
+                color: #888;
+                background: #f7f7f7;
+                border-radius: 0;
+                border: 1px solid #888;
+                vertical-align: top;
+                cursor: pointer;
+
+                &:hover{
+                    color: #333;
+                }
+            }
+        }
         .tab{
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             position: relative;
 
             &::after{
@@ -32,10 +70,10 @@
             }
             li{
                 float: left;
-                width: 20%;
-                border-top: 1px solid #888;
-                border-bottom: 1px solid #888;
-                border-right: 1px solid #888;
+                width: 25%;
+                border-top: 1px solid #333;
+                border-bottom: 1px solid #333;
+                border-right: 1px solid #333;
 
                 &:last-child{
                     border-right: none;
@@ -45,8 +83,16 @@
                     padding: 15px 0;
                     font: 500 16px/1 $font;
                     text-transform: uppercase;
-                    color: #111;
+                    color: #888;
                     text-align: center;
+
+                    &.on{
+                        background: #f7f7f7;
+                        color: #111;
+                    }
+                    &:hover{
+                        color: #111;
+                    }
                 }
             }
         }
@@ -70,7 +116,7 @@
                 float: left;
                 width: 33.3%;
                 padding: 0 20px;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 border-right: 1px solid rgba(0,0,0,0.3);
                 position: relative;
 
@@ -78,7 +124,7 @@
                     width: 50%;
 
                     a{
-                        height: 300px;
+                        height: 350px;
                     }
                 }
                 &:nth-of-type(3n+2){
@@ -190,9 +236,21 @@
 @media screen and (max-width: $mobile) {
     .gallery{
         .inner{
+            .search{
+                input{
+                    width: 70%;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                button{
+                    width: 70px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
             .tab{
                 li a{
-                    font-size: 10px;
+                    font-size: 12px;
                 }
             }
             .photos{

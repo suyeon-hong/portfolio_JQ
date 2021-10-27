@@ -2556,7 +2556,7 @@ body {
   min-height: 800px; }
   .gallery .inner .loading {
     position: absolute;
-    top: 150px;
+    top: 250px;
     left: 50%;
     width: 500px;
     height: 500px;
@@ -2565,9 +2565,38 @@ body {
     z-index: 0; }
     .gallery .inner .loading.off {
       opacity: 0; }
+  .gallery .inner .search {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; }
+    .gallery .inner .search input {
+      width: 80%;
+      height: 50px;
+      padding: 10px 20px;
+      font: 500 18px/50px "Gothic A1";
+      color: #333;
+      border-radius: 0;
+      border: 1px solid #888; }
+      .gallery .inner .search input:focus {
+        outline: none; }
+      .gallery .inner .search input::placeholder {
+        font: 500 16px/50px "Gothic A1";
+        color: #888; }
+    .gallery .inner .search button {
+      width: 80px;
+      height: 50px;
+      font: 500 16px/50px "Gothic A1";
+      color: #888;
+      background: #f7f7f7;
+      border-radius: 0;
+      border: 1px solid #888;
+      vertical-align: top;
+      cursor: pointer; }
+      .gallery .inner .search button:hover {
+        color: #333; }
   .gallery .inner .tab {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative; }
     .gallery .inner .tab::after {
       content: '';
@@ -2575,10 +2604,10 @@ body {
       clear: both; }
     .gallery .inner .tab li {
       float: left;
-      width: 20%;
-      border-top: 1px solid #888;
-      border-bottom: 1px solid #888;
-      border-right: 1px solid #888; }
+      width: 25%;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      border-right: 1px solid #333; }
       .gallery .inner .tab li:last-child {
         border-right: none; }
       .gallery .inner .tab li a {
@@ -2586,8 +2615,13 @@ body {
         padding: 15px 0;
         font: 500 16px/1 "Gothic A1";
         text-transform: uppercase;
-        color: #111;
+        color: #888;
         text-align: center; }
+        .gallery .inner .tab li a.on {
+          background: #f7f7f7;
+          color: #111; }
+        .gallery .inner .tab li a:hover {
+          color: #111; }
   .gallery .inner .photos {
     width: 100%;
     position: relative;
@@ -2605,13 +2639,13 @@ body {
       float: left;
       width: 33.3%;
       padding: 0 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       position: relative; }
       .gallery .inner .photos li:nth-of-type(1), .gallery .inner .photos li:nth-of-type(2) {
         width: 50%; }
         .gallery .inner .photos li:nth-of-type(1) a, .gallery .inner .photos li:nth-of-type(2) a {
-          height: 300px; }
+          height: 350px; }
       .gallery .inner .photos li:nth-of-type(3n+2) {
         border-right: none; }
       .gallery .inner .photos li a {
@@ -2681,8 +2715,16 @@ body {
     .gallery .inner .photos li:last-child {
       display: none; } }
 @media screen and (max-width: 539px) {
+  .gallery .inner .search input {
+    width: 70%;
+    height: 40px;
+    line-height: 40px; }
+  .gallery .inner .search button {
+    width: 70px;
+    height: 40px;
+    line-height: 40px; }
   .gallery .inner .tab li a {
-    font-size: 10px; }
+    font-size: 12px; }
   .gallery .inner .photos li {
     width: 100%;
     border-right: none; }
@@ -2713,11 +2755,11 @@ body {
     height: 550px;
     float: left;
     padding: 40px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-    border-right: 1px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
     position: relative; }
     .youtube .inner #vidGallery article:nth-of-type(1), .youtube .inner #vidGallery article:nth-of-type(2) {
-      border-top: 1px solid rgba(0, 0, 0, 0.6); }
+      border-top: 2px solid #333; }
     .youtube .inner #vidGallery article:nth-of-type(2n) {
       padding-left: 40px;
       border-right: none; }
@@ -2755,10 +2797,11 @@ body {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 1px solid #222;
+      border: 1px solid #666;
       cursor: pointer;
       text-indent: -9999px;
-      font-size: 0; }
+      font-size: 0;
+      transition: .4s; }
       .youtube .inner #vidGallery article .play i {
         position: absolute;
         top: 50%;
@@ -2767,10 +2810,12 @@ body {
         font-size: 16px;
         text-indent: 0;
         color: #555;
-        transition: .6s; }
-      .youtube .inner #vidGallery article .play:hover i {
-        font-size: 20px;
-        color: #111; }
+        transition: .4s; }
+      .youtube .inner #vidGallery article .play:hover {
+        border-color: #333; }
+        .youtube .inner #vidGallery article .play:hover i {
+          font-size: 20px;
+          color: #333; }
 
 .pop iframe {
   object-fit: contain; }
@@ -2877,7 +2922,7 @@ body {
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     z-index: 10;
-    padding: 15px; }
+    padding: 10px; }
     .location .inner #map .address h2 {
       font: 600 14px/1 "Gothic A1";
       color: #111;
