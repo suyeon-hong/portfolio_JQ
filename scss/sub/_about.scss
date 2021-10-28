@@ -1,9 +1,10 @@
 .about{
     .inner{
-        >p{
+        h1{
             padding-top: 50px;
             margin-bottom: 120px;
             font: 300 80px/1.2 $font;
+            letter-spacing: -2px;
             color: #222;
         }
         >div{
@@ -514,7 +515,7 @@
 @media screen and (max-width: $tablet){
     .about{
         .inner{
-            >p{
+            h1{
                 font-size: 6vw;
             }
             &>div{
@@ -604,7 +605,7 @@
 @media screen and (max-width: $tablet2){
     .about{
         .inner{
-            >p{
+            h1{
                 margin-bottom: 70px;
             }
             >div{
@@ -677,7 +678,7 @@
 @media screen and (max-width: $mobile){
     .about{
         .inner{
-            >p{
+            h1{
                 margin-bottom: 50px;
             }
             >div{
