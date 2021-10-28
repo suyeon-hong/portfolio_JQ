@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&family=Arapey&display=swap&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -370,86 +366,183 @@ body {
 
 #visual {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 81px);
   overflow: hidden;
-  position: relative;
-  z-index: 1; }
-  #visual .wrap {
-    width: calc((100% / 7) * 8 + 20px);
+  z-index: 1;
+  position: relative; }
+  #visual .bg {
+    width: 70%;
     height: 100%;
-    background-color: #fff;
-    transition: 1s; }
-    #visual .wrap img {
-      width: calc((100% - 20px) / 8 - 20px);
-      height: 100%;
-      margin-right: 20px;
-      float: left;
-      object-fit: cover;
-      opacity: 0.8;
-      filter: saturate(10%);
-      transition: .6s;
-      cursor: pointer; }
-      #visual .wrap img.on {
-        width: calc((100% - 20px) / 8);
-        filter: saturate(120%); }
-  #visual .left {
+    background: #ddd;
+    position: relative; }
+    #visual .bg ul {
+      position: absolute;
+      top: 50%;
+      left: -130px;
+      transform: translateY(-50%) rotate(-90deg); }
+      #visual .bg ul.on li {
+        transform: translateY(0); }
+      #visual .bg ul li {
+        float: left;
+        margin-right: 40px;
+        position: relative;
+        transform: translateY(-50px); }
+        #visual .bg ul li:nth-of-type(1) {
+          transition: all .3s .1s; }
+        #visual .bg ul li:nth-of-type(2) {
+          transition: all .3s .3s; }
+        #visual .bg ul li:nth-of-type(3) {
+          transition: all .3s .5s; }
+        #visual .bg ul li a {
+          font: 600 18px/1 "Gothic A1";
+          color: #fff; }
+          #visual .bg ul li a.on {
+            color: #222; }
+        #visual .bg ul li:not(:first-child)::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 2px;
+          background: #111;
+          position: absolute;
+          top: 50%;
+          left: -25px;
+          margin-top: -2px; }
+  #visual .inner {
+    width: 1180px;
+    height: 100%;
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.8); }
-    #visual .left::before {
-      content: '';
-      display: block;
+    top: 0;
+    left: 50%;
+    margin-left: -590px; }
+    #visual .inner .txt {
+      width: 100vh;
+      border-top: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
+      padding: 10px 100px;
+      text-align: right;
+      transform: translateY(-50%) rotate(-90deg);
       position: absolute;
       top: 50%;
-      left: 25px;
-      width: 50px;
-      height: 1px;
-      background: #fff;
-      transform-origin: left center;
-      transform: rotate(-35deg); }
-    #visual .left::after {
-      content: '';
-      display: block;
+      left: -250px; }
+      #visual .inner .txt span {
+        display: block;
+        font: 600 24px/1 "Zen Kaku Gothic";
+        color: #333; }
+      #visual .inner .txt h1 {
+        font: 600 100px/1 "Zen Kaku Gothic";
+        color: #333; }
+      #visual .inner .txt h2 {
+        font: 300 70px/1 "Zen Kaku Gothic";
+        color: #222;
+        letter-spacing: 5px;
+        padding-right: 200px; }
+        #visual .inner .txt h2 .plus {
+          display: inline-block;
+          margin-left: 30px;
+          vertical-align: super;
+          position: relative; }
+          #visual .inner .txt h2 .plus::before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+          #visual .inner .txt h2 .plus::after {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 30px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+    #visual .inner .pic {
       position: absolute;
       top: 50%;
-      left: 25px;
-      width: 50px;
-      height: 1px;
-      background: #fff;
-      transform-origin: left center;
-      transform: rotate(35deg); }
-  #visual .right {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.8); }
-    #visual .right::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 25px;
-      width: 50px;
-      height: 1px;
-      background: #fff;
-      transform-origin: right center;
-      transform: rotate(35deg); }
-    #visual .right::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 25px;
-      width: 50px;
-      height: 1px;
-      background: #fff;
-      transform-origin: right center;
-      transform: rotate(-35deg); }
+      right: 60px;
+      transform: translateY(-50%);
+      width: 480px;
+      height: 600px; }
+      #visual .inner .pic .frame {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); }
+        #visual .inner .pic .frame .wrap {
+          width: calc(100% * 3);
+          height: 100%; }
+          #visual .inner .pic .frame .wrap img {
+            width: calc(100% / 3);
+            height: 100%;
+            object-fit: cover; }
+      #visual .inner .pic .con {
+        position: absolute;
+        top: 50%;
+        left: -84px;
+        transform: translateY(-50%); }
+        #visual .inner .pic .con h1 {
+          display: inline-block;
+          font: bold 48px/1 "Zen Kaku Gothic";
+          letter-spacing: -4px;
+          color: #333;
+          margin-bottom: 10px;
+          position: relative; }
+          #visual .inner .pic .con h1::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 2px;
+            background: #333;
+            position: absolute;
+            top: 50%;
+            right: -120px;
+            margin-top: 2px; }
+        #visual .inner .pic .con h2 {
+          font: 600 20px/1.4 "Gothic A1";
+          color: #222; }
+      #visual .inner .pic .next {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 40%;
+        right: -50px;
+        font-size: 0; }
+        #visual .inner .pic .next::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: #333;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+        #visual .inner .pic .next::after {
+          content: '';
+          display: block;
+          width: 3px;
+          height: 100%;
+          background: #333;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+      #visual .inner .pic .util {
+        position: absolute;
+        right: -50px;
+        bottom: 0; }
+        #visual .inner .pic .util li:not(:last-child) {
+          margin-bottom: 40px; }
+        #visual .inner .pic .util li i {
+          color: #222; }
 
 #main .section {
   width: 100%;
@@ -792,6 +885,9 @@ body {
         width: 100%; }
         #header .gnbMo > ul > li {
           padding: 50px 10px; }
+
+  #visual {
+    height: calc(100vh - 71px); }
 
   #main .section .inner {
     width: 100%;

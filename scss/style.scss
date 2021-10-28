@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&family=Arapey&display=swap&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap');
 @import 'reset';
 
 $font: 'Gothic A1';
@@ -457,100 +457,235 @@ body{
 
 #visual{
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 81px);
     overflow: hidden;
-    position: relative;
     z-index: 1;
+    position: relative;
 
-    .wrap{
-        width: calc((100% / 7) * 8 + 20px);
+    .bg{
+        width: 70%;
         height: 100%;
-        background-color: #fff;
-        transition: 1s;
+        background: #ddd;
+        position: relative;
 
-        img{
-            width: calc((100% - 20px) / 8 - 20px);
-            height: 100%;
-            margin-right: 20px;
-            float: left;
-            object-fit: cover;
-            opacity: 0.8;
-            filter: saturate(10%);
-            transition: .6s;
-            cursor: pointer;
+        ul{
+            position: absolute;
+            top: 50%;
+            left: -130px;
+            transform: translateY(-50%) rotate(-90deg);
 
             &.on{
-                width: calc((100% - 20px) / 8);
-                filter: saturate(120%);
+                li{
+                    transform: translateY(0);
+                }
+            }
+            li{
+                float: left;
+                margin-right: 40px;
+                position: relative;
+                transform: translateY(-50px);
+
+                &:nth-of-type(1){
+                    transition: all .3s .1s;
+                }
+                &:nth-of-type(2){
+                    transition: all .3s .3s;
+                }
+                &:nth-of-type(3){
+                    transition: all .3s .5s;
+                }
+                a{
+                    font: 600 18px/1 $font;
+                    color: #fff;
+
+                    &.on{
+                        color: #222;
+                    }
+                }
+                &:not(:first-child)::before{
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 2px;
+                    background: #111;
+                    position: absolute;
+                    top: 50%;
+                    left: -25px;
+                    margin-top: -2px;
+                }
             }
         }
     }
-    .left{
+    .inner{
+        width: 1180px;
+        height: 100%;
         position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        background: rgba(0,0,0,0.8);
+        top: 0;
+        left: 50%;
+        margin-left: -590px;
 
-        &::before{
-            content:'';
-            display: block;
+        .txt{
+            width: 100vh;
+            border-top: 1px solid #bbb;
+            border-bottom: 1px solid #bbb;
+            padding: 10px 100px;
+            text-align: right;
+            transform: translateY(-50%) rotate(-90deg);
             position: absolute;
             top: 50%;
-            left: 25px;
-            width: 50px;
-            height: 1px;
-            background: #fff;
-            transform-origin: left center;
-            transform: rotate(-35deg);
+            left: -250px;
+    
+            span{
+                display: block;
+                font: 600 24px/1 "Zen Kaku Gothic";
+                color: #333;
+            }
+            h1{
+                font: 600 100px/1 "Zen Kaku Gothic";
+                color: #333;
+            }
+            h2{
+                font: 300 70px/1 "Zen Kaku Gothic";
+                color: #222;
+                letter-spacing: 5px;
+                padding-right: 200px;
+
+                .plus{
+                    display: inline-block;
+                    margin-left: 30px;
+                    vertical-align: super;
+                    position: relative;
+
+                    &::before{
+                        content:'';
+                        display: block;
+                        width: 30px;
+                        height: 5px;
+                        background: #000;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &::after{
+                        content:'';
+                        display: block;
+                        width: 5px;
+                        height: 30px;
+                        background: #000;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
         }
-        &::after{
-            content:'';
-            display: block;
+        .pic{
             position: absolute;
             top: 50%;
-            left: 25px;
-            width: 50px;
-            height: 1px;
-            background: #fff;
-            transform-origin: left center;
-            transform: rotate(35deg);
+            right: 60px;
+            transform: translateY(-50%);
+            width: 480px;
+            height: 600px;
+    
+            .frame{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: #fff;
+                box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    
+                .wrap{
+                    width: calc(100% * 3);
+                    height: 100%;
+        
+                    img{
+                        width: calc(100% / 3);
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .con{
+                position: absolute;
+                top: 50%;
+                left: -84px;
+                transform: translateY(-50%);
+    
+                h1{
+                    display: inline-block;
+                    font: bold 48px/1 "Zen Kaku Gothic";
+                    letter-spacing: -4px;
+                    color: #333;
+                    margin-bottom: 10px;
+                    position: relative;
+    
+                    &::after{
+                        content:'';
+                        display: block;
+                        width: 120px;
+                        height: 2px;
+                        background: #333;
+                        position: absolute;
+                        top: 50%;
+                        right: -120px;
+                        margin-top: 2px;
+                    }
+                }
+                h2{
+                    font: 600 20px/1.4 $font;
+                    color: #222;
+                }
+            }
+            .next{
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 40%;
+                right: -50px;
+                font-size: 0;
+    
+                &::before{
+                    content:'';
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background: #333;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    width: 3px;
+                    height: 100%;
+                    background: #333;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .util{
+                position: absolute;
+                right: -50px;
+                bottom: 0;
+    
+                li:not(:last-child){
+                    margin-bottom: 40px;
+                }
+                li i{
+                    color: #222;
+                }
+            }
         }
     }
-    .right{
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 100px;
-        height: 100px;
-        background: rgba(0,0,0,0.8);
+    
 
-        &::before{
-            content:'';
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 25px;
-            width: 50px;
-            height: 1px;
-            background: #fff;
-            transform-origin: right center;
-            transform: rotate(35deg);
-        }
-        &::after{
-            content:'';
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 25px;
-            width: 50px;
-            height: 1px;
-            background: #fff;
-            transform-origin: right center;
-            transform: rotate(-35deg);
-        }
-    }
 }
 
 #main{
@@ -1060,6 +1195,9 @@ body{
         }
     }
 
+    #visual{
+        height: calc(100vh - 71px);
+    }
     #main{
         .section{
             .inner{
