@@ -127,8 +127,9 @@ function getList(opt){
                         })
                     ),
                     $("<h2>").text(title),
-                    $("<h3>").text("CATEGORY |  " + tag).append(
-                        $("<span>").text(data.owner)
+                    $("<h3>").text("CATEGORY |").append(
+                        $("<span>").text(tag),
+                        $("<span class='id'>").text(data.owner)
                     )
                 )
             )

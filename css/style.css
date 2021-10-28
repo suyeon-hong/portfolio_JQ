@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&family=Pathway+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -33,7 +36,7 @@ body {
   width: 100%;
   padding-top: 40px;
   background: #fff;
-  border-bottom: 1px solid #B3B3AF;
+  border-bottom: 1px solid #888;
   position: relative;
   z-index: 2; }
   #header .inner {
@@ -76,7 +79,7 @@ body {
           left: 0;
           top: 37px;
           background: #fff;
-          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15); }
+          border-bottom: 1px solid #888; }
           #header .inner #gnb > li .sub::before {
             content: '';
             display: block;
@@ -85,7 +88,8 @@ body {
             background: inherit;
             position: absolute;
             top: 0;
-            left: -100%; }
+            left: -100%;
+            border-bottom: 1px solid #888; }
           #header .inner #gnb > li .sub::after {
             content: '';
             display: block;
@@ -94,7 +98,8 @@ body {
             background: inherit;
             position: absolute;
             top: 0;
-            right: -100%; }
+            right: -100%;
+            border-bottom: 1px solid #888; }
           #header .inner #gnb > li .sub > ul {
             width: 90%;
             height: 100%;
@@ -115,6 +120,7 @@ body {
                 display: block;
                 padding: 10px;
                 font: 400 14px/1 "Gothic A1";
+                text-transform: uppercase;
                 color: #555; }
                 #header .inner #gnb > li .sub > ul > li a:hover {
                   color: #111;
@@ -144,11 +150,18 @@ body {
             padding: 30px 20px 0; }
             #header .inner #gnb > li:last-child .sub > ul > li:last-child {
               text-align: left; }
-              #header .inner #gnb > li:last-child .sub > ul > li:last-child ul li {
-                list-style-type: square;
-                font: 600 15px/1 "Gothic A1";
-                color: #111;
-                margin-bottom: 10px; }
+              #header .inner #gnb > li:last-child .sub > ul > li:last-child p {
+                position: relative; }
+                #header .inner #gnb > li:last-child .sub > ul > li:last-child p::before {
+                  content: '';
+                  display: block;
+                  width: 4px;
+                  height: 4px;
+                  background: #111;
+                  position: absolute;
+                  top: 50%;
+                  left: -10px;
+                  margin-top: -4px; }
             #header .inner #gnb > li:last-child .sub > ul > li .pic {
               width: 100%;
               height: 180px;
@@ -997,7 +1010,7 @@ body {
   width: 100%;
   padding-top: 40px;
   background: #fff;
-  border-bottom: 1px solid #B3B3AF;
+  border-bottom: 1px solid #888;
   position: relative;
   z-index: 2; }
   #header_sub .inner {
@@ -1040,7 +1053,7 @@ body {
           left: 0;
           top: 37px;
           background: #fff;
-          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15); }
+          border-bottom: 1px solid #888; }
           #header_sub .inner #gnb > li .sub::before {
             content: '';
             display: block;
@@ -1049,7 +1062,8 @@ body {
             background: inherit;
             position: absolute;
             top: 0;
-            left: -100%; }
+            left: -100%;
+            border-bottom: 1px solid #888; }
           #header_sub .inner #gnb > li .sub::after {
             content: '';
             display: block;
@@ -1058,7 +1072,8 @@ body {
             background: inherit;
             position: absolute;
             top: 0;
-            right: -100%; }
+            right: -100%;
+            border-bottom: 1px solid #888; }
           #header_sub .inner #gnb > li .sub > ul {
             width: 90%;
             height: 100%;
@@ -1079,6 +1094,7 @@ body {
                 display: block;
                 padding: 10px;
                 font: 400 14px/1 "Gothic A1";
+                text-transform: uppercase;
                 color: #555; }
                 #header_sub .inner #gnb > li .sub > ul > li a:hover {
                   color: #111;
@@ -1108,11 +1124,18 @@ body {
             padding: 30px 20px 0; }
             #header_sub .inner #gnb > li:last-child .sub > ul > li:last-child {
               text-align: left; }
-              #header_sub .inner #gnb > li:last-child .sub > ul > li:last-child ul li {
-                list-style-type: square;
-                font: 600 15px/1 "Gothic A1";
-                color: #111;
-                margin-bottom: 10px; }
+              #header_sub .inner #gnb > li:last-child .sub > ul > li:last-child p {
+                position: relative; }
+                #header_sub .inner #gnb > li:last-child .sub > ul > li:last-child p::before {
+                  content: '';
+                  display: block;
+                  width: 4px;
+                  height: 4px;
+                  background: #111;
+                  position: absolute;
+                  top: 50%;
+                  left: -10px;
+                  margin-top: -4px; }
             #header_sub .inner #gnb > li:last-child .sub > ul > li .pic {
               width: 100%;
               height: 180px;
@@ -1359,7 +1382,7 @@ body {
   border: none; }
   .content .visual {
     width: 100%;
-    height: 400px;
+    height: 300px;
     background: url(../img/visual_sub1.jpg) no-repeat center/cover;
     filter: grayscale(80%);
     opacity: 0.8; }
@@ -1367,18 +1390,6 @@ body {
     width: 1180px;
     margin: 0 auto;
     padding: 100px 0; }
-    .content .inner h1 {
-      font: 600 40px/1 "Gothic A1";
-      color: #000;
-      position: relative;
-      margin-bottom: 40px; }
-      .content .inner h1::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 4px;
-        background: #000;
-        margin-top: 20px; }
 
 #footer_sub {
   width: 100%;
@@ -1504,11 +1515,10 @@ body {
   .content .visual {
     height: 200px; }
   .content .inner {
-    padding: 30px 10px 50px; }
-    .content .inner h1 {
-      font-size: 30px; } }
+    padding: 30px 10px 50px; } }
 .about .inner > p {
-  padding: 200px 0 240px;
+  padding-top: 50px;
+  margin-bottom: 120px;
   font: 300 80px/1.2 "Gothic A1";
   color: #222; }
 .about .inner > div {
@@ -1902,8 +1912,7 @@ body {
 
 @media screen and (max-width: 1179px) {
   .about .inner > p {
-    font-size: 6vw;
-    padding: 14vw 0 18vw; }
+    font-size: 6vw; }
   .about .inner > div .wrap {
     margin-left: 25vw; }
   .about .inner > div .btnMore {
@@ -1944,6 +1953,8 @@ body {
   .about .inner > div.news .wrap article .pic {
     height: 40vw; } }
 @media screen and (max-width: 768px) {
+  .about .inner > p {
+    margin-bottom: 70px; }
   .about .inner > div .wrap {
     margin-left: 0; }
   .about .inner > div .btnMore {
@@ -1981,8 +1992,7 @@ body {
             width: 337px; } }
 @media screen and (max-width: 539px) {
   .about .inner > p {
-    font-size: 24px;
-    padding: 20px 0 60px; }
+    margin-bottom: 50px; }
   .about .inner > div {
     margin-bottom: 100px; }
     .about .inner > div h2 {
@@ -2090,7 +2100,19 @@ body {
       margin-right: 0;
       margin-bottom: 20px; } }
 .community .visual {
-  background-image: url(../img/visual_sub2.jpg); }
+  background-image: url(../img/visual_community.jpg); }
+.community .inner h1 {
+  font: 600 40px/1 "Gothic A1";
+  color: #000;
+  position: relative;
+  margin-bottom: 40px; }
+  .community .inner h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #000;
+    margin-top: 20px; }
 .community .inner > dl {
   position: relative;
   padding-top: 100px; }
@@ -2384,7 +2406,7 @@ body {
       font-size: 14px;
       padding: 8px 10px; } }
 .join .visual {
-  background-image: url(../img/visual_sub6.jpg); }
+  background-image: url(../img/visual_join.jpg); }
 .join .inner form fieldset {
   border: none; }
   .join .inner form fieldset p.caution {
@@ -2479,12 +2501,12 @@ body {
       margin-left: 20px; }
   .join .inner form fieldset > div {
     margin-bottom: 100px; }
-    .join .inner form fieldset > div h2 {
+    .join .inner form fieldset > div h1 {
       font: 600 18px/1 "Gothic A1";
       color: #222;
       position: relative;
       margin-bottom: 30px; }
-      .join .inner form fieldset > div h2::after {
+      .join .inner form fieldset > div h1::after {
         content: '';
         display: block;
         width: 100%;
@@ -2599,14 +2621,12 @@ body {
     height: 34px;
     line-height: 34px;
     font-size: 14px; } }
-.gallery .visual {
-  background-image: url(../img/visual_sub4.jpg); }
 .gallery .inner {
   position: relative;
-  min-height: 800px; }
+  min-height: 1000px; }
   .gallery .inner .loading {
     position: absolute;
-    top: 250px;
+    top: 350px;
     left: 50%;
     width: 500px;
     height: 500px;
@@ -2615,10 +2635,32 @@ body {
     z-index: 0; }
     .gallery .inner .loading.off {
       opacity: 0; }
+  .gallery .inner .title {
+    margin-bottom: 100px;
+    text-align: center; }
+    .gallery .inner .title h1 {
+      font: bold 70px/1 "Arapey";
+      color: #111;
+      text-align: center; }
+    .gallery .inner .title span {
+      display: inline-block;
+      font: 600 12px/1 "Gothic A1";
+      color: #555;
+      margin-left: 100px;
+      position: relative; }
+      .gallery .inner .title span::before {
+        content: '';
+        display: block;
+        width: 96px;
+        height: 1px;
+        background: #888;
+        position: absolute;
+        top: 50%;
+        left: -100px; }
   .gallery .inner .search {
     width: 100%;
     text-align: center;
-    margin-bottom: 40px; }
+    margin-bottom: 80px; }
     .gallery .inner .search input {
       width: 80%;
       height: 50px;
@@ -2696,13 +2738,15 @@ body {
         width: 50%; }
         .gallery .inner .photos li:nth-of-type(1) a, .gallery .inner .photos li:nth-of-type(2) a {
           height: 350px; }
+        .gallery .inner .photos li:nth-of-type(1) h2, .gallery .inner .photos li:nth-of-type(2) h2 {
+          font-size: 40px; }
       .gallery .inner .photos li:nth-of-type(3n+2) {
         border-right: none; }
       .gallery .inner .photos li a {
         display: block;
         width: 100%;
         height: 250px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         filter: saturate(10%);
         transition: 1s; }
         .gallery .inner .photos li a img {
@@ -2712,22 +2756,28 @@ body {
         .gallery .inner .photos li a:hover {
           filter: saturate(100%); }
       .gallery .inner .photos li h2 {
-        font: 500 24px/1 "Gothic A1";
+        font: 26px/1 "Arapey";
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        text-transform: uppercase;
+        letter-spacing: 2px;
         color: #222;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         margin-bottom: 15px; }
       .gallery .inner .photos li h3 {
         font: 500 12px/1 "Gothic A1";
-        color: #444;
+        color: #333;
         text-transform: uppercase;
         padding-bottom: 15px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         position: relative; }
         .gallery .inner .photos li h3 span {
+          color: #666;
+          font-weight: 500;
+          margin-left: 5px; }
+        .gallery .inner .photos li h3 .id {
           position: absolute;
           right: 0;
           color: #777;
@@ -2758,6 +2808,8 @@ body {
     width: 50%; }
     .gallery .inner .photos li:nth-of-type(1) a, .gallery .inner .photos li:nth-of-type(2) a {
       height: 250px; }
+    .gallery .inner .photos li:nth-of-type(1) h2, .gallery .inner .photos li:nth-of-type(2) h2 {
+      font-size: 26px; }
     .gallery .inner .photos li:nth-of-type(3n+2) {
       border-right: 1px solid rgba(0, 0, 0, 0.3); }
     .gallery .inner .photos li:nth-of-type(2n) {
@@ -2785,21 +2837,24 @@ body {
 
   .pop {
     padding: 100px 20px; } }
-.youtube .visual {
-  background-image: url(../img/visual_sub3.jpg); }
 .youtube .inner #vidGallery {
   width: 100%; }
   .youtube .inner #vidGallery::after {
     content: '';
     display: block;
     clear: both; }
-  .youtube .inner #vidGallery h2 {
-    font: 400 28px/1 "Gothic A1";
+  .youtube .inner #vidGallery h1 {
+    font: 120px/1 "Arapey";
     color: #111;
     text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-    padding: 10px 0; }
+    letter-spacing: -5px;
+    margin-bottom: 50px; }
+    .youtube .inner #vidGallery h1 span {
+      display: block;
+      font-size: 100px;
+      font-weight: normal;
+      color: #333;
+      font-style: italic; }
   .youtube .inner #vidGallery article {
     width: 50%;
     height: 550px;
@@ -2832,12 +2887,12 @@ body {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font: 500 26px/1.2 "Gothic A1";
+      font: 500 26px/1.2 "Zen Kaku Gothic Antique";
       color: #333;
       margin-bottom: 30px; }
     .youtube .inner #vidGallery article p {
       width: 60%;
-      font: 500 14px/1.2 "Gothic A1";
+      font: 500 14px/1.2 "Zen Kaku Gothic Antique";
       color: #777; }
     .youtube .inner #vidGallery article .play {
       position: absolute;
@@ -2882,6 +2937,10 @@ body {
     height: 70px;
     right: 20px; } }
 @media screen and (max-width: 768px) {
+  .youtube .inner #vidGallery h1 {
+    font-size: 70px; }
+    .youtube .inner #vidGallery h1 span {
+      font-size: 60px; }
   .youtube .inner #vidGallery article {
     width: 100%;
     border-right: none; }
@@ -2909,10 +2968,78 @@ body {
       right: 0;
       bottom: 20px; } }
 .location .visual {
-  background-image: url(../img/visual_sub5.jpg); }
+  background-image: url(../img/visual_location.jpg); }
+.location .inner .contact {
+  margin-bottom: 100px; }
+  .location .inner .contact .wrap h1 {
+    float: left;
+    width: 50%;
+    padding: 80px 0;
+    font: 600 60px/1.2 "Gothic A1";
+    color: #111; }
+  .location .inner .contact .wrap form {
+    float: right;
+    width: 50%; }
+    .location .inner .contact .wrap form fieldset {
+      border: none; }
+      .location .inner .contact .wrap form fieldset table {
+        width: 100%;
+        border-collapse: collapse; }
+        .location .inner .contact .wrap form fieldset table tr {
+          border-top: 2px solid #eee; }
+          .location .inner .contact .wrap form fieldset table tr th {
+            display: inline-block;
+            width: 90px;
+            padding: 30px 0;
+            font: 600 16px/1 "Gothic A1";
+            text-align: left;
+            color: #222; }
+            .location .inner .contact .wrap form fieldset table tr th input[type="submit"] {
+              width: 150px;
+              height: 40px;
+              border: 2px solid #222;
+              background: transparent;
+              font: 500 18px/1 "Gothic A1";
+              color: #222;
+              cursor: pointer; }
+          .location .inner .contact .wrap form fieldset table tr td {
+            display: inline-block;
+            padding: 30px 0;
+            width: 70%; }
+            .location .inner .contact .wrap form fieldset table tr td input {
+              width: 90%;
+              border: none;
+              outline: none;
+              font: 500 16px/1 "Gothic A1";
+              color: #888; }
+            .location .inner .contact .wrap form fieldset table tr td textarea {
+              width: 100%;
+              height: 100px;
+              resize: none;
+              border: none;
+              outline: none;
+              font: 500 16px/1 "Gothic A1";
+              color: #888; }
+          .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) {
+            display: inline-block;
+            width: 40%;
+            border-right: 2px solid #eee; }
+            .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td {
+              width: auto; }
+              .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td input {
+                width: 120px; }
+          .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) {
+            display: inline-block;
+            width: 60%;
+            padding-left: 30px; }
+            .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td {
+              width: auto; }
+              .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td input {
+                width: 120px; }
+          .location .inner .contact .wrap form fieldset table tr:nth-of-type(4) th {
+            vertical-align: top; }
 .location .inner .tabmenu {
-  width: 100%;
-  margin-bottom: 10px; }
+  width: 100%; }
   .location .inner .tabmenu::after {
     content: '';
     display: block;
@@ -2920,7 +3047,7 @@ body {
   .location .inner .tabmenu li {
     width: 33.3%;
     float: left;
-    padding: 12px 0;
+    padding: 15px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -2934,13 +3061,14 @@ body {
       font-weight: 500;
       color: #000;
       background: #f9f9f9; }
-    .location .inner .tabmenu li h2, .location .inner .tabmenu li address, .location .inner .tabmenu li p {
+    .location .inner .tabmenu li h1, .location .inner .tabmenu li address, .location .inner .tabmenu li p {
       display: none; }
 .location .inner #map {
   width: 100%;
   height: 500px;
-  margin-bottom: 100px;
-  filter: saturate(60%);
+  margin-bottom: 30px;
+  border-bottom: 2px solid #222;
+  filter: grayscale(60%);
   position: relative; }
   .location .inner #map .traffic {
     position: absolute;
@@ -2973,7 +3101,7 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     z-index: 10;
     padding: 10px; }
-    .location .inner #map .address h2 {
+    .location .inner #map .address h1 {
       font: 600 14px/1 "Gothic A1";
       color: #111;
       margin-bottom: 15px; }
@@ -2987,18 +3115,6 @@ body {
 .location .inner .trafficInfo {
   width: 100%;
   margin-bottom: 150px; }
-  .location .inner .trafficInfo h2 {
-    font: 600 28px/1 "Gothic A1";
-    color: #000;
-    margin-bottom: 30px;
-    position: relative; }
-    .location .inner .trafficInfo h2::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #000;
-      margin-top: 10px; }
   .location .inner .trafficInfo article {
     width: 100%;
     min-height: 200px;
@@ -3020,7 +3136,7 @@ body {
         object-fit: cover; }
     .location .inner .trafficInfo article .txt {
       padding-left: 350px; }
-      .location .inner .trafficInfo article .txt h3 {
+      .location .inner .trafficInfo article .txt h1 {
         font: 600 18px/1 "Gothic A1";
         color: #222;
         margin-bottom: 20px; }
@@ -3031,91 +3147,33 @@ body {
           display: inline-block;
           width: 100px;
           color: #444; }
-.location .inner .contact h2 {
-  font: 600 28px/1 "Gothic A1";
-  color: #000;
-  margin-bottom: 100px;
-  position: relative; }
-  .location .inner .contact h2::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    margin-top: 10px; }
-.location .inner .contact .wrap h3 {
-  float: left;
-  width: 50%;
-  padding: 80px 0;
-  font: 600 60px/1.2 "Gothic A1";
-  color: #111; }
-.location .inner .contact .wrap form {
-  float: right;
-  width: 50%; }
-  .location .inner .contact .wrap form fieldset {
-    border: none; }
-    .location .inner .contact .wrap form fieldset table {
-      width: 100%;
-      border-collapse: collapse; }
-      .location .inner .contact .wrap form fieldset table tr {
-        border-top: 2px solid #eee; }
-        .location .inner .contact .wrap form fieldset table tr th {
-          display: inline-block;
-          width: 90px;
-          padding: 30px 0;
-          font: 600 16px/1 "Gothic A1";
-          text-align: left;
-          color: #222; }
-          .location .inner .contact .wrap form fieldset table tr th input[type="submit"] {
-            width: 150px;
-            height: 40px;
-            border: 2px solid #222;
-            background: transparent;
-            font: 500 18px/1 "Gothic A1";
-            color: #222;
-            cursor: pointer; }
-        .location .inner .contact .wrap form fieldset table tr td {
-          display: inline-block;
-          padding: 30px 0;
-          width: 70%; }
-          .location .inner .contact .wrap form fieldset table tr td input {
-            width: 90%;
-            border: none;
-            outline: none;
-            font: 500 16px/1 "Gothic A1";
-            color: #888; }
-          .location .inner .contact .wrap form fieldset table tr td textarea {
-            width: 100%;
-            height: 100px;
-            resize: none;
-            border: none;
-            outline: none;
-            font: 500 16px/1 "Gothic A1";
-            color: #888; }
-        .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) {
-          display: inline-block;
-          width: 40%;
-          border-right: 2px solid #eee; }
-          .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td {
-            width: auto; }
-            .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) td input {
-              width: 120px; }
-        .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) {
-          display: inline-block;
-          width: 60%;
-          padding-left: 30px; }
-          .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td {
-            width: auto; }
-            .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) td input {
-              width: 120px; }
-        .location .inner .contact .wrap form fieldset table tr:nth-of-type(4) th {
-          vertical-align: top; }
+.location .inner .txtbox {
+  width: 100%; }
+  .location .inner .txtbox h1 {
+    font: 300 38px/1 "Zen Kaku Gothic Antique";
+    color: #555;
+    letter-spacing: -2px;
+    margin-bottom: 10px; }
+  .location .inner .txtbox p {
+    font: 400 18px/1 "Zen Kaku Gothic Antique";
+    color: #bbb; }
+  .location .inner .txtbox .wrap article {
+    width: 50%;
+    float: left;
+    padding-top: 50px;
+    padding-right: 50px; }
+    .location .inner .txtbox .wrap article h2 {
+      font: 600 18px/1 "Zen Kaku Gothic Antique";
+      color: #222;
+      margin-bottom: 10px; }
+      .location .inner .txtbox .wrap article h2 i {
+        margin-right: 10px;
+        color: #ccc; }
+    .location .inner .txtbox .wrap article p {
+      font: 500 12px/1.4 "Zen Kaku Gothic Antique";
+      color: #777; }
 
 @media screen and (max-width: 1179px) {
-  .location .inner .trafficInfo article .pic {
-    left: 8vw; }
-  .location .inner .trafficInfo article .txt {
-    padding-left: 30vw; }
   .location .inner .contact .wrap form fieldset table tr:nth-of-type(1) {
     display: block;
     width: 100%;
@@ -3123,49 +3181,56 @@ body {
   .location .inner .contact .wrap form fieldset table tr:nth-of-type(2) {
     display: block;
     width: 100%;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .location .inner .trafficInfo article .pic {
+    left: 8vw; }
+  .location .inner .trafficInfo article .txt {
+    padding-left: 30vw; } }
 @media screen and (max-width: 768px) {
+  .location .inner .contact .wrap h1 {
+    width: 100%;
+    font-size: 50px;
+    padding: 30px 0; }
+  .location .inner .contact .wrap form {
+    width: 100%; }
+  .location .inner #map {
+    height: 400px; }
   .location .inner .trafficInfo article {
     padding: 30px 0; }
     .location .inner .trafficInfo article .pic {
       left: 0; }
     .location .inner .trafficInfo article .txt {
-      padding-left: 170px; }
-  .location .inner #map {
-    height: 400px; }
-  .location .inner .contact h2 {
-    margin-bottom: 0; }
-  .location .inner .contact .wrap h3 {
-    width: 100%;
-    font-size: 50px; }
-  .location .inner .contact .wrap form {
-    width: 100%; } }
+      padding-left: 170px; } }
 @media screen and (max-width: 539px) {
+  .location .inner .contact .wrap h1 {
+    font-size: 38px;
+    padding: 60px 0; }
   .location .inner .tabmenu li {
     font-size: 12px; }
-  .location .inner .trafficInfo article {
-    min-height: auto;
-    text-align: center; }
-    .location .inner .trafficInfo article .pic {
-      width: 100px;
-      height: 100px;
-      transform: translate(-50%, 0);
-      position: relative;
-      left: 50%;
-      margin-bottom: 20px; }
-    .location .inner .trafficInfo article .txt {
-      padding-left: 0; }
-      .location .inner .trafficInfo article .txt p {
-        margin-bottom: 10px; }
-        .location .inner .trafficInfo article .txt p span {
-          display: block;
-          width: 100%; }
   .location .inner #map {
     height: 300px; }
-  .location .inner .contact h2 {
-    font-size: 24px; }
-  .location .inner .contact .wrap h3 {
-    font-size: 38px;
-    padding: 60px 0; } }
+  .location .inner .trafficInfo {
+    margin-bottom: 100px; }
+    .location .inner .trafficInfo article {
+      min-height: auto;
+      text-align: center; }
+      .location .inner .trafficInfo article .pic {
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%, 0);
+        position: relative;
+        left: 50%;
+        margin-bottom: 20px; }
+      .location .inner .trafficInfo article .txt {
+        padding-left: 0; }
+        .location .inner .trafficInfo article .txt p {
+          margin-bottom: 10px; }
+          .location .inner .trafficInfo article .txt p span {
+            display: block;
+            width: 100%; }
+  .location .inner .txtbox .wrap article {
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */

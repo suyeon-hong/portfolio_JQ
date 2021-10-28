@@ -1,7 +1,8 @@
 .about{
     .inner{
         >p{
-            padding: 200px 0 240px;
+            padding-top: 50px;
+            margin-bottom: 120px;
             font: 300 80px/1.2 $font;
             color: #222;
         }
@@ -515,7 +516,6 @@
         .inner{
             >p{
                 font-size: 6vw;
-                padding: 14vw 0 18vw;
             }
             &>div{
                 .wrap{
@@ -604,6 +604,9 @@
 @media screen and (max-width: $tablet2){
     .about{
         .inner{
+            >p{
+                margin-bottom: 70px;
+            }
             >div{
                 .wrap{
                     margin-left: 0;
@@ -675,8 +678,7 @@
     .about{
         .inner{
             >p{
-                font-size: 24px;
-                padding: 20px 0 60px;
+                margin-bottom: 50px;
             }
             >div{
                 margin-bottom: 100px;
