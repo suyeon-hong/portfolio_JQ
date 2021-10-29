@@ -2578,10 +2578,16 @@ body {
 .join .inner {
   padding: 50px 0 100px; }
   .join .inner h1 {
-    font: 40px/1 "Arapey";
-    color: #777;
     text-align: center;
     margin-bottom: 70px; }
+    .join .inner h1:hover span {
+      color: #333; }
+    .join .inner h1 span {
+      display: inline-block;
+      font: 40px/1 "Arapey";
+      color: #777;
+      margin-right: 20px;
+      transition-duration: .6s; }
   .join .inner form fieldset {
     border: none; }
     .join .inner form fieldset p.caution {
@@ -2676,12 +2682,12 @@ body {
         margin-left: 20px; }
     .join .inner form fieldset > div {
       margin-bottom: 100px; }
-      .join .inner form fieldset > div h1 {
+      .join .inner form fieldset > div h2 {
         font: 600 18px/1 "Gothic A1";
         color: #222;
         position: relative;
         margin-bottom: 30px; }
-        .join .inner form fieldset > div h1::after {
+        .join .inner form fieldset > div h2::after {
           content: '';
           display: block;
           width: 100%;

@@ -1,6 +1,9 @@
 const $submitBtn = $(".join input[type=submit]");
 let result = [];
 
+
+letter(".join h1", 0.1);
+
 $submitBtn.on("click", function(e){
     result = [];
 
@@ -194,5 +197,31 @@ function isEmail(name1, name2, name3){
         )
         result.push($("label[for="+ name1 +"]").text());
         return false;
+    }
+}
+
+function letter(item, interval){
+    let txt = $(item).text();
+    let num = 0;
+
+    txt = txt.split(" ");
+    console.log(txt);
+    $(item).empty();
+
+    for(let el of txt){
+        $(item).append(
+            $("<span>").text(el).css({
+                transitionDelay: num*interval +"s",
+                transform: "translateY(-200px)",
+                opacity: 0
+            })
+        )
+        num++;
+
+        $(item).find("span").stop().animate({
+            opacity: 1
+        }, 500, function(){
+            $(this).css({transform: "translateY(0)"})
+        });
     }
 }
