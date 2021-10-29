@@ -294,18 +294,21 @@ body {
         padding: 50px 20px;
         position: relative; }
         #header .gnbMo > ul > li a {
-          font: 600 18px/1 "Gothic A1";
+          font: 600 18px/1 "Arapey";
           color: #000; }
           #header .gnbMo > ul > li a .pic {
             width: 100%;
             height: 600px;
             margin-bottom: 30px;
             filter: grayscale(30%);
-            opacity: 0.8; }
+            opacity: 0.8;
+            transition: .4s; }
             #header .gnbMo > ul > li a .pic img {
               width: 100%;
               height: 100%;
               object-fit: cover; }
+          #header .gnbMo > ul > li a:hover .pic {
+            opacity: 1; }
         #header .gnbMo > ul > li .arrow {
           display: none;
           width: 12px;
@@ -320,22 +323,26 @@ body {
             display: block;
             width: 100%;
             height: 2px;
-            background: #bbb;
+            background: #888;
             transform-origin: right center;
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            margin-top: 2px; }
           #header .gnbMo > ul > li .arrow::after {
             content: '';
             display: block;
             width: 100%;
             height: 2px;
-            background: #bbb;
+            background: #888;
             transform-origin: right center;
             transform: rotate(-45deg);
             margin-top: -2px; }
           #header .gnbMo > ul > li .arrow.on {
             transform: rotate(90deg); }
+            #header .gnbMo > ul > li .arrow.on::before, #header .gnbMo > ul > li .arrow.on::after {
+              background: #333; }
         #header .gnbMo > ul > li ul {
-          display: none; }
+          display: none;
+          padding: 20px 0; }
           #header .gnbMo > ul > li ul.on {
             display: block; }
           #header .gnbMo > ul > li ul::after {
@@ -344,22 +351,25 @@ body {
             clear: both; }
           #header .gnbMo > ul > li ul li {
             float: left;
-            margin: 20px 10px 0 0; }
+            padding-left: 40px;
+            padding-top: 10px; }
             #header .gnbMo > ul > li ul li a {
-              display: block;
-              width: 150px;
-              height: 100px;
-              text-align: center; }
-              #header .gnbMo > ul > li ul li a img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: grayscale(30%);
-                opacity: 0.8; }
-              #header .gnbMo > ul > li ul li a span {
-                font: 500 16px/1 "Gothic A1";
-                color: #000;
-                text-align: center; }
+              font: 500 14px/1 "Gothic A1";
+              color: #666;
+              text-align: center;
+              text-transform: uppercase; }
+              #header .gnbMo > ul > li ul li a:hover {
+                color: #222;
+                font-weight: 600; }
+              #header .gnbMo > ul > li ul li a::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #666;
+                margin-bottom: 3px;
+                margin-right: 5px; }
     #header .gnbMo.on {
       left: 0;
       opacity: 1; }
@@ -387,10 +397,16 @@ body {
   #visual.on .inner .pic {
     top: 50%;
     transform: translateY(-50%); }
+    #visual.on .inner .pic .con .num .wrap h1 {
+      transform: translateX(0); }
+    #visual.on .inner .pic .con .num::after {
+      width: 150px; }
     #visual.on .inner .pic .con h2 {
       transform: translateX(0); }
     #visual.on .inner .pic .next {
       right: -50px; }
+    #visual.on .inner .pic .util li {
+      transform: translateY(0); }
   #visual .bg {
     width: 70%;
     height: 100%;
@@ -452,26 +468,26 @@ body {
         font: 600 24px/1 "Zen Kaku Gothic";
         color: #333;
         transform: translateX(100%);
-        transition: .4s .4s; }
+        transition: transform .4s .4s; }
       #visual .inner .txt h1 {
         font: 600 100px/1 "Zen Kaku Gothic";
         color: #333;
         transform: translateX(100%);
-        transition: .4s .2s; }
+        transition: transform .4s .2s; }
       #visual .inner .txt h2 {
         font: 300 70px/1 "Zen Kaku Gothic";
         color: #222;
         letter-spacing: 5px;
         padding-right: 200px;
         transform: translateX(-100%);
-        transition: .4s .4s; }
+        transition: transform .4s .4s; }
         #visual .inner .txt h2 .plus {
           display: inline-block;
           margin-left: 30px;
           vertical-align: super;
           position: relative;
           opacity: 0;
-          transition: .4s 1s; }
+          transition: opacity .4s 1s; }
           #visual .inner .txt h2 .plus::before {
             content: '';
             display: block;
@@ -500,7 +516,7 @@ body {
       right: 60px;
       width: 480px;
       height: 600px;
-      transition: .4s 1.2s; }
+      transition: top .4s 1.2s, transform .4s 1.2s; }
       #visual .inner .pic .frame {
         width: 100%;
         height: 100%;
@@ -509,35 +525,34 @@ body {
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); }
         #visual .inner .pic .frame .wrap {
           width: calc(100% * 3);
-          height: 100%; }
+          height: 100%;
+          filter: grayscale(40%); }
           #visual .inner .pic .frame .wrap img {
             width: calc(100% / 3);
             height: 100%;
-            object-fit: cover; }
+            object-fit: cover;
+            opacity: 0.9; }
       #visual .inner .pic .con {
         position: absolute;
         top: 50%;
         left: -84px;
         transform: translateY(-50%);
         overflow: hidden; }
-        #visual .inner .pic .con .pageNum {
+        #visual .inner .pic .con .num {
           margin-bottom: 10px;
           position: relative; }
-          #visual .inner .pic .con .pageNum.on .wrap h1 {
-            transform: translateX(0); }
-          #visual .inner .pic .con .pageNum.on::after {
-            width: 150px; }
-          #visual .inner .pic .con .pageNum .wrap {
+          #visual .inner .pic .con .num .wrap {
             display: inline-block;
             overflow: hidden; }
-            #visual .inner .pic .con .pageNum .wrap h1 {
+            #visual .inner .pic .con .num .wrap h1 {
               display: inline-block;
               font: bold 48px/1 "Zen Kaku Gothic";
               letter-spacing: -4px;
               color: #333;
               transform: translateX(100%);
-              transition: .4s 1.6s; }
-          #visual .inner .pic .con .pageNum::after {
+              transition: .4s 1.4s;
+              position: relative; }
+          #visual .inner .pic .con .num::after {
             content: '';
             display: block;
             width: 0;
@@ -547,7 +562,7 @@ body {
             top: 50%;
             right: 30px;
             margin-top: 2px;
-            transition: .8s 1.2s; }
+            transition: .8s 1.4s; }
         #visual .inner .pic .con h2 {
           font: 600 20px/1.4 "Gothic A1";
           color: #222;
@@ -561,8 +576,8 @@ body {
         top: 40%;
         right: -100%;
         font-size: 0;
-        transition: .4s 1.6s; }
-        #visual .inner .pic .next:hover {
+        transition: right .4s 1.6s; }
+        #visual .inner .pic .next.on {
           transform: rotate(-15deg); }
         #visual .inner .pic .next::before {
           content: '';
@@ -588,17 +603,15 @@ body {
         position: absolute;
         right: -50px;
         bottom: 0; }
-        #visual .inner .pic .util.on li {
-          transform: translateY(0); }
         #visual .inner .pic .util li {
           transform: translateY(300px);
           margin-top: 40px; }
-        #visual .inner .pic .util li:nth-of-type(1) {
-          transition: .8s 1.2s; }
-        #visual .inner .pic .util li:nth-of-type(2) {
-          transition: .8s 1.4s; }
-        #visual .inner .pic .util li:nth-of-type(3) {
-          transition: .8s 1.6s; }
+          #visual .inner .pic .util li:nth-of-type(1) {
+            transition: .8s 1.2s; }
+          #visual .inner .pic .util li:nth-of-type(2) {
+            transition: .8s 1.4s; }
+          #visual .inner .pic .util li:nth-of-type(3) {
+            transition: .8s 1.6s; }
         #visual .inner .pic .util li i {
           color: #222; }
 
@@ -946,6 +959,16 @@ body {
 
   #visual {
     height: calc(100vh - 71px); }
+    #visual .inner {
+      width: 100%;
+      left: 0;
+      margin-left: 0; }
+      #visual .inner .txt h1 {
+        font-size: 9vw; }
+      #visual .inner .txt h2 {
+        font-size: 6vw; }
+      #visual .inner .pic {
+        width: 36vw; }
 
   #main .section .inner {
     width: 100%;
@@ -998,7 +1021,8 @@ body {
   #header .gnbMo > ul > li {
     width: 100%;
     padding: 20px 30px;
-    text-align: left; }
+    text-align: left;
+    border-bottom: 1px solid #ddd; }
     #header .gnbMo > ul > li .pic {
       display: none; }
     #header .gnbMo > ul > li a {
@@ -1008,16 +1032,6 @@ body {
 
   #visual {
     height: 500px; }
-    #visual .left, #visual .right {
-      width: 50px;
-      height: 50px;
-      top: 40%; }
-    #visual .left::before, #visual .left::after {
-      width: 24px;
-      left: 10px; }
-    #visual .right::before, #visual .right::after {
-      width: 24px;
-      right: 10px; }
 
   #main .section .inner .title {
     font-size: 50px; }
@@ -1063,19 +1077,9 @@ body {
         font-size: 24px; }
     #header .gnbMo {
       top: 60px; }
-      #header .gnbMo > ul > li ul li a {
-        width: 23vw;
-        height: 85px; }
 
   #visual {
     height: 300px; }
-    #visual .wrap {
-      width: calc((100% / 7) * 8 + 5px); }
-      #visual .wrap img {
-        width: calc(((100% - 5px) / 8) - 5px);
-        margin-right: 5px; }
-        #visual .wrap img.on {
-          width: calc((100% - 5px) / 8); }
 
   #main .section .inner {
     padding: 50px 20px; }
@@ -1426,18 +1430,21 @@ body {
         padding: 50px 20px;
         position: relative; }
         #header_sub .gnbMo > ul > li a {
-          font: 600 18px/1 "Gothic A1";
+          font: 600 18px/1 "Arapey";
           color: #000; }
           #header_sub .gnbMo > ul > li a .pic {
             width: 100%;
             height: 600px;
             margin-bottom: 30px;
             filter: grayscale(30%);
-            opacity: 0.8; }
+            opacity: 0.8;
+            transition: .4s; }
             #header_sub .gnbMo > ul > li a .pic img {
               width: 100%;
               height: 100%;
               object-fit: cover; }
+          #header_sub .gnbMo > ul > li a:hover .pic {
+            opacity: 1; }
         #header_sub .gnbMo > ul > li .arrow {
           display: none;
           width: 12px;
@@ -1452,22 +1459,26 @@ body {
             display: block;
             width: 100%;
             height: 2px;
-            background: #bbb;
+            background: #888;
             transform-origin: right center;
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            margin-top: 2px; }
           #header_sub .gnbMo > ul > li .arrow::after {
             content: '';
             display: block;
             width: 100%;
             height: 2px;
-            background: #bbb;
+            background: #888;
             transform-origin: right center;
             transform: rotate(-45deg);
             margin-top: -2px; }
           #header_sub .gnbMo > ul > li .arrow.on {
             transform: rotate(90deg); }
+            #header_sub .gnbMo > ul > li .arrow.on::before, #header_sub .gnbMo > ul > li .arrow.on::after {
+              background: #333; }
         #header_sub .gnbMo > ul > li ul {
-          display: none; }
+          display: none;
+          padding: 20px 0; }
           #header_sub .gnbMo > ul > li ul.on {
             display: block; }
           #header_sub .gnbMo > ul > li ul::after {
@@ -1476,22 +1487,25 @@ body {
             clear: both; }
           #header_sub .gnbMo > ul > li ul li {
             float: left;
-            margin: 20px 10px 0 0; }
+            padding-left: 40px;
+            padding-top: 10px; }
             #header_sub .gnbMo > ul > li ul li a {
-              display: block;
-              width: 150px;
-              height: 100px;
-              text-align: center; }
-              #header_sub .gnbMo > ul > li ul li a img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: grayscale(30%);
-                opacity: 0.8; }
-              #header_sub .gnbMo > ul > li ul li a span {
-                font: 500 16px/1 "Gothic A1";
-                color: #000;
-                text-align: center; }
+              font: 500 14px/1 "Gothic A1";
+              color: #666;
+              text-align: center;
+              text-transform: uppercase; }
+              #header_sub .gnbMo > ul > li ul li a:hover {
+                color: #222;
+                font-weight: 600; }
+              #header_sub .gnbMo > ul > li ul li a::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #666;
+                margin-bottom: 3px;
+                margin-right: 5px; }
     #header_sub .gnbMo.on {
       left: 0;
       opacity: 1; }
@@ -1513,7 +1527,8 @@ body {
   #header_sub .gnbMo > ul > li {
     width: 100%;
     padding: 20px 30px;
-    text-align: left; }
+    text-align: left;
+    border-bottom: 1px solid #ddd; }
     #header_sub .gnbMo > ul > li .pic {
       display: none; }
     #header_sub .gnbMo > ul > li a {
@@ -1528,10 +1543,7 @@ body {
       #header_sub .inner h1 a {
         font-size: 24px; }
     #header_sub .gnbMo {
-      top: 60px; }
-      #header_sub .gnbMo > ul > li ul li a {
-        width: 23vw;
-        height: 85px; } }
+      top: 60px; } }
 .content {
   width: 100%;
   border: none; }
@@ -3023,11 +3035,11 @@ body {
     height: 550px;
     float: left;
     padding: 40px 0;
-    border-bottom: 2px solid #333;
-    border-right: 2px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
     position: relative; }
     .youtube .inner #vidGallery article:nth-of-type(1), .youtube .inner #vidGallery article:nth-of-type(2) {
-      border-top: 2px solid #333; }
+      border-top: 1px solid #333; }
     .youtube .inner #vidGallery article:nth-of-type(2n) {
       padding-left: 40px;
       border-right: none; }

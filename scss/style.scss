@@ -360,7 +360,7 @@ body{
                 position: relative;
     
                 a{
-                    font: 600 18px/1 $font;
+                    font: 600 18px/1 "Arapey";
                     color: #000;
 
                     .pic{
@@ -369,12 +369,16 @@ body{
                         margin-bottom: 30px;
                         filter: grayscale(30%);
                         opacity: 0.8;
+                        transition: .4s;
         
                         img{
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                         }
+                    }
+                    &:hover .pic{
+                        opacity: 1;
                     }
                 }
                 .arrow{
@@ -392,56 +396,65 @@ body{
                         display: block;
                         width: 100%;
                         height: 2px;
-                        background: #bbb;
+                        background: #888;
                         transform-origin: right center;
                         transform: rotate(45deg);
+                        margin-top: 2px;
                     }
                     &::after{
                         content: '';
                         display: block;
                         width: 100%;
                         height: 2px;
-                        background: #bbb;
+                        background: #888;
                         transform-origin: right center;
                         transform: rotate(-45deg);
                         margin-top: -2px;
                     }
                     &.on{
                         transform: rotate(90deg);
+
+                        &::before, &::after{
+                            background: #333;
+                        }
                     }
                 }
                 ul{
                     display: none;
+                    padding: 20px 0;
 
                     &.on{
                         display: block;
                     }
                     &::after{
-                        content:'';
+                        content: '';
                         display: block;
                         clear: both;
                     }
                     li{
                         float: left;
-                        margin: 20px 10px 0 0;
+                        padding-left: 40px;
+                        padding-top: 10px;
 
                         a{
-                            display: block;
-                            width: 150px;
-                            height: 100px;
+                            font: 500 14px/1 $font;
+                            color: #666;
                             text-align: center;
+                            text-transform: uppercase;
 
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                filter: grayscale(30%);
-                                opacity: 0.8;
+                            &:hover{
+                                color: #222;
+                                font-weight: 600;
                             }
-                            span{
-                                font: 500 16px/1 $font;
-                                color: #000;
-                                text-align: center;
+                            &::before{
+                                content:'';
+                                display: inline-block;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background: #666;
+                                margin-bottom: 3px;
+                                margin-right: 5px;
                             }
                         }
                     }
@@ -492,12 +505,23 @@ body{
                 transform: translateY(-50%);
 
                 .con{
+                    .num{
+                        .wrap h1{
+                            transform: translateX(0);
+                        }
+                        &::after{
+                            width: 150px;
+                        }
+                    }
                     h2{
                         transform: translateX(0);
                     }
                 }
                 .next{
                     right: -50px;
+                }
+                .util li{
+                    transform: translateY(0);
                 }
             }
         }
@@ -578,13 +602,13 @@ body{
                 font: 600 24px/1 "Zen Kaku Gothic";
                 color: #333;
                 transform: translateX(100%);
-                transition: .4s .4s;
+                transition: transform .4s .4s;
             }
             h1{
                 font: 600 100px/1 "Zen Kaku Gothic";
                 color: #333;
                 transform: translateX(100%);
-                transition: .4s .2s;
+                transition: transform .4s .2s;
             }
             h2{
                 font: 300 70px/1 "Zen Kaku Gothic";
@@ -592,7 +616,7 @@ body{
                 letter-spacing: 5px;
                 padding-right: 200px;
                 transform: translateX(-100%);
-                transition: .4s .4s;
+                transition: transform .4s .4s;
 
                 .plus{
                     display: inline-block;
@@ -600,7 +624,7 @@ body{
                     vertical-align: super;
                     position: relative;
                     opacity: 0;
-                    transition: .4s 1s;
+                    transition: opacity .4s 1s;
 
                     &::before{
                         content:'';
@@ -635,7 +659,7 @@ body{
             right: 60px;
             width: 480px;
             height: 600px;
-            transition: .4s 1.2s;
+            transition: top .4s 1.2s, transform .4s 1.2s;
     
             .frame{
                 width: 100%;
@@ -647,11 +671,13 @@ body{
                 .wrap{
                     width: calc(100% * 3);
                     height: 100%;
+                    filter: grayscale(40%);
         
                     img{
                         width: calc(100% / 3);
                         height: 100%;
                         object-fit: cover;
+                        opacity: 0.9;
                     }
                 }
             }
@@ -662,18 +688,10 @@ body{
                 transform: translateY(-50%);
                 overflow: hidden;
     
-                .pageNum{
+                .num{
                     margin-bottom: 10px;
                     position: relative;
 
-                    &.on{
-                        .wrap h1{
-                            transform: translateX(0);
-                        }
-                        &::after{
-                            width: 150px;
-                        }
-                    }
                     .wrap{
                         display: inline-block;
                         overflow: hidden;
@@ -684,7 +702,8 @@ body{
                             letter-spacing: -4px;
                             color: #333;
                             transform: translateX(100%);
-                            transition: .4s 1.6s;
+                            transition: .4s 1.4s;
+                            position: relative;
                         }
                     }
                     &::after{
@@ -697,7 +716,7 @@ body{
                         top: 50%;
                         right: 30px;
                         margin-top: 2px;
-                        transition: .8s 1.2s;
+                        transition: .8s 1.4s;
                     }
                 }
                 h2{
@@ -715,9 +734,9 @@ body{
                 top: 40%;
                 right: -100%;
                 font-size: 0;
-                transition: .4s 1.6s;
-    
-                &:hover{
+                transition: right .4s 1.6s;
+
+                &.on{
                     transform: rotate(-15deg);
                 }
                 &::before{
@@ -747,24 +766,20 @@ body{
                 position: absolute;
                 right: -50px;
                 bottom: 0;
-    
-                &.on{
-                    li{
-                        transform: translateY(0);
-                    }
-                }
+
                 li{
                     transform: translateY(300px);
                     margin-top: 40px;
-                }
-                li:nth-of-type(1){
-                    transition: .8s 1.2s;
-                }
-                li:nth-of-type(2){
-                    transition: .8s 1.4s;
-                }
-                li:nth-of-type(3){
-                    transition: .8s 1.6s;
+
+                    &:nth-of-type(1){
+                        transition: .8s 1.2s;
+                    }
+                    &:nth-of-type(2){
+                        transition: .8s 1.4s;
+                    }
+                    &:nth-of-type(3){
+                        transition: .8s 1.6s;
+                    }
                 }
                 li i{
                     color: #222;
@@ -1285,7 +1300,26 @@ body{
 
     #visual{
         height: calc(100vh - 71px);
+
+        .inner{
+            width: 100%;
+            left:0;
+            margin-left: 0;
+
+            .txt{
+                h1{
+                    font-size: 9vw;
+                }
+                h2{
+                    font-size: 6vw;
+                }
+            }
+            .pic{
+                width: 36vw;
+            }
+        }
     }
+
     #main{
         .section{
             .inner{
@@ -1397,6 +1431,7 @@ body{
                 width: 100%;
                 padding: 20px 30px;
                 text-align: left;
+                border-bottom: 1px solid #ddd;
 
                 .pic{
                     display: none;
@@ -1413,24 +1448,6 @@ body{
 
     #visual{
         height: 500px;
-
-        .left, .right{
-            width: 50px;
-            height: 50px;
-            top: 40%;
-        }
-        .left{
-            &::before, &::after{
-                width: 24px;
-                left: 10px;
-            }
-        }
-        .right{
-            &::before, &::after{
-                width: 24px;
-                right: 10px;
-            }
-        }
     }
 
     #main{
@@ -1511,31 +1528,11 @@ body{
         }
         .gnbMo{
             top: 60px;
-
-            >ul >li ul li{
-                a{
-                    width: 23vw;
-                    height: 85px;
-                }
-            }
         }
     }
 
     #visual{
         height: 300px;
-
-        .wrap{
-            width: calc((100% / 7) * 8 + 5px);
-
-            img{
-                width: calc(((100% - 5px) / 8) - 5px);
-                margin-right: 5px;
-
-                &.on{
-                    width: calc((100% - 5px) / 8);
-                }
-            }
-        }
     }
 
     #main{

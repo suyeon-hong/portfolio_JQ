@@ -1,8 +1,17 @@
 // index visual
 $(document).ready(function(){
     $("#visual").addClass("on");
-    $("#visual .pageNum").addClass("on");
-    $("#visual .util").addClass("on");
+});
+
+$(".next").on("click", function(e){
+    e.preventDefault();
+
+    $(this).addClass("on");
+    $("#visual .frame .wrap").animate({marginLeft: "-100%"}, 500, function(){
+        $(this).css({marginLeft: 0})
+        $("#visual .frame .wrap").find("img").first().appendTo("#visual .frame .wrap");
+        $(".next").removeClass("on");
+    })
 });
 
 //swiper
