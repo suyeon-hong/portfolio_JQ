@@ -1,6 +1,8 @@
 // index visual
 $(window).ready(function(){
-    $(".bg ul").addClass("on");
+    $("#visual").addClass("on");
+    $("#visual .pageNum").addClass("on");
+    $("#visual .util").addClass("on");
 });
 
 //swiper
