@@ -1,5 +1,5 @@
 // index visual
-$(window).ready(function(){
+$(document).ready(function(){
     $("#visual").addClass("on");
     $("#visual .pageNum").addClass("on");
     $("#visual .util").addClass("on");

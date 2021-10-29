@@ -498,7 +498,6 @@ body{
                 }
                 .next{
                     right: -50px;
-                    opacity: 1;
                 }
             }
         }
@@ -559,6 +558,7 @@ body{
         top: 0;
         left: 50%;
         margin-left: -590px;
+        overflow: hidden;
 
         .txt{
             width: 100vh;
@@ -713,9 +713,8 @@ body{
                 height: 18px;
                 position: absolute;
                 top: 40%;
-                right: -50%;
+                right: -100%;
                 font-size: 0;
-                opacity: 0;
                 transition: .4s 1.6s;
     
                 &:hover{
