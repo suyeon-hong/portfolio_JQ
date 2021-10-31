@@ -539,18 +539,21 @@ body {
         overflow: hidden; }
         #visual .inner .pic .con .num {
           margin-bottom: 10px;
-          position: relative; }
+          position: relative;
+          transition: 0.8s 1.4s; }
           #visual .inner .pic .con .num .wrap {
             display: inline-block;
-            overflow: hidden; }
+            overflow: hidden;
+            padding-right: 5px; }
             #visual .inner .pic .con .num .wrap h1 {
               display: inline-block;
               font: bold 48px/1 "Zen Kaku Gothic";
               letter-spacing: -4px;
               color: #333;
               transform: translateX(100%);
-              transition: .4s 1.4s;
-              position: relative; }
+              transition: .4s 1.4s; }
+          #visual .inner .pic .con .num.off::after {
+            width: 0; }
           #visual .inner .pic .con .num::after {
             content: '';
             display: block;
@@ -559,9 +562,9 @@ body {
             background: #333;
             position: absolute;
             top: 50%;
-            right: 30px;
+            right: 20px;
             margin-top: 2px;
-            transition: .8s 1.4s; }
+            transition: inherit; }
         #visual .inner .pic .con h2 {
           font: 600 20px/1.4 "Gothic A1";
           color: #222;
@@ -612,7 +615,8 @@ body {
           #visual .inner .pic .util li:nth-of-type(3) {
             transition: .8s 1.6s; }
         #visual .inner .pic .util li i {
-          color: #222; }
+          color: #222;
+          cursor: pointer; }
 
 #main .section {
   width: 100%;

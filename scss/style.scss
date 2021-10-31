@@ -691,10 +691,12 @@ body{
                 .num{
                     margin-bottom: 10px;
                     position: relative;
+                    transition: 0.8s 1.4s;
 
                     .wrap{
                         display: inline-block;
                         overflow: hidden;
+                        padding-right: 5px;
 
                         h1{
                             display: inline-block;
@@ -703,8 +705,10 @@ body{
                             color: #333;
                             transform: translateX(100%);
                             transition: .4s 1.4s;
-                            position: relative;
                         }
+                    }
+                    &.off::after{
+                        width: 0;
                     }
                     &::after{
                         content:'';
@@ -714,9 +718,9 @@ body{
                         background: #333;
                         position: absolute;
                         top: 50%;
-                        right: 30px;
+                        right: 20px;
                         margin-top: 2px;
-                        transition: .8s 1.4s;
+                        transition: inherit;
                     }
                 }
                 h2{
@@ -783,6 +787,7 @@ body{
                 }
                 li i{
                     color: #222;
+                    cursor: pointer;
                 }
             }
         }
