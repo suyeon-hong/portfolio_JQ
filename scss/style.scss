@@ -505,14 +505,6 @@ body{
                 transform: translateY(-50%);
 
                 .con{
-                    .num{
-                        .wrap h1{
-                            transform: translateX(0);
-                        }
-                        &::after{
-                            width: 150px;
-                        }
-                    }
                     h2{
                         transform: translateX(0);
                     }
@@ -703,8 +695,16 @@ body{
                             font: bold 48px/1 "Zen Kaku Gothic";
                             letter-spacing: -4px;
                             color: #333;
-                            transform: translateX(100%);
+                            transform: translateX(110%);
                             transition: .4s 1.4s;
+                        }
+                    }
+                    &.on{
+                        h1{
+                            transform: translateX(0);
+                        }
+                        &::after{
+                            width: 150px;
                         }
                     }
                     &.off::after{

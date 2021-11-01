@@ -396,10 +396,6 @@ body {
   #visual.on .inner .pic {
     top: 50%;
     transform: translateY(-50%); }
-    #visual.on .inner .pic .con .num .wrap h1 {
-      transform: translateX(0); }
-    #visual.on .inner .pic .con .num::after {
-      width: 150px; }
     #visual.on .inner .pic .con h2 {
       transform: translateX(0); }
     #visual.on .inner .pic .next {
@@ -550,8 +546,12 @@ body {
               font: bold 48px/1 "Zen Kaku Gothic";
               letter-spacing: -4px;
               color: #333;
-              transform: translateX(100%);
+              transform: translateX(110%);
               transition: .4s 1.4s; }
+          #visual .inner .pic .con .num.on h1 {
+            transform: translateX(0); }
+          #visual .inner .pic .con .num.on::after {
+            width: 150px; }
           #visual .inner .pic .con .num.off::after {
             width: 0; }
           #visual .inner .pic .con .num::after {
