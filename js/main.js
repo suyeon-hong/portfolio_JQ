@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 let isActive = false;
 let num = 1;
+let color = ["lightcoral", "lightskyblue", "lightsalmon"]
 
 $(".next").on("click", function(e){
     e.preventDefault();
@@ -15,6 +16,7 @@ $(".next").on("click", function(e){
         (num < 3) ? num++ : num=1;
         $(this).addClass("on");
         $("#visual .txt p").addClass("on");
+        $("#visual .bg").css({background: color[num - 1]});
         $(".num h1").css({transitionDelay: "0s"});
         $(".num").css({transition: "0.4s 0s"}).removeClass("on");
         $("#visual .util li").each(function(index, data){
@@ -40,6 +42,32 @@ $(".bg a").on("click", function(e){
     $(".bg a").removeClass("on");
     $(this).addClass("on");
 });
+
+//intro letter
+const $tit1 = $("#intro h1");
+const $tit2 = $("#intro h2");
+
+letter($tit1, 0.1);
+letter($tit2, 0.2);
+
+function letter(item, delay){
+    let txt = item.text();
+    let num = 0;
+    txt = txt.split("");
+    item.empty();
+
+    for(let el of txt){
+        item.append(
+            $("<span>").text(el).css({transitionDelay: num * delay + 0.4 +"s"})
+        );
+        num++;
+    }
+    let bg = item.find("span").css("color");
+    item.append(
+        $("<p>").css({background: bg})
+    )
+}
+
 
 // calendar
 const $calendar = $("#news .calendar");

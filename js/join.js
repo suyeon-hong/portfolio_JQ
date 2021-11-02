@@ -205,7 +205,6 @@ function letter(item, interval){
     let num = 0;
 
     txt = txt.split(" ");
-    console.log(txt);
     $(item).empty();
 
     for(let el of txt){

@@ -407,8 +407,9 @@ body {
   #visual .bg {
     width: 70%;
     height: 100%;
-    background: #ddd;
-    position: relative; }
+    background: lightcoral;
+    position: relative;
+    transition: .4s; }
     #visual .bg ul {
       position: absolute;
       top: 50%;
@@ -426,10 +427,13 @@ body {
         #visual .bg ul li:nth-of-type(3) {
           transition: all .3s .5s; }
         #visual .bg ul li a {
-          font: 600 18px/1 "Gothic A1";
-          color: #fff; }
+          font: 500 18px/1 "Gothic A1";
+          color: #fff;
+          opacity: 0.6; }
           #visual .bg ul li a.on {
-            color: #222; }
+            color: #222;
+            font-weight: 600;
+            opacity: 1; }
         #visual .bg ul li:not(:first-child)::before {
           content: '';
           display: inline-block;
@@ -450,8 +454,8 @@ body {
     overflow: hidden; }
     #visual .inner .txt {
       width: 100vh;
-      border-top: 1px solid #bbb;
-      border-bottom: 1px solid #bbb;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       padding: 10px 100px;
       text-align: right;
       transform: translateY(-50%) rotate(-90deg);
@@ -646,7 +650,8 @@ body {
 
 #main .section {
   width: 100%;
-  border-top: 3px solid #111; }
+  border-top: 3px solid #111;
+  overflow: hidden; }
   #main .section .inner {
     width: 1180px;
     margin: 0 auto;
@@ -674,17 +679,72 @@ body {
   #main .section.on .inner .title, #main .section.on .inner .sub {
     transform: translateX(0);
     opacity: 1; }
+  #main .section.on#intro .inner .wrap .tit h1, #main .section.on#intro .inner .wrap .tit h2 {
+    opacity: 1; }
+    #main .section.on#intro .inner .wrap .tit h1 span, #main .section.on#intro .inner .wrap .tit h2 span {
+      opacity: 1; }
+    #main .section.on#intro .inner .wrap .tit h1 p, #main .section.on#intro .inner .wrap .tit h2 p {
+      left: 100%; }
+  #main .section.on#intro .inner .wrap .desc {
+    opacity: 1;
+    transition: 1.6s 1.8s; }
+  #main .section.on#process .inner .wrap article {
+    transform: translateY(0);
+    opacity: 1; }
+    #main .section.on#process .inner .wrap article .pic img {
+      transition-delay: 1.2s;
+      transform: translateY(0);
+      opacity: 1; }
+  #main .section.on#topic .inner .wrap article svg path {
+    stroke-dashoffset: 0;
+    fill: #000;
+    transition: stroke-dashoffset 3s 0s, fill 2s 3s; }
+  #main .section.on#news .inner .wrap > div article.calendar p {
+    opacity: 1; }
+  #main .section.on#news .inner .wrap > div article.border h1, #main .section.on#news .inner .wrap > div article.border h2 {
+    opacity: 1; }
+  #main .section.on#news .inner .wrap > div article.article::before, #main .section.on#news .inner .wrap > div article.article .pic, #main .section.on#news .inner .wrap > div article.article p {
+    opacity: 1; }
   #main .section#intro .inner .wrap .tit {
     float: left; }
     #main .section#intro .inner .wrap .tit h1 {
-      font: 600 90px/1 'Pathway Gothic One';
-      color: #bbb; }
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      opacity: 0; }
+      #main .section#intro .inner .wrap .tit h1 span {
+        font: 600 90px/1 'Pathway Gothic One';
+        color: #bbb;
+        opacity: 0;
+        transition: .6s; }
+      #main .section#intro .inner .wrap .tit h1 p {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        transition: 2s; }
     #main .section#intro .inner .wrap .tit h2 {
-      font: 600 240px/1 'Pathway Gothic One';
-      color: #111; }
+      overflow: hidden;
+      position: relative;
+      opacity: 0; }
+      #main .section#intro .inner .wrap .tit h2 span {
+        font: 600 240px/1 'Pathway Gothic One';
+        color: #111;
+        opacity: 0;
+        transition: .6s; }
+      #main .section#intro .inner .wrap .tit h2 p {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        transition: 2s; }
   #main .section#intro .inner .wrap .desc {
     width: 35%;
-    float: right; }
+    float: right;
+    opacity: 0;
+    transition: .6s 0s; }
     #main .section#intro .inner .wrap .desc p {
       font: 400 16px/1.3 "Gothic A1";
       color: #444;
@@ -692,13 +752,28 @@ body {
   #main .section#process .inner .wrap article {
     width: 280px;
     margin-right: 20px;
-    float: left; }
+    float: left;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: .8s; }
+    #main .section#process .inner .wrap article:nth-of-type(1) {
+      transition-delay: calc(1 * 0.2s); }
+    #main .section#process .inner .wrap article:nth-of-type(2) {
+      transition-delay: calc(2 * 0.2s); }
+    #main .section#process .inner .wrap article:nth-of-type(3) {
+      transition-delay: calc(3 * 0.2s); }
+    #main .section#process .inner .wrap article:nth-of-type(4) {
+      transition-delay: calc(4 * 0.2s); }
     #main .section#process .inner .wrap article .pic {
       width: 100%;
       height: 280px;
       border-radius: 50%;
       background: #222;
       margin-bottom: 30px; }
+      #main .section#process .inner .wrap article .pic img {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: 1.4s; }
     #main .section#process .inner .wrap article .txt h2 {
       font: bold 45px/0.8 'Pathway Gothic One';
       color: #111;
@@ -706,33 +781,47 @@ body {
     #main .section#process .inner .wrap article .txt p {
       font: 18px/1.2 "Gothic A1";
       color: #555; }
-  #main .section#topic .inner article {
+  #main .section#topic .inner .wrap article {
     width: 100%;
     border-bottom: 3px solid #000;
-    margin-bottom: 20px; }
-    #main .section#topic .inner article .pic {
+    margin-bottom: 20px;
+    position: relative; }
+    #main .section#topic .inner .wrap article .pic {
       width: 100%;
       height: 500px;
       background: #bbb;
       margin-bottom: 30px; }
-      #main .section#topic .inner article .pic img {
+      #main .section#topic .inner .wrap article .pic img {
         filter: grayscale(80%); }
-    #main .section#topic .inner article h2 {
+    #main .section#topic .inner .wrap article h2 {
       font: bold 30px/1 'Pathway Gothic One';
       color: #111;
       margin-bottom: 10px; }
-    #main .section#topic .inner article p {
+    #main .section#topic .inner .wrap article p {
       font: 500 14px/1.4 "Gothic A1";
       color: #555;
       margin-bottom: 20px; }
-  #main .section#topic .inner .wrap article {
+    #main .section#topic .inner .wrap article svg {
+      position: absolute;
+      top: 95px;
+      right: 20px;
+      width: 270px;
+      height: 420px; }
+      #main .section#topic .inner .wrap article svg path {
+        stroke: #000;
+        stroke-width: 1px;
+        stroke-dasharray: 1650;
+        stroke-dashoffset: 1650;
+        fill: transparent;
+        transition: stroke-dashoffset 1s 1s, fill 1s 0s; }
+  #main .section#topic .inner .wrap article:not(:nth-of-type(1)) {
     width: 380px;
     margin-right: 20px;
     float: left;
     border-bottom: none; }
-    #main .section#topic .inner .wrap article .pic {
+    #main .section#topic .inner .wrap article:not(:nth-of-type(1)) .pic {
       height: 250px; }
-    #main .section#topic .inner .wrap article p {
+    #main .section#topic .inner .wrap article:not(:nth-of-type(1)) p {
       margin-bottom: 0; }
   #main .section#news .inner .wrap > div {
     width: 380px;
@@ -757,7 +846,9 @@ body {
         #main .section#news .inner .wrap > div article.calendar p {
           text-align: right;
           color: #222;
-          font: 500 20px/1 "Gothic A1"; }
+          font: 500 20px/1 "Gothic A1";
+          opacity: 0;
+          transition: .2s; }
           #main .section#news .inner .wrap > div article.calendar p.day {
             font: 600 50px/1 "Gothic A1";
             letter-spacing: -2px;
@@ -765,12 +856,15 @@ body {
             margin-bottom: 10px; }
           #main .section#news .inner .wrap > div article.calendar p.date {
             font: 600 120px/1 "Gothic A1";
-            letter-spacing: -10px; }
+            letter-spacing: -10px;
+            transition-delay: .4s; }
           #main .section#news .inner .wrap > div article.calendar p.month {
-            font: 600 80px/1 "Gothic A1"; }
+            font: 600 80px/1 "Gothic A1";
+            transition-delay: .2s; }
           #main .section#news .inner .wrap > div article.calendar p.year {
             font: 600 60px/1 "Gothic A1";
-            margin-bottom: 10px; }
+            margin-bottom: 10px;
+            transition-delay: .6s; }
       #main .section#news .inner .wrap > div article.border {
         border: 4px solid #000;
         padding: 100px 20px 20px;
@@ -778,11 +872,15 @@ body {
         #main .section#news .inner .wrap > div article.border h1 {
           font: 400 28px/1.2 "Gothic A1";
           margin-bottom: 30px;
-          color: #333; }
+          color: #333;
+          opacity: 0;
+          transition: .6s; }
         #main .section#news .inner .wrap > div article.border h2 {
           font: 600 80px/1 "Gothic A1";
           color: #111;
-          letter-spacing: 5px; }
+          letter-spacing: 5px;
+          opacity: 0;
+          transition: 1.2s .6s; }
       #main .section#news .inner .wrap > div article.article {
         border-top: 3px solid #333;
         padding: 10px 0 30px;
@@ -793,17 +891,23 @@ body {
           position: absolute;
           right: 0;
           top: -20px;
-          font: 600 18px/1 "Gothic A1"; }
+          font: 600 18px/1 "Gothic A1";
+          opacity: 0;
+          transition: .2s .2s; }
         #main .section#news .inner .wrap > div article.article .pic {
           width: 100%;
           height: 500px;
           background: #bbb;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          opacity: 0;
+          transition: 1s 0.4s; }
           #main .section#news .inner .wrap > div article.article .pic img {
             filter: grayscale(100%); }
         #main .section#news .inner .wrap > div article.article p {
           font: 400 18px/1.2 "Gothic A1";
-          color: #222; }
+          color: #222;
+          opacity: 0;
+          transition: .8s .8s; }
 
 #footer {
   width: 100%;
