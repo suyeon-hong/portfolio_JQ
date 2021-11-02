@@ -1592,7 +1592,9 @@ body {
   .content .visual {
     width: 100%;
     height: 300px;
-    background: url(../img/visual_sub1.jpg) no-repeat center/cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     filter: grayscale(80%);
     opacity: 0.8; }
   .content .inner {
@@ -2309,20 +2311,18 @@ body {
       width: 100%;
       margin-right: 0;
       margin-bottom: 20px; } }
-.community .visual {
-  background-image: url(../img/visual_community.jpg); }
 .community .inner h1 {
-  font: 600 40px/1 "Gothic A1";
-  color: #000;
+  font: 600 32px/1 "Gothic A1";
+  color: #333;
   position: relative;
   margin-bottom: 40px; }
   .community .inner h1::after {
     content: '';
     display: block;
     width: 100%;
-    height: 4px;
-    background: #000;
-    margin-top: 20px; }
+    height: 3px;
+    background: #333;
+    margin-top: 10px; }
 .community .inner > dl {
   position: relative;
   padding-top: 100px; }
@@ -2616,240 +2616,240 @@ body {
       font-size: 14px;
       padding: 8px 10px; } }
 .join .visual {
-  background-image: url(../img/visual_join.jpg); }
-.join .inner {
-  padding: 50px 0 100px; }
-  .join .inner h1 {
+  background-image: url(../img/visual_join.jpg);
+  padding-top: 150px; }
+  .join .visual h1 {
     text-align: center;
     margin-bottom: 70px; }
-    .join .inner h1:hover span {
-      color: #333; }
-    .join .inner h1 span {
+    .join .visual h1:hover span {
+      color: #000; }
+    .join .visual h1 span {
       display: inline-block;
       font: 40px/1 "Arapey";
-      color: #777;
+      color: #fff;
       margin-right: 20px;
       transition-duration: .6s; }
-  .join .inner form fieldset {
-    border: none; }
-    .join .inner form fieldset p.caution {
-      margin-top: 10px;
-      color: salmon;
-      font-size: 12px; }
-    .join .inner form fieldset table {
-      width: 100%;
-      border-top: 3px solid #bbb;
-      margin-bottom: 100px;
-      border-collapse: collapse; }
-      .join .inner form fieldset table caption {
-        font: 600 18px/1 "Gothic A1";
-        color: #222;
-        margin-bottom: 20px;
-        text-align: left; }
-      .join .inner form fieldset table tr {
-        border-bottom: 2px solid #ddd; }
-        .join .inner form fieldset table tr th {
-          width: 250px;
-          text-align: left;
-          font: 500 16px/1.2 "Gothic A1";
-          color: #333;
-          padding-left: 50px;
-          background: #f3f3f3; }
-        .join .inner form fieldset table tr td {
-          padding: 15px 0 15px 20px;
-          font: 500 14px/1 "Gothic A1";
-          color: #777; }
-          .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
-            width: 500px;
-            height: 40px;
-            font: 500 18px/40px "Gothic A1";
-            color: #777;
-            padding: 10px 20px;
-            border: 2px solid #ddd; }
-            .join .inner form fieldset table tr td input[type="text"]:focus, .join .inner form fieldset table tr td input[type="password"]:focus, .join .inner form fieldset table tr td select:focus {
-              outline: none;
-              border-color: #aaa; }
-          .join .inner form fieldset table tr td select {
-            font-size: 14px; }
-          .join .inner form fieldset table tr td input[type="button"] {
-            width: 120px;
-            height: 40px;
-            font: 300 14px/40px "Gothic A1";
-            color: #555;
-            background: #eee;
-            border: 2px solid #ddd;
-            cursor: pointer; }
-          .join .inner form fieldset table tr td input[type="radio"] {
-            vertical-align: text-top; }
-          .join .inner form fieldset table tr td label {
-            margin-right: 10px; }
-          .join .inner form fieldset table tr td p {
-            margin-top: 10px; }
-      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(1) input {
-        margin-right: 10px; }
-      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input {
-        margin-right: 10px;
-        margin-bottom: 10px; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input:nth-of-type(1) {
-          width: 200px; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input:nth-of-type(4) {
-          margin-bottom: 0; }
-      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td {
-        font-size: 14px;
+.join .inner form fieldset {
+  border: none; }
+  .join .inner form fieldset p.caution {
+    margin-top: 10px;
+    color: salmon;
+    font-size: 12px; }
+  .join .inner form fieldset table {
+    width: 100%;
+    border-top: 3px solid #bbb;
+    margin-bottom: 100px;
+    border-collapse: collapse; }
+    .join .inner form fieldset table caption {
+      font: 600 18px/1 "Gothic A1";
+      color: #222;
+      margin-bottom: 20px;
+      text-align: left; }
+    .join .inner form fieldset table tr {
+      border-bottom: 2px solid #ddd; }
+      .join .inner form fieldset table tr th {
+        width: 250px;
+        text-align: left;
+        font: 500 16px/1.2 "Gothic A1";
+        color: #333;
+        padding-left: 50px;
+        background: #f3f3f3; }
+      .join .inner form fieldset table tr td {
+        padding: 15px 0 15px 20px;
+        font: 500 14px/1 "Gothic A1";
         color: #777; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td select {
-          width: 100px;
-          margin-right: 5px;
-          vertical-align: top; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td input {
-          width: 150px;
-          margin: 0 5px; }
-      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td {
-        font-size: 14px;
-        color: #777; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
-          width: 200px;
-          margin-right: 5px; }
-          .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input:nth-of-type(2) {
-            margin-left: 5px; }
-        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td select {
-          width: 180px;
-          vertical-align: top; }
-      .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"], .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"] {
-        width: 100px;
-        margin-right: 5px; }
-        .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"]:nth-of-type(n+2), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"]:nth-of-type(n+2) {
-          margin-left: 10px; }
-      .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="radio"]:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="radio"]:nth-of-type(1) {
-        margin-left: 20px; }
-    .join .inner form fieldset > div {
-      margin-bottom: 100px; }
-      .join .inner form fieldset > div h2 {
-        font: 600 18px/1 "Gothic A1";
-        color: #222;
-        position: relative;
-        margin-bottom: 30px; }
-        .join .inner form fieldset > div h2::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 3px;
-          background: #bbb;
-          margin-top: 20px; }
-      .join .inner form fieldset > div pre {
-        word-wrap: break-word;
-        white-space: pre-wrap;
-        overflow-y: scroll;
-        width: 100%;
-        height: 300px;
-        padding: 30px;
-        resize: none;
-        border: 2px solid #ddd;
-        color: #555;
-        background: #f3f3f3;
-        margin-bottom: 20px; }
-      .join .inner form fieldset > div span, .join .inner form fieldset > div label {
-        font: 500 16px/1 "Gothic A1";
-        color: #444;
-        margin-right: 10px; }
-    .join .inner form fieldset .btns {
-      text-align: center;
-      font-size: 0; }
-      .join .inner form fieldset .btns input {
-        width: 180px;
-        height: 50px;
-        font: 500 18px/50px "Gothic A1";
-        color: #666;
-        border-radius: 0;
-        border: 1px solid #888;
-        background: #fff;
-        cursor: pointer; }
-        .join .inner form fieldset .btns input:first-child {
+        .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
+          width: 500px;
+          height: 40px;
+          font: 500 18px/40px "Gothic A1";
+          color: #777;
+          padding: 10px 20px;
+          border: 2px solid #ddd; }
+          .join .inner form fieldset table tr td input[type="text"]:focus, .join .inner form fieldset table tr td input[type="password"]:focus, .join .inner form fieldset table tr td select:focus {
+            outline: none;
+            border-color: #aaa; }
+        .join .inner form fieldset table tr td select {
+          font-size: 14px; }
+        .join .inner form fieldset table tr td input[type="button"] {
+          width: 120px;
+          height: 40px;
+          font: 300 14px/40px "Gothic A1";
+          color: #555;
+          background: #eee;
+          border: 2px solid #ddd;
+          cursor: pointer; }
+        .join .inner form fieldset table tr td input[type="radio"] {
+          vertical-align: text-top; }
+        .join .inner form fieldset table tr td label {
           margin-right: 10px; }
-        .join .inner form fieldset .btns input:last-child {
-          background: #555;
-          border-color: #555;
-          color: #fff; }
+        .join .inner form fieldset table tr td p {
+          margin-top: 10px; }
+    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(1) input {
+      margin-right: 10px; }
+    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input {
+      margin-right: 10px;
+      margin-bottom: 10px; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input:nth-of-type(1) {
+        width: 200px; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td input:nth-of-type(4) {
+        margin-bottom: 0; }
+    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td {
+      font-size: 14px;
+      color: #777; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td select {
+        width: 100px;
+        margin-right: 5px;
+        vertical-align: top; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td input {
+        width: 150px;
+        margin: 0 5px; }
+    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td {
+      font-size: 14px;
+      color: #777; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
+        width: 200px;
+        margin-right: 5px; }
+        .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input:nth-of-type(2) {
+          margin-left: 5px; }
+      .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td select {
+        width: 180px;
+        vertical-align: top; }
+    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"], .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"] {
+      width: 100px;
+      margin-right: 5px; }
+      .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"]:nth-of-type(n+2), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"]:nth-of-type(n+2) {
+        margin-left: 10px; }
+    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="radio"]:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="radio"]:nth-of-type(1) {
+      margin-left: 20px; }
+  .join .inner form fieldset > div {
+    margin-bottom: 100px; }
+    .join .inner form fieldset > div h2 {
+      font: 600 18px/1 "Gothic A1";
+      color: #222;
+      position: relative;
+      margin-bottom: 30px; }
+      .join .inner form fieldset > div h2::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #bbb;
+        margin-top: 20px; }
+    .join .inner form fieldset > div pre {
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      overflow-y: scroll;
+      width: 100%;
+      height: 300px;
+      padding: 30px;
+      resize: none;
+      border: 2px solid #ddd;
+      color: #555;
+      background: #f3f3f3;
+      margin-bottom: 20px; }
+    .join .inner form fieldset > div span, .join .inner form fieldset > div label {
+      font: 500 16px/1 "Gothic A1";
+      color: #444;
+      margin-right: 10px; }
+  .join .inner form fieldset .btns {
+    text-align: center;
+    font-size: 0; }
+    .join .inner form fieldset .btns input {
+      width: 180px;
+      height: 50px;
+      font: 500 18px/50px "Gothic A1";
+      color: #666;
+      border-radius: 0;
+      border: 1px solid #888;
+      background: #fff;
+      cursor: pointer; }
+      .join .inner form fieldset .btns input:first-child {
+        margin-right: 10px; }
+      .join .inner form fieldset .btns input:last-child {
+        background: #555;
+        border-color: #555;
+        color: #fff; }
 
 @media screen and (max-width: 1179px) {
-  .join .inner {
-    padding: 50px 30px 100px; }
-    .join .inner form fieldset table tr th {
-      width: 25%;
-      padding-left: 20px; }
-    .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
-      width: 70%; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(1) input {
-      margin-bottom: 10px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
-      width: 18vw; }
-    .join .inner form fieldset table:nth-of-type(2) tr:last-child td {
-      line-height: 1.6; }
-      .join .inner form fieldset table:nth-of-type(2) tr:last-child td input {
-        vertical-align: text-top; } }
+  .join .inner form fieldset table tr th {
+    width: 25%;
+    padding-left: 20px; }
+  .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
+    width: 70%; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(1) input {
+    margin-bottom: 10px; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
+    width: 18vw; }
+  .join .inner form fieldset table:nth-of-type(2) tr:last-child td {
+    line-height: 1.6; }
+    .join .inner form fieldset table:nth-of-type(2) tr:last-child td input {
+      vertical-align: text-top; } }
 @media screen and (max-width: 768px) {
-  .join .inner {
-    padding: 50px 20px; }
-    .join .inner form fieldset table tbody p {
-      line-height: 1.2; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td select {
-      width: 24%; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td input {
-      width: 25%; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
-      width: 35%; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td select {
-      display: block;
-      margin-top: 10px;
-      width: 80%; }
-    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"], .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"] {
-      width: 24%;
-      margin-right: 0; }
-    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td span, .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td span {
-      display: block;
-      margin-top: 10px; }
-      .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td span label:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td span label:nth-of-type(1) {
-        margin-left: 0; } }
+  .join .visual h1 span {
+    font-size: 36px;
+    margin-right: 10px; }
+  .join .inner form fieldset table tbody p {
+    line-height: 1.2; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td select {
+    width: 24%; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(9) td input {
+    width: 25%; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td input {
+    width: 35%; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(11) td select {
+    display: block;
+    margin-top: 10px;
+    width: 80%; }
+  .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td input[type="text"], .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td input[type="text"] {
+    width: 24%;
+    margin-right: 0; }
+  .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td span, .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td span {
+    display: block;
+    margin-top: 10px; }
+    .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(2) td span label:nth-of-type(1), .join .inner form fieldset table:nth-of-type(2) tr:nth-of-type(3) td span label:nth-of-type(1) {
+      margin-left: 0; } }
 @media screen and (max-width: 539px) {
-  .join .inner {
-    padding: 50px 10px; }
-    .join .inner form fieldset table caption {
-      font-size: 16px; }
-    .join .inner form fieldset table tr th {
-      padding: 0 10px;
-      font-size: 14px; }
-    .join .inner form fieldset table tr td {
+  .join .visual {
+    padding-top: 100px; }
+    .join .visual h1 span {
+      font-size: 24px; }
+  .join .inner form fieldset table caption {
+    font-size: 16px; }
+  .join .inner form fieldset table tr th {
+    padding: 0 10px;
+    font-size: 14px; }
+  .join .inner form fieldset table tr td {
+    font-size: 12px;
+    padding: 10px 0 10px 10px; }
+    .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
+      width: 100%;
+      height: 30px;
       font-size: 12px;
-      padding: 10px 0 10px 10px; }
-      .join .inner form fieldset table tr td input[type="text"], .join .inner form fieldset table tr td input[type="password"], .join .inner form fieldset table tr td select {
-        width: 100%;
-        height: 30px;
-        font-size: 12px;
-        padding: 0 5px; }
-      .join .inner form fieldset table tr td input[type="button"] {
-        width: 100px;
-        height: 30px;
-        font-size: 12px;
-        line-height: 30px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td span:nth-of-type(1) {
-      display: block;
-      margin-bottom: 10px; }
-    .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td span:nth-of-type(2) {
-      display: block;
-      margin-top: 10px; }
-    .join .inner form fieldset div h2 {
-      font-size: 16px;
-      margin-bottom: 10px; }
-    .join .inner form fieldset div pre {
-      height: 200px;
-      padding: 10px; }
-    .join .inner form fieldset div span, .join .inner form fieldset div label {
-      font-size: 14px; }
-    .join .inner form fieldset .btns input {
-      width: 120px;
-      height: 34px;
-      line-height: 34px;
-      font-size: 14px; } }
+      padding: 0 5px; }
+    .join .inner form fieldset table tr td input[type="button"] {
+      width: 100px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td span:nth-of-type(1) {
+    display: block;
+    margin-bottom: 10px; }
+  .join .inner form fieldset table:nth-of-type(1) tr:nth-of-type(8) td span:nth-of-type(2) {
+    display: block;
+    margin-top: 10px; }
+  .join .inner form fieldset div h2 {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .join .inner form fieldset div pre {
+    height: 200px;
+    padding: 10px; }
+  .join .inner form fieldset div span, .join .inner form fieldset div label {
+    font-size: 14px; }
+  .join .inner form fieldset .btns input {
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px; } }
 .gallery .inner {
   position: relative;
   min-height: 1000px; }
