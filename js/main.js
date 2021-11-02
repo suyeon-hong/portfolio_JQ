@@ -14,15 +14,21 @@ $(".next").on("click", function(e){
         isActive = true;
         (num < 3) ? num++ : num=1;
         $(this).addClass("on");
-        $(".num h1").css({transition: "0.4s 0s",});
+        $("#visual .txt p").addClass("on");
+        $(".num h1").css({transitionDelay: "0s"});
         $(".num").css({transition: "0.4s 0s"}).removeClass("on");
+        $("#visual .util li").each(function(index, data){
+            $(this).css({transition: "0.4s "+ index*0.2 +"s"});
+        }).addClass("on");
         $("#visual .frame .wrap").css({filter: "grayscale(70%) blur(2px)"});
-        $("#visual .frame .wrap").animate({marginLeft: "-100%"}, 500, function(){
+        $("#visual .frame .wrap").animate({marginLeft: "-100%"}, 700, function(){
+            $(".next").removeClass("on");
+            $("#visual .txt p").removeClass("on");
             $(this).css({marginLeft: 0, filter: "grayscale(40%)"})
             $("#visual .frame .wrap").find("img").first().appendTo("#visual .frame .wrap");
-            $(".next").removeClass("on");
             $(".num h1").text("0"+ num);
             $(".num").addClass("on");
+            $("#visual .util li").removeClass("on");
             isActive = false;
         });
     }

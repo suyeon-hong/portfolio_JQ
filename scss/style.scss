@@ -483,7 +483,10 @@ body{
             .txt{
                 opacity: 1;
 
-                span, h1, h2{
+                span{
+                    transform: translate(0, 0);
+                }
+                h1, h2, p{
                     transform: translateX(0);
 
                     .plus{
@@ -593,8 +596,8 @@ body{
                 display: block;
                 font: 600 24px/1 "Zen Kaku Gothic";
                 color: #333;
-                transform: translateX(100%);
-                transition: transform .4s .4s;
+                transform: translateY(-1000px);
+                transition: transform .5s .4s;
             }
             h1{
                 font: 600 100px/1 "Zen Kaku Gothic";
@@ -644,6 +647,35 @@ body{
                     }
                 }
             }
+            p{
+                position: absolute;
+                top: 40%;
+                left: 0;
+                display: inline-block;
+                transform: translateX(-100%);
+                transition: .2s .8s;
+
+                &.on{
+                    animation: pMotion .2s;
+                }
+                &::before{
+                    content:'';
+                    display: block;
+                    width: 3px;
+                    height: 20px;
+                    background: #333;
+                    position: absolute;
+                    top: -8px;
+                    right: 10px;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 180px;
+                    height: 3px;
+                    background: #333;
+                }
+            }
         }
         .pic{
             position: absolute;
@@ -685,6 +717,14 @@ body{
                     position: relative;
                     transition: 0.8s 1.4s;
 
+                    &.on{
+                        .wrap h1{
+                            transform: translateX(0%);
+                        }
+                        &::after{
+                            width: 150px;
+                        }
+                    }
                     .wrap{
                         display: inline-block;
                         overflow: hidden;
@@ -698,17 +738,6 @@ body{
                             transform: translateX(110%);
                             transition: .4s 1.4s;
                         }
-                    }
-                    &.on{
-                        h1{
-                            transform: translateX(0);
-                        }
-                        &::after{
-                            width: 150px;
-                        }
-                    }
-                    &.off::after{
-                        width: 0;
                     }
                     &::after{
                         content:'';
@@ -741,7 +770,7 @@ body{
                 transition: right .4s 1.6s;
 
                 &.on{
-                    transform: rotate(-15deg);
+                    animation: rotate .3s;
                 }
                 &::before{
                     content:'';
@@ -783,6 +812,9 @@ body{
                     }
                     &:nth-of-type(3){
                         transition: .8s 1.6s;
+                    }
+                    &.on{
+                        transform: translateX(100px);
                     }
                 }
                 li i{
@@ -1690,6 +1722,20 @@ body{
         display: none;
     }
 }
+
+
+@keyframes rotate{
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(-15deg)}
+    100%{transform: rotate(0deg)}
+}
+
+@keyframes pMotion{
+    0%{transform: translateX(0)}
+    50%{transform: translateX(-10px)}
+    100%{transform: translateX(0)}
+}
+
 
 
 // sub
