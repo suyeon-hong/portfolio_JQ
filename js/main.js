@@ -16,6 +16,7 @@ $(".next").on("click", function(e){
         (num < 3) ? num++ : num=1;
         $(this).addClass("on");
         $("#visual .txt h1 span").css({transform: "translateY(-10px)", color: "#000"});
+        $("#visual .txt p").addClass("on");
         $(".num h1").css({transitionDelay: "0s"});
         $(".num").css({transition: "0.4s 0s"}).removeClass("on");
         $("#visual .util li").each(function(index,_){
@@ -25,6 +26,7 @@ $(".next").on("click", function(e){
         $("#visual .frame .wrap").animate({marginLeft: "-100%"}, 700, function(){
             $(".next").removeClass("on");
             $("#visual .txt h1 span").css({transform: "translateY(0)", color: "#333"});
+            $("#visual .txt p").removeClass("on");
             $(this).css({marginLeft: 0, filter: "grayscale(40%)"})
             $("#visual .frame .wrap").find("img").first().appendTo("#visual .frame .wrap");
             $(".num h1").text("0"+ num);
