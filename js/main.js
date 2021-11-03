@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 let isActive = false;
 let num = 1;
-let color = ["lightcoral", "lightskyblue", "lightsalmon"]
 
 $(".next").on("click", function(e){
     e.preventDefault();
@@ -16,7 +15,6 @@ $(".next").on("click", function(e){
         (num < 3) ? num++ : num=1;
         $(this).addClass("on");
         $("#visual .txt p").addClass("on");
-        $("#visual .bg").css({background: color[num - 1]});
         $(".num h1").css({transitionDelay: "0s"});
         $(".num").css({transition: "0.4s 0s"}).removeClass("on");
         $("#visual .util li").each(function(index, data){
