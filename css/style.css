@@ -383,7 +383,7 @@ body {
     transform: translateY(0); }
   #visual.on .inner .txt {
     opacity: 1; }
-    #visual.on .inner .txt span {
+    #visual.on .inner .txt > span {
       transform: translate(0, 0); }
     #visual.on .inner .txt h1, #visual.on .inner .txt h2, #visual.on .inner .txt p {
       transform: translateX(0); }
@@ -464,7 +464,7 @@ body {
       left: -250px;
       opacity: 0;
       transition: opacity .4s .2s; }
-      #visual .inner .txt span {
+      #visual .inner .txt > span {
         display: block;
         font: 600 24px/1 "Zen Kaku Gothic";
         color: #333;
@@ -475,6 +475,12 @@ body {
         color: #333;
         transform: translateX(100%);
         transition: transform .4s .2s; }
+        #visual .inner .txt h1 span {
+          display: inline-block;
+          transform: translateY(0);
+          transition: .4s; }
+          #visual .inner .txt h1 span.on {
+            transform: translateY(-10px); }
       #visual .inner .txt h2 {
         font: 300 70px/1 "Zen Kaku Gothic";
         color: #222;
