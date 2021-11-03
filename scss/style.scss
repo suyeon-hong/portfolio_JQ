@@ -902,7 +902,7 @@ body{
                     }
                     .desc{
                         opacity: 1;
-                        transition: 1.6s 1.8s;
+                        transition: 1.6s 1s;
                     }
                 }
             }
@@ -917,15 +917,6 @@ body{
                             transform: translateY(0);
                             opacity: 1;
                         }
-                    }
-                }
-            }
-            &#topic{
-                .inner .wrap article{
-                    svg path{
-                        stroke-dashoffset: 0;
-                        fill: #000;
-                        transition: stroke-dashoffset 2s 0s, fill 2s 2s;
                     }
                 }
             }
@@ -1093,12 +1084,12 @@ body{
                             height: 420px;
 
                             path{
-                                stroke: #000;
+                                stroke: #eee;
                                 stroke-width: 1px;
                                 stroke-dasharray: 1650;
                                 stroke-dashoffset: 1650;
                                 fill: transparent;
-                                transition: stroke-dashoffset 1s .4s, fill .4s 0s;
+                                transition: fill 1s;
                             }
                         }
                     }
@@ -1116,7 +1107,7 @@ body{
                             .pic svg polyline{
                                 stroke-dashoffset: 0;
                                 fill: #eee;
-                                transition: stroke-dashoffset 2.4s 0s, fill .8s 2s;
+                                transition: stroke-dashoffset 1.6s 0s, fill .8s 1.2s;
                             }
                         }
                         .pic{
