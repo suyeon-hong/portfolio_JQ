@@ -3283,7 +3283,7 @@ body {
       cursor: pointer;
       text-indent: -9999px;
       font-size: 0;
-      transition: .4s; }
+      transition: .6s; }
       .youtube .inner #vidGallery article .play i {
         position: absolute;
         top: 50%;
@@ -3292,12 +3292,12 @@ body {
         font-size: 16px;
         text-indent: 0;
         color: #555;
-        transition: .4s; }
+        transition: .6s; }
       .youtube .inner #vidGallery article .play:hover {
-        border-color: #333; }
+        border-color: #222;
+        background: #222; }
         .youtube .inner #vidGallery article .play:hover i {
-          font-size: 20px;
-          color: #333; }
+          color: #eee; }
 
 .pop iframe {
   object-fit: contain; }
