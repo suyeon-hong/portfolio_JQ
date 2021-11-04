@@ -1373,22 +1373,21 @@ body{
 
 #navi{
     position: fixed;
-    top: 50%;
-    right: 50px;
+    top: 30%;
+    right: 10px;
+    box-shadow: -2px -2px 10px rgba(0,0,0,0.15);
 
     li{
         a{
             display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 5px;
-            background: #eee;
-            margin-bottom: 20px;
+            width: 12px;
+            height: 14px;
+            background: #222;
+            margin-top: 14px;
             transition: 1s;
         }
         &.on a{
-            height: 50px;
-            background: #222;
+            background: #bbb;
         }
     }
 }
