@@ -1388,7 +1388,7 @@ body{
                     display: block;
                     font: 400 11px/1 $font;
                     color: #aaa;
-                    padding: 0 10px;
+                    padding: 5px 10px;
                 }
             }
         }
@@ -1663,14 +1663,22 @@ body{
     }
     
     #footer{
-        padding: 50px 30px;
-    
         .inner{
             width: 100%;
+            padding: 70px 50px 40px;
 
-            .bottom address{
-                width: 75%;
-                line-height: 1.6;
+            .wrap{
+                h1{
+                    display: none;
+                }
+                address{
+                    width: 38%;
+                }
+                ul{
+                    li{
+                        margin-right: 10px;
+                    }
+                }
             }
         }
     }
@@ -1768,6 +1776,41 @@ body{
                         }
                     }
                 }
+            }
+        }
+    }
+
+    #footer{
+        .inner{
+            padding: 70px 50px 40px;
+
+            .wrap{
+                margin-bottom: 50px;
+
+                address{
+                    width: 100%;
+                    margin-bottom: 50px;
+                    font-size: 13px;
+                }
+                ul{
+                    width: 100%;
+
+                    li{
+                        width: 50%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+
+                        h2{
+                            font-size: 14px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            >ul li a{
+                font-size: 10px;
             }
         }
     }
@@ -1900,73 +1943,8 @@ body{
     }
 
     #footer{
-        padding: 50px 10px;
-    
         .inner{
-            width: 100%;
-
-            .top{
-                text-align: center;
-
-                h1{
-                    float: none;
-                    margin-bottom: 20px;
-    
-                    a{
-                        font-size: 22px;
-                    }
-                }
-                .sns{
-                    float: none;
-                    display: inline-block;
-
-                    li{
-                        &:first-child{
-                            margin-left: 0;
-                        }
-                        a{
-                            font-size: 18px;
-                        }
-                    }
-                }
-            } 
-            .bottom{
-                address{
-                    width: 100%;
-                    font-size: 12px;
-                    line-height: 1.4;
-                    margin-bottom: 30px;
-                    text-align: center;
-
-                    .btn{
-                        font-size: 11px;
-                    }
-                    p{
-                        margin-top: 10px;
-
-                        span{
-                            margin-left: 0;
-                            display: block;
-                        }
-                    }
-                }
-                ul{
-                    text-align: center;
-
-                    li{
-                        display: inline-block;
-                        padding: 0px 10px;
-
-                        a{
-                            font-size: 12px;
-                        }
-                    }
-                }
-            }
-            >p{
-                font-size: 12px;
-                text-align: center;
-            }
+            padding: 70px 20px 40px;
         }
     }
 
