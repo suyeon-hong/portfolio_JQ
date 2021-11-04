@@ -855,7 +855,7 @@ body{
             padding: 100px 0;
     
             .title{
-                font: bold 70px/1 'Pathway Gothic One';
+                font: bold 64px/1 'Pathway Gothic One';
                 color: #111;
                 margin-bottom: 10px;
                 transform: translateX(-200px);
@@ -863,7 +863,7 @@ body{
                 transition: 1s;
             }
             .sub{
-                font: 500 18px/1 $font;
+                font: 500 16px/1 $font;
                 color: #888;
                 text-transform: uppercase;
                 letter-spacing: -1px;
@@ -1036,12 +1036,12 @@ body{
                     }
                     .txt{
                         h2{
-                            font: bold 45px/0.8 'Pathway Gothic One';
+                            font: bold 40px/0.8 'Pathway Gothic One';
                             color: #111;
                             margin-bottom: 20px;
                         }
                         p{
-                            font: 18px/1.2 $font;
+                            font: 15px/1.2 $font;
                             color: #555;
                         }
                     }

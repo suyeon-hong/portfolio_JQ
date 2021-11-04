@@ -664,14 +664,14 @@ body {
     margin: 0 auto;
     padding: 100px 0; }
     #main .section .inner .title {
-      font: bold 70px/1 'Pathway Gothic One';
+      font: bold 64px/1 'Pathway Gothic One';
       color: #111;
       margin-bottom: 10px;
       transform: translateX(-200px);
       opacity: 0;
       transition: 1s; }
     #main .section .inner .sub {
-      font: 500 18px/1 "Gothic A1";
+      font: 500 16px/1 "Gothic A1";
       color: #888;
       text-transform: uppercase;
       letter-spacing: -1px;
@@ -784,11 +784,11 @@ body {
           opacity: 0;
           transition: 1.4s; }
       #main .section#process .inner .wrap article .txt h2 {
-        font: bold 45px/0.8 'Pathway Gothic One';
+        font: bold 40px/0.8 'Pathway Gothic One';
         color: #111;
         margin-bottom: 20px; }
       #main .section#process .inner .wrap article .txt p {
-        font: 18px/1.2 "Gothic A1";
+        font: 15px/1.2 "Gothic A1";
         color: #555; }
   #main .section#topic .inner .wrap article {
     width: 100%;
