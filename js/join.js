@@ -20,7 +20,10 @@ $submitBtn.on("click", function(e){
     if(!isCheck("emailAd", "이메일 수신여부")) e.preventDefault();
     if(!isCheck("terms", "이용약관 동의")) e.preventDefault();
     if(!isCheck("privacy", "개인정보 수집 및 이용 동의")) e.preventDefault();
-    if(result.length) alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + result);
+    if(result.length) {
+        $(window).scrollTop(0);
+        alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + result);
+    }
 });
 
 function isId(name){
