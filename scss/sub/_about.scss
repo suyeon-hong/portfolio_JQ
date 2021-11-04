@@ -101,6 +101,9 @@
                         width: 100%;
                         height: 600px;
 
+                        img{
+                            filter: grayscale(50%);
+                        }
                         h3{
                             text-align: center;
                             font: 500 18px/1 $font;
@@ -481,7 +484,7 @@
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                filter: brightness(80%);
+                                filter: grayscale(0%);
                             }
                             h3{
                                 font: 400 16px/1 $font;

@@ -1941,6 +1941,8 @@ body {
       .about .inner > div.projects .swiper .swiper-slide {
         width: 100%;
         height: 600px; }
+        .about .inner > div.projects .swiper .swiper-slide img {
+          filter: grayscale(50%); }
         .about .inner > div.projects .swiper .swiper-slide h3 {
           text-align: center;
           font: 500 18px/1 "Gothic A1";
@@ -2237,7 +2239,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            filter: brightness(80%); }
+            filter: grayscale(0%); }
           .about .inner > div.news .more .swiper .swiper-slide h3 {
             font: 400 16px/1 "Gothic A1";
             color: #ddd;
@@ -2664,7 +2666,7 @@ body {
         border-top: 2px solid #000;
         background: #efefef; }
         .community .inner > dl > dd#notice table thead tr th {
-          padding: 16px 0;
+          padding: 18px 0;
           text-align: center;
           font: 600 15px/1 "Gothic A1";
           color: #222; }
@@ -2689,7 +2691,8 @@ body {
           .community .inner > dl > dd#notice table tbody tr td:nth-of-type(2) {
             text-align: left; }
             .community .inner > dl > dd#notice table tbody tr td:nth-of-type(2) a {
-              color: #555; }
+              color: #555;
+              line-height: 1.2; }
 
 @media screen and (max-width: 768px) {
   .community .inner dl dd#faq .search form {
@@ -2703,10 +2706,15 @@ body {
   .community .inner dl dd#notice table tbody tr td:nth-of-type(3) {
     display: none; } }
 @media screen and (max-width: 539px) {
+  .community .inner h1 {
+    font-size: 26px;
+    margin-bottom: 30px; }
   .community .inner > dl {
     padding-top: 80px; }
-    .community .inner > dl > dt li a {
+    .community .inner > dl > dt a {
       font-size: 20px; }
+    .community .inner > dl > dt:nth-of-type(2) {
+      left: 50px; }
     .community .inner > dl dd#faq h2 {
       font-size: 18px; }
     .community .inner > dl dd#faq .search {
