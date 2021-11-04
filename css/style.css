@@ -399,6 +399,10 @@ body {
   #visual.on .inner .pic {
     top: 50%;
     transform: translateY(-50%); }
+    #visual.on .inner .pic .con .num .wrap h1 {
+      transform: translateX(0%); }
+    #visual.on .inner .pic .con .num::after {
+      width: 150px; }
     #visual.on .inner .pic .con h2 {
       transform: translateX(0); }
     #visual.on .inner .pic .next {
@@ -411,11 +415,30 @@ body {
     background: #bbb;
     position: relative;
     transition: .4s; }
+    #visual .bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: grayscale(60%);
+      clip-path: inset(50% 0 50% 100%);
+      transition: clip-path 1s;
+      z-index: -1; }
+      #visual .bg video.on {
+        clip-path: inset(0 0 0 0);
+        z-index: 1;
+        transition: clip-path 1s; }
+      #visual .bg video.upper {
+        clip-path: inset(0 0 0 0);
+        z-index: 0; }
     #visual .bg ul {
       position: absolute;
       top: 50%;
       left: -130px;
-      transform: translateY(-50%) rotate(-90deg); }
+      transform: translateY(-50%) rotate(-90deg);
+      z-index: 2; }
       #visual .bg ul li {
         float: left;
         margin-right: 40px;
@@ -452,7 +475,20 @@ body {
     top: 0;
     left: 50%;
     margin-left: -590px;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 2; }
+    #visual .inner.on .txt h1 span {
+      transform: translateY(-10px); }
+    #visual .inner.on .txt p {
+      animation: pMotion .2s; }
+    #visual .inner.on .pic .con .num .wrap h1 {
+      transform: translateX(110%); }
+    #visual .inner.on .pic .con .num::after {
+      width: 0px; }
+    #visual .inner.on .pic .next {
+      animation: rotate .3s; }
+    #visual .inner.on .pic .util li {
+      transform: translateX(100px); }
     #visual .inner .txt {
       width: 100vh;
       border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -480,8 +516,6 @@ body {
           display: inline-block;
           transform: translateY(0);
           transition: .4s; }
-          #visual .inner .txt h1 span.on {
-            transform: translateY(-10px); }
       #visual .inner .txt h2 {
         font: 300 70px/1 "Zen Kaku Gothic";
         color: #222;
@@ -525,8 +559,6 @@ body {
         display: inline-block;
         transform: translateX(-100%);
         transition: .2s .8s; }
-        #visual .inner .txt p.on {
-          animation: pMotion .2s; }
         #visual .inner .txt p::before {
           content: '';
           display: block;
@@ -574,10 +606,6 @@ body {
           margin-bottom: 10px;
           position: relative;
           transition: 0.8s 1.4s; }
-          #visual .inner .pic .con .num.on .wrap h1 {
-            transform: translateX(0%); }
-          #visual .inner .pic .con .num.on::after {
-            width: 150px; }
           #visual .inner .pic .con .num .wrap {
             display: inline-block;
             overflow: hidden;
@@ -614,8 +642,6 @@ body {
         right: -100%;
         font-size: 0;
         transition: right .4s 1.6s; }
-        #visual .inner .pic .next.on {
-          animation: rotate .3s; }
         #visual .inner .pic .next::before {
           content: '';
           display: block;
@@ -649,8 +675,6 @@ body {
             transition: .8s 1.4s; }
           #visual .inner .pic .util li:nth-of-type(3) {
             transition: .8s 1.6s; }
-          #visual .inner .pic .util li.on {
-            transform: translateX(100px); }
         #visual .inner .pic .util li i {
           color: #222;
           cursor: pointer; }
