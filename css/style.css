@@ -999,7 +999,7 @@ body {
       #footer .inner .wrap address {
         float: left;
         font: 500 14px/1.6 "Gothic A1";
-        color: #111;
+        color: #222;
         width: 35%; }
       #footer .inner .wrap ul {
         float: right; }
@@ -1012,11 +1012,11 @@ body {
             cursor: pointer; }
           #footer .inner .wrap ul li h2 {
             font: 600 15px/1 "Gothic A1";
-            color: #222;
+            color: #333;
             margin-bottom: 10px; }
           #footer .inner .wrap ul li p {
             font: 500 14px/1.6 "Gothic A1";
-            color: #333; }
+            color: #555; }
     #footer .inner > ul {
       display: inline-block; }
       #footer .inner > ul::after {
@@ -1784,7 +1784,7 @@ body {
       #footer_sub .inner .wrap address {
         float: left;
         font: 500 14px/1.6 "Gothic A1";
-        color: #111;
+        color: #222;
         width: 35%; }
       #footer_sub .inner .wrap ul {
         float: right; }
@@ -1797,11 +1797,11 @@ body {
             cursor: pointer; }
           #footer_sub .inner .wrap ul li h2 {
             font: 600 15px/1 "Gothic A1";
-            color: #222;
+            color: #333;
             margin-bottom: 10px; }
           #footer_sub .inner .wrap ul li p {
             font: 500 14px/1.6 "Gothic A1";
-            color: #333; }
+            color: #555; }
     #footer_sub .inner > ul {
       display: inline-block; }
       #footer_sub .inner > ul::after {
