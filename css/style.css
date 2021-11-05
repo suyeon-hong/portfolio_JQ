@@ -1035,7 +1035,8 @@ body {
   position: fixed;
   top: 30%;
   right: 10px;
-  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.15); }
+  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2; }
   #navi li a {
     display: block;
     width: 12px;
@@ -1848,7 +1849,7 @@ body {
     #footer_sub .inner > ul li a {
       font-size: 10px; } }
 @media screen and (max-width: 539px) {
-  #footer .inner {
+  #footer_sub .inner {
     padding: 70px 20px 40px; } }
 @media screen and (max-width: 1179px) {
   .content .inner {
