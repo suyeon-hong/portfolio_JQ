@@ -435,7 +435,8 @@ body {
             content: '';
             display: block;
             clear: both; }
-          #visual .inner .wrap article .pic img {
+          #visual .inner .wrap article .pic a {
+            display: block;
             float: left;
             width: 65%;
             height: 100%;
@@ -490,304 +491,255 @@ body {
             margin-left: 5px;
             margin-bottom: 2px; }
 
-#main .section {
+#main {
   width: 100%;
-  border-top: 3px solid #111;
-  overflow: hidden; }
-  #main .section .inner {
+  border-top: 1px solid #000; }
+  #main .inner {
     width: 1180px;
-    margin: 0 auto;
-    padding: 100px 0; }
-    #main .section .inner .title {
-      font: bold 64px/1 'Pathway Gothic One';
-      color: #111;
-      margin-bottom: 10px;
-      transform: translateX(-200px);
-      opacity: 0;
-      transition: 1s; }
-    #main .section .inner .sub {
-      font: 500 16px/1 "Gothic A1";
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      margin-bottom: 80px;
-      transform: translateX(-200px);
-      opacity: 0;
-      transition: 1s .2s; }
-    #main .section .inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  #main .section.on .inner .title, #main .section.on .inner .sub {
-    transform: translateX(0);
-    opacity: 1; }
-  #main .section.on#intro .inner .wrap .tit h1, #main .section.on#intro .inner .wrap .tit h2 {
-    opacity: 1;
-    transition-delay: 0s; }
-    #main .section.on#intro .inner .wrap .tit h1 span, #main .section.on#intro .inner .wrap .tit h2 span {
-      opacity: 1; }
-    #main .section.on#intro .inner .wrap .tit h1 p, #main .section.on#intro .inner .wrap .tit h2 p {
-      left: 100%;
-      transition-delay: 0s; }
-  #main .section.on#intro .inner .wrap .desc {
-    opacity: 1;
-    transition: 1.6s 1s; }
-  #main .section.on#process .inner .wrap article {
-    transform: translateY(0);
-    opacity: 1; }
-    #main .section.on#process .inner .wrap article .pic img {
-      transition-delay: 1.2s;
-      transform: translateY(0);
-      opacity: 1; }
-  #main .section.on#news .inner .wrap > div article.calendar p {
-    opacity: 1; }
-  #main .section.on#news .inner .wrap > div article.border h1, #main .section.on#news .inner .wrap > div article.border h2 {
-    opacity: 1; }
-  #main .section.on#news .inner .wrap > div article.article::before, #main .section.on#news .inner .wrap > div article.article .pic, #main .section.on#news .inner .wrap > div article.article p {
-    opacity: 1; }
-  #main .section#intro .inner {
-    padding: 150px 0; }
-    #main .section#intro .inner .wrap .tit {
-      float: left; }
-      #main .section#intro .inner .wrap .tit h1 {
-        font: 600 50px/1 'Pathway Gothic One';
-        color: #bbb;
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        opacity: 0;
-        transition: opacity 1s; }
-        #main .section#intro .inner .wrap .tit h1 span {
-          opacity: 0;
-          transition: .2s; }
-        #main .section#intro .inner .wrap .tit h1 p {
-          position: absolute;
-          top: 0;
-          left: -100%;
+    margin: 0 auto; }
+    #main .inner .box1 {
+      padding: 50px 0;
+      margin-bottom: 50px; }
+      #main .inner .box1 .wrap > .pic {
+        float: left;
+        width: 68%;
+        height: 354px;
+        margin-right: 2%;
+        padding-right: 2%;
+        border-right: 1px solid #bbb; }
+        #main .inner .box1 .wrap > .pic p {
           width: 100%;
           height: 100%;
-          transition: 2s .4s; }
-      #main .section#intro .inner .wrap .tit h2 {
-        font: 600 160px/0.8 'Pathway Gothic One';
-        color: #111;
-        overflow: hidden;
-        position: relative;
-        opacity: 0;
-        transition: opacity 1s; }
-        #main .section#intro .inner .wrap .tit h2 span {
-          opacity: 0;
-          transition: .2s; }
-        #main .section#intro .inner .wrap .tit h2 p {
-          position: absolute;
-          top: 0;
-          left: -100%;
+          background: #000; }
+      #main .inner .box1 .wrap .con {
+        float: left;
+        width: 30%; }
+        #main .inner .box1 .wrap .con ul li {
           width: 100%;
-          height: 100%;
-          transition: 2s .4s; }
-    #main .section#intro .inner .wrap .desc {
-      width: 50%;
-      float: right;
-      opacity: 0;
-      transition: opacity .6s 0s; }
-      #main .section#intro .inner .wrap .desc p {
-        font: 400 16px/1.3 "Gothic A1";
-        color: #444;
-        margin-bottom: 30px; }
-  #main .section#process .inner .wrap {
-    overflow: hidden; }
-    #main .section#process .inner .wrap article {
-      width: 280px;
-      margin-right: 20px;
-      float: left;
-      transform: translateY(200%);
-      opacity: 0;
-      transition: .8s; }
-      #main .section#process .inner .wrap article:nth-of-type(1) {
-        transition-delay: calc(1 * 0.2s); }
-      #main .section#process .inner .wrap article:nth-of-type(2) {
-        transition-delay: calc(2 * 0.2s); }
-      #main .section#process .inner .wrap article:nth-of-type(3) {
-        transition-delay: calc(3 * 0.2s); }
-      #main .section#process .inner .wrap article:nth-of-type(4) {
-        transition-delay: calc(4 * 0.2s); }
-      #main .section#process .inner .wrap article .pic {
-        width: 100%;
-        height: 280px;
-        border-radius: 50%;
-        background: #222;
-        margin-bottom: 30px; }
-        #main .section#process .inner .wrap article .pic img {
-          transform: translateY(-100%);
-          opacity: 0;
-          transition: 1.4s; }
-      #main .section#process .inner .wrap article .txt h2 {
-        font: bold 40px/0.8 'Pathway Gothic One';
-        color: #111;
-        margin-bottom: 20px; }
-      #main .section#process .inner .wrap article .txt p {
-        font: 15px/1.2 "Gothic A1";
-        color: #555; }
-  #main .section#topic .inner .wrap article {
-    width: 100%;
-    border-bottom: 3px solid #000;
-    margin-bottom: 20px;
-    position: relative; }
-    #main .section#topic .inner .wrap article .pic {
-      width: 100%;
-      height: 500px;
-      background: #bbb;
-      margin-bottom: 30px; }
-      #main .section#topic .inner .wrap article .pic img {
-        filter: grayscale(80%); }
-    #main .section#topic .inner .wrap article h2 {
-      font: bold 30px/1 'Pathway Gothic One';
+          height: 130px;
+          position: relative;
+          background: #eee;
+          padding: 30px 0;
+          padding-left: 170px;
+          margin-bottom: 5px; }
+          #main .inner .box1 .wrap .con ul li .pic {
+            width: 150px;
+            height: 100%;
+            background: #555;
+            position: absolute;
+            top: 0;
+            left: 0; }
+            #main .inner .box1 .wrap .con ul li .pic img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              filter: grayscale(60%); }
+          #main .inner .box1 .wrap .con ul li h1 {
+            font: 600 24px/1 "Gothic A1";
+            color: #222;
+            margin-bottom: 12px; }
+          #main .inner .box1 .wrap .con ul li h2 {
+            font: 500 15px/1 "Gothic A1";
+            color: #777; }
+          #main .inner .box1 .wrap .con ul li:nth-of-type(n+3) {
+            width: 50%;
+            float: left;
+            height: 84px;
+            padding: 15px 0;
+            padding-left: 15px; }
+            #main .inner .box1 .wrap .con ul li:nth-of-type(n+3) h1 {
+              font: 500 15px/1 "Gothic A1";
+              color: #777; }
+            #main .inner .box1 .wrap .con ul li:nth-of-type(n+3) h2 {
+              font: 600 26px/1 "Gothic A1";
+              color: #222; }
+          #main .inner .box1 .wrap .con ul li:nth-of-type(4) {
+            background: #000; }
+            #main .inner .box1 .wrap .con ul li:nth-of-type(4) h1 {
+              color: #ddd; }
+            #main .inner .box1 .wrap .con ul li:nth-of-type(4) h2 {
+              font: 500 25px/1 "Gothic A1";
+              color: #fff; }
+    #main .inner .box2 h1 {
+      display: inline-block;
+      font: 600 20px/1 "Gothic A1";
       color: #111;
-      margin-bottom: 10px; }
-    #main .section#topic .inner .wrap article p {
-      font: 500 14px/1.4 "Gothic A1";
-      color: #555;
-      margin-bottom: 20px; }
-    #main .section#topic .inner .wrap article svg {
-      position: absolute;
-      top: 95px;
-      right: 20px;
-      width: 270px; }
-      #main .section#topic .inner .wrap article svg path {
-        stroke: #eee;
-        stroke-width: 1px;
-        stroke-dasharray: 1650;
-        stroke-dashoffset: 1650;
-        fill: transparent;
-        transition: fill 1s; }
-  #main .section#topic .inner .wrap article:not(:nth-of-type(1)) {
-    width: 380px;
-    margin-right: 20px;
-    float: left;
-    border-bottom: none; }
-    #main .section#topic .inner .wrap article:not(:nth-of-type(1)):hover .pic::after {
-      bottom: 0;
-      transition-delay: 0s; }
-    #main .section#topic .inner .wrap article:not(:nth-of-type(1)):hover .pic svg polyline {
-      stroke-dashoffset: 0;
-      fill: #eee;
-      transition: stroke-dashoffset 1.6s 0s, fill .8s 1.2s; }
-    #main .section#topic .inner .wrap article:not(:nth-of-type(1)) .pic {
-      height: 250px;
-      position: relative;
-      overflow: hidden; }
-      #main .section#topic .inner .wrap article:not(:nth-of-type(1)) .pic::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        transition: .4s .4s;
-        z-index: 1; }
-      #main .section#topic .inner .wrap article:not(:nth-of-type(1)) .pic svg {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 100%;
-        z-index: 2; }
-        #main .section#topic .inner .wrap article:not(:nth-of-type(1)) .pic svg polyline {
-          stroke: #eee;
-          stroke-width: 10px;
-          stroke-dasharray: 27700;
-          stroke-dashoffset: 27700;
-          fill: transparent;
-          transition: stroke-dashoffset .6s 0s, fill .4s 0s; }
-    #main .section#topic .inner .wrap article:not(:nth-of-type(1)) p {
-      margin-bottom: 0; }
-  #main .section#news .inner .wrap > div {
-    width: 380px;
-    margin-right: 20px;
-    float: left; }
-    #main .section#news .inner .wrap > div:last-child {
-      margin-right: 0; }
-      #main .section#news .inner .wrap > div:last-child .border {
-        margin-bottom: 40px; }
-        #main .section#news .inner .wrap > div:last-child .border h2 {
-          font-size: 40px;
-          line-height: 1.3;
-          letter-spacing: 2px; }
-      #main .section#news .inner .wrap > div:last-child .article .pic {
-        height: 300px; }
-    #main .section#news .inner .wrap > div article {
-      padding: 20px;
-      margin-bottom: 20px; }
-      #main .section#news .inner .wrap > div article.calendar {
-        border-top: 3px solid #222;
-        border-bottom: 3px solid #222; }
-        #main .section#news .inner .wrap > div article.calendar p {
-          text-align: right;
-          color: #222;
-          font: 500 20px/1 "Gothic A1";
-          opacity: 0;
-          transition: .2s; }
-          #main .section#news .inner .wrap > div article.calendar p.day {
-            font: 600 50px/1 "Gothic A1";
-            letter-spacing: -2px;
-            color: #000;
-            margin-bottom: 10px; }
-          #main .section#news .inner .wrap > div article.calendar p.date {
-            font: 600 120px/1 "Gothic A1";
-            letter-spacing: -10px;
-            transition-delay: .4s; }
-          #main .section#news .inner .wrap > div article.calendar p.month {
-            font: 600 80px/1 "Gothic A1";
-            transition-delay: .2s; }
-          #main .section#news .inner .wrap > div article.calendar p.year {
-            font: 600 60px/1 "Gothic A1";
-            margin-bottom: 10px;
-            transition-delay: .6s; }
-      #main .section#news .inner .wrap > div article.border {
-        border: 4px solid #000;
-        padding: 100px 20px 20px;
-        text-align: right; }
-        #main .section#news .inner .wrap > div article.border h1 {
-          font: 400 28px/1.2 "Gothic A1";
-          margin-bottom: 30px;
-          color: #333;
-          opacity: 0;
-          transition: .6s; }
-        #main .section#news .inner .wrap > div article.border h2 {
-          font: 600 80px/1 "Gothic A1";
-          color: #111;
-          letter-spacing: 5px;
-          opacity: 0;
-          transition: 1.2s .6s; }
-      #main .section#news .inner .wrap > div article.article {
-        border-top: 3px solid #333;
-        padding: 10px 0 30px;
+      border-bottom: 5px solid #111;
+      padding-bottom: 10px; }
+    #main .inner .box2 .wrap {
+      border-top: 1px solid #888;
+      padding: 50px 0 100px; }
+      #main .inner .box2 .wrap article {
+        float: left;
+        width: 380px;
+        margin-right: 20px;
+        padding-left: 120px;
+        border-right: 1px solid #bbb;
         position: relative; }
-        #main .section#news .inner .wrap > div article.article::before {
-          content: 'lorem lorem';
-          display: block;
+        #main .inner .box2 .wrap article:last-child {
+          border-right: none; }
+        #main .inner .box2 .wrap article .pic {
           position: absolute;
-          right: 0;
-          top: -20px;
-          font: 600 18px/1 "Gothic A1";
-          opacity: 0;
-          transition: .2s .2s; }
-        #main .section#news .inner .wrap > div article.article .pic {
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: 100%;
+          background: #333; }
+          #main .inner .box2 .wrap article .pic svg path {
+            fill: transparent;
+            stroke: #fff;
+            stroke-width: 10px;
+            stroke-dasharray: 5060;
+            stroke-dashoffset: 5060;
+            transition: stroke-dashoffset 1s, fill 1s 1s; }
+          #main .inner .box2 .wrap article .pic svg:hover path {
+            fill: #fff;
+            stroke-dashoffset: 0; }
+        #main .inner .box2 .wrap article h2 {
+          font: 600 20px/1 "Gothic A1";
+          color: #111;
+          margin-bottom: 10px; }
+        #main .inner .box2 .wrap article p {
+          font: 500 14px/1.4 "Gothic A1";
+          color: #333;
+          margin-bottom: 10px; }
+        #main .inner .box2 .wrap article a {
+          display: block;
+          font: 600 13px/1 "Gothic A1";
+          color: #222; }
+          #main .inner .box2 .wrap article a .arrow {
+            display: inline-block;
+            width: 10px;
+            height: 6px;
+            margin-left: 5px;
+            margin-bottom: 1px;
+            position: relative; }
+            #main .inner .box2 .wrap article a .arrow::before {
+              content: '';
+              display: inline-block;
+              width: 6px;
+              height: 2px;
+              background: #222;
+              transform: rotate(45deg);
+              position: absolute;
+              top: 0;
+              right: 0; }
+            #main .inner .box2 .wrap article a .arrow::after {
+              content: '';
+              display: inline-block;
+              width: 6px;
+              height: 2px;
+              background: #222;
+              transform: rotate(-45deg);
+              position: absolute;
+              bottom: 0;
+              right: 0; }
+    #main .inner .box3 {
+      width: 100%;
+      margin-bottom: 50px; }
+      #main .inner .box3 .wrap {
+        width: 100%;
+        position: relative; }
+        #main .inner .box3 .wrap .left {
+          float: left;
+          width: 65%;
+          margin-right: 5%; }
+          #main .inner .box3 .wrap .left article {
+            margin-bottom: 40px; }
+            #main .inner .box3 .wrap .left article .pic {
+              width: 100%;
+              height: 400px;
+              background: #555;
+              margin-bottom: 20px; }
+            #main .inner .box3 .wrap .left article .tag {
+              display: block;
+              font: 600 13px/1 "Gothic A1";
+              color: rosybrown;
+              margin-bottom: 14px; }
+            #main .inner .box3 .wrap .left article h1 {
+              font: 600 24px/1 "Gothic A1";
+              color: #111;
+              margin-bottom: 10px; }
+            #main .inner .box3 .wrap .left article h2 {
+              font: 500 16px/1 "Gothic A1";
+              color: #333; }
+        #main .inner .box3 .wrap .right {
+          float: right;
+          width: 28%;
+          position: sticky;
+          top: 50px;
+          right: 0; }
+          #main .inner .box3 .wrap .right article {
+            width: 100%;
+            margin-bottom: 20px; }
+            #main .inner .box3 .wrap .right article:nth-of-type(1) h1 {
+              font: bold 38px/1 "Pathway Gothic One";
+              color: #111;
+              margin-bottom: 5px; }
+            #main .inner .box3 .wrap .right article:nth-of-type(1) .pic {
+              width: 100%;
+              height: 200px;
+              background: #bbb;
+              margin-bottom: 10px; }
+            #main .inner .box3 .wrap .right article:nth-of-type(1) h2 {
+              font: 600 17px/1 "Gothic A1";
+              letter-spacing: 1px;
+              color: #222; }
+            #main .inner .box3 .wrap .right article:not(:nth-of-type(1)) {
+              position: relative;
+              padding-left: 110px; }
+              #main .inner .box3 .wrap .right article:not(:nth-of-type(1)) .pic {
+                width: 100px;
+                height: 100%;
+                background: #bbb;
+                position: absolute;
+                top: 0;
+                left: 0; }
+              #main .inner .box3 .wrap .right article:not(:nth-of-type(1)) h2 {
+                font: 500 16px/1.2 "Gothic A1";
+                letter-spacing: 1px;
+                color: #222; }
+    #main .inner .box4 h1 {
+      display: inline-block;
+      font: 600 20px/1 "Gothic A1";
+      color: #111;
+      border-bottom: 5px solid #111;
+      padding-bottom: 10px; }
+    #main .inner .box4 .wrap {
+      border-top: 1px solid #888;
+      padding: 30px 0 100px; }
+      #main .inner .box4 .wrap article {
+        float: left;
+        width: 235px;
+        padding: 0 15px;
+        border-right: 1px solid #888; }
+        #main .inner .box4 .wrap article:nth-of-type(1) {
+          padding-left: 0; }
+        #main .inner .box4 .wrap article:nth-of-type(5) {
+          padding-right: 0;
+          border-right: none; }
+        #main .inner .box4 .wrap article .pic {
           width: 100%;
-          height: 500px;
+          height: 100px;
           background: #bbb;
-          margin-bottom: 20px;
-          opacity: 0;
-          transition: 1s 0.4s; }
-          #main .section#news .inner .wrap > div article.article .pic img {
-            filter: grayscale(100%); }
-        #main .section#news .inner .wrap > div article.article p {
-          font: 400 18px/1.2 "Gothic A1";
-          color: #222;
-          opacity: 0;
-          transition: .8s .8s; }
+          margin-bottom: 10px; }
+          #main .inner .box4 .wrap article .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(70%); }
+        #main .inner .box4 .wrap article h2 {
+          font: 600 20px/1.2 "Gothic A1";
+          color: #111;
+          margin-bottom: 10px; }
+        #main .inner .box4 .wrap article p {
+          font: 500 13px/1.4 "Gothic A1";
+          color: #555; }
+  #main .slider {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    margin-bottom: 50px; }
 
 #footer {
   width: 100%;
