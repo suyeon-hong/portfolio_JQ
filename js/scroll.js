@@ -32,6 +32,9 @@ $(window).on("scroll", function(){
             activeBtn($btnScroll, i);
             activeBtn($boxs, i);
         }
+        if(scroll >= posArr[1] + baseLine && scroll < posArr[2]){
+            $(".box2").addClass("on");
+        }
         if(scroll >= posArr[3] + baseLine && scroll < posArr[4]){
             let current_scroll = (scroll - posArr[3] - baseLine) * 3;
             let svg_scroll;
