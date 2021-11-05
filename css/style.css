@@ -698,24 +698,88 @@ body {
           width: 65%;
           margin-right: 5%; }
           #main .inner .box3 .wrap .left article {
+            width: 100%;
             margin-bottom: 40px; }
-            #main .inner .box3 .wrap .left article .pic {
+            #main .inner .box3 .wrap .left article:nth-of-type(1) .pic {
               width: 100%;
               height: 400px;
               background: #555;
               margin-bottom: 20px; }
-            #main .inner .box3 .wrap .left article .tag {
+            #main .inner .box3 .wrap .left article:nth-of-type(1) .tag {
               display: block;
               font: 600 13px/1 "Gothic A1";
               color: rosybrown;
               margin-bottom: 14px; }
-            #main .inner .box3 .wrap .left article h1 {
+            #main .inner .box3 .wrap .left article:nth-of-type(1) h1 {
               font: 600 24px/1 "Gothic A1";
               color: #111;
               margin-bottom: 10px; }
-            #main .inner .box3 .wrap .left article h2 {
+            #main .inner .box3 .wrap .left article:nth-of-type(1) h2 {
               font: 500 16px/1 "Gothic A1";
               color: #333; }
+            #main .inner .box3 .wrap .left article:nth-of-type(2) {
+              border-top: 1px dotted #000;
+              border-left: 1px dotted #000;
+              border-right: 6px solid #000;
+              border-bottom: 6px solid #000;
+              padding: 50px 70px;
+              position: relative; }
+              #main .inner .box3 .wrap .left article:nth-of-type(2) h1 {
+                font: bold 36px "Pathway Gothic One";
+                color: #111;
+                margin-bottom: 20px; }
+              #main .inner .box3 .wrap .left article:nth-of-type(2) h2 {
+                font: 500 17px/1 "Gothic A1";
+                color: #666;
+                margin-bottom: 40px; }
+              #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div {
+                width: 48%;
+                margin-right: 4%;
+                float: left; }
+                #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div:last-child {
+                  margin-right: 0; }
+                #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div .pic {
+                  width: 100%;
+                  height: 200px;
+                  background: #bbb;
+                  margin-bottom: 15px; }
+                #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div h3 {
+                  font: 500 16px/1 "Gothic A1";
+                  color: #111; }
+              #main .inner .box3 .wrap .left article:nth-of-type(2) .more {
+                position: absolute;
+                top: 50px;
+                right: 50px;
+                font: 600 15px/1 "Gothic A1";
+                color: #111; }
+                #main .inner .box3 .wrap .left article:nth-of-type(2) .more .arrow {
+                  display: inline-block;
+                  width: 10px;
+                  height: 8px;
+                  margin-left: 5px;
+                  margin-bottom: 1px;
+                  position: relative; }
+                  #main .inner .box3 .wrap .left article:nth-of-type(2) .more .arrow::before {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 2px;
+                    background: #222;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin-top: 1px; }
+                  #main .inner .box3 .wrap .left article:nth-of-type(2) .more .arrow::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 2px;
+                    background: #222;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0; }
         #main .inner .box3 .wrap .right {
           float: right;
           width: 28%;
