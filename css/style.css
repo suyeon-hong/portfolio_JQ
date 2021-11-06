@@ -383,43 +383,45 @@ body {
   #visual .inner {
     width: 1180px;
     margin: 0 auto;
-    padding: 30px 0; }
+    padding: 30px 0;
+    overflow: hidden;
+    position: relative; }
     #visual .inner > h1 {
       font: 500 60px/1.1 "Gothic A1";
       color: #111; }
-    #visual .inner .wrap {
+    #visual .inner > .wrap {
       width: 100%; }
-      #visual .inner .wrap article {
+      #visual .inner > .wrap article {
         float: left;
         width: 380px;
         margin-right: 20px;
         border: 1px solid #333; }
-        #visual .inner .wrap article h1 {
+        #visual .inner > .wrap article h1 {
           font: 600 16px/1 "Gothic A1";
           color: #333;
           padding: 10px 20px;
           border-bottom: 1px solid #333; }
-        #visual .inner .wrap article h2 {
+        #visual .inner > .wrap article h2 {
           font: 500 45px/1 "Gothic A1";
           color: #222;
           padding: 10px 20px 50px;
           border-bottom: 1px solid #333; }
-        #visual .inner .wrap article .wrap {
+        #visual .inner > .wrap article .wrap {
           padding: 10px 20px;
           border-bottom: 1px solid #333; }
-          #visual .inner .wrap article .wrap p {
+          #visual .inner > .wrap article .wrap p {
             float: left;
             width: 50%;
-            font: 500 12px/1 "Gothic A1";
+            font: 500 10px/1.1 "Gothic A1";
             color: #333;
             margin-right: 2%; }
-          #visual .inner .wrap article .wrap ul {
+          #visual .inner > .wrap article .wrap ul {
             float: right;
             width: 45%; }
-            #visual .inner .wrap article .wrap ul li {
+            #visual .inner > .wrap article .wrap ul li {
               font: 600 14px/1.2 "Gothic A1";
               color: #222; }
-              #visual .inner .wrap article .wrap ul li::before {
+              #visual .inner > .wrap article .wrap ul li::before {
                 content: '';
                 display: inline-block;
                 width: 3px;
@@ -428,35 +430,38 @@ body {
                 border-radius: 50%;
                 margin-bottom: 3px;
                 margin-right: 2px; }
-        #visual .inner .wrap article .pic {
+        #visual .inner > .wrap article .pic {
           height: 280px;
           background: #bbb; }
-          #visual .inner .wrap article .pic::after {
+          #visual .inner > .wrap article .pic::after {
             content: '';
             display: block;
             clear: both; }
-          #visual .inner .wrap article .pic a {
+          #visual .inner > .wrap article .pic a {
             display: block;
             float: left;
             width: 65%;
             height: 100%;
             object-fit: cover; }
-          #visual .inner .wrap article .pic p {
+            #visual .inner > .wrap article .pic a img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              filter: grayscale(60%); }
+          #visual .inner > .wrap article .pic p {
             float: right;
             width: 35%;
             height: 50%;
             background: #888;
-            font: 600 70px/1 "Pathway Gothic One";
+            font: 600 40px/1 "Pathway Gothic One";
             color: #111;
             text-align: center;
             border-left: 1px solid #333;
-            padding: 30px 0; }
-            #visual .inner .wrap article .pic p:nth-of-type(2) {
+            padding: 45px 0; }
+            #visual .inner > .wrap article .pic p:nth-of-type(2) {
               border-top: 1px solid #333;
-              background: #555;
-              font-size: 50px;
-              padding: 40px 0; }
-            #visual .inner .wrap article .pic p span {
+              background: #555; }
+            #visual .inner > .wrap article .pic p span {
               display: block;
               font: 600 10px/1 "Gothic A1";
               color: #111; }
