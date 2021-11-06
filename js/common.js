@@ -1,3 +1,5 @@
+let speed = 1000;
+
 // btnMo button
 const btnMo = document.querySelector(".btnMo");
 const gnbMo = document.querySelector(".gnbMo");

@@ -3,7 +3,6 @@ const $btnScroll = $("#navi li");
 let posArr = [];
 let $boxs = $(".myScroll");
 let baseLine = -300;
-let speed = 1000;
 
 let custom = [
     ,
