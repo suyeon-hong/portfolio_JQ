@@ -20,7 +20,7 @@ $(".box1 .btns li").on("click", function(){
 $(".mento .slider-wrapper .slide").last().prependTo(".mento .slider-wrapper");
 
 let timer = setInterval(function(){
-    movingRight(".mento .slider-wrapper", ".slide", -100, -50);
+    movingRight(".mento .slider-wrapper", ".slider", -100, -50);
 }, speed*2);
 
 $(".mento .prev").on("click", function(e){
@@ -76,18 +76,18 @@ $(".box3 .frame .next").on("click", function(e){
 
 
 
-function movingLeft(frame, slide, def_percent){
+function movingLeft(frame, slider, def_percent){
     $(frame).animate({marginLeft: 0}, speed/2, function(){
         $(this).css({marginLeft: def_percent +"%"});
-        $(frame).children(slide).last().prependTo(frame);
+        $(frame).children(slider).last().prependTo(frame);
         enableClick = true;
     })
 }
 
-function movingRight(frame, slide, percent, def_percent){
+function movingRight(frame, slider, percent, def_percent){
     $(frame).animate({marginLeft: percent +"%"}, speed/2, function(){
         $(this).css({marginLeft: def_percent +"%"});
-        $(frame).children(slide).first().appendTo(frame);
+        $(frame).children(slider).first().appendTo(frame);
         enableClick = true;
     })
 }

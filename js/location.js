@@ -19,7 +19,7 @@ function isTxt(name){
         $("label[for="+ name +"]").css({color: "#222"});
         return true;
     }else{
-        $("label[for="+ name +"]").css({color: "tomato"});
+        $("label[for="+ name +"]").css({color: "rosybrown"});
         result.push($("label[for="+ name +"]").text());
         return false;
     }
