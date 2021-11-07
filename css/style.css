@@ -1190,7 +1190,7 @@ body {
     background: #bbb; }
 
 #popup {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1488,7 +1488,7 @@ body {
         width: 30px; }
 
   #footer .inner {
-    padding: 70px 50px 40px; }
+    padding: 70px 30px 40px; }
     #footer .inner .wrap {
       margin-bottom: 50px; }
       #footer .inner .wrap address {
@@ -1537,7 +1537,7 @@ body {
         height: 15px;
         margin-left: 15px; }
     #main .inner .box1 .wrap .con ul li {
-      padding: 13px 0;
+      padding: 15px 0;
       padding-left: 170px; }
       #main .inner .box1 .wrap .con ul li h1 {
         font-size: 20px; }
@@ -1656,7 +1656,7 @@ body {
       margin-top: -20px; }
 
   #footer .inner {
-    padding: 70px 20px 40px; }
+    padding: 60px 10px 20px; }
 
   #navi {
     display: none; } }
@@ -2143,7 +2143,7 @@ body {
       margin-right: 10px; } }
 @media screen and (max-width: 768px) {
   #footer_sub .inner {
-    padding: 70px 50px 40px; }
+    padding: 70px 30px 40px; }
     #footer_sub .inner .wrap {
       margin-bottom: 50px; }
       #footer_sub .inner .wrap address {
@@ -2164,7 +2164,7 @@ body {
       font-size: 10px; } }
 @media screen and (max-width: 539px) {
   #footer_sub .inner {
-    padding: 70px 20px 40px; } }
+    padding: 60px 10px 20px; } }
 @media screen and (max-width: 1179px) {
   .content .inner {
     width: 100%;
