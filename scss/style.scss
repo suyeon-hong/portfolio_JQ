@@ -842,6 +842,12 @@ body{
                         background: #333;
 
                         svg{
+                            width: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
                             path{
                                 fill: transparent;
                                 stroke: #fff;
@@ -1330,7 +1336,6 @@ body{
             }
             .sliderbox{
                 width: 100%;
-                height: 400px;
                 position: relative;
 
                 .frame{
@@ -1661,81 +1666,66 @@ body{
     }
 
     #main{
-        .section{
-            .inner{
-                width: 100%;
-                padding: 100px 50px;
-            }
-            &#intro{
-                .inner{
-                    padding: 150px 50px;
-                    
-                    .wrap{
-                        .tit{
-                            h1{
-                                font-size: 5vw;
-                            }
-                            h2{
-                                font-size: 14vw;
-                            }
-                        }
-                        .desc{
-                            p{
-                                font-size: 14px;
-                            }
-                        }
-                    }
-                }
-            }
-            &#process{
-                .inner .wrap{
-                    article{
-                        width: 23%;
-                        margin-right: 2%;
+        .inner{
+            width: 100%;
+            margin: 0;
+            padding: 0 50px;
 
-                        .pic{
-                            height: 20vw;
+            .box1 .wrap{
+                .frame{
+                    height: 314px;
+                }
+                .con ul li{
+                    height: 110px;
+                    padding: 20px 0;
+                    padding-left: 130px;
+    
+                    .pic{
+                        width: 120px;
+                    }
+                    h1{
+                        font-size: 22px;
+                    }
+                    &:nth-of-type(n+3){
+                        h1{
+                            font-size: 13px;
                         }
-                    }
+                        h2{
+                            font-size: 19px;
+                        }
+                    } 
                 }
             }
-            &#topic{
-                .inner{
-                    .wrap article:not(:nth-of-type(1)){
-                        width: 32%;
-                        margin-right: 2%;
-                    }
-                }
+            .box2 .wrap article{
+                width: 32%;
+                margin-right: 2%;
             }
-            &#news{
-                .inner .wrap{
-                    >div{
-                        width: 32%;
-                        margin-right: 2%;
+            .box3 .wrap{
+                .left{
+                    article:nth-of-type(3){
+                        .frame .slider-wrapper .slider{
+                            padding: 50px 70px;
 
-                        article{
-                            &.calendar{
-                                p.day{
-                                    font-size: 4.5vw;
+                            .wrap{
+                                .pic{
+                                    width: 150px;
+                                    height: 150px;
+                                    margin-top: 40px;
                                 }
                             }
-                            &.border h2{
-                                font-size: 5vw;
-                            }
-                            &.article .pic {
-                                height: 40vw;
-                            }
-                        }
-                        &:last-child .border{
-                            h1{
-                                font-size: 2vw;
-                            }
-                            h2{
-                                font-size: 2.7vw;
-                            }
-                        }
+                        } 
                     }
                 }
+            }
+            .box4 .wrap article{
+                width: 20%;
+            }
+        }
+        .mento{
+            .inner{
+                width: 100%;
+                margin: 0;
+                padding: 0 50px;
             }
         }
     }
@@ -1766,6 +1756,91 @@ body{
     }
 }
 
+@media screen and (max-width: 980px){
+    #main{
+        .inner{
+            .box1 .wrap{
+                .frame{
+                    height: 260px;
+                    
+                    .mySlider .slide-wrapper div h1{
+                        font-size: 40px;
+                    }
+                }
+                .con ul li{
+                    height: 90px;
+                    padding: 10px 0;
+                    padding-left: 110px;
+
+                    .pic{
+                        width: 100px;
+                    }
+                    h1{
+                        font-size: 16px;
+                    }
+                    h2{
+                        font-size: 13px;
+                    }
+                    &:nth-of-type(n+3){
+                        height: 70px;
+                        padding: 10px 0;
+                        padding-left: 10px;
+
+                        h2{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .box2 .wrap article{
+                padding-left: 90px;
+
+                .pic{
+                    width: 80px;
+                }
+                h2{
+                    font-size: 17px;
+                }
+                p{
+                    font-size: 13px;
+                    line-height: 1.3;
+                }
+                a{
+                    font-size: 12px;
+                }
+            }
+            .box3 .wrap{
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    display: none;
+                }
+            }
+        }
+        .mento .inner{
+            h1{
+                margin-bottom: 20px;
+            }
+            h2{
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            h3{
+                font-size: 16px;
+            }
+            .sliderbox .frame .slider-wrapper .slider{
+                .pic{
+                    height: 180px;
+                }
+                h4{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $tablet2){
     #header{
         .gnbMo{
@@ -1793,64 +1868,173 @@ body{
     }
 
     #main{
-        .section{
-            .inner{
-                .title{
-                    font-size: 50px;
-                }
-                .sub{
-                    font-size: 14px;
-                }
-            }
-            &#intro .inner{
-                padding: 100px 50px;
+        .inner{
+            padding: 0 30px;
 
+            .box1{
+                margin-bottom: 0;
                 .wrap{
-                    .tit{
-                        margin-bottom: 50px;
-                    }
-                    .desc{
+                    .frame{
                         width: 100%;
+                        border-right: none;
+                        padding-right: 0;
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
+                    .con{
+                        width: 100%;
+    
+                        ul li{
+                            padding: 20px 0;
+                            padding-left: 170px;
+    
+                            .pic{
+                                width: 150px;
+                            }
+                            h1{
+                                font-size: 22px;
+                            }
+                            h2{
+                                font-size: 15px;
+                            }
+                            &:nth-of-type(n+3){
+                                height: 80px;
+                                padding: 20px 0;
+                                padding-left: 15px;
+    
+                                h2{
+                                    font-size: 20px;
+                                }
+                            }
+                        }
                     }
                 }
             }
-            &#process .inner .wrap article{
-                .txt{
-                    h2{font-size: 28px;}
-                    p{font-size: 14px;}
-                }
-            }
-            &#topic .inner article:nth-of-type(1){
-                .pic{
-                    height: 400px;
-                }
-                svg{
-                    width: 170px;
-                    top: 150px;
-                    right: 0;
-                }
-            }
-            &#news .inner .wrap>div{
-                width: 49%;
+            .box2 .wrap{
+                padding: 50px 0;
 
                 article{
-                    &.calendar p.day{
-                        font-size: 6vw;
+                    padding-left: 0;
+    
+                    .pic{
+                        width: 100%;
+                        height: 100px;
+                        position: relative;
+                        margin-bottom: 10px;
+    
+                        svg{
+                            width: auto;
+                            height: 90%;
+                        }
                     }
                 }
-                &:nth-of-type(2){
-                    margin-right: 0;
+            }
+            .box3 .wrap{
+                .left article{
+                    &:nth-of-type(1){
+                        .pic{
+                            height: 300px;
+                        }
+                        .tag{
+                            font-size: 12px;
+                            margin-bottom: 12px;
+                        }
+                        h1{
+                            font-size: 22px;
+                            margin-bottom: 6px;
+                        }
+                        h2{
+                            font-size: 15px;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        padding: 30px 40px;
+
+                        h2{
+                            font-size: 16px;
+                        }
+                        .wrap >div .pic{
+                            height: 150px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        h1{
+                            font-size: 40px;
+                            font-weight: normal;
+
+                            span{
+                                font-size: 14px;
+                                margin-top: -6px;
+                            }
+                        }
+                        .frame .slider-wrapper .slider{
+                            padding: 40px 50px;
+
+                            .wrap .con{
+                                h2{
+                                    font-size: 20px;
+                                    margin-bottom: 10px;
+                                }
+                                h3{
+                                    font-size: 13px;
+                                    margin-bottom: 15px;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    margin-bottom: 20px;
+                                }
+                                .more{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+            .box4 .wrap article{
+                width: 33.3%;
+
                 &:nth-of-type(3){
-                    width: 100%;
+                    border-right: none;
+                    padding-right: 0;
+                }
+                &:nth-of-type(n+4){
+                    display: none;
+                }
+            }
+        }
+        .mento{
+            padding: 50px 0;
 
-                    article{
-                        float: left;
-                        width: 49%;
-                        margin-right: 2%;
+            .inner{
+                padding: 0 30px;
 
-                        &:last-child{
-                            margin-right: 0;
+                h1{
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+                h2{
+                    font-size: 24px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                h3{
+                    font-size: 15px;
+                }
+                .sliderbox{
+                    .frame .slider-wrapper .slider{
+                        .pic{
+                            height: 120px;
+                            margin-bottom: 15px;
+                        }
+                        h4{
+                            font-size: 15px;
+                        }
+                    }
+                    .prev, .next{
+                        &::before, &::after{
+                            width: 30px;
                         }
                     }
                 }
@@ -1893,18 +2077,8 @@ body{
         }
     }
 
-    .detail{
-        padding: 100px 50px;
-
-        .pic{
-            width: 100%;
-            height: 50%;
-            margin-bottom: 30px;
-        }
-        h2{
-            width: 100%;
-            text-align: center;
-        }
+    #navi{
+        right: 0;
     }
 }
 
@@ -1929,91 +2103,226 @@ body{
     }
 
     #main{
-        .section{
-            .inner{
-                padding: 50px 20px;
+        .inner{
+            padding: 0 10px;
 
-                .title{
-                    font-size: 30px;
+            .box1 .wrap{
+                .frame{
+                    height: 250px;
+
+                    .mySlider{
+                        .slide-wrapper div{
+                            h1{
+                                font-size: 30px;
+                                top: 30px;
+                            }
+                            p{
+                                font-size: 13px;
+                            }
+                        }
+                        .btns li{
+                            width: 15px;
+                            height: 15px;
+                            margin-left: 15px;
+                        }
+                    }
                 }
-                .sub{
-                    font-size: 11px;
-                    margin-bottom: 50px;
+                .con ul li{
+                    padding: 13px 0;
+                    padding-left: 170px;
+
+                    h1{
+                        font-size: 20px;
+                    }
+                    h2{
+                        font-size: 13px;
+                    }
                 }
             }
-            &#intro .inner{
-                padding:  50px 20px;
+            .box2{
+                h1{
+                    font-size: 18px;
+                }
                 .wrap{
-                    .tit{
-                        margin-bottom: 30px;
-                    }
-                    .desc p{
-                        font-size: 12px;
+                    padding: 30px 0 50px;
+
+                    article{
+                        h2{
+                            font-size: 14px;
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 1.2;
+                            margin-bottom: 14px;
+                        }
                     }
                 }
             }
-            &#process .inner .wrap article{
-                width: 49%;
-                margin-right: 2%;
-                margin-bottom: 20px;
+            .box3{
+                .wrap .left article{
+                    &:nth-of-type(1){
+                        .pic{
+                            height: 200px;
+                            margin-bottom: 15px;
+                        }
+                        .tag{
+                            font-size: 10px;
+                            margin-bottom: 10px;
+                        }
+                        h1{
+                            font-size: 18px;
+                        }
+                        h2{
+                            font-size: 12px;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        padding: 10px 20px;
 
-                &:nth-of-type(even){
-                    margin-right: 0;
-                }
-                .pic{
-                    height: 42vw;
+                        h1{
+                            font-size: 28px;
+                            margin-bottom: 15px;
+                        }
+                        h2{
+                            font-size: 13px;
+                            margin-bottom: 30px;
+                        }
+                        .wrap >div{
+                            .pic{
+                                height: 100px;
+                                margin-bottom: 5px;
+                            }
+                            h3{font-size: 13px;}
+                        }
+                        .more{
+                            top: 20px;
+                            right: 20px;
+                            font-size: 11px;
+
+                            .arrow{
+                                margin-left: 0;
+
+                                &:before, &:after{
+                                    width: 6px;
+                                }
+                                &::before{
+                                    margin-top: 2px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3){
+                        h1{
+                            font-size: 30px;
+                            padding-left: 10px;
+
+                            span{
+                                font-size: 10px;
+                                font-weight: lighter;
+                                margin-top: -4px;
+                                right: 10px;
+                            }
+                        }
+                        .frame{
+                            .slider-wrapper .slider .wrap{
+                                .pic{
+                                    float: none;
+                                    margin: 0 auto;
+                                    margin-bottom: 20px;
+                                }
+                                .con{
+                                    width: 100%;
+    
+                                    h2{
+                                        font-size: 18px;
+                                    }
+                                    h3{
+                                        font-size: 11px;
+                                    }
+                                    p{
+                                        font-size: 15px;
+                                    }
+                                    .more{
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                            .prev{
+                                top: auto;
+                                left: auto;
+                                bottom: 50px;
+                                right: 40px;
+
+                                &::before, &::after{
+                                    width: 30px;
+                                }
+                            }
+                            .next{
+                                top: auto;
+                                bottom: 50px;
+                                right: 10px;
+
+                                &::before, &::after{
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            &#topic .inner .wrap{
-                article{
-                    border-bottom: none;
-
-                    .pic{
-                        height: 250px;
-                        margin-bottom: 20px;
-                    }
-                    svg{
-                        width: 110px;
-                        top: 90px;
-                    }
-                } 
-                article:not(:nth-of-type(1)){
-                    width: 100%;
-                    margin-right: 0;
+            .box4{
+                h1{
+                    font-size: 18px;
                 }
-            } 
-            &#news .inner .wrap>div{
-                width: 100%;
-                margin-right: 0;
+                .wrap{
+                    padding: 30px 0 50px;
 
-                &:last-child{
                     article{
                         width: 100%;
-                    }
-                    .border{
-                        h1{
-                            font-size: 20px;
+                        padding: 0;
+                        border-right: none;
+                        margin-bottom: 20px;
+    
+                        .pic{
+                            height: 150px;
                         }
                         h2{
-                            font-size: 30px;
+                            font-size: 18px;
+                            line-height: 1;
+                            margin-bottom: 5px;
                         }
                     }
                 }
-                article{
-                    &.calendar{
-                        p.day{
-                            font-size: 46px;
+            }
+        }
+        .mento{
+            .inner{
+                padding: 0 10px;
+
+                h1{
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+                h2{
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                h3{
+                    font-size: 12px;
+                }
+                .sliderbox{
+                    .frame .slider-wrapper .slider{
+                        .pic{
+                            height: 90px;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            font-size: 12px;
+                            font-weight: 300;
                         }
                     }
-                    &.border{
-                        margin-bottom: 40px;
-
-                        h2{
-                            font-size: 24px;
-                        }
-                    } 
-                    &.article .pic{
-                        height: 300px;
+                    .prev, .next{
+                        margin-top: -20px;
                     }
                 }
             }
