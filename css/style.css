@@ -2091,6 +2091,9 @@ body {
         font: 500 14px/1.6 "Gothic A1";
         color: #222;
         width: 35%; }
+        #footer_sub .inner .wrap address span {
+          font-weight: 600;
+          color: #111; }
       #footer_sub .inner .wrap ul {
         float: right; }
         #footer_sub .inner .wrap ul li {

@@ -27,6 +27,11 @@
                 font: 500 14px/1.6 $font;
                 color: #222;
                 width: 35%;
+
+                span{
+                    font-weight: 600;
+                    color: #111;
+                }
             }
             ul{
                 float: right;
