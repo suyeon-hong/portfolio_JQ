@@ -910,7 +910,7 @@ body {
                     background: #bbb;
                     transform: rotate(45deg);
                     transform-origin: left center;
-                    margin-top: -2px; }
+                    margin-top: -3px; }
                 #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next {
                   display: block;
                   position: absolute;
