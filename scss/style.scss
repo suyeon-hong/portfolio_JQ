@@ -624,20 +624,25 @@ body{
                     &:nth-of-type(n+2){
                         a{
                             font-weight: 500;
-                        }
-                        &.on a{
-                            font-weight: 600;
+                            color: #222;
+
+                            &.on{
+                                font-weight: 600;
+                            }
+                            &::after{
+                                border-top-color: #222;
+                            }
                         }
                     }
                     a{
                         font: 600 13px/1 $font;
-                        color: #333;
+                        color: #555;
                         margin-left: 30px;
 
                         &::after{
                             content:'';
                             display: inline-block;
-                            border-top: 5px solid #333;
+                            border-top: 5px solid #555;
                             border-left: 5px solid transparent;
                             border-right: 5px solid transparent;
                             margin-left: 5px;

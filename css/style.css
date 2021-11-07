@@ -491,17 +491,20 @@ body {
           color: #333;
           margin-right: 50px; }
         #visual .filter .inner ul li:nth-of-type(n+2) a {
-          font-weight: 500; }
-        #visual .filter .inner ul li:nth-of-type(n+2).on a {
-          font-weight: 600; }
+          font-weight: 500;
+          color: #222; }
+          #visual .filter .inner ul li:nth-of-type(n+2) a.on {
+            font-weight: 600; }
+          #visual .filter .inner ul li:nth-of-type(n+2) a::after {
+            border-top-color: #222; }
         #visual .filter .inner ul li a {
           font: 600 13px/1 "Gothic A1";
-          color: #333;
+          color: #555;
           margin-left: 30px; }
           #visual .filter .inner ul li a::after {
             content: '';
             display: inline-block;
-            border-top: 5px solid #333;
+            border-top: 5px solid #555;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             margin-left: 5px;
