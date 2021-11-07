@@ -1553,7 +1553,7 @@ body{
 }
 
 #popup{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -2146,7 +2146,7 @@ body{
                     }
                 }
                 .con ul li{
-                    padding: 13px 0;
+                    padding: 15px 0;
                     padding-left: 170px;
 
                     h1{
