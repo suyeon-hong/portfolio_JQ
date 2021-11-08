@@ -1583,8 +1583,9 @@ body{
         background: #ddd;
         padding: 100px 260px 100px 80px;
         position: absolute;
-        top: 20%;
-        left: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         box-shadow: -5px 5px 20px rgba(0,0,0,0.4);
 
         .con{
@@ -1625,6 +1626,7 @@ body{
             label{
                 font: 400 14px/1 $font;
                 color: #aaa;
+                cursor: pointer;
     
                 &.on{
                     color: #555;
@@ -2156,6 +2158,17 @@ body{
     #navi{
         right: 0;
     }
+
+    #popup{
+        .inner{
+            width: 500px;
+            padding: 50px 150px 50px 40px;
+
+            .pic{
+                width: 240px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $mobile){
@@ -2413,6 +2426,31 @@ body{
 
     #navi{
         display: none;
+    }
+
+    #popup{
+        .inner{
+            width: 330px;
+            padding: 40px;
+
+            .con{
+                text-align: center;
+
+                h1{
+                    margin-bottom: 0;
+                }
+                h2{
+                    font-size: 50px;
+                }
+                a{
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+            }
+            .pic{
+                display: none;
+            }
+        }
     }
 }
 
