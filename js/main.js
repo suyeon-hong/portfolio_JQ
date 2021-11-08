@@ -18,7 +18,7 @@ function letterMotion(item, delay){
         )
         num++;
     });
-    
+
     $(item).append(
         $("<p>").css({
             position: "absolute",
@@ -38,12 +38,48 @@ function letterMotion(item, delay){
 
 
 // visual tab button
+let i=0;
+
+setTimeout(function(){
+    $("#visual .wrapbox >.wrap").eq(0).slideDown(speed);
+}, speed/2 );
+
+let timer3 = setInterval(function(){
+    (i >= 2) ? i=0 : i++;
+    visualMoving(i);
+}, speed*3);
+
 $("#visual .filter li a").on("click", function(e){
     e.preventDefault();
     let target = $(this).parent().index() - 1;
+    let isActive = $(this).hasClass("on");
 
+    if(isActive) return;
+    if(enableClick){
+        enableClick = false;
+        clearInterval(timer3);
+        visualMoving(target);
+    }
+});
+
+$("#visual .wrapbox article").on("mouseenter", function(){
+    clearInterval(timer3);
+});
+$("#visual .wrapbox article").on("mouseleave", function(){
+    timer3 = setInterval(function(){
+        (i >= 2) ? i=0 : i++;
+        visualMoving(i);
+    }, speed*3);
+});
+
+
+function visualMoving(index){
     $("#visual .filter li a").removeClass("on");
-    $(this).addClass("on");
+    $("#visual .filter li").eq(index + 1).children("a").addClass("on");
     $("#visual .wrapbox >.wrap").slideUp(speed/2);
-    $("#visual .wrapbox >.wrap").eq(target).slideDown(speed);
-})
+    setTimeout(function(){
+        $("#visual .wrapbox >.wrap").eq(index).slideDown(speed);
+    }, speed/2, function(){
+        enableClick = true;
+    });
+}
