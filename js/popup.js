@@ -27,9 +27,7 @@ $delCookie.on("click", function(e){
 });
 
 $("#popup label").on("click", function(){
-    let isOn = $(this).hasClass("on");
-
-    (isOn) ? $(this).removeClass("on") : $(this).addClass("on");
+    $(this).toggleClass("on");
 });
 
 function setCookie(time){

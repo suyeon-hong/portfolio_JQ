@@ -1579,76 +1579,117 @@ body{
     z-index:2;
 
     .inner{
+        width: 650px;
+        background: #ddd;
+        padding: 100px 260px 100px 80px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 350px;
-        background: #fff;
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+        top: 20%;
+        left: 30%;
+        box-shadow: -5px 5px 20px rgba(0,0,0,0.4);
 
+        .con{
+            h1{
+                font: 400 14px/1 $font;
+                color: #888;
+                margin-bottom: 10px;
+            }
+            h2{
+                font: bold 60px/1 "Arapey";
+                color: #111;
+                margin-bottom: 10px;
+                letter-spacing: -1px;
+            }
+            p{
+                font: 500 14px/1.4 $font;
+                color: #777;
+                margin-bottom: 30px;
+    
+                span{
+                    font-weight: 600;
+                    color: #222;
+                }
+            }
+            a{
+                display: block;
+                width: 160px;
+                height: 45px;
+                background: #111;
+                font: 400 15px/45px $font;
+                color: #ddd;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            input{
+                display: none;
+            }
+            label{
+                font: 400 14px/1 $font;
+                color: #aaa;
+    
+                &.on{
+                    color: #555;
+                    font-weight: 500;
+    
+                    &::after{
+                        background: #555;
+                    }
+                }
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #aaa;
+                    margin-left: 6px;
+                    vertical-align: text-top;
+                }
+            }
+        }
         .pic{
-            width: 100%;
-            height: 400px;
-            background: #eee;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
 
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                cursor: pointer;
-            }
-            .swiper-pagination span{
-                background: #222;
             }
         }
-        .btns{
-            padding: 15px 30px;
+        .close{
+            background: transparent;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
 
-            input{
-                display: none;
+            &:before{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #333;
+                transform: rotate(45deg);
+                position: absolute;
+                top:50%;
+                left:0;
             }
-            label{
-                font: 300 15px/20px $font;
-                color: #000;
-
-                &::before{
-                    content:'';
-                    display: inline-block;
-                    width: 15px;
-                    height: 15px;
-                    border: 1px solid #aaa;
-                    margin-right: 10px;
-                    vertical-align: middle;
-                }
-                &.on{
-                    &::before{
-                        background: #000;
-                    }
-                }
-            }
-            .close{
-                float: right;
-                font: 500 15px/1.3 $font;
-                color: #333;
-                position: relative;
-
-                &::before{
-                    content:'';
-                    display: inline-block;
-                    width: 1px;
-                    height: 26px;
-                    background: #ddd;
-                    position: absolute;
-                    top: -4px;
-                    left: -40px;
-                }
+            &:after{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #333;
+                transform: rotate(-45deg);
+                position: absolute;
+                top:50%;
+                left:0;
             }
         }
-
     }
-
-
 }
 
 

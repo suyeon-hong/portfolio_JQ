@@ -1211,55 +1211,93 @@ body {
   background: rgba(0, 0, 0, 0.7);
   z-index: 2; }
   #popup .inner {
+    width: 650px;
+    background: #ddd;
+    padding: 100px 260px 100px 80px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    background: #fff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); }
+    top: 20%;
+    left: 30%;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.4); }
+    #popup .inner .con h1 {
+      font: 400 14px/1 "Gothic A1";
+      color: #888;
+      margin-bottom: 10px; }
+    #popup .inner .con h2 {
+      font: bold 60px/1 "Arapey";
+      color: #111;
+      margin-bottom: 10px;
+      letter-spacing: -1px; }
+    #popup .inner .con p {
+      font: 500 14px/1.4 "Gothic A1";
+      color: #777;
+      margin-bottom: 30px; }
+      #popup .inner .con p span {
+        font-weight: 600;
+        color: #222; }
+    #popup .inner .con a {
+      display: block;
+      width: 160px;
+      height: 45px;
+      background: #111;
+      font: 400 15px/45px "Gothic A1";
+      color: #ddd;
+      text-align: center;
+      margin-bottom: 20px; }
+    #popup .inner .con input {
+      display: none; }
+    #popup .inner .con label {
+      font: 400 14px/1 "Gothic A1";
+      color: #aaa; }
+      #popup .inner .con label.on {
+        color: #555;
+        font-weight: 500; }
+        #popup .inner .con label.on::after {
+          background: #555; }
+      #popup .inner .con label::after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #aaa;
+        margin-left: 6px;
+        vertical-align: text-top; }
     #popup .inner .pic {
-      width: 100%;
-      height: 400px;
-      background: #eee; }
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%; }
       #popup .inner .pic img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        cursor: pointer; }
-      #popup .inner .pic .swiper-pagination span {
-        background: #222; }
-    #popup .inner .btns {
-      padding: 15px 30px; }
-      #popup .inner .btns input {
-        display: none; }
-      #popup .inner .btns label {
-        font: 300 15px/20px "Gothic A1";
-        color: #000; }
-        #popup .inner .btns label::before {
-          content: '';
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          border: 1px solid #aaa;
-          margin-right: 10px;
-          vertical-align: middle; }
-        #popup .inner .btns label.on::before {
-          background: #000; }
-      #popup .inner .btns .close {
-        float: right;
-        font: 500 15px/1.3 "Gothic A1";
-        color: #333;
-        position: relative; }
-        #popup .inner .btns .close::before {
-          content: '';
-          display: inline-block;
-          width: 1px;
-          height: 26px;
-          background: #ddd;
-          position: absolute;
-          top: -4px;
-          left: -40px; }
+        object-fit: cover; }
+    #popup .inner .close {
+      background: transparent;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+      #popup .inner .close:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #333;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 0; }
+      #popup .inner .close:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #333;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        left: 0; }
 
 @media screen and (max-width: 1179px) {
   #header {
