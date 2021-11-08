@@ -395,9 +395,14 @@ body {
     position: relative; }
     #visual .inner.wrapbox {
       height: 610px; }
-    #visual .inner > h1 {
+    #visual .inner > h1, #visual .inner > h2 {
+      display: inline-block;
       font: 500 64px/1.1 "Gothic A1";
-      color: #111; }
+      color: #111;
+      position: relative;
+      overflow: hidden; }
+      #visual .inner > h1 span, #visual .inner > h2 span {
+        opacity: 0; }
     #visual .inner > .wrap {
       width: 100%;
       position: absolute;
