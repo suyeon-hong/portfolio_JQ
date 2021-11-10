@@ -1,21 +1,5 @@
 let enableClick = true;
 
-
-// box1 slide
-$(".box1 .btns li").on("click", function(){
-
-    if(enableClick){
-        enableClick =false;
-        let index = $(this).index();
-
-        $(".box1 .btns li").removeClass("on");
-        $(this).addClass("on");
-        $(".slide-wrapper").animate({left: -(100 * index) +"%"}, speed/2, function(){
-            enableClick = true;
-        });
-    }
-});
-
 //slidebox slide
 $(".mento .slider-wrapper .slide").last().prependTo(".mento .slider-wrapper");
 
@@ -42,6 +26,21 @@ $(".mento .next").on("click", function(e){
         
         clearInterval(timer);
         movingRight(".mento .slider-wrapper", ".slider", -100, -50)
+    }
+});
+
+// box1 slide
+$(".box1 .btns li").on("click", function(){
+
+    if(enableClick){
+        enableClick =false;
+        let index = $(this).index();
+
+        $(".box1 .btns li").removeClass("on");
+        $(this).addClass("on");
+        $(".slider-wrapper").animate({left: -(100 * index) +"%"}, speed/2, function(){
+            enableClick = true;
+        });
     }
 });
 

@@ -556,25 +556,25 @@ body {
           height: 100%;
           position: relative;
           overflow: hidden; }
-          #main .inner .box1 .wrap .frame .mySlider .slide-wrapper {
+          #main .inner .box1 .wrap .frame .mySlider .slider-wrapper {
             position: absolute;
             top: 0;
             left: 0;
             width: calc(100% * 4);
             height: 100%; }
-            #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div {
+            #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div {
               width: calc(100% / 4);
               float: left;
               height: 100%;
               background: #000;
               position: relative; }
-              #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div h1 {
+              #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div h1 {
                 font: 600 63px/1.2 "Gothic A1";
                 color: #fff;
                 position: absolute;
                 top: 50px;
                 left: 30px; }
-              #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div p {
+              #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div p {
                 font: 500 18px/1 "Gothic A1";
                 color: #ddd;
                 position: absolute;
@@ -1386,7 +1386,7 @@ body {
 @media screen and (max-width: 980px) {
   #main .inner .box1 .wrap .frame {
     height: 260px; }
-    #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div h1 {
+    #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div h1 {
       font-size: 40px; }
   #main .inner .box1 .wrap .con ul li {
     height: 90px;
@@ -1598,10 +1598,10 @@ body {
     padding: 0 10px; }
     #main .inner .box1 .wrap .frame {
       height: 250px; }
-      #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div h1 {
+      #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div h1 {
         font-size: 30px;
         top: 30px; }
-      #main .inner .box1 .wrap .frame .mySlider .slide-wrapper div p {
+      #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div p {
         font-size: 13px; }
       #main .inner .box1 .wrap .frame .mySlider .btns li {
         width: 15px;

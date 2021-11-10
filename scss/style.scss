@@ -714,7 +714,7 @@ body{
                         position: relative;
                         overflow: hidden;
     
-                        .slide-wrapper{
+                        .slider-wrapper{
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -1851,7 +1851,7 @@ body{
                 .frame{
                     height: 260px;
 
-                    .mySlider .slide-wrapper div h1{
+                    .mySlider .slider-wrapper div h1{
                         font-size: 40px;
                     }
                 }
@@ -2214,7 +2214,7 @@ body{
                     height: 250px;
 
                     .mySlider{
-                        .slide-wrapper div{
+                        .slider-wrapper div{
                             h1{
                                 font-size: 30px;
                                 top: 30px;
