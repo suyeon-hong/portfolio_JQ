@@ -1,21 +1,3 @@
-// community tab메뉴
-const $tabBtns = $(".community .inner>dl>dt a");
-const $tabBoxs = $(".community .inner>dl>dd");
-
-$tabBtns.on("click focus", function(e){
-    e.preventDefault();
-
-    let target = $(this).attr("href");
-    let isOn = $(this).hasClass("on");
-    if (isOn) return;
-
-    $tabBtns.removeClass("on");
-    $(this).addClass("on");
-
-    $tabBoxs.hide();
-    $(target).show();
-});
-
 // community tabs 버튼
 const $tabs = $(".community .tabs li a");
 

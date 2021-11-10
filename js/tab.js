@@ -5,8 +5,8 @@ $(document).ready(function(){
 });
 
 function Tab(btns, boxs){
-    this.$tabBtns = $();
-    this.$tabBoxs = $();
+    this.$tabBtns = $(btns);
+    this.$tabBoxs = $(boxs);
 
     this.$tabBtns.on("click focus", function(e){
         e.preventDefault();
