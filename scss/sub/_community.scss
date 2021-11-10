@@ -27,6 +27,13 @@
                 &:nth-of-type(2){
                     left: 70px;
                 }
+                &.on a{
+                    color: #000;
+
+                    &::after{
+                        opacity: 1;
+                    }
+                }
                 a{
                     font: 600 24px/1 $font;
                     color: #555;
@@ -40,13 +47,6 @@
                         background: #000;
                         margin-top: 5px;
                         opacity: 0;
-                    }
-                    &.on{
-                        color: #000;
-
-                        &::after{
-                            opacity: 1;
-                        }
                     }
                 }
             }

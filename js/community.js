@@ -8,26 +8,6 @@ $tabs.on("click", function(e){
     $(this).addClass("on");
 });
 
-// community QnAbox 토글 설정
-const $qbox = $("#faq .qna dt");
-const $abox = $("#faq .qna dd");
-
-$qbox.on("click", function(e){
-    e.preventDefault();
-
-    let i = $(this).index();
-    let isOn = $(this).hasClass("on");
-    
-    if (isOn) {
-        $(this).removeClass("on");
-        $(this).next().slideUp();
-    } else{
-        activeBtn($qbox, i/2);
-        $abox.slideUp();
-        $(this).next().slideDown(500);
-    }
-});
-
 // community pagination
 const $faqBtns = $(".community #faq .numbers span");
 const $noticeBtns = $(".community #notice .numbers span");

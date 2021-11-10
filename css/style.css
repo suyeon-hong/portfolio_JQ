@@ -2870,6 +2870,10 @@ body {
     left: 0; }
     .community .inner > dl > dt:nth-of-type(2) {
       left: 70px; }
+    .community .inner > dl > dt.on a {
+      color: #000; }
+      .community .inner > dl > dt.on a::after {
+        opacity: 1; }
     .community .inner > dl > dt a {
       font: 600 24px/1 "Gothic A1";
       color: #555;
@@ -2882,10 +2886,6 @@ body {
         background: #000;
         margin-top: 5px;
         opacity: 0; }
-      .community .inner > dl > dt a.on {
-        color: #000; }
-        .community .inner > dl > dt a.on::after {
-          opacity: 1; }
   .community .inner > dl > dd {
     width: 100%;
     display: none; }
