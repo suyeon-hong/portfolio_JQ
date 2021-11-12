@@ -137,3 +137,13 @@ $btnClose.on("click", function(e){
     $detail.removeClass("on");
     $detail.fadeOut(1000);
 });
+
+// detail page date
+const $date = $detail.find(".date");
+const date = new Date();
+const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+$date.find("h1").text(date.getDate());
+$date.find("h2").text(day[date.getDay()]);
+$date.find("h3").text(month[date.getMonth()]);

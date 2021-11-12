@@ -696,7 +696,7 @@ body {
             display: block;
             font: 600 10px/1 "Gothic A1";
             position: absolute;
-            top: -25px;
+            top: -20px;
             left: 0; }
           #visual .detail .inner .con > h2::after {
             content: '';
