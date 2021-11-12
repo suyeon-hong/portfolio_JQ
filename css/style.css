@@ -386,7 +386,8 @@ body {
   height: calc(100vh - 81px);
   overflow: hidden;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  background: #f6f6f6; }
   #visual .inner {
     width: 1180px;
     margin: 0 auto;
@@ -409,82 +410,122 @@ body {
       top: 30px;
       left: 0;
       display: none; }
-      #visual .inner > .wrap article {
-        float: left;
+      #visual .inner > .wrap:nth-child(1) {
+        display: block; }
+      #visual .inner > .wrap section {
         width: 380px;
-        margin-right: 20px;
-        border: 1px solid #333;
-        background: #f9f9f9; }
-        #visual .inner > .wrap article h1 {
-          font: 600 16px/1 "Gothic A1";
-          color: #666;
-          padding: 10px 20px;
-          border-bottom: 1px solid #333; }
-        #visual .inner > .wrap article h2 {
-          font: 500 45px/1 "Gothic A1";
-          color: #333;
-          padding: 10px 20px 50px;
-          border-bottom: 1px solid #333; }
-        #visual .inner > .wrap article .wrap {
-          padding: 10px 20px;
-          border-bottom: 1px solid #333; }
-          #visual .inner > .wrap article .wrap p {
-            float: left;
-            width: 65%;
-            font: 500 10px/1.1 "Gothic A1";
-            color: #555; }
-          #visual .inner > .wrap article .wrap ul {
-            float: right;
-            width: 30%; }
-            #visual .inner > .wrap article .wrap ul li {
-              font: 600 14px/1.3 "Gothic A1";
-              color: #222; }
-              #visual .inner > .wrap article .wrap ul li::before {
-                content: '';
-                display: inline-block;
-                width: 3px;
-                height: 3px;
-                background: #222;
-                border-radius: 50%;
-                margin-bottom: 3px;
-                margin-right: 2px; }
-        #visual .inner > .wrap article .pic {
-          height: 280px;
-          background: #bbb; }
-          #visual .inner > .wrap article .pic::after {
-            content: '';
-            display: block;
-            clear: both; }
-          #visual .inner > .wrap article .pic a {
-            display: block;
-            float: left;
-            width: 65%;
-            height: 100%;
-            object-fit: cover; }
-            #visual .inner > .wrap article .pic a img {
-              width: 100%;
+        height: 546px;
+        transform-style: preserve-3d;
+        transition: 2s; }
+        #visual .inner > .wrap section.on {
+          transform: rotateY(180deg); }
+        #visual .inner > .wrap section:nth-of-type(1) {
+          position: absolute;
+          top: 0;
+          left: 0; }
+        #visual .inner > .wrap section:nth-of-type(2) {
+          position: absolute;
+          top: 0;
+          left: 400px; }
+        #visual .inner > .wrap section:nth-of-type(3) {
+          position: absolute;
+          top: 0;
+          left: 800px; }
+        #visual .inner > .wrap section article {
+          width: 100%;
+          height: 100%;
+          border: 1px solid #333;
+          background: #f9f9f9;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 2s; }
+          #visual .inner > .wrap section article.front {
+            z-index: 1;
+            transform: rotateY(180deg); }
+          #visual .inner > .wrap section article.back {
+            z-index: 2; }
+            #visual .inner > .wrap section article.back h1 {
+              border-bottom: none;
+              font: 600 30px/1 "Gothic A1";
+              color: #111;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+          #visual .inner > .wrap section article h1 {
+            font: 600 16px/1 "Gothic A1";
+            color: #666;
+            padding: 10px 20px;
+            border-bottom: 1px solid #333; }
+          #visual .inner > .wrap section article h2 {
+            font: 500 45px/1 "Gothic A1";
+            color: #333;
+            padding: 10px 20px 50px;
+            border-bottom: 1px solid #333; }
+          #visual .inner > .wrap section article .wrap {
+            padding: 10px 20px;
+            border-bottom: 1px solid #333; }
+            #visual .inner > .wrap section article .wrap p {
+              float: left;
+              width: 65%;
+              font: 500 10px/1.1 "Gothic A1";
+              color: #555; }
+            #visual .inner > .wrap section article .wrap ul {
+              float: right;
+              width: 30%; }
+              #visual .inner > .wrap section article .wrap ul li {
+                font: 600 14px/1.3 "Gothic A1";
+                color: #222; }
+                #visual .inner > .wrap section article .wrap ul li::before {
+                  content: '';
+                  display: inline-block;
+                  width: 3px;
+                  height: 3px;
+                  background: #222;
+                  border-radius: 50%;
+                  margin-bottom: 3px;
+                  margin-right: 2px; }
+          #visual .inner > .wrap section article .pic {
+            height: 280px;
+            background: #bbb; }
+            #visual .inner > .wrap section article .pic::after {
+              content: '';
+              display: block;
+              clear: both; }
+            #visual .inner > .wrap section article .pic a {
+              display: block;
+              float: left;
+              width: 65%;
               height: 100%;
               object-fit: cover;
-              filter: grayscale(60%); }
-              #visual .inner > .wrap article .pic a img:hover {
-                filter: grayscale(0); }
-          #visual .inner > .wrap article .pic p {
-            float: right;
-            width: 35%;
-            height: 50%;
-            background: #ddd;
-            font: 600 40px/1 "Pathway Gothic One";
-            color: #111;
-            text-align: center;
-            border-left: 1px solid #333;
-            padding: 45px 0; }
-            #visual .inner > .wrap article .pic p:nth-of-type(2) {
-              border-top: 1px solid #333;
-              background: #aaa; }
-            #visual .inner > .wrap article .pic p span {
-              display: block;
-              font: 600 10px/1 "Gothic A1";
-              color: #111; }
+              overflow: hidden; }
+              #visual .inner > .wrap section article .pic a img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(60%);
+                transition: .4s; }
+                #visual .inner > .wrap section article .pic a img:hover {
+                  filter: grayscale(0);
+                  transform: scale(1.15); }
+            #visual .inner > .wrap section article .pic p {
+              float: right;
+              width: 35%;
+              height: 50%;
+              background: #ddd;
+              font: 600 40px/1 "Pathway Gothic One";
+              color: #111;
+              text-align: center;
+              border-left: 1px solid #333;
+              padding: 45px 0; }
+              #visual .inner > .wrap section article .pic p:nth-of-type(2) {
+                border-top: 1px solid #333;
+                background: #aaa; }
+              #visual .inner > .wrap section article .pic p span {
+                display: block;
+                font: 600 10px/1 "Gothic A1";
+                color: #111; }
   #visual .filter {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333; }
@@ -522,12 +563,148 @@ body {
             border-right: 5px solid transparent;
             margin-left: 5px;
             margin-bottom: 2px; }
-  #visual .inner.detail {
+  #visual .detail {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #fefefe;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%; }
+    opacity: 1;
+    transition: 1s;
+    z-index: -1; }
+    #visual .detail.on {
+      z-index: 10; }
+      #visual .detail.on .inner {
+        opacity: 1; }
+        #visual .detail.on .inner .pic {
+          width: 750px;
+          height: 100%;
+          left: 150px;
+          bottom: 0; }
+        #visual .detail.on .inner .con h1::before, #visual .detail.on .inner .con h2::after {
+          right: 0;
+          opacity: 1; }
+        #visual .detail.on .inner .con .wrap {
+          transform: translateY(0);
+          opacity: 1; }
+    #visual .detail .inner {
+      width: 100%;
+      height: 100%;
+      padding-left: 900px;
+      opacity: 0;
+      transition: 1s; }
+      #visual .detail .inner .pic {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 30%;
+        bottom: 100px;
+        transition: 1.4s;
+        background: #000; }
+        #visual .detail .inner .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      #visual .detail .inner .con {
+        width: 100%;
+        height: 100%;
+        padding: 100px 50px; }
+        #visual .detail .inner .con h1 {
+          font: 500 50px/1 "Gothic A1";
+          color: #111;
+          margin-bottom: 100px; }
+          #visual .detail .inner .con h1::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #555;
+            margin-bottom: 20px;
+            position: relative;
+            right: -50%;
+            transition: .6s .6s;
+            opacity: 0; }
+        #visual .detail .inner .con h2 {
+          font: 600 14px/3 "Gothic A1";
+          color: #111;
+          margin-bottom: 50px;
+          position: relative; }
+          #visual .detail .inner .con h2::before {
+            content: "lorem";
+            display: block;
+            font: 500 12px/3 "Gothic A1";
+            position: absolute;
+            top: -40px;
+            left: 0; }
+          #visual .detail .inner .con h2::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #000;
+            position: absolute;
+            top: 0;
+            right: -50%;
+            transition: .8s .6s;
+            opacity: 0; }
+        #visual .detail .inner .con .wrap {
+          margin-bottom: 190px;
+          transform: translateY(200px);
+          transition: .6s .6s;
+          opacity: 0; }
+          #visual .detail .inner .con .wrap p {
+            float: left;
+            width: 60%;
+            font: 400 13px/1.6 "Gothic A1";
+            color: #555; }
+          #visual .detail .inner .con .wrap .thumb {
+            float: right;
+            width: 30%;
+            height: 170px; }
+            #visual .detail .inner .con .wrap .thumb img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain; }
+        #visual .detail .inner .con h3 {
+          display: inline-block;
+          font: 600 12px/1 "Gothic A1";
+          color: #333;
+          padding: 10px;
+          border-bottom: 1px solid #333; }
+      #visual .detail .inner .close {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 25px;
+        height: 2px;
+        background: #000; }
+        #visual .detail .inner .close::before {
+          content: '';
+          display: block;
+          width: 15px;
+          height: 2px;
+          background: inherit;
+          transform: rotate(-45deg);
+          transform-origin: left center; }
+        #visual .detail .inner .close::after {
+          content: '';
+          display: block;
+          width: 15px;
+          height: 2px;
+          background: inherit;
+          transform: rotate(45deg);
+          transform-origin: left center;
+          margin-top: -2px; }
+      #visual .detail .inner > p {
+        position: absolute;
+        left: 25px;
+        bottom: 20px;
+        font: 500 16px/1 "Gothic A1";
+        color: #111;
+        transform-origin: left center;
+        transform: rotate(-90deg); }
 
 #main {
   width: 100%;

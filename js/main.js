@@ -38,48 +38,87 @@ function letterMotion(item, delay){
 
 
 // visual tab button
+const $wrap = $("#visual .wrapbox >.wrap");
+const $section = $("#visual .wrapbox section");
+const $front = $("#visual .front");
+const $back = $("#visual .back");
+const $btns = $("#visual .filter li");
 let i=0;
 
-setTimeout(function(){
-    $("#visual .wrapbox >.wrap").eq(0).slideDown(speed);
-}, speed/2 );
-
 let timer3 = setInterval(function(){
-    (i >= 2) ? i=0 : i++;
-    visualMoving(i);
+    rotate();
 }, speed*3);
 
-$("#visual .filter li a").on("click", function(e){
+function rotate(){
+    (i >= 2) ? i = 0 : i++;
+    $section.addClass("on");
+    $front.css({zIndex: 2});
+    $back.css({zIndex: 1});
+    setTimeout(function(){
+        $section.removeClass("on");
+        $front.css({zIndex: 1});
+        $back.css({zIndex: 2});
+    }, speed*2);
+    setTimeout(function(){
+        $wrap.fadeOut();
+        $wrap.eq(i).fadeIn();
+    }, speed*2.5);
+}
+
+$btns.on("click", function(e){
     e.preventDefault();
-    let target = $(this).parent().index() - 1;
-    let isActive = $(this).hasClass("on");
+    let index = $(this).index() - 1;
+    let isActive = $(this).children("a").hasClass("on");
 
     if(isActive) return;
     if(enableClick){
         enableClick = false;
+
         clearInterval(timer3);
-        visualMoving(target);
+
+        $btns.children("a").removeClass("on");
+        $(this).children("a").addClass("on");
+    
+        $section.addClass("on");
+        $front.css({zIndex: 2});
+        $back.css({zIndex: 1});
+        $wrap.fadeOut();
+        $wrap.eq(index).fadeIn(0, function(){
+            enableClick = true;
+        });
     }
 });
 
-$("#visual .wrapbox article").on("mouseenter", function(){
-    clearInterval(timer3);
-});
-$("#visual .wrapbox article").on("mouseleave", function(){
-    timer3 = setInterval(function(){
-        (i >= 2) ? i=0 : i++;
-        visualMoving(i);
-    }, speed*3);
-});
 
 
-function visualMoving(index){
-    $("#visual .filter li a").removeClass("on");
-    $("#visual .filter li").eq(index + 1).children("a").addClass("on");
-    $("#visual .wrapbox >.wrap").slideUp(speed/2);
-    setTimeout(function(){
-        $("#visual .wrapbox >.wrap").eq(index).slideDown(speed);
-    }, speed/2, function(){
-        enableClick = true;
+//visual detail page
+const $btnClose = $("#visual .detail .close");
+const $img = $("#visual .wrapbox img")
+
+$img.on("click", function(e){
+    e.preventDefault();
+    let imgSrc = $(this).attr("src");
+    let index = $(this).closest("article").index();
+    let tit1 = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find("h2").text();
+    let tit2 = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find("li").eq(0).text();
+    let desc = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find(".wrap p").text();
+
+
+    $("#visual .detail .pic img").attr({src: imgSrc});
+    $("#visual .detail .thumb img").attr({src: imgSrc});
+    $("#visual .detail h1").text(tit1);
+    $("#visual .detail h2").text(tit2);
+    $("#visual .detail .con p").text(desc);
+
+    $("#visual .detail").fadeIn(0, function(){
+        $("#visual .detail").addClass("on");
     });
-}
+    
+});
+
+$btnClose.on("click", function(e){
+    e.preventDefault();
+
+    $("#visual .detail").removeClass("on");
+    $("#visual .detail").fadeOut(1000);
+});
