@@ -1,92 +1,109 @@
-let enableClick = true;
 
-//slidebox slide
-$(".mento .slider-wrapper .slide").last().prependTo(".mento .slider-wrapper");
-
-let timer = setInterval(function(){
-    movingRight(".mento .slider-wrapper", ".slider", -100, -50);
-}, speed*2);
-
-$(".mento .prev").on("click", function(e){
-    e.preventDefault();
-
-    if(enableClick){
-        enableClick = false;
-        
-        clearInterval(timer);
-        movingLeft(".mento .slider-wrapper", ".slider", -50);
-    }
+$(document).ready(function(){
+    new Slider({
+        frame: ".mento .slider-wrapper",
+        slider: ".slider",
+        prev: ".mento .prev",
+        next: ".mento .next",
+        default_percent: "-50%",
+        moving_percent: "-100%",
+        speed: 2000
+    });
+    new Slider({
+        frame: ".box3 .slider-wrapper",
+        slider: ".slider",
+        prev: ".box3 .prev",
+        next: ".box3 .next",
+        default_percent: "-100%",
+        moving_percent: "-200%",
+        speed: 3000
+    });
 });
 
-$(".mento .next").on("click", function(e){
-    e.preventDefault();
 
-    if(enableClick){
-        enableClick = false;
-        
-        clearInterval(timer);
-        movingRight(".mento .slider-wrapper", ".slider", -100, -50)
+
+class Slider{
+    constructor(opt){
+        this.initDOM(opt);
+        this.init();
+        this.bindingEvent();
     }
-});
+    initDOM(opt){
+        this.frame = opt.frame;
+        this.slider = opt.slider;
+        this.prev = opt.prev;
+        this.next = opt.next;
+        this.default_per = opt.def_percent;
+        this.moving_per = opt.moving_percent;
+        this.speed = opt.speed;
+        this.enableClick = true;
+    }
+    init(){
+        $(this.frame).find(this.slider).last().prependTo(this.frame);
+    
+        this.timer = setInterval(function(){
+            this.movingRight();
+        }.bind(this), this.speed);
+    }
+    bindingEvent(){
+        $(this.prev).on("click", e=>{
+            e.preventDefault();
+        
+            if(this.enableClick){
+                this.enableClick = false;
+                clearInterval(this.timer);
+                this.movingLeft();
+            }
+        });
+        
+        $(this.next).on("click", e=>{
+            e.preventDefault();
+        
+            if(this.enableClick){
+                this.enableClick = false;
+                clearInterval(this.timer);
+                this.movingRight();
+            }
+        });
+    }
+    movingLeft(){
+        $(this.frame).animate({marginLeft: 0}, 1000, function(){
+            $(this.frame).css({marginLeft: (this.default_per) +"%"});
+            $(this.frame).children(this.slider).last().prependTo(this.frame);
+            this.enableClick = true;
+        }.bind(this))
+    }
+    movingRight(){
+        $(this.frame).animate({marginLeft: this.moving_per +"%"}, 1000, function(){
+            $(this.frame).css({marginLeft: this.default_per +"%"});
+            $(this.frame).children(this.slider).first().appendTo(this.frame);
+            this.enableClick = true;
+        }.bind(this))
+    }
+}
+
+
 
 // box1 slide
-$(".box1 .btns li").on("click", function(){
+const $sliderBtns = $(".box1 .btns li");
+const $frame = $(".box1 .slider-wrapper");
+let enableClick = true;
+
+$sliderBtns.on("click", function(){
 
     if(enableClick){
         enableClick =false;
         let index = $(this).index();
 
-        $(".box1 .btns li").removeClass("on");
+        $sliderBtns.removeClass("on");
         $(this).addClass("on");
-        $(".slider-wrapper").animate({left: -(100 * index) +"%"}, speed/2, function(){
+        $frame.animate({left: -(100 * index) +"%"}, speed/2, function(){
             enableClick = true;
         });
     }
 });
 
-//box3 slide
-$(".box3 .slider-wrapper .slider").last().prependTo(".box3 .slider-wrapper");
-
-let timer2 = setInterval(function(){
-    movingRight(".box3 .slider-wrapper", ".slider", -100, 0);
-}, speed*3);
-
-$(".box3 .frame .prev").on("click", function(e){
-    e.preventDefault();
-
-    if(enableClick){
-        enableClick = false;
-        
-        clearInterval(timer2);
-        movingLeft(".box3 .slider-wrapper", ".slider", -100);
-    }
-});
-
-$(".box3 .frame .next").on("click", function(e){
-    e.preventDefault();
-
-    if(enableClick){
-        enableClick = false;
-        
-        clearInterval(timer2);
-        movingRight(".box3 .slider-wrapper", ".slider", -200, -100);
-    }
-});
 
 
 
-function movingLeft(frame, slider, def_percent){
-    $(frame).animate({marginLeft: 0}, speed/2, function(){
-        $(this).css({marginLeft: def_percent +"%"});
-        $(frame).children(slider).last().prependTo(frame);
-        enableClick = true;
-    })
-}
 
-function movingRight(frame, slider, percent, def_percent){
-    $(frame).animate({marginLeft: percent +"%"}, speed/2, function(){
-        $(this).css({marginLeft: def_percent +"%"});
-        $(frame).children(slider).first().appendTo(frame);
-        enableClick = true;
-    })
-}
