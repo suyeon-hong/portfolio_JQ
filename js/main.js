@@ -123,8 +123,8 @@ $img.on("click", function(e){
 
     $detail.find(".pic").children("img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".thumb").children("img").attr({src: imgSrc, alt: imgAlt});
-    $detail.find("h1").text(tit1);
-    $detail.find("h2").text(tit2);
+    $detail.find(".con >h1").text(tit1);
+    $detail.find(".con >h2").text(tit2);
     $detail.find(".con p").text(desc);
 
     $detail.fadeIn(0);

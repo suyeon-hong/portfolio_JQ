@@ -587,8 +587,10 @@ body{
                         p{
                             float: left;
                             width: 65%;
+                            height: 53px;
                             font: 500 10px/1.1 $font;
                             color: #555;
+                            overflow: hidden;
                         }
                         ul{
                             float: right;
@@ -797,6 +799,28 @@ body{
                 height: 100%;
                 padding: 100px 50px;
     
+                .date{
+                    position: absolute;
+                    top: 20px;
+                    right: 150px;
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(0,0,0,0.2);
+                    padding: 50px;
+
+                    h1, h2, h3{
+                        font: 300 14px/1 $font;
+                        color: rgba(0,0,0,0.6);
+                        letter-spacing: 2px;
+                        margin-bottom: 10px;
+                    }
+                    h1{
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        color: #111;
+                    }
+                }
                 .arrow{
                     display: block;
                     width: 1px;
@@ -834,7 +858,7 @@ body{
                         transition: transform .4s .6s, height 1s .6s;
                     }
                 }
-                h1{
+                >h1{
                     font: 500 50px/1 $font;
                     color: #111;
                     margin-bottom: 100px;
@@ -852,16 +876,16 @@ body{
                         opacity: 0;
                     }
                 }
-                h2{
+                >h2{
                     font: 600 11px/3 $font;
                     color: #111;
                     margin-bottom: 50px;
                     position: relative;
     
                     &::before{
-                        content: "lorem";
+                        content: "style";
                         display: block;
-                        font: 500 10px/1 $font;
+                        font: 600 10px/1 $font;
                         position: absolute;
                         top: -25px;
                         left: 0;
@@ -903,7 +927,7 @@ body{
                         }
                     }
                 }
-                h3{
+                >h3{
                     position: absolute;
                     bottom: 30px;
                     left: 950px;
