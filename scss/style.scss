@@ -748,6 +748,18 @@ body{
                     bottom: 0;
                 }
                 .con{
+                    .arrow{
+                        height: 40px;
+
+                        &::before{
+                            transform: rotate(-45deg);
+                            height: 20px;
+                        }
+                        &::after{
+                            transform: rotate(45deg);
+                            height: 20px;
+                        }
+                    }
                     h1::before, h2::after{
                         right: 0;
                         opacity: 1;
@@ -773,7 +785,6 @@ body{
                 left: 30%;
                 bottom: 100px;
                 transition: 1.4s;
-                background: #000;
     
                 img{
                     width: 100%;
@@ -786,6 +797,43 @@ body{
                 height: 100%;
                 padding: 100px 50px;
     
+                .arrow{
+                    display: block;
+                    width: 1px;
+                    height: 0;
+                    background: orange;
+                    position: absolute;
+                    top: 160px;
+                    right: 70px;
+                    transition: .6s .6s;
+
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 1px;
+                        height: 0;
+                        background: inherit;
+                        transform-origin: bottom center;
+                        margin-left: -1px;
+                        transition: transform .4s .6s, height 1s .6s;
+                    }
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 1px;
+                        height: 0;
+                        background: inherit;
+                        transform-origin: bottom center;
+                        margin-left: -1px;
+                        transition: transform .4s .6s, height 1s .6s;
+                    }
+                }
                 h1{
                     font: 500 50px/1 $font;
                     color: #111;
@@ -805,7 +853,7 @@ body{
                     }
                 }
                 h2{
-                    font: 600 14px/3 $font;
+                    font: 600 11px/3 $font;
                     color: #111;
                     margin-bottom: 50px;
                     position: relative;
@@ -813,9 +861,9 @@ body{
                     &::before{
                         content: "lorem";
                         display: block;
-                        font: 500 12px/3 $font;
+                        font: 500 10px/1 $font;
                         position: absolute;
-                        top: -40px;
+                        top: -25px;
                         left: 0;
                     }
                     &::after{
@@ -832,7 +880,6 @@ body{
                     }
                 }
                 .wrap{
-                    margin-bottom: 190px;
                     transform: translateY(200px);
                     transition: .6s .6s;
                     opacity: 0;
@@ -846,16 +893,20 @@ body{
                     .thumb{
                         float: right;
                         width: 30%;
-                        height: 170px;
+                        height: 100%;
     
                         img{
                             width: 100%;
                             height: 100%;
                             object-fit: contain;
+                            filter: grayscale(30%);
                         }
                     }
                 }
                 h3{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 950px;
                     display: inline-block;
                     font: 600 12px/1 $font;
                     color: #333;

@@ -106,33 +106,34 @@ $section.on("mouseleave", function(){
 
 
 //visual detail page
-const $btnClose = $("#visual .detail .close");
-const $img = $("#visual .wrapbox img")
+const $detail = $(".detail");
+const $btnClose = $detail.find(".close");
+const $img = $wrap.find("img");
 
 $img.on("click", function(e){
     e.preventDefault();
     let imgSrc = $(this).attr("src");
-    let index = $(this).closest("article").index();
-    let tit1 = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find("h2").text();
-    let tit2 = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find("li").eq(0).text();
-    let desc = $("#visual .wrapbox >.wrap").eq(index).find("article").eq(index).find(".wrap p").text();
+    let imgAlt = $(this).attr("alt");
+    let itemIndex = $(this).closest("section").index();
+    let boxIndex = $(this).closest("article").parent("section").parent(".wrap").index();
 
+    let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
+    let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
+    let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
 
-    $("#visual .detail .pic img").attr({src: imgSrc});
-    $("#visual .detail .thumb img").attr({src: imgSrc});
-    $("#visual .detail h1").text(tit1);
-    $("#visual .detail h2").text(tit2);
-    $("#visual .detail .con p").text(desc);
+    $detail.find(".pic").children("img").attr({src: imgSrc, alt: imgAlt});
+    $detail.find(".thumb").children("img").attr({src: imgSrc, alt: imgAlt});
+    $detail.find("h1").text(tit1);
+    $detail.find("h2").text(tit2);
+    $detail.find(".con p").text(desc);
 
-    $("#visual .detail").fadeIn(0, function(){
-        $("#visual .detail").addClass("on");
-    });
-    
+    $detail.fadeIn(0);
+    $detail.addClass("on");
 });
 
 $btnClose.on("click", function(e){
     e.preventDefault();
 
-    $("#visual .detail").removeClass("on");
-    $("#visual .detail").fadeOut(1000);
+    $detail.removeClass("on");
+    $detail.fadeOut(1000);
 });
