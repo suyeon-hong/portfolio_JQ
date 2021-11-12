@@ -60,7 +60,7 @@ function rotate(){
         $back.css({zIndex: 2});
     }, speed*2);
     setTimeout(function(){
-        $wrap.fadeOut(0);
+        $wrap.fadeOut(500);
         $btns.children("a").removeClass("on");
         $wrap.eq(i).fadeIn();
         $btns.eq(i + 1).children("a").addClass("on");
