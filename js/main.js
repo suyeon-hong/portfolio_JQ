@@ -60,8 +60,10 @@ function rotate(){
         $back.css({zIndex: 2});
     }, speed*2);
     setTimeout(function(){
-        $wrap.fadeOut();
+        $wrap.fadeOut(0);
+        $btns.children("a").removeClass("on");
         $wrap.eq(i).fadeIn();
+        $btns.eq(i + 1).children("a").addClass("on");
     }, speed*2.5);
 }
 
@@ -89,6 +91,18 @@ $btns.on("click", function(e){
     }
 });
 
+$section.on("mouseenter", function(){
+    clearInterval(timer3);
+    $section.addClass("on");
+    $front.css({zIndex: 2});
+    $back.css({zIndex: 1});
+});
+
+$section.on("mouseleave", function(){
+    timer3 = setInterval(function(){
+        rotate();
+    }, speed*3);
+});
 
 
 //visual detail page
