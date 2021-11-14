@@ -33,6 +33,8 @@ $(window).on("scroll", function(){
         }
         if(scroll >= posArr[1] + baseLine && scroll < posArr[2]){
             $(".box2").addClass("on");
+        }else{
+            $(".box2").removeClass("on");
         }
         if(scroll >= posArr[3] + baseLine && scroll < posArr[4]){
             let current_scroll = (scroll - posArr[3] - baseLine) * 3;
