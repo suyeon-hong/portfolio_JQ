@@ -1690,8 +1690,8 @@ body {
     #visual .detail .inner .con .date h1 {
       font-size: 16px;
       margin-bottom: 15px; }
-    #visual .detail .inner .con .date h2 {
-      font-size: 12px;
+    #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
+      font-size: 11px;
       margin-bottom: 5px; }
 
   #main .inner .box1 .wrap .frame {
@@ -1791,6 +1791,57 @@ body {
         font-size: 12px; }
       #visual .filter .inner ul li:nth-of-type(n+2) a {
         font-size: 12px; }
+    #visual .detail.on .inner .pic {
+      left: 30px;
+      width: 45vw; }
+    #visual .detail .inner {
+      padding-left: 53vw; }
+      #visual .detail .inner .con {
+        padding: 0; }
+        #visual .detail .inner .con .date {
+          width: 100px;
+          height: 100px;
+          top: auto;
+          bottom: 40px;
+          right: 5px;
+          padding: 22px; }
+          #visual .detail .inner .con .date h1 {
+            font-size: 12px;
+            margin-bottom: 10px; }
+          #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
+            font-size: 11px; }
+        #visual .detail .inner .con .arrow {
+          top: 20px;
+          height: 70px; }
+        #visual .detail .inner .con > h1 {
+          font-size: 26px; }
+          #visual .detail .inner .con > h1::before {
+            display: none; }
+        #visual .detail .inner .con > h2 {
+          font-size: 10px;
+          margin-bottom: 10px; }
+          #visual .detail .inner .con > h2::before {
+            top: -15px; }
+        #visual .detail .inner .con .wrap p {
+          width: 100%;
+          font-size: 11px;
+          line-height: 1.4; }
+        #visual .detail .inner .con .wrap .thumb {
+          display: none; }
+        #visual .detail .inner .con > h3 {
+          left: 53vw;
+          bottom: 20px;
+          font-size: 10px;
+          padding: 5px; }
+      #visual .detail .inner .close {
+        width: 20px;
+        top: 25px;
+        left: 5px; }
+        #visual .detail .inner .close::before, #visual .detail .inner .close::after {
+          width: 12px; }
+      #visual .detail .inner > p {
+        font-size: 13px;
+        left: 15px; }
 
   #main .inner {
     padding: 0 30px; }
