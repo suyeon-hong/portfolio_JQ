@@ -621,24 +621,6 @@ body {
         width: 100%;
         height: 100%;
         padding: 100px 50px; }
-        #visual .detail .inner .con .date {
-          position: absolute;
-          top: 20px;
-          right: 5vw;
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
-          border: 1px solid rgba(0, 0, 0, 0.2);
-          padding: 50px; }
-          #visual .detail .inner .con .date h1, #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
-            font: 300 14px/1 "Gothic A1";
-            color: rgba(0, 0, 0, 0.6);
-            letter-spacing: 2px;
-            margin-bottom: 10px; }
-          #visual .detail .inner .con .date h1 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #111; }
         #visual .detail .inner .con .arrow {
           display: block;
           width: 1px;
@@ -737,6 +719,24 @@ body {
           color: #333;
           padding: 10px;
           border-bottom: 1px solid #333; }
+        #visual .detail .inner .con .date {
+          position: absolute;
+          bottom: 50px;
+          right: 10vw;
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          padding: 50px; }
+          #visual .detail .inner .con .date h1, #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
+            font: 300 14px/1 "Gothic A1";
+            color: rgba(0, 0, 0, 0.6);
+            letter-spacing: 2px;
+            margin-bottom: 10px; }
+          #visual .detail .inner .con .date h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #111; }
       #visual .detail .inner .close {
         position: absolute;
         top: 30px;
@@ -1604,10 +1604,6 @@ body {
       padding-left: 53vw; }
       #visual .detail .inner .con {
         padding: 90px 0; }
-        #visual .detail .inner .con .date {
-          width: 150px;
-          height: 150px;
-          padding: 36px; }
         #visual .detail .inner .con .arrow {
           top: 140px;
           right: 40px; }
@@ -1618,6 +1614,11 @@ body {
           margin-bottom: 30px; }
         #visual .detail .inner .con > h3 {
           left: 53vw; }
+        #visual .detail .inner .con .date {
+          width: 150px;
+          height: 150px;
+          padding: 36px;
+          bottom: 100px; }
 
   #main .inner {
     width: 100%;
@@ -1686,7 +1687,8 @@ body {
     left: 70px; }
   #visual .detail .inner .con .date {
     width: 120px;
-    height: 120px; }
+    height: 120px;
+    padding: 30px; }
     #visual .detail .inner .con .date h1 {
       font-size: 16px;
       margin-bottom: 15px; }
@@ -1798,18 +1800,6 @@ body {
       padding-left: 53vw; }
       #visual .detail .inner .con {
         padding: 0; }
-        #visual .detail .inner .con .date {
-          width: 100px;
-          height: 100px;
-          top: auto;
-          bottom: 40px;
-          right: 5px;
-          padding: 22px; }
-          #visual .detail .inner .con .date h1 {
-            font-size: 12px;
-            margin-bottom: 10px; }
-          #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
-            font-size: 11px; }
         #visual .detail .inner .con .arrow {
           top: 20px;
           height: 70px; }
@@ -1833,6 +1823,18 @@ body {
           bottom: 20px;
           font-size: 10px;
           padding: 5px; }
+        #visual .detail .inner .con .date {
+          width: 100px;
+          height: 100px;
+          top: auto;
+          bottom: 20px;
+          right: 20px;
+          padding: 22px; }
+          #visual .detail .inner .con .date h1 {
+            font-size: 12px;
+            margin-bottom: 10px; }
+          #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h3 {
+            font-size: 11px; }
       #visual .detail .inner .close {
         width: 20px;
         top: 25px;
@@ -2016,6 +2018,8 @@ body {
           padding: 10px; }
     #visual .filter {
       display: none; }
+    #visual .detail .inner {
+      padding: 20px 10px; }
 
   #main .inner {
     padding: 0 10px; }

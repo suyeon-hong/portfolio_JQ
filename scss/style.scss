@@ -800,28 +800,6 @@ body{
                 height: 100%;
                 padding: 100px 50px;
     
-                .date{
-                    position: absolute;
-                    top: 20px;
-                    right: 5vw;
-                    width: 180px;
-                    height: 180px;
-                    border-radius: 50%;
-                    border: 1px solid rgba(0,0,0,0.2);
-                    padding: 50px;
-
-                    h1, h2, h3{
-                        font: 300 14px/1 $font;
-                        color: rgba(0,0,0,0.6);
-                        letter-spacing: 2px;
-                        margin-bottom: 10px;
-                    }
-                    h1{
-                        font-size: 20px;
-                        margin-bottom: 20px;
-                        color: #111;
-                    }
-                }
                 .arrow{
                     display: block;
                     width: 1px;
@@ -937,6 +915,28 @@ body{
                     color: #333;
                     padding: 10px;
                     border-bottom: 1px solid #333;
+                }
+                .date{
+                    position: absolute;
+                    bottom: 50px;
+                    right: 10vw;
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(0,0,0,0.2);
+                    padding: 50px;
+
+                    h1, h2, h3{
+                        font: 300 14px/1 $font;
+                        color: rgba(0,0,0,0.6);
+                        letter-spacing: 2px;
+                        margin-bottom: 10px;
+                    }
+                    h1{
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        color: #111;
+                    }
                 }
             }
             .close{
@@ -2099,11 +2099,6 @@ body{
                 .con{
                     padding: 90px 0;
 
-                    .date{
-                        width: 150px;
-                        height: 150px;
-                        padding: 36px;
-                    }
                     .arrow{
                         top: 140px;
                         right: 40px;
@@ -2117,6 +2112,12 @@ body{
                     }
                     >h3{
                         left: 53vw;
+                    }
+                    .date{
+                        width: 150px;
+                        height: 150px;
+                        padding: 36px;
+                        bottom: 100px;
                     }
                 }
             }
@@ -2257,6 +2258,7 @@ body{
                     .date{
                         width: 120px;
                         height: 120px;
+                        padding: 30px;
 
                         h1{
                             font-size: 16px;
@@ -2456,22 +2458,6 @@ body{
                 .con{
                     padding: 0;
 
-                    .date{
-                        width: 100px;
-                        height: 100px;
-                        top: auto;
-                        bottom: 40px;
-                        right: 5px;
-                        padding: 22px;
-
-                        h1{
-                            font-size: 12px;
-                            margin-bottom: 10px;
-                        }
-                        h2, h3{
-                            font-size: 11px;
-                        }
-                    }
                     .arrow{
                         top: 20px;
                         height: 70px;
@@ -2506,6 +2492,22 @@ body{
                         bottom: 20px;
                         font-size: 10px;
                         padding: 5px;
+                    }
+                    .date{
+                        width: 100px;
+                        height: 100px;
+                        top: auto;
+                        bottom: 20px;
+                        right: 20px;
+                        padding: 22px;
+
+                        h1{
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                        }
+                        h2, h3{
+                            font-size: 11px;
+                        }
                     }
                 }
                 .close{
@@ -2821,6 +2823,11 @@ body{
         }
         .filter{
             display: none;
+        }
+        .detail{
+            .inner{
+                padding: 20px 10px;
+            }
         }
     }
 
