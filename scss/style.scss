@@ -2104,6 +2104,10 @@ body{
                         height: 150px;
                         padding: 36px;
                     }
+                    .arrow{
+                        top: 140px;
+                        right: 40px;
+                    }
                     >h1{
                         margin-bottom: 60px;
                         font-size: 34px;
@@ -2238,6 +2242,30 @@ body{
                     p{
                         width: 40%;
                         font-size: 26px;
+                    }
+                }
+            }
+        }
+        .detail{
+            &.on{
+                .inner .pic{
+                    left: 70px;
+                }
+            }
+            .inner{
+                .con{
+                    .date{
+                        width: 120px;
+                        height: 120px;
+
+                        h1{
+                            font-size: 16px;
+                            margin-bottom: 15px;
+                        }
+                        h2{
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                        }
                     }
                 }
             }

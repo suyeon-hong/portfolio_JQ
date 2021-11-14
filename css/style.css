@@ -1608,6 +1608,9 @@ body {
           width: 150px;
           height: 150px;
           padding: 36px; }
+        #visual .detail .inner .con .arrow {
+          top: 140px;
+          right: 40px; }
         #visual .detail .inner .con > h1 {
           margin-bottom: 60px;
           font-size: 34px; }
@@ -1679,6 +1682,17 @@ body {
     #visual .inner > .wrap section article .pic p {
       width: 40%;
       font-size: 26px; }
+  #visual .detail.on .inner .pic {
+    left: 70px; }
+  #visual .detail .inner .con .date {
+    width: 120px;
+    height: 120px; }
+    #visual .detail .inner .con .date h1 {
+      font-size: 16px;
+      margin-bottom: 15px; }
+    #visual .detail .inner .con .date h2 {
+      font-size: 12px;
+      margin-bottom: 5px; }
 
   #main .inner .box1 .wrap .frame {
     height: 260px; }
