@@ -1908,6 +1908,32 @@ body {
 
   #visual {
     height: 300px; }
+    #visual .inner {
+      display: none; }
+      #visual .inner.wrapbox {
+        display: block; }
+      #visual .inner > .wrap section:nth-of-type(1) {
+        left: 10px;
+        width: 95%; }
+      #visual .inner > .wrap section:nth-of-type(2) {
+        display: none; }
+      #visual .inner > .wrap section article.back {
+        height: 260px; }
+      #visual .inner > .wrap section article h2 {
+        font-weight: 600;
+        padding: 10px; }
+      #visual .inner > .wrap section article .wrap p {
+        width: 60%; }
+      #visual .inner > .wrap section article .wrap ul {
+        width: 35%; }
+        #visual .inner > .wrap section article .wrap ul li {
+          line-height: 1.5; }
+      #visual .inner > .wrap section article .pic {
+        height: 108px; }
+        #visual .inner > .wrap section article .pic p {
+          padding: 10px; }
+    #visual .filter {
+      display: none; }
 
   #main .inner {
     padding: 0 10px; }
