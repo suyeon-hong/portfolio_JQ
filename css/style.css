@@ -1598,6 +1598,23 @@ body {
     #visual .filter .inner {
       width: 100%;
       padding: 14px 30px; }
+    #visual .detail.on .inner .pic {
+      left: 90px; }
+    #visual .detail .inner {
+      padding-left: 53vw; }
+      #visual .detail .inner .con {
+        padding: 90px 0; }
+        #visual .detail .inner .con .date {
+          width: 150px;
+          height: 150px;
+          padding: 36px; }
+        #visual .detail .inner .con > h1 {
+          margin-bottom: 60px;
+          font-size: 34px; }
+        #visual .detail .inner .con > h2 {
+          margin-bottom: 30px; }
+        #visual .detail .inner .con > h3 {
+          left: 53vw; }
 
   #main .inner {
     width: 100%;

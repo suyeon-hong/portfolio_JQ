@@ -2085,6 +2085,38 @@ body{
             width: 100%;
             padding: 14px 30px;
         }
+        .detail{
+            &.on{
+                .inner{
+                    .pic{
+                        left: 90px;
+                    }
+                }
+            }
+            .inner{
+                padding-left: 53vw;
+
+                .con{
+                    padding: 90px 0;
+
+                    .date{
+                        width: 150px;
+                        height: 150px;
+                        padding: 36px;
+                    }
+                    >h1{
+                        margin-bottom: 60px;
+                        font-size: 34px;
+                    }
+                    >h2{
+                        margin-bottom: 30px;
+                    }
+                    >h3{
+                        left: 53vw;
+                    }
+                }
+            }
+        }
     }
 
     #main{
