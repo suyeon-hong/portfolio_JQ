@@ -1645,8 +1645,25 @@ body {
       margin-right: 10px; }
 
   #navi {
-    right: 20px; } }
+    right: 0; } }
 @media screen and (max-width: 980px) {
+  #visual .inner > .wrap section article h1 {
+    font-size: 12px; }
+  #visual .inner > .wrap section article h2 {
+    font-size: 25px; }
+  #visual .inner > .wrap section article .wrap p {
+    height: 64px; }
+  #visual .inner > .wrap section article .wrap ul li {
+    font-size: 11px;
+    line-height: 1.6; }
+  #visual .inner > .wrap section article .pic {
+    height: 324px; }
+    #visual .inner > .wrap section article .pic a {
+      width: 60%; }
+    #visual .inner > .wrap section article .pic p {
+      width: 40%;
+      font-size: 26px; }
+
   #main .inner .box1 .wrap .frame {
     height: 260px; }
     #main .inner .box1 .wrap .frame .mySlider .slider-wrapper div h1 {
