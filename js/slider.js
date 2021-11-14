@@ -1,27 +1,4 @@
 
-$(document).ready(function(){
-    new Slider({
-        frame: ".mento .slider-wrapper",
-        slider: ".slider",
-        prev: ".mento .prev",
-        next: ".mento .next",
-        default_percent: "-50%",
-        moving_percent: "-100%",
-        speed: 2000
-    });
-    new Slider({
-        frame: ".box3 .slider-wrapper",
-        slider: ".slider",
-        prev: ".box3 .prev",
-        next: ".box3 .next",
-        default_percent: "-100%",
-        moving_percent: "-200%",
-        speed: 3000
-    });
-});
-
-
-
 class Slider{
     constructor(opt){
         this.initDOM(opt);

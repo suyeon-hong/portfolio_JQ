@@ -440,10 +440,10 @@ body {
           left: 0;
           transition: 2s; }
           #visual .inner > .wrap section article.front {
-            z-index: 1;
+            z-index: 2;
             transform: rotateY(180deg); }
           #visual .inner > .wrap section article.back {
-            z-index: 2;
+            z-index: 1;
             height: 545px;
             border-width: 2px; }
             #visual .inner > .wrap section article.back h1 {
@@ -574,7 +574,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
     transition: 1s;
     z-index: -1; }
     #visual .detail.on {
