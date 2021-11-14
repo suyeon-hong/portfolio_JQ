@@ -2229,7 +2229,7 @@ body {
         #header_sub .inner #gnb > li .sub {
           display: none;
           width: 1180px;
-          height: 320px;
+          height: 300px;
           position: absolute;
           left: 0;
           top: 37px;
