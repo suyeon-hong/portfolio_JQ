@@ -745,14 +745,14 @@ body{
                 opacity: 1;
 
                 .pic{
-                    width: 750px;
+                    width: 40vw;
                     height: 100%;
                     left: 150px;
                     bottom: 0;
                 }
                 .con{
                     .arrow{
-                        height: 40px;
+                        height: 60px;
 
                         &::before{
                             transform: rotate(-45deg);
@@ -777,7 +777,7 @@ body{
         .inner{
             width: 100%;
             height: 100%;
-            padding-left: 900px;
+            padding-left: 50vw;
             opacity: 0;
             transition: 1s;
 
@@ -803,7 +803,7 @@ body{
                 .date{
                     position: absolute;
                     top: 20px;
-                    right: 150px;
+                    right: 5vw;
                     width: 180px;
                     height: 180px;
                     border-radius: 50%;
@@ -931,7 +931,7 @@ body{
                 >h3{
                     position: absolute;
                     bottom: 30px;
-                    left: 950px;
+                    left: 54vw;
                     display: inline-block;
                     font: 600 12px/1 $font;
                     color: #333;
