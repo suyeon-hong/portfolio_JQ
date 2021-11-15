@@ -971,6 +971,10 @@ body {
               position: absolute;
               bottom: 0;
               right: 0; }
+          #main .inner .box2 .wrap article a:hover {
+            color: #777; }
+            #main .inner .box2 .wrap article a:hover .arrow::before, #main .inner .box2 .wrap article a:hover .arrow::after {
+              background: #777; }
     #main .inner .box3 {
       width: 100%;
       margin-bottom: 50px; }
@@ -981,7 +985,7 @@ body {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          filter: grayscale(60%); }
+          filter: grayscale(80%); }
         #main .inner .box3 .wrap .left {
           float: left;
           width: 65%;
@@ -989,27 +993,30 @@ body {
           #main .inner .box3 .wrap .left article {
             width: 100%;
             margin-bottom: 40px; }
-            #main .inner .box3 .wrap .left article:nth-of-type(1) .pic {
-              width: 100%;
-              height: 400px;
-              background: #555;
-              margin-bottom: 20px; }
-            #main .inner .box3 .wrap .left article:nth-of-type(1) .tag {
-              display: block;
-              font: 600 13px/1 "Gothic A1";
-              color: rosybrown;
-              margin-bottom: 14px; }
-            #main .inner .box3 .wrap .left article:nth-of-type(1) h1 {
-              font: 600 24px/1 "Gothic A1";
-              color: #111;
-              margin-bottom: 10px;
-              cursor: pointer;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-            #main .inner .box3 .wrap .left article:nth-of-type(1) h2 {
-              font: 500 17px/1 "Gothic A1";
-              color: #333; }
+            #main .inner .box3 .wrap .left article:nth-of-type(1) {
+              cursor: pointer; }
+              #main .inner .box3 .wrap .left article:nth-of-type(1):hover {
+                box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1); }
+              #main .inner .box3 .wrap .left article:nth-of-type(1) .pic {
+                width: 100%;
+                height: 400px;
+                background: #555;
+                margin-bottom: 20px; }
+              #main .inner .box3 .wrap .left article:nth-of-type(1) .tag {
+                display: block;
+                font: 600 13px/1 "Gothic A1";
+                color: rosybrown;
+                margin-bottom: 14px; }
+              #main .inner .box3 .wrap .left article:nth-of-type(1) h1 {
+                font: 600 24px/1 "Gothic A1";
+                color: #111;
+                margin-bottom: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              #main .inner .box3 .wrap .left article:nth-of-type(1) h2 {
+                font: 500 17px/1 "Gothic A1";
+                color: #333; }
             #main .inner .box3 .wrap .left article:nth-of-type(2) {
               border-top: 1px dotted #000;
               border-left: 1px dotted #000;
@@ -1028,7 +1035,11 @@ body {
               #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div {
                 width: 48%;
                 margin-right: 4%;
-                float: left; }
+                float: left;
+                cursor: pointer;
+                transition: .4s; }
+                #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div:hover {
+                  transform: scale(1.05); }
                 #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div:last-child {
                   margin-right: 0; }
                 #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div .pic {
@@ -1038,8 +1049,7 @@ body {
                   margin-bottom: 15px; }
                 #main .inner .box3 .wrap .left article:nth-of-type(2) .wrap > div h3 {
                   font: 500 18px/1.2 "Zen Kaku Gothic Antique";
-                  color: #111;
-                  cursor: pointer; }
+                  color: #111; }
               #main .inner .box3 .wrap .left article:nth-of-type(2) .more {
                 position: absolute;
                 top: 50px;
@@ -1202,19 +1212,24 @@ body {
                     transform: rotate(45deg);
                     transform-origin: right center;
                     margin-top: -2px; }
+                #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev:hover::before, #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev:hover::after, #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next:hover::before, #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next:hover::after {
+                  background: #888; }
         #main .inner .box3 .wrap .right {
           float: right;
           width: 28%;
           position: sticky;
           top: 50px;
           right: 0; }
+          #main .inner .box3 .wrap .right h1 {
+            font: bold 38px/1 "Pathway Gothic One";
+            color: #111;
+            margin-bottom: 5px; }
           #main .inner .box3 .wrap .right article {
             width: 100%;
-            margin-bottom: 20px; }
-            #main .inner .box3 .wrap .right article:nth-of-type(1) h1 {
-              font: bold 38px/1 "Pathway Gothic One";
-              color: #111;
-              margin-bottom: 5px; }
+            margin-bottom: 20px;
+            cursor: pointer; }
+            #main .inner .box3 .wrap .right article:hover {
+              box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05); }
             #main .inner .box3 .wrap .right article:nth-of-type(1) .pic {
               width: 100%;
               height: 200px;
@@ -1223,8 +1238,7 @@ body {
             #main .inner .box3 .wrap .right article:nth-of-type(1) h2 {
               font: 600 22px/1.2 "Gothic A1";
               letter-spacing: 1px;
-              color: #222;
-              cursor: pointer; }
+              color: #222; }
             #main .inner .box3 .wrap .right article:not(:nth-of-type(1)) {
               position: relative;
               padding-left: 110px;
@@ -1240,8 +1254,7 @@ body {
                 font: 500 16px/1.2 "Zen Kaku Gothic Antique";
                 letter-spacing: 1px;
                 color: #222;
-                padding: 5px 0;
-                cursor: pointer; }
+                padding: 5px 0; }
     #main .inner .box4 h1 {
       display: inline-block;
       font: 600 20px/1 "Gothic A1";
@@ -1317,7 +1330,10 @@ body {
               float: left;
               width: calc((100% / 4) - 20px);
               height: 100%;
-              margin-right: 20px; }
+              margin-right: 20px;
+              cursor: pointer; }
+              #main .mento .inner .sliderbox .frame .slider-wrapper .slider:hover h4 {
+                color: #bbb; }
               #main .mento .inner .sliderbox .frame .slider-wrapper .slider .pic {
                 width: 100%;
                 height: 300px;
@@ -1327,11 +1343,10 @@ body {
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
-                  filter: grayscale(50%); }
+                  filter: grayscale(80%); }
               #main .mento .inner .sliderbox .frame .slider-wrapper .slider h4 {
                 font: 500 21px/1.2 "Zen Kaku Gothic Antique";
-                color: #fff;
-                cursor: pointer; }
+                color: #fff; }
         #main .mento .inner .sliderbox .prev {
           display: block;
           position: absolute;
@@ -1378,6 +1393,8 @@ body {
             transform: rotate(45deg);
             transform-origin: right center;
             margin-top: -2px; }
+        #main .mento .inner .sliderbox .prev:hover::before, #main .mento .inner .sliderbox .prev:hover::after, #main .mento .inner .sliderbox .next:hover::before, #main .mento .inner .sliderbox .next:hover::after {
+          background: #ddd; }
 
 #footer {
   width: 100%;
