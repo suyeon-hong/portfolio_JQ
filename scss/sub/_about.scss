@@ -172,7 +172,9 @@
                                     opacity: 0;
                                     transition: .6s;
                                 }
-                                &:hover, &.on{
+                            }
+                            &:hover, &.on{
+                                a{
                                     color: #000;
     
                                     &::after{

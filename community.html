@@ -11,6 +11,19 @@
     <script defer src="js/common.js"></script>
     <script defer src="js/tab.js"></script>
     <script defer src="js/community.js"></script>
+    <script>
+        $(document).ready(function(){
+            new Tab({
+                btns: ".inner>dl>dt",
+                boxs: ".inner>dl>dd"
+            });
+            new Tab2({
+                btns: ".qna dt",
+                boxs: ".qna dd",
+                speed: 500
+            })
+        });
+    </script>
 </head>
 <body>
     <header id="header_sub">

@@ -11,7 +11,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="js/common.js"></script>
+    <script defer src="js/tab.js"></script>
     <script defer src="js/about.js"></script>
+    <script>
+        $(document).ready(function(){
+            new Tab({
+                btns: ".services ul li",
+                boxs: ".services img"
+            })
+        });
+    </script>
 </head>
 <body>
     <header id="header_sub">
@@ -366,11 +375,11 @@
                 <h2>Services</h2>
                 <div class="wrap">
                     <ul>
-                        <li><a class="on" href="#architecture" title="architecture 이미지로 전환">Architecture</a></li>
-                        <li><a href="#landscape" title="landscape 이미지로 전환">Landscape</a></li>
-                        <li><a href="#interior" title="interior 이미지로 전환">Interior</a></li>
-                        <li><a href="#product" title="product 이미지로 전환">Product design</a></li>
-                        <li><a href="#graphic" title="graphic 이미지로 전환">Graphic design</a></li>
+                        <li class="on"><a href="#architecture" title="architecture 이미지 보기">Architecture</aclass=></li>
+                        <li><a href="#landscape" title="landscape 이미지 보기">Landscape</a></li>
+                        <li><a href="#interior" title="interior 이미지 보기">Interior</a></li>
+                        <li><a href="#product" title="product 이미지 보기">Product design</a></li>
+                        <li><a href="#graphic" title="graphic 이미지 보기">Graphic design</a></li>
                     </ul>
                     <div class="pic">
                         <img src="img/architecture.jpg" alt="architecture image" id="architecture">

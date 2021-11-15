@@ -1,20 +1,3 @@
-$(document).ready(function(){
-    new Tab({
-        btns: ".inner>dl>dt",
-        boxs: ".inner>dl>dd",
-        motion: "show"
-    });
-    new Tab2({
-        btns: ".qna dt",
-        boxs: ".qna dd",
-        motion: "slideDown",
-        speed: 500
-    })
-});
-
-
-
-// community tab메뉴
 class Tab{
     constructor(opt){
         if(opt.motion = "show"){
@@ -55,7 +38,6 @@ class Tab{
 }
 
 
-// community QnAbox 토글 설정
 class Tab2{
     constructor(opt){
         this.init(opt);

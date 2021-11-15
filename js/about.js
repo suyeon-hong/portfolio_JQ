@@ -1,19 +1,3 @@
-const $btns_service = $(".about .services ul li");
-
-$btns_service.on("click", function(e){
-    e.preventDefault();
-
-    let isOn = $(this).hasClass("on");
-    let id = $(this).children("a").attr("href");
-    
-    if(isOn) return;
-
-    $btns_service.children("a").removeClass("on");
-    $(this).children("a").addClass("on");
-    $(".services img").hide();
-    $(id).fadeIn(500);
-});
-
 // projects 더보기 버튼
 const $projectBtn = $(".about .projects .btnMore");
 const $moreClose = $(".about .projects .btnClose");

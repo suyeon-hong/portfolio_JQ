@@ -45,45 +45,39 @@ const $back = $("#visual .back");
 const $btns = $("#visual .filter li");
 let i=0;
 
-let timer3 = setInterval(function(){
-    rotate();
-}, speed*3);
+let timer = setInterval(rotate, 3000);
 
 $btns.on("click", function(e){
     e.preventDefault();
-    let index = $(this).index() - 1;
     let isActive = $(this).children("a").hasClass("on");
+    i = $(this).index() - 1;
 
     if(isActive) return;
     if(enableClick){
         enableClick = false;
 
-        clearInterval(timer3);
+        clearInterval(timer);
 
         $btns.children("a").removeClass("on");
         $(this).children("a").addClass("on");
     
         $section.addClass("on");
-        $front.css({zIndex: 2});
-        $back.css({zIndex: 1});
         $wrap.fadeOut();
-        $wrap.eq(index).fadeIn(0, function(){
+        $wrap.eq(i).fadeIn(0, function(){
             enableClick = true;
         });
     }
 });
 
 $section.on("mouseenter", function(){
-    clearInterval(timer3);
+    clearInterval(timer);
     $section.addClass("on");
-    $front.css({zIndex: 2});
-    $back.css({zIndex: 1});
 });
 
 $section.on("mouseleave", function(){
-    timer3 = setInterval(function(){
+    timer = setInterval(function(){
         rotate();
-    }, speed*3);
+    }, 3000);
 });
 
 function rotate(){
@@ -91,13 +85,13 @@ function rotate(){
     $section.addClass("on");
     setTimeout(function(){
         $section.removeClass("on");
-    }, speed*2);
+    }, 2000);
     setTimeout(function(){
         $wrap.fadeOut(500);
         $btns.children("a").removeClass("on");
         $wrap.eq(i).fadeIn();
         $btns.eq(i + 1).children("a").addClass("on");
-    }, speed*2.5);
+    }, 2500);
 }
 
 
@@ -117,6 +111,8 @@ $img.on("click", function(e){
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
     let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
 
+    clearInterval(timer);
+
     $detail.find(".pic").children("img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".thumb").children("img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".con >h1").text(tit1);
@@ -129,7 +125,7 @@ $img.on("click", function(e){
 
 $btnClose.on("click", function(e){
     e.preventDefault();
-
+    
     $detail.removeClass("on");
     $detail.fadeOut(1000);
 });
