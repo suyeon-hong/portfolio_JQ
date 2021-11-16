@@ -141,7 +141,7 @@ $img.on("click", function(e){
         $detail_img.css({
             width: "40vw",
             height: "100%",
-            left: "150px",
+            left: "10vw",
             bottom: 0
         })
     }, 100);
