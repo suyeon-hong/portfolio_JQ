@@ -44,10 +44,13 @@ const $back = $section.find(".back");
 const $btns = $("#visual .filter li");
 let i=0;
 
-$(document).ready(function(){
-    $wrap.eq(0).addClass("on");
-    $back.fadeOut(2000);
-});
+$wrap.eq(0).addClass("on");
+$back.hide(2000);
+
+let timer = setInterval(function(){
+    (i >= 2) ? i=0 : i++;
+    reverse(i)
+}, 4000);
 
 $btns.on("click", function(e){
     e.preventDefault();
@@ -58,18 +61,23 @@ $btns.on("click", function(e){
     if(enableClick){
         enableClick = false;
 
-        $btns.removeClass("on");
-        $(this).addClass("on");
-
-        $back.show();
-        $wrap.fadeOut().removeClass("on");
-
-        $wrap.eq(i).fadeIn().addClass("on");
-        $back.fadeOut(2500, function(){
-            enableClick = true;
-        });
+        clearInterval(timer);
+        reverse(i);
     }
 });
+
+function reverse(index){
+    $btns.removeClass("on");
+    $btns.eq(index).addClass("on");
+
+    $back.show();
+    $wrap.fadeOut().removeClass("on");
+
+    $wrap.eq(index).fadeIn().addClass("on");
+    $back.fadeOut(2500, function(){
+        enableClick = true;
+    });
+}
 
 
 
@@ -112,6 +120,8 @@ $img.on("click", function(e){
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
     let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
 
+    clearInterval(timer);
+
     $detail_img.css(imgPos[posIndex]);
     setTimeout(function(){
         $detail_img.css({
@@ -137,6 +147,11 @@ $btnClose.on("click", function(e){
     $detail_img.css(imgPos[posIndex]);
     $detail.removeClass("on");
     $detail.fadeOut(1000);
+
+    timer = setInterval(function(){
+        (i >= 2) ? i=0 : i++;
+        reverse(i)
+    }, 4000);
 });
 
 // detail page date
