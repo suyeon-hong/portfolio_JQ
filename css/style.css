@@ -586,13 +586,13 @@ body {
           left: 150px;
           bottom: 0; }
         #visual .detail.on .inner .con .arrow {
-          height: 60px; }
+          height: 120px; }
           #visual .detail.on .inner .con .arrow::before {
             transform: rotate(-45deg);
-            height: 20px; }
+            height: 30px; }
           #visual .detail.on .inner .con .arrow::after {
             transform: rotate(45deg);
-            height: 20px; }
+            height: 30px; }
         #visual .detail.on .inner .con h1::before, #visual .detail.on .inner .con h2::after {
           right: 0;
           opacity: 1; }
@@ -626,7 +626,7 @@ body {
           height: 0;
           background: orange;
           position: absolute;
-          top: 160px;
+          top: 110px;
           right: 70px;
           transition: .6s .6s; }
           #visual .detail .inner .con .arrow::before {
@@ -1621,8 +1621,8 @@ body {
       #visual .detail .inner .con {
         padding: 90px 0; }
         #visual .detail .inner .con .arrow {
-          top: 140px;
-          right: 40px; }
+          top: 100px;
+          right: 60px; }
         #visual .detail .inner .con > h1 {
           margin-bottom: 60px;
           font-size: 34px; }
@@ -1701,6 +1701,10 @@ body {
       font-size: 26px; }
   #visual .detail.on .inner .pic {
     left: 70px; }
+  #visual .detail .inner .con .arrow {
+    right: 40px; }
+    #visual .detail .inner .con .arrow::before, #visual .detail .inner .con .arrow::after {
+      height: 20px; }
   #visual .detail .inner .con .date {
     width: 120px;
     height: 120px;
@@ -1812,6 +1816,8 @@ body {
     #visual .detail.on .inner .pic {
       left: 30px;
       width: 45vw; }
+    #visual .detail.on .inner .con .arrow {
+      height: 90px; }
     #visual .detail .inner {
       padding-left: 53vw; }
       #visual .detail .inner .con {

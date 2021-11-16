@@ -99,6 +99,7 @@ function rotate(){
 const $detail = $(".detail");
 const $btnClose = $detail.find(".close");
 const $img = $wrap.find("img");
+const $detail_img = $detail.find(".pic");
 
 $img.on("click", function(e){
     e.preventDefault();
@@ -113,8 +114,8 @@ $img.on("click", function(e){
 
     clearInterval(timer);
 
-    $detail.find(".pic").children("img").attr({src: imgSrc, alt: imgAlt});
-    $detail.find(".thumb").children("img").attr({src: imgSrc, alt: imgAlt});
+    $detail_img.find("img").attr({src: imgSrc, alt: imgAlt});
+    $detail.find(".thumb img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".con >h1").text(tit1);
     $detail.find(".con >h2").text(tit2);
     $detail.find(".con p").text(desc);

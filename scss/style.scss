@@ -751,15 +751,15 @@ body{
                 }
                 .con{
                     .arrow{
-                        height: 60px;
+                        height: 120px;
 
                         &::before{
                             transform: rotate(-45deg);
-                            height: 20px;
+                            height: 30px;
                         }
                         &::after{
                             transform: rotate(45deg);
-                            height: 20px;
+                            height: 30px;
                         }
                     }
                     h1::before, h2::after{
@@ -805,7 +805,7 @@ body{
                     height: 0;
                     background: orange;
                     position: absolute;
-                    top: 160px;
+                    top: 110px;
                     right: 70px;
                     transition: .6s .6s;
 
@@ -2137,8 +2137,8 @@ body{
                     padding: 90px 0;
 
                     .arrow{
-                        top: 140px;
-                        right: 40px;
+                        top: 100px;
+                        right: 60px;
                     }
                     >h1{
                         margin-bottom: 60px;
@@ -2292,6 +2292,13 @@ body{
             }
             .inner{
                 .con{
+                    .arrow{
+                        right: 40px;
+
+                        &::before, &::after{
+                            height: 20px;
+                        }
+                    }
                     .date{
                         width: 120px;
                         height: 120px;
@@ -2484,9 +2491,16 @@ body{
         }
         .detail{
             &.on{
-                .inner .pic{
-                    left: 30px;
-                    width: 45vw;
+                .inner{
+                    .pic{
+                        left: 30px;
+                        width: 45vw;
+                    }
+                    .con{
+                        .arrow{
+                            height: 90px;
+                        }
+                    }
                 }
             }
             .inner{
