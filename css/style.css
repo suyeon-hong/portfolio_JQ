@@ -2044,7 +2044,27 @@ body {
     #visual .filter {
       display: none; }
     #visual .detail .inner {
-      padding: 20px 10px; }
+      padding: 20px 10px 20px 40px; }
+      #visual .detail .inner .pic {
+        display: none; }
+      #visual .detail .inner .con .arrow {
+        display: none; }
+      #visual .detail .inner .con > h1 {
+        font-size: 20px;
+        margin-bottom: 40px; }
+      #visual .detail .inner .con > h2::before {
+        top: -10px; }
+      #visual .detail .inner .con > h2::after {
+        top: 4px; }
+      #visual .detail .inner .con > h3 {
+        display: none; }
+      #visual .detail .inner .con .date {
+        top: 10px;
+        bottom: auto; }
+        #visual .detail .inner .con .date h1 {
+          margin-bottom: 15px; }
+        #visual .detail .inner .con .date h2, #visual .detail .inner .con .date h2 {
+          font-size: 10px; }
 
   #main .inner {
     padding: 0 10px; }
