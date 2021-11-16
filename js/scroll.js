@@ -36,23 +36,6 @@ $(window).on("scroll", function(){
         }else{
             $(".box2").removeClass("on");
         }
-        if(scroll >= posArr[3] + baseLine && scroll < posArr[4]){
-            let current_scroll = (scroll - posArr[3] - baseLine) * 3;
-            let svg_scroll;
-
-            if(current_scroll >= 1650){
-                svg_scroll = 0;
-                $("#topic article > svg path").css({fill: "#ddd"});
-            }else{
-                svg_scroll = 1650 - current_scroll;
-                $("#topic article > svg path").css({fill: "transparent"});
-            }
-
-            $("#topic article > svg path").css({strokeDashoffset: svg_scroll});
-            
-        }else{
-            $("#topic article > svg path").css({strokeDashoffset: 1650, fill: "transparent"});
-        }
     }
 });
 
