@@ -6,24 +6,24 @@ class Slider{
         this.bindingEvent();
     }
     initDOM(opt){
-        this.frame = opt.frame;
-        this.slider = opt.slider;
-        this.prev = opt.prev;
-        this.next = opt.next;
+        this.frame = $(opt.frame);
+        this.slider = $(opt.slider);
+        this.prev = $(opt.prev);
+        this.next = $(opt.next);
         this.default_per = opt.def_percent;
         this.moving_per = opt.moving_percent;
         this.speed = opt.speed;
         this.enableClick = true;
     }
     init(){
-        $(this.frame).find(this.slider).last().prependTo(this.frame);
+        this.frame.find(this.slider).last().prependTo(this.frame);
     
         this.timer = setInterval(()=>{
             this.movingRight();
         }, this.speed);
     }
     bindingEvent(){
-        $(this.prev).on("click", e=>{
+        this.prev.on("click", e=>{
             e.preventDefault();
         
             if(this.enableClick){
@@ -33,7 +33,7 @@ class Slider{
             }
         });
         
-        $(this.next).on("click", e=>{
+        this.next.on("click", e=>{
             e.preventDefault();
         
             if(this.enableClick){
@@ -44,16 +44,16 @@ class Slider{
         });
     }
     movingLeft(){
-        $(this.frame).animate({marginLeft: 0}, 1000, ()=>{
-            $(this.frame).css({marginLeft: (this.default_per) +"%"});
-            $(this.frame).children(this.slider).last().prependTo(this.frame);
+        this.frame.animate({marginLeft: 0}, 1000, ()=>{
+            this.frame.css({marginLeft: this.default_per +"%"});
+            this.frame.children(this.slider).last().prependTo(this.frame);
             this.enableClick = true;
         });
     }
     movingRight(){
-        $(this.frame).animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
-            $(this.frame).css({marginLeft: this.default_per +"%"});
-            $(this.frame).children(this.slider).first().appendTo(this.frame);
+        this.frame.animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
+            this.frame.css({marginLeft: this.default_per +"%"});
+            this.frame.children(this.slider).first().appendTo(this.frame);
             this.enableClick = true;
         });
     }
@@ -79,8 +79,4 @@ $sliderBtns.on("click", function(){
         });
     }
 });
-
-
-
-
 

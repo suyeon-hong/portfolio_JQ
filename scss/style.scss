@@ -2817,7 +2817,7 @@ body{
     #visual{
         height: 300px;
 
-        .inner{
+        >.inner{
             display: none;
 
             &.wrapbox{
