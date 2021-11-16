@@ -1317,6 +1317,10 @@ body {
             width: calc(100% * 2 + 20px);
             height: 100%;
             margin-left: -50%; }
+            #main .mento .inner .sliderbox .frame .slider-wrapper::after {
+              content: '';
+              display: block;
+              clear: both; }
             #main .mento .inner .sliderbox .frame .slider-wrapper .slider {
               float: left;
               width: calc((100% / 4) - 20px);

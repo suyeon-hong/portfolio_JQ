@@ -1705,6 +1705,11 @@ body{
                         height: 100%;
                         margin-left: -50%;
 
+                        &::after{
+                            content:'';
+                            display: block;
+                            clear: both;
+                        }
                         .slider{
                             float: left;
                             width: calc((100% / 4) - 20px);
