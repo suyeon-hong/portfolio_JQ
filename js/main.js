@@ -45,8 +45,8 @@ const $btns = $("#visual .filter li");
 let i=0;
 
 $(document).ready(function(){
-    $wrap.addClass("on");
-    $back.hide(3000);
+    $wrap.eq(0).addClass("on");
+    $back.fadeOut(2000);
 });
 
 $btns.on("click", function(e){
@@ -61,12 +61,11 @@ $btns.on("click", function(e){
         $btns.removeClass("on");
         $(this).addClass("on");
 
-
         $back.show();
         $wrap.fadeOut().removeClass("on");
 
         $wrap.eq(i).fadeIn().addClass("on");
-        $back.hide(3000, function(){
+        $back.fadeOut(2500, function(){
             enableClick = true;
         });
     }
