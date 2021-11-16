@@ -18,9 +18,9 @@ class Slider{
     init(){
         $(this.frame).find(this.slider).last().prependTo(this.frame);
     
-        this.timer = setInterval(function(){
+        this.timer = setInterval(()=>{
             this.movingRight();
-        }.bind(this), this.speed);
+        }, this.speed);
     }
     bindingEvent(){
         $(this.prev).on("click", e=>{
@@ -44,18 +44,18 @@ class Slider{
         });
     }
     movingLeft(){
-        $(this.frame).animate({marginLeft: 0}, 1000, function(){
+        $(this.frame).animate({marginLeft: 0}, 1000, ()=>{
             $(this.frame).css({marginLeft: (this.default_per) +"%"});
             $(this.frame).children(this.slider).last().prependTo(this.frame);
             this.enableClick = true;
-        }.bind(this))
+        });
     }
     movingRight(){
-        $(this.frame).animate({marginLeft: this.moving_per +"%"}, 1000, function(){
+        $(this.frame).animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
             $(this.frame).css({marginLeft: this.default_per +"%"});
             $(this.frame).children(this.slider).first().appendTo(this.frame);
             this.enableClick = true;
-        }.bind(this))
+        });
     }
 }
 
