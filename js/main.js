@@ -40,59 +40,38 @@ function letterMotion(item, delay){
 // visual tab button
 const $wrap = $("#visual .wrapbox >.wrap");
 const $section = $("#visual .wrapbox section");
-const $front = $("#visual .front");
-const $back = $("#visual .back");
+const $back = $section.find(".back");
 const $btns = $("#visual .filter li");
 let i=0;
 
-let timer = setInterval(rotate, 3000);
+$(document).ready(function(){
+    $wrap.addClass("on");
+    $back.hide(3000);
+});
 
 $btns.on("click", function(e){
     e.preventDefault();
-    let isActive = $(this).children("a").hasClass("on");
-    i = $(this).index() - 1;
+    let isActive = $(this).hasClass("on");
+    i = $(this).index();
 
     if(isActive) return;
     if(enableClick){
         enableClick = false;
 
-        clearInterval(timer);
+        $btns.removeClass("on");
+        $(this).addClass("on");
 
-        $btns.children("a").removeClass("on");
-        $(this).children("a").addClass("on");
-    
-        $section.addClass("on");
-        $wrap.fadeOut();
-        $wrap.eq(i).fadeIn(0, function(){
+
+        $back.show();
+        $wrap.fadeOut().removeClass("on");
+
+        $wrap.eq(i).fadeIn().addClass("on");
+        $back.hide(3000, function(){
             enableClick = true;
         });
     }
 });
 
-$section.on("mouseenter", function(){
-    clearInterval(timer);
-    $section.addClass("on");
-});
-
-$section.on("mouseleave", function(){
-    timer = setInterval(function(){
-        rotate();
-    }, 3000);
-});
-
-function rotate(){
-    (i >= 2) ? i = 0 : i++;
-    $section.addClass("on");
-    setTimeout(function(){
-        $section.removeClass("on");
-    }, 2000);
-    setTimeout(function(){
-        $wrap.fadeOut(500);
-        $btns.children("a").removeClass("on");
-        $wrap.eq(i).fadeIn();
-        $btns.eq(i + 1).children("a").addClass("on");
-    }, 2500);
-}
 
 
 //visual detail page
@@ -133,8 +112,6 @@ $img.on("click", function(e){
     let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
     let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
-
-    clearInterval(timer);
 
     $detail_img.css(imgPos[posIndex]);
     setTimeout(function(){

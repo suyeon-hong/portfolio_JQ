@@ -413,12 +413,12 @@ body {
       display: none; }
       #visual .inner > .wrap:nth-child(1) {
         display: block; }
+      #visual .inner > .wrap.on section {
+        transform: rotateY(180deg); }
       #visual .inner > .wrap section {
         width: 380px;
         transform-style: preserve-3d;
         transition: transform 2s, left 0s; }
-        #visual .inner > .wrap section.on {
-          transform: rotateY(180deg); }
         #visual .inner > .wrap section:nth-of-type(1) {
           position: absolute;
           top: 30px;
@@ -426,11 +426,13 @@ body {
         #visual .inner > .wrap section:nth-of-type(2) {
           position: absolute;
           top: 30px;
-          left: 400px; }
+          left: 400px;
+          transition-delay: 0.2s; }
         #visual .inner > .wrap section:nth-of-type(3) {
           position: absolute;
           top: 30px;
-          left: 800px; }
+          left: 800px;
+          transition-delay: 0.4s; }
         #visual .inner > .wrap section article {
           width: 100%;
           border: 1px solid #333;
@@ -536,36 +538,37 @@ body {
       width: 1180px;
       margin: 0 auto;
       padding: 14px 0; }
-      #visual .filter .inner ul::after {
+      #visual .filter .inner::after {
         content: '';
         display: block;
         clear: both; }
-      #visual .filter .inner ul li {
+      #visual .filter .inner em {
         float: left;
-        font-size: 0; }
-        #visual .filter .inner ul li:nth-of-type(1) {
-          font: 600 13px/1 "Gothic A1";
-          color: #444;
-          margin-right: 50px; }
-        #visual .filter .inner ul li:nth-of-type(n+2) a {
-          font-weight: 500;
-          color: #222; }
-          #visual .filter .inner ul li:nth-of-type(n+2) a.on {
-            font-weight: 600; }
-          #visual .filter .inner ul li:nth-of-type(n+2) a::after {
-            border-top-color: #222; }
-        #visual .filter .inner ul li a {
-          font: 600 13px/1 "Gothic A1";
-          color: #888;
-          margin-left: 30px; }
-          #visual .filter .inner ul li a::after {
-            content: '';
-            display: inline-block;
-            border-top: 5px solid #555;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            margin-left: 5px;
-            margin-bottom: 2px; }
+        font: 600 13px/1 "Gothic A1";
+        color: #444;
+        margin-right: 50px; }
+      #visual .filter .inner ul {
+        float: left; }
+        #visual .filter .inner ul li {
+          float: left;
+          font-size: 0; }
+          #visual .filter .inner ul li.on a {
+            font-weight: 600;
+            color: #222; }
+            #visual .filter .inner ul li.on a::after {
+              border-top-color: #222; }
+          #visual .filter .inner ul li a {
+            font: 500 13px/1 "Gothic A1";
+            color: #888;
+            margin-left: 30px; }
+            #visual .filter .inner ul li a::after {
+              content: '';
+              display: inline-block;
+              border-top: 5px solid #555;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              margin-left: 5px;
+              margin-bottom: 2px; }
   #visual .detail {
     display: none;
     width: 100%;
