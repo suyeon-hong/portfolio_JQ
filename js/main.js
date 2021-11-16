@@ -100,6 +100,27 @@ const $detail = $(".detail");
 const $btnClose = $detail.find(".close");
 const $img = $wrap.find("img");
 const $detail_img = $detail.find(".pic");
+const imgPos = [
+    {
+        width: "250px",
+        height: "280px",
+        left: "20%",
+        bottom: "30px"
+    },
+    {
+        width: "250px",
+        height: "280px",
+        left: "40%",
+        bottom: "30px"
+    },
+    {
+        width: "250px",
+        height: "280px",
+        left: "60%",
+        bottom: "30px"
+    },
+]
+let posIndex;
 
 $img.on("click", function(e){
     e.preventDefault();
@@ -107,6 +128,7 @@ $img.on("click", function(e){
     let imgAlt = $(this).attr("alt");
     let itemIndex = $(this).closest("section").index();
     let boxIndex = $(this).closest("article").parent("section").parent(".wrap").index();
+    posIndex = itemIndex;
 
     let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
@@ -114,6 +136,15 @@ $img.on("click", function(e){
 
     clearInterval(timer);
 
+    $detail_img.css(imgPos[posIndex]);
+    setTimeout(function(){
+        $detail_img.css({
+            width: "40vw",
+            height: "100%",
+            left: "150px",
+            bottom: 0
+        })
+    }, 100);
     $detail_img.find("img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".thumb img").attr({src: imgSrc, alt: imgAlt});
     $detail.find(".con >h1").text(tit1);
@@ -127,6 +158,7 @@ $img.on("click", function(e){
 $btnClose.on("click", function(e){
     e.preventDefault();
     
+    $detail_img.css(imgPos[posIndex]);
     $detail.removeClass("on");
     $detail.fadeOut(1000);
 });

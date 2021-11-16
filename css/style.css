@@ -580,11 +580,6 @@ body {
       z-index: 10; }
       #visual .detail.on .inner {
         opacity: 1; }
-        #visual .detail.on .inner .pic {
-          width: 40vw;
-          height: 100%;
-          left: 150px;
-          bottom: 0; }
         #visual .detail.on .inner .con .arrow {
           height: 120px; }
           #visual .detail.on .inner .con .arrow::before {
@@ -606,11 +601,7 @@ body {
       opacity: 0;
       transition: 1s; }
       #visual .detail .inner .pic {
-        width: 0;
-        height: 0;
         position: absolute;
-        left: 30%;
-        bottom: 100px;
         transition: 1.4s; }
         #visual .detail .inner .pic img {
           width: 100%;
