@@ -15,11 +15,13 @@
         $(document).ready(function(){
             new Tab({
                 btns: ".inner>dl>dt",
-                boxs: ".inner>dl>dd"
+                boxs: ".inner>dl>dd",
+                motion: "show"
             });
-            new Tab2({
+            new Tab({
                 btns: ".qna dt",
                 boxs: ".qna dd",
+                motion: "slideDown",
                 speed: 500
             })
         });

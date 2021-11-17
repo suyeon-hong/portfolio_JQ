@@ -1,74 +1,63 @@
 class Tab{
     constructor(opt){
-        if(opt.motion = "show"){
-            this.init(opt);
-            this.bindingEvent();
+        if(!opt.btns || !opt.boxs){
+            console.error("btns와 boxs는 필수 입력사항 입니다.");
+            return;
         }
-        if(opt.motion = "slideDown"){
-            this.init(opt);
-            this.bindingEvent();
+        const defaults = {
+            motion: "show"
         }
+        let result = Object.assign({}, defaults, opt);
+
+        console.log(result);
+        this.init(result);
+        this.bindingEvent();
     }
     init(opt){
-        this.$tabBtns = $(opt.btns);
-        this.$tabBoxs = $(opt.boxs);
+        this.btns = $(opt.btns);
+        this.boxs = $(opt.boxs);
+        this.motion = opt.motion;
+        this.speed = opt.speed;
     }
-
     bindingEvent(){
-        this.$tabBtns.on("click focus", e=>{
+        this.btns.on("click focus", e=>{
             e.preventDefault();
-            this.activation(e.currentTarget);
-            this.showBox();
+
+            if(this.motion == "show"){
+                this.activation(e.currentTarget);
+                this.showBox();
+            }
+            if(this.motion == "slideDown"){
+                let i = $(e.currentTarget).index();
+                let isOn = $(e.currentTarget).hasClass("on");
+                
+                if (isOn) {
+                    this.slideUp(e.currentTarget);
+                } else{
+                    this.slideDown(e.currentTarget, i);
+                }
+            }
         });
     }
-
     activation(e){
         this.target = $(e).children("a").attr("href");
         this.isOn = $(e).hasClass("on");
         if (this.isOn) return;
     
-        this.$tabBtns.removeClass("on");
+        this.btns.removeClass("on");
         $(e).addClass("on");
     }
-
     showBox(){
-    this.$tabBoxs.hide();
+    this.boxs.hide();
     $(this.target).show();
-    }
-}
-
-
-class Tab2{
-    constructor(opt){
-        this.init(opt);
-        this.bindingEvent();
-    }
-    init(opt){
-        this.$qbox = $(opt.btns);
-        this.$abox = $(opt.boxs);
-        this.speed = opt.speed;
-    }
-    bindingEvent(){
-        this.$qbox.on("click", e=>{
-            e.preventDefault();
-        
-            let i = $(e.currentTarget).index();
-            let isOn = $(e.currentTarget).hasClass("on");
-            
-            if (isOn) {
-                this.slideUp(e.currentTarget);
-            } else{
-                this.slideDown(e.currentTarget, i);
-            }
-        });
     }
     slideUp(e){
         $(e).removeClass("on");
         $(e).next().slideUp();
     }
     slideDown(e, i){
-        activeBtn(this.$qbox, i/2);
-        this.$abox.slideUp();
+        activeBtn(this.btns, i/2);
+        this.boxs.slideUp();
         $(e).next().slideDown(this.speed);
     }
 }
