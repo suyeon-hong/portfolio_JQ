@@ -17,7 +17,10 @@
     <script defer src="js/main.js"></script>
     <script>
         $(document).ready(function(){
-            new MyScroll();
+            new MyScroll({
+                btns: "#navi li",
+                panel: ".myScroll"
+            });
             new Slider({
                 frame: ".mento .slider-wrapper",
                 slider: ".slider",
