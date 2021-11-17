@@ -9,7 +9,6 @@ class Tab{
         }
         let result = Object.assign({}, defaults, opt);
 
-        console.log(result);
         this.init(result);
         this.bindingEvent();
     }
