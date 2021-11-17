@@ -1,46 +1,55 @@
 // index scroll효과
-const $btnScroll = $("#navi li");
-let posArr = [];
-let $boxs = $(".myScroll");
-let baseLine = -300;
 
-initScroll();
+function MyScroll(){
+    this.initDOM();
+    this.initScroll();
+    this.bindingEvent();
+}
 
+MyScroll.prototype.initDOM = function(){
+    this.btns = $("#navi li");
+    this.posArr = [];
+    this.boxs = $(".myScroll");
+    this.baseLine = -300;
+}
 
-$(window).on("resize", function(){
-    posArr = [];
-    let activeIndex = $btnScroll.find("a").filter(".on").parent().index();
+MyScroll.prototype.bindingEvent = function(){
+    $(window).on("resize", function(){
+        this.posArr = [];
+        let activeIndex = this.btns.find("a").filter(".on").parent().index();
+    
+        this.initScroll();
+        this.moveScroll(activeIndex);
+    }.bind(this));
+    
+    $(window).on("scroll", function(){
+        let scroll = $(window).scrollTop();
+    
+        this.activation(scroll);
+    }.bind(this));
+    
+    this.btns.on("click", function(e){
+        e.preventDefault();
+        let index = $(e.currentTarget).index();
+    
+        this.moveScroll(index);
+    }.bind(this));
+}
 
-    initScroll();
-    moveScroll(activeIndex);
-});
-
-$(window).on("scroll", function(){
-    let scroll = $(window).scrollTop();
-
-    activation(scroll);
-});
-
-$btnScroll.on("click", function(e){
-    e.preventDefault();
-
-    moveScroll($(this));
-});
-
-function initScroll(){
-    for (let i = 0; i < $boxs.length; i++){
-        let $id = $btnScroll.eq(i).children("a").attr("href");
-        posArr.push($($id).offset().top);
+MyScroll.prototype.initScroll = function(){
+    for (let i = 0; i < this.boxs.length; i++){
+        let id = this.btns.eq(i).children("a").attr("href");
+        this.posArr.push($(id).offset().top);
     }
 }
 
-function activation(scroll){
-    for (let i = 0; i < posArr.length; i++){
-        if(scroll >= posArr[i] + baseLine){
-            activeBtn($btnScroll, i);
-            activeBtn($boxs, i);
+MyScroll.prototype.activation = function(scroll){
+    for (let i = 0; i < this.posArr.length; i++){
+        if(scroll >= this.posArr[i] + this.baseLine){
+            activeBtn(this.btns, i);
+            activeBtn(this.boxs, i);
         }
-        if(scroll >= posArr[1] + baseLine && scroll < posArr[2]){
+        if(scroll >= this.posArr[1] + this.baseLine && scroll < this.posArr[2]){
             $(".box2").addClass("on");
         }else{
             $(".box2").removeClass("on");
@@ -48,11 +57,9 @@ function activation(scroll){
     }
 }
 
-function moveScroll(el){
-    let target = el.index();
-
+MyScroll.prototype.moveScroll = function(index){
     $("html, body").animate({
-        scrollTop : posArr[target]
+        scrollTop : this.posArr[index]
     }, speed);
 }
 
