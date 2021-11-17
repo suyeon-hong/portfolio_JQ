@@ -1,10 +1,10 @@
 class MyForm{
-    constructor(option){
-        this.init();
+    constructor(selector, option){
+        this.init(selector);
         this.eventBinding(option);
     }
-    init(){
-        this.submitBtn = $(".join input[type=submit]");
+    init(selector){
+        this.submitBtn = $(selector);
         this.result = [];
     }
     
@@ -228,7 +228,6 @@ class MyForm{
 
 
 letter(".join h1", 0.1);
-
 
 function letter(item, interval){
     let txt = $(item).text();

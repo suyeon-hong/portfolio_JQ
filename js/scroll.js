@@ -4,42 +4,24 @@ let posArr = [];
 let $boxs = $(".myScroll");
 let baseLine = -300;
 
-let custom = [
-    ,
-    function(item, index){
-        let current_scroll = scroll - posArr[index];
-        
-        item.css({left: current_scroll +"%"});
-    },
+initScroll();
 
-]
-
-window.onload = function(){
-    initScroll();
-}
 
 $(window).on("resize", function(){
     posArr = [];
+    let activeIndex = $btnScroll.find("a").filter(".on").parent().index();
+
     initScroll();
+    moveScroll(activeIndex);
 });
 
 $(window).on("scroll", function(){
     let scroll = $(window).scrollTop();
 
-    for (let i = 0; i < posArr.length; i++){
-        if(scroll >= posArr[i] + baseLine){
-            activeBtn($btnScroll, i);
-            activeBtn($boxs, i);
-        }
-        if(scroll >= posArr[1] + baseLine && scroll < posArr[2]){
-            $(".box2").addClass("on");
-        }else{
-            $(".box2").removeClass("on");
-        }
-    }
+    activation(scroll);
 });
 
-$btnScroll.children("a").on("click", function(e){
+$btnScroll.on("click", function(e){
     e.preventDefault();
 
     moveScroll($(this));
@@ -52,8 +34,22 @@ function initScroll(){
     }
 }
 
+function activation(scroll){
+    for (let i = 0; i < posArr.length; i++){
+        if(scroll >= posArr[i] + baseLine){
+            activeBtn($btnScroll, i);
+            activeBtn($boxs, i);
+        }
+        if(scroll >= posArr[1] + baseLine && scroll < posArr[2]){
+            $(".box2").addClass("on");
+        }else{
+            $(".box2").removeClass("on");
+        }
+    }
+}
+
 function moveScroll(el){
-    let target = el.parent().index();
+    let target = el.index();
 
     $("html, body").animate({
         scrollTop : posArr[target]
