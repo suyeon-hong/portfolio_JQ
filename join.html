@@ -12,7 +12,64 @@
     <script defer src="js/join.js"></script>
     <script>
         $(document).ready(function(){
-            new MyForm();
+            new MyForm([
+                {
+                    type: "id",
+                    name: "userid"
+                },
+                {
+                    type: "password",
+                    name: ["userpw1", "userpw2"]
+                },
+                {
+                    type: "select",
+                    name: "pwQ"
+                },
+                {
+                    type: "text",
+                    name: "pwA"
+                },
+                {
+                    type: "text",
+                    name: "usernameKR"
+                },
+                {
+                    type: "text",
+                    name: "usernameEN"
+                },
+                {
+                    type: "address",
+                    name: ["postcode", "address1", "address2"]
+                },
+                {
+                    type: "phone",
+                    name: ["phone", "phone1", "phone2"]
+                },
+                {
+                    type: "email",
+                    name: ["email1", "email2", "email"]
+                },
+                {
+                    type: "check",
+                    name: "snsAd",
+                    subject: "sns 수신여부"
+                },
+                {
+                    type: "check",
+                    name: "emailAd",
+                    subject: "이메일 수신여부"
+                },
+                {
+                    type: "check",
+                    name: "terms",
+                    subject: "이용약관 동의"
+                },
+                {
+                    type: "check",
+                    name: "privacy",
+                    subject: "개인정보 수집 및 이용 동의"
+                },
+            ]);
         });
     </script>
 </head>

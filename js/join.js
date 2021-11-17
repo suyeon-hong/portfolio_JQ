@@ -1,34 +1,47 @@
 class MyForm{
-    constructor(){
+    constructor(option){
         this.init();
-        this.eventBinding();
+        this.eventBinding(option);
     }
     init(){
         this.submitBtn = $(".join input[type=submit]");
         this.result = [];
     }
     
-    eventBinding(){
-        this.submitBtn.on("click", e=>{
-            this.result = [];
-        
-            if(!this.isId("userid")) e.preventDefault();
-            if(!this.isPw("userpw1", "userpw2")) e.preventDefault();
-            if(!this.isSelect("pwQ")) e.preventDefault();
-            if(!this.isTxt("pwA")) e.preventDefault();
-            if(!this.isTxt("usernameKR")) e.preventDefault();
-            if(!this.isTxt("usernameEN")) e.preventDefault();
-            if(!this.isTxt3("postcode","address1", "address2")) e.preventDefault();
-            if(!this.isTxt2("phone", "phone1", "phone2")) e.preventDefault();
-            if(!this.isEmail("email1", "email2", "email")) e.preventDefault();
-            if(!this.isCheck("snsAd", "sns 수신여부")) e.preventDefault();
-            if(!this.isCheck("emailAd", "이메일 수신여부")) e.preventDefault();
-            if(!this.isCheck("terms", "이용약관 동의")) e.preventDefault();
-            if(!this.isCheck("privacy", "개인정보 수집 및 이용 동의")) e.preventDefault();
-            if(this.result.length) {
-                $(window).scrollTop(0);
-                alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + this.result);
-            }
+    eventBinding(option){
+        option.forEach((opt)=>{
+            this.submitBtn.on("click", e=>{
+                this.result = [];
+                
+                if(opt.type == "id"){
+                    if(!this.isId(opt.name)) e.preventDefault();
+                }
+                if(opt.type == "password"){
+                    if(!this.isPw(opt.name[0], opt.name[1])) e.preventDefault();
+                }
+                if(opt.type == "select"){
+                    if(!this.isSelect(opt.name)) e.preventDefault();
+                }
+                if(opt.type == "text"){
+                    if(!this.isTxt(opt.name)) e.preventDefault();
+                }
+                if(opt.type == "address"){
+                    if(!this.isAddress(opt.name[0], opt.name[1], opt.name[2])) e.preventDefault();
+                }
+                if(opt.type == "phone"){
+                    if(!this.isPhone(opt.name[0], opt.name[1], opt.name[2])) e.preventDefault();
+                }
+                if(opt.type == "email"){
+                    if(!this.isEmail(opt.name[0], opt.name[1], opt.name[2])) e.preventDefault();
+                }
+                if(opt.type == "check"){
+                    if(!this.isCheck(opt.name, opt.subject)) e.preventDefault();
+                }
+                // if(this.result.length) {
+                //     $(window).scrollTop(0);
+                //     alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + this.result);
+                // }
+            });
         });
     }
     
@@ -155,7 +168,7 @@ class MyForm{
         }
     }
     
-    isTxt2(name1, name2, name3){
+    isPhone(name1, name2, name3){
         let txt2 = $("[name="+ name2 +"]").val();
         let txt3 = $("[name="+ name3 +"]").val();
     
@@ -173,7 +186,7 @@ class MyForm{
         }
     }
     
-    isTxt3(name1, name2, name3){
+    isAddress(name1, name2, name3){
         let txt1 = $("[name="+ name1 +"]").val();
         let txt2 = $("[name="+ name2 +"]").val();
         let txt3 = $("[name="+ name3 +"]").val();
