@@ -43,28 +43,37 @@ const $section = $("#visual .wrapbox section");
 const $back = $section.find(".back");
 const $btns = $("#visual .filter li");
 let i=0;
+let timer;
 
-$wrap.eq(0).addClass("on");
-$back.hide(2000);
+init();
+bindingEvent();
 
-let timer = setInterval(function(){
-    (i >= 2) ? i=0 : i++;
-    reverse(i)
-}, 4000);
+function init(){
+    $wrap.eq(0).addClass("on");
+    $back.hide(2500);
 
-$btns.on("click", function(e){
-    e.preventDefault();
-    let isActive = $(this).hasClass("on");
-    i = $(this).index();
+    timer = setInterval(function(){
+        (i >= 2) ? i=0 : i++;
+        reverse(i)
+    }, 4000);
+}
 
-    if(isActive) return;
-    if(enableClick){
-        enableClick = false;
-
-        clearInterval(timer);
-        reverse(i);
-    }
-});
+function bindingEvent(){
+    $btns.on("click", function(e){
+        e.preventDefault();
+        
+        let isActive = $(e.currentTarget).hasClass("on");
+        i = $(e.currentTarget).index();
+    
+        if(isActive) return;
+        if(enableClick){
+            enableClick = false;
+    
+            clearInterval(timer);
+            reverse(i);
+        }
+    });
+}
 
 function reverse(index){
     $btns.removeClass("on");
