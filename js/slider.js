@@ -1,7 +1,21 @@
-
 class Slider{
     constructor(opt){
-        this.initDOM(opt);
+        if(!opt.frame || !opt.slider){
+            console.error("frame과 slider값은 필수입력사항 입니다");
+            return;
+        }
+
+        const defaults = {
+            prev: $(".prev"),
+            next: $(".next"),
+            default_percent: "-100%",
+            moving_percent: "100%",
+            speed: 1000,
+        }
+        let result_opt = {};
+        result_opt = Object.assign({}, defaults, opt);
+
+        this.initDOM(result_opt);
         this.init();
         this.bindingEvent();
     }
@@ -10,7 +24,7 @@ class Slider{
         this.slider = $(opt.slider);
         this.prev = $(opt.prev);
         this.next = $(opt.next);
-        this.default_per = opt.def_percent;
+        this.default_per = opt.default_percent;
         this.moving_per = opt.moving_percent;
         this.speed = opt.speed;
         this.enableClick = true;
@@ -44,14 +58,14 @@ class Slider{
         });
     }
     movingLeft(){
-        this.frame.animate({marginLeft: 0}, 1000, ()=>{
+        this.frame.stop().animate({marginLeft: 0}, 1000, ()=>{
             this.frame.css({marginLeft: this.default_per +"%"});
             this.frame.children(this.slider).last().prependTo(this.frame);
             this.enableClick = true;
         });
     }
     movingRight(){
-        this.frame.animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
+        this.frame.stop().animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
             this.frame.css({marginLeft: this.default_per +"%"});
             this.frame.children(this.slider).first().appendTo(this.frame);
             this.enableClick = true;
