@@ -11,7 +11,6 @@ class MyForm{
     eventBinding(option){
         option.forEach((opt)=>{
             this.submitBtn.on("click", e=>{
-                this.result = [];
                 
                 if(opt.type == "id"){
                     if(!this.isId(opt.name)) e.preventDefault();
@@ -37,11 +36,14 @@ class MyForm{
                 if(opt.type == "check"){
                     if(!this.isCheck(opt.name, opt.subject)) e.preventDefault();
                 }
-                // if(this.result.length) {
-                //     $(window).scrollTop(0);
-                //     alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + this.result);
-                // }
             });
+        });
+        this.submitBtn.on("click", e=>{
+            if(this.result.length) {
+                $(window).scrollTop(0);
+                alert("아래 항목의 필수 입력값을 확인해 주세요\n\n" + this.result);
+                this.result = [];
+            }
         });
     }
     
