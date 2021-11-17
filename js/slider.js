@@ -58,14 +58,14 @@ class Slider{
         });
     }
     movingLeft(){
-        this.frame.stop().animate({marginLeft: 0}, 1000, ()=>{
+        this.frame.animate({marginLeft: "0%"}, 1000, ()=>{
             this.frame.css({marginLeft: this.default_per +"%"});
             this.frame.children(this.slider).last().prependTo(this.frame);
             this.enableClick = true;
         });
     }
     movingRight(){
-        this.frame.stop().animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
+        this.frame.animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
             this.frame.css({marginLeft: this.default_per +"%"});
             this.frame.children(this.slider).first().appendTo(this.frame);
             this.enableClick = true;
