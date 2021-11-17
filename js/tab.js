@@ -55,7 +55,9 @@ class Tab{
         $(e).next().slideUp();
     }
     slideDown(e, i){
-        activeBtn(this.btns, i/2);
+        this.btns.removeClass("on");
+        $(e).addClass("on");
+
         this.boxs.slideUp();
         $(e).next().slideDown(this.speed);
     }

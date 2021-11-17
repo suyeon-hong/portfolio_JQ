@@ -37,7 +37,7 @@ function letterMotion(item, delay){
 }
 
 
-// visual tab button
+// visual article motion
 const $wrap = $("#visual .wrapbox >.wrap");
 const $section = $("#visual .wrapbox section");
 const $back = $section.find(".back");
