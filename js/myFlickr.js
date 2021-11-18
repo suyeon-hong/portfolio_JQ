@@ -4,6 +4,7 @@ https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 
 21be590b77fb11bd12a7266f99a2f2d8
 */
+const gallery = $(".gallery");
 let totalImg = 11;
 let tag = "landscape";
 
@@ -13,15 +14,15 @@ getList({
     user_id: "194091829@N05"
 });
 
-$(".gallery button").on("click", function(){
-    tag = $(".gallery input").val();
+gallery.find("button").on("click", function(){
+    tag = gallery.find("input").val();
 
     if(!tag){
         alert("검색어를 입력해 주세요.");
         return;
     }
-    $(".gallery .loading").removeClass("off");
-    $(".gallery .photos").removeClass("on");
+    $(".loading").removeClass("off");
+    $(".photos").removeClass("on");
 
     getList({
         type: "search",
@@ -31,14 +32,14 @@ $(".gallery button").on("click", function(){
 
 $(window).on("keypress", function(e){
     if(e.key == "Enter"){
-        tag = $(".gallery input").val();
+        tag = gallery.find("input").val();
 
         if(!tag){
             alert("검색어를 입력해 주세요.");
             return;
         }
-        $(".gallery .loading").removeClass("off");
-        $(".gallery .photos").removeClass("on");
+        $(".loading").removeClass("off");
+        $(".photos").removeClass("on");
 
         getList({
             type: "search",
@@ -47,7 +48,7 @@ $(window).on("keypress", function(e){
     }
 });
 
-$("body").on("click", ".gallery .photos li", function(e){
+$("body").on("click", ".photos li", function(e){
     e.preventDefault();
 
     let imgSrc = $(this).find("a").attr("href");
@@ -68,9 +69,9 @@ $("body").on("click", ".pop span", function(){
 $(".tab li a").on("click", function(e){
     e.preventDefault();
     tag = $(this).text();
-    $(".gallery .loading").removeClass("off");
-    $(".gallery .photos").removeClass("on");
-    $(".gallery .tab li a").removeClass("on");
+    $(".loading").removeClass("off");
+    $(".photos").removeClass("on");
+    $(".tab li a").removeClass("on");
     $(this).addClass("on");
 
     getList({
@@ -118,7 +119,7 @@ function getList(opt){
         let items = data.photos.photo;
         let imgNum = 0;
         
-        $(".gallery .photos").empty();
+        gallery.find(".photos").empty();
         $(items).each(function(index,data){
             let title = data.title;
     
@@ -126,7 +127,7 @@ function getList(opt){
                 title = "No description in this photo"
             }
 
-            $(".gallery .photos").append(
+            gallery.find(".photos").append(
                 $("<li class='item'>").append(
                     $("<a>").attr({
                         href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg",
@@ -145,7 +146,7 @@ function getList(opt){
             )
         });
     
-        $(".photos img").each(function(index, data){
+        $(".photos img").each(function(_, data){
             data.onload = function(){
                 imgNum++;
     
