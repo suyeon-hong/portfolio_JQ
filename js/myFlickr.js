@@ -15,6 +15,11 @@ getList({
 
 $(".gallery button").on("click", function(){
     tag = $(".gallery input").val();
+
+    if(!tag){
+        alert("검색어를 입력해 주세요.");
+        return;
+    }
     $(".gallery .loading").removeClass("off");
     $(".gallery .photos").removeClass("on");
 
@@ -25,8 +30,13 @@ $(".gallery button").on("click", function(){
 });
 
 $(window).on("keypress", function(e){
-    if(e.keyCode == 13){
+    if(e.key == "Enter"){
         tag = $(".gallery input").val();
+
+        if(!tag){
+            alert("검색어를 입력해 주세요.");
+            return;
+        }
         $(".gallery .loading").removeClass("off");
         $(".gallery .photos").removeClass("on");
 
