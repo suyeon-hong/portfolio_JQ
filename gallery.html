@@ -10,6 +10,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
     <script defer src="js/myFlickr.js"></script>
+    <script>
+        $(document).ready(function(){
+            new MyFlickr({
+                selector: ".gallery",
+                tabBox: ".gallery .tab",
+                photoBox: ".gallery .photos",
+                loadingImg: ".gallery .loading",
+                api_key: "21be590b77fb11bd12a7266f99a2f2d8",
+                user_id: "194091829@N05",
+                type: "search",
+                tag: "landscape",
+                totalImg: 11,
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="header_sub">
