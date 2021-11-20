@@ -1,19 +1,27 @@
 
-
-init();
-bindingEvent();
-
-function init(){
-    const frame = $("#vidGallery");
-    const key = "AIzaSyDLlgfKVBsGJubow2HpPxjC1LJgGRtpBHA";
-    const playlist = "PLbO44G2j_RJzPLODoK6qiJwJ39JK4JyCY";
-    const num = 10;
+function MyYoutube(opt){
+    if(!opt.frame || !opt.key){
+        console.error("frame값과 key값은 필수 입력사항 입니다.");
+        return;
+    }
+    if(!opt.playlist) opt.playlist = "PLbO44G2j_RJzPLODoK6qiJwJ39JK4JyCY";
+    if(!opt.num) opt.num = 10;
+    this.init(opt);
+    this.bindingEvent();
 }
 
-function bindingEvent(){
-    createVid();
 
-    $("body").on("click", frame.selector +(" article .play"), function(e){
+MyYoutube.prototype.init = function(opt){
+    this.frame = $(opt.frame);
+    this.key = opt.key;
+    this.playlist = opt.playlist;
+    this.num = opt.num;
+}
+
+MyYoutube.prototype.bindingEvent = function(){
+    this.createVid();
+
+    $("body").on("click", this.frame.selector +(" article .play"), function(e){
         e.preventDefault();
     
         let vidId = $(e.currentTarget).parent().find("a").attr("href");
@@ -30,22 +38,22 @@ function bindingEvent(){
                 $("<span class='close'>").text("CLOSE")
             )
         )
-    });
+    }.bind(this));
     
     $("body").on("click", ".close", function(){
         $(".pop").remove();
     })
 }
 
-function createVid(){
+MyYoutube.prototype.createVid = function(){
     $.ajax({
         url:"https://www.googleapis.com/youtube/v3/playlistItems",
         dataType: "jsonp",
         data: {
             part: "snippet",
-            key: key,
-            maxResults: num,
-            playlistId: playlist
+            key: this.key,
+            maxResults: this.num,
+            playlistId: this.playlist
         }
     }).success(function(data){
         let items = data.items;
@@ -58,7 +66,7 @@ function createVid(){
                 txt = txt.substr(0, 200)+ "..";
             }
     
-            $(frame).append(
+            $(this.frame).append(
                 $("<article>").append(
                     $("<a>").attr({
                         href : data.snippet.resourceId.videoId
@@ -72,8 +80,8 @@ function createVid(){
                     )
                 )
             )
-        });
-    }).error(function(err){
+        }.bind(this));
+    }.bind(this)).error(function(err){
         console.error(err);
     });
 }

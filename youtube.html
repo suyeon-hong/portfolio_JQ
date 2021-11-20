@@ -10,7 +10,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
     <script defer src="js/youtube.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            new MyYoutube({
+                frame: "#vidGallery",
+                key: "AIzaSyDLlgfKVBsGJubow2HpPxjC1LJgGRtpBHA",
+                playlist: "PLbO44G2j_RJzPLODoK6qiJwJ39JK4JyCY",
+                num: 10
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="header_sub">
