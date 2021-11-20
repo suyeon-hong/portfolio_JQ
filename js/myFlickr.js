@@ -7,6 +7,11 @@ https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 
 class MyFlickr{
     constructor(opt){
+        if(!opt.selector || !opt.api_key){
+            console.error("selector값과 api_key값은 필수 입력사항 입니다.");
+            return;
+        }
+        if(!opt.type) opt.type = "interest";
         this.init(opt);
         this.bindingEvent();
     }
@@ -57,7 +62,7 @@ class MyFlickr{
             }
         });
         
-        $("body").on("click", this.photoBox.selctor +(" li"), e=>{
+        $("body").on("click", this.photoBox.selector +(" li"), e=>{
             e.preventDefault();
         
             let imgSrc = $(e.currentTarget).find("a").attr("href");

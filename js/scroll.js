@@ -1,5 +1,9 @@
 class MyScroll{
     constructor(opt){
+        if(!opt.panel || !opt.btns){
+            console.error("panel값과 btns값은 필수 입력사항 입니다.");
+            return;
+        }
         this.initDOM(opt);
         this.initScroll();
         this.bindingEvent();
