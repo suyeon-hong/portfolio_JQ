@@ -75,6 +75,15 @@ class MyFlickr{
             $(".pop").remove();
         });
 
+        this.main.on("click", ()=>{
+            this.type = "interest",
+            this.tag = "interest";
+            this.loadingImg.removeClass("off");
+            this.photoBox.removeClass("on");
+            
+            this.getList();
+        });
+
         this.tabBox.find("li a").on("click", e=>{
             e.preventDefault();
             this.tag = $(e.currentTarget).text();
