@@ -5,6 +5,9 @@ https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 21be590b77fb11bd12a7266f99a2f2d8
 */
 const gallery = $(".gallery");
+const tabBox = gallery.find(".tab");
+const photoBox = gallery.find(".photos");
+const loadingImg = gallery.find(".loading");
 let totalImg = 11;
 let tag = "landscape";
 
@@ -21,8 +24,8 @@ gallery.find("button").on("click", function(){
         alert("검색어를 입력해 주세요.");
         return;
     }
-    $(".loading").removeClass("off");
-    $(".photos").removeClass("on");
+    loadingImg.removeClass("off");
+    photoBox.removeClass("on");
 
     getList({
         type: "search",
@@ -38,8 +41,8 @@ $(window).on("keypress", function(e){
             alert("검색어를 입력해 주세요.");
             return;
         }
-        $(".loading").removeClass("off");
-        $(".photos").removeClass("on");
+        loadingImg.removeClass("off");
+        photoBox.removeClass("on");
 
         getList({
             type: "search",
@@ -66,12 +69,12 @@ $("body").on("click", ".pop span", function(){
     $(".pop").remove();
 });
 
-$(".tab li a").on("click", function(e){
+tabBox.find("li a").on("click", function(e){
     e.preventDefault();
     tag = $(this).text();
-    $(".loading").removeClass("off");
-    $(".photos").removeClass("on");
-    $(".tab li a").removeClass("on");
+    loadingImg.removeClass("off");
+    photoBox.removeClass("on");
+    tabBox.find("li a").removeClass("on");
     $(this).addClass("on");
 
     getList({
@@ -119,7 +122,7 @@ function getList(opt){
         let items = data.photos.photo;
         let imgNum = 0;
         
-        gallery.find(".photos").empty();
+        photoBox.empty();
         $(items).each(function(index,data){
             let title = data.title;
     
@@ -127,7 +130,7 @@ function getList(opt){
                 title = "No description in this photo"
             }
 
-            gallery.find(".photos").append(
+            photoBox.append(
                 $("<li class='item'>").append(
                     $("<a>").attr({
                         href: "https://live.staticflickr.com/"+ data.server +"/"+ data.id +"_"+ data.secret +"_b.jpg",
@@ -146,14 +149,14 @@ function getList(opt){
             )
         });
     
-        $(".photos img").each(function(_, data){
+        photoBox.find("img").each(function(_, data){
             data.onload = function(){
                 imgNum++;
     
                 if (imgNum == totalImg){
-                    $(".gallery .loading").addClass("off");
+                    loadingImg.addClass("off");
                 }
-                $(".gallery .photos").addClass("on");
+                photoBox.addClass("on");
             }
         });
     }).error(function(err){
