@@ -120,7 +120,6 @@ function getList(opt){
     $.ajax(result_opt)
     .success(function(data){
         let items = data.photos.photo;
-        let imgNum = 0;
         
         photoBox.empty();
         $(items).each(function(index,data){
@@ -149,17 +148,23 @@ function getList(opt){
             )
         });
     
-        photoBox.find("img").each(function(_, data){
-            data.onload = function(){
-                imgNum++;
-    
-                if (imgNum == totalImg){
-                    loadingImg.addClass("off");
-                }
-                photoBox.addClass("on");
-            }
-        });
+        loadImg();
     }).error(function(err){
         console.error("데이터를 불러오지 못했습니다.");
     })
+}
+
+function loadImg(){
+    let imgNum = 0;
+
+    photoBox.find("img").each(function(_, data){
+        data.onload = function(){
+            imgNum++;
+
+            if (imgNum == totalImg){
+                loadingImg.addClass("off");
+            }
+            photoBox.addClass("on");
+        }
+    });
 }
