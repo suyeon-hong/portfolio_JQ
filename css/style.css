@@ -410,7 +410,8 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      display: none; }
+      display: none;
+      perspective: 5000px; }
       #visual .inner > .wrap:nth-child(1) {
         display: block; }
       #visual .inner > .wrap.on section {
