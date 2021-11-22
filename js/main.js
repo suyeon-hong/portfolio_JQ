@@ -95,49 +95,36 @@ const $detail = $(".detail");
 const $btnClose = $detail.find(".close");
 const $img = $wrap.find("img");
 const $detail_img = $detail.find(".pic");
-const imgPos = [
-    {
-        width: "250px",
-        height: "280px",
-        left: "20%",
-        bottom: "30px"
-    },
-    {
-        width: "250px",
-        height: "280px",
-        left: "40%",
-        bottom: "30px"
-    },
-    {
-        width: "250px",
-        height: "280px",
-        left: "60%",
-        bottom: "30px"
-    },
-]
-let posIndex;
+let imgPos;
 
 $img.on("click", function(e){
     e.preventDefault();
     let imgSrc = $(this).attr("src");
     let imgAlt = $(this).attr("alt");
+    let imgTop = $(this).offset().top;
+    let imgLeft = $(this).offset().left;
     let itemIndex = $(this).closest("section").index();
     let boxIndex = $(this).closest("article").parent("section").parent(".wrap").index();
-    posIndex = itemIndex;
 
+    imgPos = {
+        width: "250px",
+        height: "280px",
+        top: imgTop - 70,
+        left: imgLeft
+    }
     let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
     let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
 
     clearInterval(timer);
 
-    $detail_img.css(imgPos[posIndex]);
+    $detail_img.css(imgPos);
     setTimeout(function(){
         $detail_img.css({
             width: "40vw",
             height: "100%",
             left: "10vw",
-            bottom: 0
+            top: 0
         })
     }, 100);
     $detail_img.find("img").attr({src: imgSrc, alt: imgAlt});
@@ -153,7 +140,7 @@ $img.on("click", function(e){
 $btnClose.on("click", function(e){
     e.preventDefault();
     
-    $detail_img.css(imgPos[posIndex]);
+    $detail_img.css(imgPos);
     $detail.removeClass("on");
     $detail.fadeOut(1000);
 
