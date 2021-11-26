@@ -3,11 +3,7 @@ const $popup = $("#popup");
 const $popup_close = $popup.find(".close");
 let isCookie = document.cookie.indexOf("popup=done");
 
-if(isCookie == 0){
-    $popup.hide();
-}else{
-    $popup.show();
-}
+(isCookie == 0) ? $popup.hide() : $popup.show();
 
 $popup_close.on("click", function(e){
     e.preventDefault();

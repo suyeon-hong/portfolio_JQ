@@ -1,25 +1,25 @@
 let speed = 1000;
 
 // btnMo button
-const btnMo = document.querySelector(".btnMo");
-const gnbMo = document.querySelector(".gnbMo");
-const gnb = document.querySelector("#gnb");
+const btnMo = $(".btnMo");
+const gnbMo =$(".gnbMo");
+const gnb = $("#gnb");
 
-btnMo.addEventListener("click", e=>{
+btnMo.on("click", e=>{
     e.preventDefault();
 
-    btnMo.classList.toggle("on");
-    gnbMo.classList.toggle("on");
+    btnMo.toggleClass("on");
+    gnbMo.toggleClass("on");
 });
 
 // gnbMo tabmenu
-const gnbMo_tabs = gnbMo.querySelectorAll(".arrow");
-const gnbMo_boxs = gnbMo.querySelectorAll("ul li ul");
+const gnbMo_tabs = gnbMo.find(".arrow");
+const gnbMo_boxs = gnbMo.find("ul li ul");
 
 for(let i=0; i<gnbMo_tabs.length; i++){
-    gnbMo_tabs[i].addEventListener("click", ()=>{
-        gnbMo_tabs[i].classList.toggle("on");
-        gnbMo_boxs[i].classList.toggle("on");
+    gnbMo_tabs.on("click", ()=>{
+        gnbMo_tabs.toggleClass("on");
+        gnbMo_boxs.toggleClass("on");
     });
 }
 
@@ -40,8 +40,3 @@ $("#gnb>li").each(function(index){
         $("#gnb>li").eq(index).find(".sub").hide();
     })
 });
-
-function activeBtn(item, index){
-    item.removeClass("on");
-    item.eq(index).addClass("on");
-}

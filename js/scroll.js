@@ -45,8 +45,8 @@ class MyScroll{
     activation(scroll){
         for (let i = 0; i < this.posArr.length; i++){
             if(scroll >= this.posArr[i] + this.baseLine){
-                activeBtn(this.btns, i);
-                activeBtn(this.boxs, i);
+                this.activeBtn(this.btns, i);
+                this.activeBtn(this.boxs, i);
             }
             if(scroll >= this.posArr[1] + this.baseLine && scroll < this.posArr[2]){
                 $(".box2").addClass("on");
@@ -59,5 +59,9 @@ class MyScroll{
         $("html, body").animate({
             scrollTop : this.posArr[index]
         }, 1000);
-    }    
+    }
+    activeBtn(item, index){
+        item.removeClass("on");
+        item.eq(index).addClass("on");
+    }
 }
