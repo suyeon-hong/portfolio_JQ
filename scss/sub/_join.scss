@@ -73,7 +73,7 @@
                             select{
                                 font-size: 14px;
                             }
-                            input[type="button"]{
+                            input[type="button"], input[type="checkbox"]{
                                 width: 120px;
                                 height: 40px;
                                 font: 300 14px/40px $font;
