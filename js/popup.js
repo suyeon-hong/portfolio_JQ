@@ -1,7 +1,6 @@
 // cookie popup
 const $popup = $("#popup");
 const $popup_close = $popup.find(".close");
-const $delCookie = $(".delCookie");
 let isCookie = document.cookie.indexOf("popup=done");
 
 if(isCookie == 0){
@@ -19,13 +18,6 @@ $popup_close.on("click", function(e){
     $popup.hide();
 });
 
-$delCookie.on("click", function(e){
-    e.preventDefault();
-
-    setCookie(0);
-    alert("쿠키삭제완료");
-});
-
 $("#popup label").on("click", function(){
     $(this).toggleClass("on");
 });
@@ -40,12 +32,3 @@ function setCookie(time){
 
     document.cookie = "popup=done; expires=" + duedate;
 }
-
-//swiper
-let swiper = new Swiper(".swiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    loop: true,
-});
