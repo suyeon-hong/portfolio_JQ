@@ -1,27 +1,16 @@
-// community tabs 버튼
 const $tabs = $(".community .tabs li a");
+const $faqs = $(".community #faq .numbers span");
+const $notices = $(".community #notice .numbers span");
 
-$tabs.on("click", function(e){
-    e.preventDefault();
+activation($tabs);
+activation($faqs);
+activation($notices);
 
-    $tabs.removeClass("on");
-    $(this).addClass("on");
-});
+function activation(item){
+    item.on("click", function(e){
+        e.preventDefault();
 
-// community pagination
-const $faqBtns = $(".community #faq .numbers span");
-const $noticeBtns = $(".community #notice .numbers span");
-
-$faqBtns.on("click", function(e){
-    e.preventDefault();
-
-    $faqBtns.removeClass("on");
-    $(this).addClass("on");
-});
-
-$noticeBtns.on("click", function(e){
-    e.preventDefault();
-
-    $noticeBtns.removeClass("on");
-    $(this).addClass("on");
-});
+        item.removeClass("on");
+        $(this).addClass("on");
+    });
+}
