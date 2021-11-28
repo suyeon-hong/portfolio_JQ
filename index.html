@@ -11,9 +11,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
-    <script defer src="js/popup.js"></script>
-    <script defer src="js/scroll.js"></script>
-    <script defer src="js/slider.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
     <script>
         $(document).ready(function(){
@@ -38,6 +38,12 @@
                 default_percent: -100,
                 moving_percent: -200,
                 speed: 3000
+            });
+            new CookiePopup("#popup", {
+                btnClose: ".close",
+                name: "popup",
+                vlaue: "done",
+                delay: 1
             });
         });
     </script>

@@ -1,30 +1,49 @@
-// cookie popup
-const $popup = $("#popup");
-const $popup_close = $popup.find(".close");
-let isCookie = document.cookie.indexOf("popup=done");
+class CookiePopup{
+    constructor(selector, opt){
+        if(!selector){
+            console.error("selector값은 필수 입력값입니다.");
+            return;
+        }
+        this.init(selector, opt);
+        this.bindingEvent();
+    }
+    init(selector, opt){
+        this.popup = $(selector);
+        this.popup_close = this.popup.find(opt.btnClose);
+        this.isCookie = document.cookie.indexOf(opt.name +"="+ opt.value);
+        this.name = opt.name;
+        this.value = opt.value;
+        this.delay = opt.delay;
+    }
+    bindingEvent(){
+        (this.isCookie == 0) ? this.popup.hide() : this.popup.show();
 
-(isCookie == 0) ? $popup.hide() : $popup.show();
-
-$popup_close.on("click", function(e){
-    e.preventDefault();
-
-    let isChecked = $popup.find("input[type=checkbox]").is(":checked");
-
-    if(isChecked) setCookie(1);
-    $popup.hide();
-});
-
-$("#popup label").on("click", function(){
-    $(this).toggleClass("on");
-});
-
-function setCookie(time){
-    let today = new Date();
-    let date = today.getDate();
+        this.popup_close.on("click", e=>{
+            e.preventDefault();
+        
+            let isChecked = $(this.popup).find("input[type=checkbox]").is(":checked");
+        
+            if(isChecked) this.setCookie(this.delay);
+            this.popup.hide();
+        });
+        
+        this.popup.find("label").on("click", e=>{
+            $(e.currentTarget).toggleClass("on");
+        });
+    }
+    setCookie(time){
+        let today = new Date();
+        let date = today.getDate();
+        
+        today.setDate(date + time);
     
-    today.setDate(date + time);
-
-    let duedate = today.toGMTString();
-
-    document.cookie = "popup=done; expires=" + duedate;
+        let duedate = today.toGMTString();
+    
+        document.cookie = this.name +"="+ this.value +"; expires=" + duedate;
+    }
 }
+
+
+
+
+
