@@ -1,4 +1,4 @@
-class Slider{
+class SliderLoop{
     constructor(opt){
         if(!opt.frame || !opt.slider){
             console.error("frame과 slider값은 필수입력사항 입니다");
@@ -73,24 +73,34 @@ class Slider{
     }
 }
 
+class BasicSlider{
+    constructor(opt){
+        this.init(opt);
+        this.bindingEvent();
+    }
+    init(opt){
+        this.frame = $(opt.frame);
+        this.sliderBtns = $(opt.btns);
+        this.enableClick = true;
+        this.speed = opt.speed;
+    }
+    bindingEvent(){
+        this.sliderBtns.on("click", e=>{
 
-
-// box1 slide
-const $sliderBtns = $(".box1 .btns li");
-const $frame = $(".box1 .slider-wrapper");
-let enableClick = true;
-
-$sliderBtns.on("click", function(){
-
-    if(enableClick){
-        enableClick =false;
-        let index = $(this).index();
-
-        $sliderBtns.removeClass("on");
-        $(this).addClass("on");
-        $frame.animate({left: -(100 * index) +"%"}, speed/2, function(){
-            enableClick = true;
+            if(this.enableClick){
+                this.enableClick =false;
+                let index = $(e.currentTarget).index();
+        
+                this.sliderBtns.removeClass("on");
+                $(e.currentTarget).addClass("on");
+                this.frame.animate({left: (-100 * index) +"%"}, this.speed, ()=>{
+                    this.enableClick = true;
+                });
+            }
         });
     }
-});
+}
+
+
+
 

@@ -21,7 +21,12 @@
                 panel: ".myScroll",
                 btns: "#navi li"
             });
-            new Slider({
+            new BasicSlider({
+                frame: ".box1 .slider-wrapper",
+                btns: ".box1 .btns li",
+                speed: 500
+            });
+            new SliderLoop({
                 frame: ".mento .slider-wrapper",
                 slider: ".slider",
                 prev: ".mento .prev",
@@ -30,7 +35,7 @@
                 moving_percent: -100,
                 speed: 2000
             });
-            new Slider({
+            new SliderLoop({
                 frame: ".box3 .slider-wrapper",
                 slider: ".slider",
                 prev: ".box3 .prev",
