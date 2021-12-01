@@ -22,7 +22,7 @@ class MyForm{
                     if(!this.isSelect(opt.name)) e.preventDefault();
                 }
                 if(opt.type == "text"){
-                    if(!this.isTxt(opt.name)) e.preventDefault();
+                    if(!this.isTxt(opt.name, opt.len)) e.preventDefault();
                 }
                 if(opt.type == "address"){
                     if(!this.isAddress(opt.name[0], opt.name[1], opt.name[2])) e.preventDefault();
@@ -139,16 +139,16 @@ class MyForm{
         }
     }
     
-    isTxt(name){
+    isTxt(name, len){
         let txt = $("[name="+ name +"]").val();
         
-        if(txt !== ""){
+        if(txt >= len){
             $("[name="+ name +"]").parent().find("p").remove();
             return true;
         }else{
             $("[name="+ name +"]").parent().find("p").remove();
             $("[name="+ name +"]").parent().append(
-                "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+                "<p class='caution'>필수 입력사항 입니다. "+ len +"자 이상 입력해 주세요.</p>"
             )
             this.result.push($("label[for="+ name +"]").text());
             return false;
@@ -174,14 +174,13 @@ class MyForm{
         let txt2 = $("[name="+ name2 +"]").val();
         let txt3 = $("[name="+ name3 +"]").val();
     
-        if(this.isSelect(name1) && txt2 !== "" && txt3 !== ""){
-            $("[name="+ name2 +"]").parent().find("p").remove();
+        if(this.isSelect(name1) && txt2.length >= 4 && txt3.length >= 4){
             $("[name="+ name2 +"]").parent().find("p").remove();
             return true;
         }else{
             $("[name="+ name2 +"]").parent().find("p").remove();
             $("[name="+ name2 +"]").parent().append(
-                "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+                "<p class='caution'>필수 입력사항 입니다. 올바른 값을 입력해 주세요.</p>"
             )
             this.result.push($("label[for="+ name1 +"]").text());
             return false;
@@ -199,7 +198,7 @@ class MyForm{
         }else{
             $("[name="+ name1 +"]").parent().find("p").remove();
             $("[name="+ name1 +"]").parent().append(
-                "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+                "<p class='caution'>필수 입력사항 입니다. 올바른 값을 입력해 주세요.</p>"
             )
             this.result.push($("label[for="+ name1 +"]").text());
             return false;
@@ -217,7 +216,7 @@ class MyForm{
         }else{
             $("[name="+ name1 +"]").parent().find("p").remove();
             $("[name="+ name1 +"]").parent().append(
-                "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
+                "<p class='caution'>필수 입력사항 입니다. 올바른 값을 입력해 주세요.</p>"
             )
             this.result.push($("label[for="+ name1 +"]").text());
             return false;
