@@ -56,7 +56,7 @@ for (let i = 0; i < positions.length; i ++) {
             map_btns[k].classList.remove("on");
         }
         positions[i].button.classList.add("on");
-        $(".address h2").text($(map_btns[i]).find("h2").text());
+        $(".address h1").text($(map_btns[i]).find("h1").text());
         $(".address address").text($(map_btns[i]).find("address").text());
         $(".address p").text($(map_btns[i]).find("p").text());
         panTo(positions[i].latlng);
