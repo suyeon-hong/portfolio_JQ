@@ -28,6 +28,22 @@ $.ajax({
     createList2(itemsNotice);
 })
 
+$qna.on("click", e=>{
+    const target = e.target.closest("dt");
+    const isOn = $(target).hasClass("on");
+    const dds = $("#faq .qna dd");
+
+    if(target == null) return;
+    if(isOn){
+        $(target).removeClass("on");
+        $(target).next().slideUp(500);
+    }else{
+        $(dds).slideUp(500);
+        $(target).addClass("on");
+        $(target).next().slideDown(500);
+    }
+});
+
 function createList(items){
     $(items).each((_,item)=>{
         $qna.append(
