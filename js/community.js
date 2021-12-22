@@ -14,7 +14,7 @@ function activation(item){
 
         const isOn = $(this).hasClass("on");
         if(isOn) return;
-        
+
         item.removeClass("on");
         $(this).addClass("on");
     });
@@ -29,6 +29,7 @@ $.ajax({
 
     createList(itemsQna);
     createList2(itemsNotice);
+    $(".tabs").on("click", e=>onButton(e, itemsQna));
 })
 
 $qna.on("click", e=>{
@@ -46,6 +47,35 @@ $qna.on("click", e=>{
         $(target).next().slideDown(500);
     }
 });
+
+
+function onButton(e, items){
+    const target = e.target.getAttribute("data-value");
+
+    if(target == null) return;
+    if(target == "전체"){
+        $qna.empty();
+        createList(items);
+    }
+
+    $(items).each((_,item)=>{
+        if(item.subject !== target) return;
+
+        $qna.empty();
+        $qna.append(
+            $("<dt>").append(
+                $("<span class='icon'>").text("Q"),
+                $("<p>").text(item.question),
+                $("<span class='subj'>").text(item.subject),
+                $("<a href='#' class='arrow' title='답변보기'>")
+            ),
+            $("<dd>").append(
+                $("<span class='icon'>").text("A"),
+                $("<p>").text(item.answer)
+            )
+        )
+    });
+}
 
 function createList(items){
     $(items).each((_,item)=>{
