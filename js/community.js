@@ -12,6 +12,9 @@ function activation(item){
     item.on("click", function(e){
         e.preventDefault();
 
+        const isOn = $(this).hasClass("on");
+        if(isOn) return;
+        
         item.removeClass("on");
         $(this).addClass("on");
     });
