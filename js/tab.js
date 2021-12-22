@@ -5,7 +5,7 @@ class Tab{
             return;
         }
         const defaults = {
-            motion: "show"
+            speed: 500
         }
         let result = Object.assign({}, defaults, opt);
 
@@ -15,27 +15,14 @@ class Tab{
     init(opt){
         this.btns = $(opt.btns);
         this.boxs = $(opt.boxs);
-        this.motion = opt.motion;
         this.speed = opt.speed;
     }
     bindingEvent(){
         this.btns.on("click focus", e=>{
             e.preventDefault();
 
-            if(this.motion == "show"){
-                this.activation(e.currentTarget);
-                this.showBox();
-            }
-            if(this.motion == "slideDown"){
-                let i = $(e.currentTarget).index();
-                let isOn = $(e.currentTarget).hasClass("on");
-                
-                if (isOn) {
-                    this.slideUp(e.currentTarget);
-                } else{
-                    this.slideDown(e.currentTarget, i);
-                }
-            }
+            this.activation(e.currentTarget);
+            this.showBox();
         });
     }
     activation(e){
@@ -49,16 +36,5 @@ class Tab{
     showBox(){
     this.boxs.hide();
     $(this.target).show();
-    }
-    slideUp(e){
-        $(e).removeClass("on");
-        $(e).next().slideUp();
-    }
-    slideDown(e){
-        this.btns.removeClass("on");
-        $(e).addClass("on");
-
-        this.boxs.slideUp();
-        $(e).next().slideDown(this.speed);
     }
 }
