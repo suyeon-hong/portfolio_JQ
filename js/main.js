@@ -1,3 +1,13 @@
+// skip navigation
+const skip = $("#skip a");
+
+skip.on("focusin", function(){
+    $(this).addClass("on");
+});
+skip.on("focusout", function(){
+    $(this).removeClass("on");
+});
+
 // visual letter motion
 const letter1 = $("#visual .inner >h1");
 const letter2 = $("#visual .inner >h2");
