@@ -3631,10 +3631,10 @@ body {
           .community .inner > dl dd#faq .search form .btn::after {
             width: 10px; }
     .community .inner > dl dd#faq .tabs li {
-      height: 50px; }
+      height: 40px; }
       .community .inner > dl dd#faq .tabs li a {
-        font-size: 12px;
-        line-height: 50px; }
+        font-size: 11px;
+        line-height: 40px; }
     .community .inner > dl dd#faq .qna {
       margin-bottom: 50px; }
       .community .inner > dl dd#faq .qna dt, .community .inner > dl dd#faq .qna dd {
