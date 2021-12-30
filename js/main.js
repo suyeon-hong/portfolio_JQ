@@ -122,7 +122,7 @@ $img.on("click", function(e){
         top: imgTop - 70,
         left: imgLeft
     }
-    let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
+    let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h4").text();
     let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
     let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
 
